@@ -1,0 +1,575 @@
+/* *** WIKISPACES INTERNAL STYLESHEET *** */
+img { -ms-interpolation-mode:bicubic; }
+
+.WikiDisable { display: none; }
+.WikiPageMenuEntries img.WikiDisable { display: none; }
+
+.WikiHeaderNav { font-family: arial,helvetica,sans-serif; font-size: 12px; position: absolute; right: 0; top: 0; height: 20px; padding: 4px 8px 0 8px; margin: 0; text-decoration: none; line-height: 20px; }
+.WikiHeaderNav img, .WikiHeaderNav a img { vertical-align: top; border: 0; }
+
+/* *** EDITOR STYLES *** */
+#editor_wrap { display: none; }
+#wikispacesEditorToolbar { margin: 0; padding-top: 6px; }
+.rteButton { border: 1px solid #DDD; background-color: #EEE; background-image: url(/_/2009031101/i/editor_sprite.gif); background-repeat: no-repeat; width: 24px; height: 24px; } /* cache defeat in [10419] */
+.rteButtonActive, .rteButtonHover, .rteButton:hover { background-color: #CDDBF3; border: 1px solid #6E9CE6 !important; }
+.rteButtonPressed, .rteButton:active { background-color: #C1D2EE; border: 1px solid #316AC5 !important; }
+#changeMessageInputLabel, #tagInputLabel { font-weight: bold; color: #666; padding: 0 0 2px 0; margin: 0; font-size: 1.1em; }
+
+/* *** HIDDEN ATTRIBUTE TABLES *** */
+table.basic tr { vertical-align: top; }
+table.basic td { border: 0px !important; }
+table.basic .hideable { display: none; }
+table.basic td.hideable { width: 0px; }
+table.advanced tr { vertical-align: top; }
+table.advanced td { border: 0px !important; }
+table.advanced table.hideable { display: table; }
+table.advanced tr.hideable { display: table-row; }
+table.advanced td.hideable { display: table-cell; }
+table.advanced .hideable { display: block; }
+
+/* *** ROUNDED BOXES *** */
+.WikispacesBox { background-color: #DDF; padding: 0; margin: 0; }
+.WikispacesBox p { padding: 4px 0 0 0 !important; margin: 0; }
+.WikispacesBox img { vertical-align: text-top; }
+.WikispacesBox .WikispacesBox_t { background: url(/i/bTRin.gif) no-repeat top right; height: 8px; }
+.WikispacesBox .WikispacesBox_b { background: url(/i/bBRin.gif) no-repeat top right; height: 8px; }
+.WikispacesBox img.WikispacesBox_c { padding: 0px; margin: 0px; width: 8px; height: 8px; border: none; display: block !important; }
+.WikispacesBox .WikispacesBox_text { padding: 0 8px; }
+.WikispacesBox .WikispacesBox_text td, .WikispacesBox .WikispacesBox_text th { border: 0 }
+
+.WikispacesBox_info { background: transparent url(/i/icon_16_info.gif) 8px 4px no-repeat; }
+.WikispacesBox_info p { margin-left: 22px; }
+
+/* TODO: remove these */
+#index_form50 { background-color: #DFF4CE; width: 50%; }
+#index_form75 { width: 75%; }
+#index_form300 { background-color: #DFF4CE; width: 300px; }
+#index_form400 { background-color: #DFF4CE; width: 400px; }
+
+/* used in themes */
+img.corner { width: 8px; height: 8px; border: none; display: block !important; }
+/* *** END ROUNDED BOXES *** /
+
+/* *** USED IN SEARCH VIEW *** */
+.WikiSearchResult { width: 90%; line-height: 130%; margin: 1em 0 .5em 0; }
+.WikiSearchResult .w_title { font-size: 125%; }
+.WikiSearchResult .w_url { color: #080; }
+.WikiSearchResult .w_body { margin: 2px 0; }
+.WikiSearchResult .w_foot { }
+
+/* *** HIGHLIGHTING WITH YELLOW BACKGROUND *** */
+.hl { background-color: #FFA !important; }
+
+/* *** OVERRIDES FOR INLINE IMAGE POPUP *** */
+#imageDiv p { padding: 0; margin: 0 0 13px 0; }
+#imageDiv form { padding: 0; margin: 0; }
+img.draggableImage { border: 1px solid #000; }
+.imageTable td { font-size: 10px; margin: 0px; padding: 0px; border: none; white-space: nowrap; }
+.imageTable { clear: both; margin-top: 4px; }
+.imageTable img { border: 1px solid #aaa; }
+.imageJump td { font-size: 11px; border: none; }
+
+/* *** MISC STUFF USED ALL OVER *** */
+.nowrap { white-space: nowrap; }
+.hidden { display: none; }
+tr td .sm { font-size: 90%; }
+.grey { color: #666; }
+.smgrey { color: #666; font-size: 80%; }
+.grey a { color: #666; }
+.textentry { font-family: arial, helvetica, sans-serif; border: 1px solid #999; }
+.nopad { padding: 0; margin: 0; }
+.bblack { color: #000; font-size: 1.1em; font-weight: bold; }
+.bblacklight { color: #000; font-size: 1.1em; }
+
+/* *** USED IN USERLINKS, which can appear inside and out of wikitext *** */
+.membersnapnote { white-space: nowrap; padding: 2px 4px 3px 4px; }
+.membersnap { white-space: nowrap; background: #FFD; padding: 2px 4px 3px 4px; color: #999; }
+.membersnap b { color: #000; }
+.userPicture { vertical-align: text-top; border: 0; padding: 0 !important; }
+
+/* IE6 min-height: http://www.dustindiaz.com/min-height-fast-hack */
+#content_view { display: block; padding-bottom: 2em; width: 100%; min-height: 600px; height: auto !important; height: 600px; }
+
+/* Used with .innerContentBox and #WikiAds to position the ad column */
+.contentBox { position: relative; min-height: 600px; height: auto !important; height: 600px; }
+
+.WikiLogoName a { text-decoration: none; font-weight: bold; }
+
+#concurrentEditor { padding: 5px; }
+#concurrentEditor h1 { font-size: 83%; font-weight: bold; padding: 0; margin: 0; }
+#concurrentEditor ul { list-style-type: none; padding: 0; margin: 4px 0; }
+#concurrentEditor li { padding: 2px 0 0 16px; margin: 0; }
+
+.callout_small { cursor: pointer; padding: 2px 20px 2px 2px; line-height: 200%; }
+.callout_small a { font-weight: bold; }
+.callout_large { cursor: pointer; width: 200px; margin: 0 20px 0 0; position: relative; }
+.callout_large .WikispacesBox_text { margin-right: 40px; }
+.callout_large a { font-weight: bold; }
+
+/* *** DISCUSSION AREA *** */
+table#WikiMessageSearch { border-collapse: collapse; padding: 0; margin: 0; }
+table#WikiMessageSearch td { padding: 4px; }
+
+table#WikiMessageThread { border-collapse: collapse; padding: 0; margin: 0; width: 90%; }
+table#WikiMessageThread td { padding: 2px; }
+table#WikiMessageThread td.w_userpic { vertical-align: top; width: 88px; }
+table#WikiMessageThread td.w_userpic a img { border: 1px black solid; }
+table#WikiMessageThread td.w_body { padding-bottom: 20px; }
+table#WikiMessageThread td.w_pager { text-align: center; font-size: 90%; }
+
+table#WikiMessageList { border-collapse: collapse; padding: 0; margin: 0 0 20px 0; width: 90%; }
+table#WikiMessageList td { padding: 2px; }
+table#WikiMessageList tr.w_row { background-color: #FFF; }
+table#WikiMessageList tr.w_altrow { background-color: #EEE; }
+table#WikiMessageList td.w_subject { white-space: nowrap; }
+table#WikiMessageList td.w_username { white-space: nowrap; }
+table#WikiMessageList td.w_replies { text-align: center; }
+table#WikiMessageList td.w_views { text-align: center; }
+table#WikiMessageList td.w_lastmessage { white-space: nowrap; }
+table#WikiMessageList td.w_pager { text-align: center; font-size: 90%; }
+
+#mediaDiv { margin: 0; padding: 0; }
+#mediaDiv p { margin-top: 0; padding-top: 0; }
+#mediaDiv ul { list-style-type: none; white-space: nowrap; margin: 0; padding: 0; }
+#mediaDiv ul li { padding: 2px; }
+#mediaDiv ul img { border: none; vertical-align: top; }
+#mediaDiv ul a { text-decoration: none; }
+#mediaDiv table tr { vertical-align: top; }
+#mediaDiv table td { border: 0; margin: 0; padding: 0; }
+#mediaDiv .activeMediaMenuEntry { background-color: #AAF; }
+#mediaDiv input.right { float: right; margin-right: 5px; }
+
+#mediaDiv table td#mediaMenu { background-color: #7373B6; }
+#mediaDiv #mediaMenu ul li { padding: 0; }
+#mediaDiv #mediaMenu ul li a { background-color: #7373B6; color: #FFF; display: block; padding: 5px 6px; width: 101px; }
+#mediaDiv #mediaMenu ul li a:hover, #mediaDiv #mediaMenu li.activeMediaMenuEntry a { background-color: #CECEEE; color: #222; }
+
+#mediaDiv table td#mediaContent { padding: 4px 12px; vertical-align: top; }
+#mediaPreviewDiv { min-height: 100px; }
+#mediaPreviewDiv form { text-align: center; }
+
+#spinnerMediaMenu { text-align: center; }
+
+#mediaContent div.mediaInstructions { max-height: 380px; overflow-y: auto; overflow-x: hidden; margin-bottom: 5px; min-width: 400px; padding-bottom: 5px; } 
+#mediaContent ul { margin: 0px; padding: 0px; list-style-type: none; }
+#mediaContent ol { margin-bottom: 0; }
+#mediaContent li { margin: 0; padding: 0; }
+#mediaContent ul a:link, #mediaContent ul a:visited { display: block; padding: 5px; border: 1px solid #F6F6FA; text-align: center; text-decoration: underline; }
+#mediaContent ul a:hover { background-color: #EEE; border: 1px solid #CCC; text-decoration: none; }
+#mediaContent h1 { color: #228; font-weight: normal; margin-top: 0; }
+#mediaContent a:hover { color: #000; }
+#mediaContent a img { border: thin black solid; }
+#mediaContent table { margin: 8px 0; }
+#mediaContent table td { padding: 2px 4px; }
+#mediaContent .WikispacesBox p { font-size: 12px !important; }
+.mediaContentSpinner { width: 100%; vertical-align: middle; }
+.mediaInstructions img { border: thin dotted #CCC; }
+#otherMediaForm { padding-top: 4px; }
+
+/* *** HELP POPUP *** */
+.jqmWindow { display: none; position: absolute; z-index: 2000; width: 876px; height: 576px; background-color: #FFF; color: #222; border: 1px solid black; }
+.jqmOverlayMacFF { background: url(/i/macFFBgHack.png) repeat; }
+.jqmOverlay { background-color: #666; }
+.jqmTransfer { border: 1px solid #000; z-index: 9000; background-color: #FFF; }
+
+#WikispacesGettingStartedContent { width: 876px; height: 476px; }
+#WikispacesGettingStartedContent h1 { margin-top: 0; padding-top: 0; font-size: 20px; }
+#WikispacesGettingStartedContent h2 { margin-top: 0; padding-top: 0; font-size: 18px; }
+#WikispacesGettingStartedContent .w_gs { clear: right; font-size: 14px; }
+#WikispacesGettingStartedContent .w_gs .image img { border: 2px solid #AAA; display: block; margin: 0 auto; }
+#WikispacesGettingStartedContent .w_gs .content img { vertical-align: text-bottom; }
+#WikispacesGettingStartedContent .w_gs div.image { float: right; margin: 10px 0 0 20px; padding: 20px; background-image: url(/i/stripe.png); background-repeat: repeat; width: 519px; }
+#WikispacesGettingStartedContent .w_gs div.content { margin: 0; }
+#WikispacesGettingStartedContent .w_gs li { margin-bottom: 4px; }
+
+#WikispacesGettingStartedNav { clear: both; width: 856px; height: 80px; margin: 0 auto; background-color: #FFF; padding: 10px; top: 17%; }
+#WikispacesGettingStartedNav div { float: left; margin: 10px; padding: 10px; text-align: center; font-size: 24px; border: 1px solid #666; color: #666; cursor: pointer; }
+#WikispacesGettingStartedNav div.navhl { color: #000; background-color: #FFA; font-weight: bold; }
+#WikispacesGettingStartedNav div.num { width: 20px; }
+
+#WikispacesHelp { padding-right: 0px; margin-right: 0px; }
+#WikispacesHelpControls, #WikispacesGettingStartedControls { padding: 10px; background-color: #CCCCCC; position: relative; }
+.WikispacesHelpClose { position: absolute; top: 10px; right: 10px; }
+.WikispacesHelpClose a img { border: 0; }
+#WikispacesHelpContent, #WikispacesGettingStartedContent { overflow-y: auto; overflow-x: hidden; width: 856px; height: 530px; padding: 10px; text-align:left; }
+#WikispacesHelpBreadcrumbSpinner { vertical-align: top; }
+.WikispacesHelpBreadcrumbCurrent a { font-weight: bold; }
+.WikispacesHelpPageUp { position: absolute; right: 20px; top: 35px; }
+.WikispacesHelpPageDown { position: absolute; right: 20px; bottom: 0px; }
+
+/* *** TAG CLOUD *** */
+.tagcloud a { text-decoration: none; line-height: 20pt; }
+.tagcloud a:hover { text-decoration: underline; }
+.tagcloud_1 { opacity: .5; font-size: 10pt; }
+.tagcloud_2 { opacity: .5; font-size: 12pt; }
+.tagcloud_3 { font-weight: bold; opacity: .7; font-size: 14pt; }
+.tagcloud_4 { font-weight: bold; opacity: .8; font-size: 18pt; }
+.tagcloud_5 { font-weight: bold; opacity: 1.0; font-size: 20pt; }
+
+.ac_results { padding: 0px; border: 1px solid WindowFrame; background-color: Window; overflow: hidden; z-index: 200000000; }
+.ac_results ul { width: 100%; list-style-position: outside; list-style: none; padding: 0; margin: 0; }
+.ac_results iframe { display: none; position: absolute; top: 0; left: 0; z-index: -1; filter: mask(); width: 3000px; height: 3000px; }
+.ac_results li { margin: 0px; padding: 2px 5px; cursor: pointer; display: block; width: 100%; font: menu; /* TODO */ font-size: 12px; overflow: hidden; }
+.ac_loading { background: Window url(/i/spinner.gif) right center no-repeat; /* TODO */ }
+.ac_over { background-color: #FFA; }
+img.autocompleteStatusImage { border: 0 !important; }
+#linkDiv img.autocompleteStatusImage { margin: -5px 0 -5px 5px; }
+.autocompleteSupplemental { font-size: .8em; font-style: italic; }
+.autocompleteSpaceMember-M { color: brown; }
+.autocompleteSpaceMember-O { color: green; }
+
+.userMenu { position: absolute; z-index: 100; border: thin #CCC solid; background: #FFF; width: 300px; padding: 8px; }
+
+/* windows_js 1.3 default */
+
+.overlay_dialog { background-color: #666666; filter: alpha(opacity=60); -moz-opacity: 0.6; opacity: 0.6; }
+.overlay___invisible__ { background-color: #666666; filter: alpha(opacity=0); -moz-opacity: 0; opacity: 0; }
+
+.dialog_nw { width: 9px; height: 23px; background: transparent url(/i/w/top_left.gif) no-repeat 0 0; }
+.dialog_n { background: transparent url(/i/w/top_mid.gif) repeat-x 0 0; height: 23px; }
+.dialog_ne { width: 9px; height: 23px; background: transparent url(/i/w/top_right.gif) no-repeat 0 0; }
+.dialog_e { width: 2px; background: transparent url(/i/w/center_right.gif) repeat-y 0 0; }
+.dialog_w { width: 2px; background: transparent url(/i/w/center_left.gif) repeat-y 0 0; }
+.dialog_sw { width: 9px; height: 19px; background: transparent url(/i/w/bottom_left.gif) no-repeat 0 0; }
+.dialog_s { background: transparent url(/i/w/bottom_mid.gif) repeat-x 0 0; height: 19px; }
+.dialog_se { width: 9px; height: 19px; background: transparent url(/i/w/bottom_right.gif) no-repeat 0 0; }
+
+.dialog_sizer { width: 9px; height: 19px; background: transparent url(/i/w/sizer.gif) no-repeat 0 0; cursor: se-resize; }
+.dialog_close { width: 14px; height: 14px; background: transparent url(/i/w/close.gif) no-repeat 0 0; position: absolute; top: 5px; left: 8px; cursor: pointer; z-index: 2000; }
+.dialog_minimize { width: 14px; height: 15px; background: transparent url(/i/w/minimize.gif) no-repeat 0 0; position: absolute; top: 5px; left: 28px; cursor: pointer; z-index: 2000; }
+.dialog_maximize { width: 14px; height: 15px; background: transparent url(/i/w/maximize.gif) no-repeat 0 0; position: absolute; top: 5px; left: 49px; cursor: pointer; z-index: 2000; }
+.dialog_title { float: left; height: 14px; font-family: Tahoma, Arial, sans-serif; font-size: 12px; text-align: center; width: 100%; color: #000; }
+.dialog_content { overflow: auto; color: #DDD; font-family: Tahoma, Arial, sans-serif; font-size: 10px; background-color: #123; }
+
+.top_draggable, .bottom_draggable { cursor: move; }
+
+.status_bar { font-size: 12px; }
+.status_bar input { font-size: 12px; }
+
+.wired_frame { display: block; position: absolute; border: 1px #000 dashed; }
+
+/* DO NOT CHANGE THESE VALUES*/
+.dialog { display: block; position: absolute; }
+.dialog table.table_window  { border-collapse: collapse; border-spacing: 0; width: 100%; margin: 0px; padding: 0px; }
+.dialog table.table_window td, .dialog table.table_window th { padding: 0; }
+.dialog .title_window { -moz-user-select: none; }
+
+/* windows js 1.3 */
+.overlay_wikispaces { background-color: #AAA; filter: alpha(opacity=60); -moz-opacity: 0.6; opacity: 0.6; }
+.wikispaces_nw { background: transparent url(/i/w/TL.png) no-repeat 0 0; width: 24px; height: 30px; }
+.wikispaces_n { background: transparent url(/i/w/T.png) repeat-x 0 0; height: 30px; }
+.wikispaces_ne { background: transparent url(/i/w/TR.png) no-repeat 0 0; width: 31px; height: 30px; }
+.wikispaces_w { background: transparent url(/i/w/L.png) repeat-y top left; width: 16px; }
+.wikispaces_e { background: transparent url(/i/w/R.png) repeat-y top right; width: 16px; }
+.wikispaces_sw { background: transparent url(/i/w/BLs.png) no-repeat 0 0; width: 31px; height: 14px; }
+.wikispaces_s { background: transparent url(/i/w/Bs.png) repeat-x 0 0; height: 14px; }
+.wikispaces_se, .wikispaces_sizer { background: transparent url(/i/w/BRs.png) no-repeat 0 0; width: 31px; height: 14px; }
+
+.wikispaces_sizer { cursor: se-resize; }
+.wikispaces_close { width: 19px; height: 19px; background: transparent url(/i/w/W_close.gif) no-repeat 0 0; position: absolute; right: 20px; top: 12px; cursor: pointer; z-index: 1000; }
+.wikispaces_minimize { width: 19px; height: 19px; background: transparent url(/i/w/W_minimize.gif) no-repeat 0 0; position: absolute; right: 40px; top: 12px; cursor: pointer; z-index: 1000; }
+.wikispaces_maximize { width: 19px; height: 19px; background: transparent url(/i/w/W_maximize.gif) no-repeat 0 0; position: absolute; right: 40px ; top: 0px ; cursor: pointer; z-index: 1000; }
+.wikispaces_helptext { position: absolute; right: 50px ; top: 12px ; font-size: 10px ; }
+.wikispaces_title { float: left; height: 14px; font-size: 12px; text-align: center; margin-top: 8px; width: 100%; color: #000; }
+.wikispaces_message { text-align: center; }
+.wikispaces_buttons { text-align: center; margin: 10px; }
+.wikispaces_message h1 { font-size: 20px; text-align: center; color: #000; }
+.wikispaces_content { overflow: auto; color: #222; font-family: Arial, Helvetica, sans-serif; background: #FFF; }
+.wikispaces_p { width: 400px; margin: auto; }
+
+/* * * * EDITOR POPUPS * * * */
+.editorPopup, #imageListPopup_table_content, #imageListPopup_content, #stylePopup_content { background-color: #F6F6FA; }
+#charPopupContents, #codePopupContents, #tablePopupContents, #imageProperties { padding: 1px 15px 15px 15px; }
+#imageListPopup_content { padding-bottom: 15px; }
+#codePopupContents, #imageProperties { padding-top: 15px; }
+.editorPopup form, .editorPopup p { color: #228; font-weight: normal; font-size: 16px; }
+
+.editorPopup .submit-buttons { font-size: 13px; font-weight: normal; text-align: right; }
+.editorPopup input.default { font-weight: bold; }
+.editorPopup .tabs a.tab { background-color: #7373B6; padding: 10px 20px; float: left; height: 15px; margin-right: 8px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-top-left-radius: 4px; text-decoration: none; color: #FFF; font-weight: bold; font-size: 14px; background-image:url(/i/header-overlay.png); background-position:left bottom; background-repeat:repeat-x; }
+.editorPopup .tabs a.selected  { background-color: #F6F6FA; color: #000; background-image: none; }
+.editorPopup div.tabs { background-color: #CECEEE; padding: 15px 15px 0 15px; margin-bottom: 15px; height: 35px; }
+.editorPopup .tabContents { padding: 0 15px; }
+
+#charPopupContents { width: 420px; }
+#charPopupContents table { background-color: #F6F6FA; width: 420px; height: 231px; }
+#charPopupContents td { font-size: 14px; vertical-align: middle; text-align: center; background-color: #FFF; border: 1px solid #CCC; cursor: pointer; height: 18px; width: 18px; margin: 2px; }
+#codePopupContents textarea { margin: 10px 0; }
+#stylePopupContents div.not-editable #stylePreview { background-color: #FFFFFF; -moz-border-radius: 4px; -webkit-border-radius: 4px; padding: 10px; width: 335px; color: #000; margin: 15px 0; border: 1px solid #CCC; }
+#stylePopupContents #styleAdvancedTextarea { width: 345px; border: 1px solid #CCC; -moz-border-radius: 4px; -webkit-border-radius: 4px; padding: 5px; }
+#stylePopupContents div.not-editable { float: left; width: 355px; margin: 0 15px; }
+#stylePopupContents div.not-editable h2 { margin: 0; }
+#stylePopupContents table th, #linkDiv table th, #imageProperties table th { color: #228; text-align: right; padding-right: 10px; vertical-align: top; }
+#stylePopupContents table th, #stylePopupContents table td, #linkDiv table th, #linkDiv table td { padding-bottom: 7px; }
+#stylePopupContents .tabContents { width: 355px; }
+#stylePopupContents div.tabs { width: 570px; }
+#linkDiv div.tabs { width: 470px; }
+#imageDiv div.tabs { width: 98%; padding-left: 1%; padding-right: 1%; }
+#imageDiv table#showSelect { float: right; padding-left: 60px; }
+#wikispacesMediaMenu a { text-decoration: none; }
+
+/* * * * END EDITOR POPUPS * * * */
+
+.farbtastic { position: relative; }
+.farbtastic * { position: absolute; cursor: crosshair; }
+.farbtastic { border: 1px black solid; width: 195px; height: 195px; padding: 0px; }
+.farbtastic .color, .farbtastic .overlay { top: 47px; left: 47px; width: 101px; height: 101px; }
+.farbtastic .wheel { background: url(/s/js/lib/farbtastic/wheel.png) no-repeat; margin: 0px; padding: 0px; width: 195px; height: 195px; }
+.farbtastic .overlay { background: url(/s/js/lib/farbtastic/mask.png) no-repeat; }
+.farbtastic .marker { width: 17px; height: 17px; margin: -8px 0 0 -8px; overflow: hidden; background: url(/s/js/lib/farbtastic/marker.png) no-repeat; }
+
+#tablePropertiesList { border-left: 1px solid #CCC; border-right: 1px solid #CCC; }
+#tablePropertiesList img { border: 0; }
+#tablePropertiesList, #tablePropertiesList ul { list-style-type: none; margin: 0; padding: 0; width: 12em; }
+#tablePropertiesList li, #tablePropertiesList ul li { margin: 0; padding: 0; border-bottom: 1px solid #CCC; }
+#tablePropertiesList a { display: block; text-decoration: none; color: #000; }
+#tablePropertiesList a:hover { background-color: #999; }
+#tablePropertiesList li a { background-color: #C1D2EE; color: #000; padding: 4px 8px; }
+#tablePropertiesList li.disabledMenu { display: none; }
+#tablePropertiesList li a:hover { background-color: #999; color: #FFF; }
+#tablePropertiesList li ul li a { background-color: #DDD; padding-left: 16px; }
+#tablePropertiesList li ul li ul li a { background-color: #FFF; padding-left: 24px; }
+
+#openid_selector_button_container img { vertical-align: middle; }
+
+.WikispacesButton a { display: block; margin: 1px auto; padding: 10px 0 6px 0; font: normal 14px/1 sans-serif; text-align: center; text-decoration: none; color: #000; }
+.WikispacesButton button { padding: 0; margin: 0; border: 0; font: normal 14px/1 sans-serif; text-decoration: none; color: #000; }
+
+.WikispacesButton.w_80 a { background: url(/i/button-80.gif) 0 0 no-repeat; width: 80px; }
+.WikispacesButton.w_80 button { background: url(/i/button-80.gif) 0 0 no-repeat; width: 80px; height: 30px; }
+.WikispacesButton.w_80 a:hover, .WikispacesButton.w_80 button:hover { background-position: -80px 0; }
+.WikispacesButton.w_80 a:active { background-position: -240px 0; }
+
+.WikispacesButton.w_100 a { background: url(/i/button-100.gif) 0 0 no-repeat; width: 100px; }
+.WikispacesButton.w_100 button { background: url(/i/button-100.gif) 0 0 no-repeat; width: 100px; height: 30px; }
+.WikispacesButton.w_100 a:hover, .WikispacesButton.w_100 button:hover { background-position: -100px 0; }
+.WikispacesButton.w_100 a:active { background-position: -300px 0; }
+
+.WikispacesButton.w_120 a { background: url(/i/button-120.gif) 0 0 no-repeat; width: 120px; }
+.WikispacesButton.w_120 button { background: url(/i/button-120.gif) 0 0 no-repeat; width: 120px; height: 30px; }
+.WikispacesButton.w_120 a:hover, .WikispacesButton.w_120 button:hover { background-position: -120px 0; }
+.WikispacesButton.w_120 a:active { background-position: -360px 0; }
+
+a#editButton img { border: 0; }
+
+/* *** DROPDOWN MENUS *** */
+.WikiMenuDisabled { display: none; }
+.WikiMenuEnabled { display: inline !important; }
+.WikiMenuControl { white-space: nowrap; cursor: default !important; }
+.WikiMenuControl a { cursor: pointer !important; }
+.WikiMenu { cursor: pointer; }
+.WikiMenu ul { z-index: 2; position: absolute; list-style: none; width: 150px; background-color: #FFF; padding: 0; margin: 0; border-color: #DDD; border-style: solid; border-width: 1px 1px 0 1px; }
+.WikiMenu ul .WikiMenuEntry, .WikiMenu ul .WikiMenuEntryDisabled { width: 138px; background-image: none; padding: 4px 4px 4px 8px; border-bottom: 1px solid #DDD; margin: 0; float: left; background-color: #FFF; }
+.WikiMenu ul .WikiMenuEntry a { color: #000; font-weight: normal; background-image: none; padding: 0; border: 0; }
+.WikiMenu ul .WikiMenuEntryDisabled { color: #CCC; }
+.WikiMenu ul .WikiMenuEntry:hover { background-color: #EEE; }
+.WikiMenu ul .WikiMenuEntryDisabled:hover { background-color: #FFF; }
+
+.querySelect, .queryAs, .queryInsertInto, .queryValues, .queryUpdate, .queryDelete, .queryFrom, .queryInnerJoin, .queryLeftJoin, .querySet, .queryWhere, .queryOrderBy, .queryLimit, .queryOffset, .queryHaving { font-weight: bold; color: red; }
+.queryParam { font-weight: bold; color: blue; }
+
+#signup ul.fieldErrors, .WikispacesContent #signup ul.fieldErrors { margin-left: -20px; padding-left: 20px; }
+ul.fieldErrors, .WikispacesContent ul.fieldErrors { list-style: none; color: red; font-size: 80%; margin: 0; padding-left: 3em; padding-bottom: 5px; background-image: url(/i/icon_16_error.gif); background-repeat: no-repeat; }
+.invalidField, .WikispacesContent .invalidField { background-color: #FCC; }
+
+/* for subsidiary settings pages */
+.WikispacesBackLink { text-align: right; }
+.WikispacesBackLink .r_space { margin-right: 90px; }
+
+/* space navigation popup */
+#SpaceNavigationTool { position: absolute; z-index: 999; top: 32px; right: 0; width: 450px; }
+#SpaceNavigationTool td.wikispaces_content { text-align: left; vertical-align: top; color: black; }
+#SpaceNavigationTool td.wikispaces_content a { color: black; }
+#SpaceNavigationTool td.wikispaces_content table { border-collapse: collapse; }
+#SpaceNavigationTool td.wikispaces_content table { width: 100%; }
+#SpaceNavigationTool td.wikispaces_content table tr { clear: both; }
+#SpaceNavigationTool td.wikispaces_content table td.spaceCell { display: list-item; list-style-type: none; margin-right: 4px; overflow: hidden; padding: 2px 4px 2px 4px; vertical-align: top; white-space: nowrap; width: 196px; }
+#SpaceNavigationTool td.wikispaces_content table td.spaceCell a { text-decoration: none; }
+#SpaceNavigationTool td.wikispaces_content table td.divider { width: 0px; }
+#SpaceNavigationTool td.divider { border-right: 1px solid #999; }
+#SpaceNavigationTool form.divider { border-top: 1px solid #999; }
+#SpaceNavigationTool form { padding: 3px; text-align: center; }
+#SpaceNavigationTool form p { margin: 0; }
+#SpaceNavigationTool img { border: 0; }
+.SpaceNavigationHighlight { background-color: #FFA; }
+
+/* -----------------------------------
+  ********WIKISPACES CONTENT**********
+ ------------------------------------*/
+/* *** BASIC PROPERTIES *** */
+.WikispacesContent { padding: 1%; }
+.WikispacesContent, .WikispacesContent .wiki { font-family: arial,helvetica,sans-serif; }
+.WikispacesContent br.clear { clear: both; }
+.WikispacesContent strong { font-weight: bold; }
+.WikispacesContent img { border: 0; }
+
+/* *** LAYOUT CLASSES *** */
+.WikispacesContent .twoColumn { display: inline; float: left; padding: 0 3%; width: 43.99%; }
+.WikispacesContent .twoColumnClear { clear: both; display: inline;  float: left; margin: 1% 3% 2% 3%; width: 44%; }
+.WikispacesContent .narrowLeftColumn { display: inline; float: left; margin: 1% 3% 2% 3%; width: 25%; }
+.WikispacesContent .wideRightColumn { display: inline; float: right; margin: 1% 3% 2% 3%; width: 63%; }
+
+/* *** CONVENIENCE CLASSES FOR BOX PROPERTIES *** */
+.WikispacesContent div.divRight { text-align: right; }
+.WikispacesContent .padAbove { padding-top: 1em !important; }
+.WikispacesContent .padBelow, p.padBelow { margin-bottom: 1em; }
+.WikispacesContent .nopad { padding: 0 !important; }
+.WikispacesContent .leftLine { float: left; padding-right: 1em; }
+
+/* *** HEADINGS *** */
+.WikispacesContent h1, .WikispacesContent h2, .WikispacesContent h3, .WikispacesContent h4, .WikispacesContent h5, .WikispacesContent h6 { color: #222; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: normal; margin: 0; padding: 0; }
+.WikispacesContent h1 { font-size: 1.9em !important; font-weight: normal; margin-bottom: 0.6em; }
+.WikispacesContent h2 { color: #228; font-size: 1.5em !important; margin: 0.6em 0; }
+.WikispacesContent h2.top { margin-top: 0; }
+.WikispacesContent h3 { font-size: 1.3em; line-height: 1.04em; }
+.WikispacesContent .gradientHeader { background: #DDDDE2 url(/i/gradient_gray.png) repeat-x scroll left 7px; background-position: bottom left; border-top: 1px solid #CCCCDD; clear: both; color: #222; margin: 0; padding: 0.16em 0.5em; }
+.WikispacesContent h1.gradientHeader { padding: 0.36em; }
+.WikispacesContent h2.gradientHeader { padding: 0.3875em 0.5em; } 
+.WikispacesContent .headerStyle { color: #222; font-size: 1.5em !important; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: normal; padding-bottom: 0.6em; }
+.WikispacesContent h1.big { font-size: 2.3em !important; }
+.WikispacesContent h1#create { margin-bottom: 0; }
+
+/* *** FORM BASICS *** */
+.WikispacesContent form h1, .WikispacesContent form h2, .WikispacesContent form h3, .borderAbove { border-top: 1px dotted #CCC; margin-top: 1em !important; padding-top: 1em !important; }
+.WikispacesContent form h1 { margin-top: 1.065em !important; padding-top: 1.065em !important; }
+.WikispacesContent form h2 { margin-top: 1em !important; padding-top: 1em !important; }
+.WikispacesContent form h3 { margin-top: 1em !important; padding-top: 1em !important; }
+.WikispacesContent form h1.top, .WikispacesContent form h2.top, .WikispacesContent form h3.top { border-top: 0; margin-top: 0 !important; padding-top: 0 !important; }
+.WikispacesContent form h1.noborder, .WikispacesContent form h2.noborder, .WikispacesContent form h3.noborder { border-top: 0; }
+.WikispacesContent select, .WikispacesContent option, .WikispacesContent input, .WikispacesContent button { font-size: 0.95em; font-family: arial, helvetica, sans-serif; }
+.WikispacesContent select { margin-top: 0.5em; }
+.WikispacesContent input.default { font-weight: bold; }
+.WikispacesContent a.plainButton { background-image: url(/i/plain-button.gif); background-position: left top; background-repeat: no-repeat; color: #fff; display: block; font-family: Arial, sans-serif; font-size: 2em; height: auto; padding: 8px 0; text-decoration: none; text-align: center; width: 251px; }
+.WikispacesContent a.plainButton:hover { text-decoration: underline; }
+.WikispacesContent select#templateSpaceId { margin: 0 0 5px; width: 151px; }
+
+/* *** FIELDSET STYLES (largely intact from WikispacesSection) *** */
+.WikispacesContent fieldset { border: 0 none; margin: 0; padding: 0; }
+.WikispacesContent fieldset ol { margin: 0 0 0 1.16em; padding: 0; }
+.WikispacesContent fieldset li { list-style-image: none; list-style-position: outside; list-style-type: none; }
+.WikispacesContent fieldset.w_vertical label { display: block; font-size: 110%; margin-bottom: 0.16em; }
+.WikispacesContent fieldset.w_vertical .w_input { border-color: #666666 #CCCCCC #CCCCCC #666666; border-style: solid; border-width: 1px; font-family: arial,helvetica,sans-serif; font-size: 100%; font-weight: normal; padding: 0.3em; }
+.WikispacesContent fieldset .w_required label { color: #000; font-weight: bold; }
+.WikispacesContent fieldset .w_about { color: #666666; font-size: 0.8em; font-weight: normal; line-height: 1.1em; margin: 0.16em 0 1em; }
+
+/* *** PARAGRAPHS *** */
+.WikispacesContent p { color: #404040; font-size: 1em !important; line-height: 1.35 !important; margin: 0; padding: 0 0 1.35em 0; }
+.WikispacesContent p.marketing { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 1.15em !important; line-height: 1.5 !important; }
+.WikispacesContent p.smaller, WikispacesContent .wiki { color: #404040; font-size: 0.9em !important; line-height: 1.25em !important; }
+.WikispacesContent p.noMargin { margin: 0; }
+.WikispacesContent p.alignRight { text-align: right; }
+.WikispacesContent p.fixedWidth { width: 35em; }
+.WikispacesContent .paragraphStyle { color: #404040; font-size: 1em !important; line-height: 1.35; }
+.WikispacesContent p.warn, .WikispacesContent span.warn { color: #CC0000; }
+.WikispacesContent span.sm {  color: #666; }
+
+/* *** LISTS *** */
+.WikispacesContent ul { list-style-type: disc; margin: 0; padding: 0 0 1em 1em; }
+.WikispacesContent li { color: #404040; font-size: 1em; line-height: 1.35; padding: 0.3875em 0; }
+.WikispacesContent ul.marketing li { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 1.15em; line-height: 1.5em; }
+.WikispacesContent ul.compress li { line-height: 1.5em; padding: 0; }
+.WikispacesContent .WikiMenuEnabled ul { list-style-type: none; padding: 0; }
+.WikispacesContent ul.simple { padding-right: 0; padding-top: 0.5em; }
+.WikispacesContent ul.simple li { line-height: 1.75em; }
+.WikispacesContent ul li.top, .WikispacesContent ol li.top { padding-top:0; }
+.WikispacesContent ul li.bottom, .WikispacesContent ol li.bottom { padding-bottom:0; }
+
+/* *** TABLE STYLES *** */
+.WikispacesContent table { border-collapse: collapse; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; margin: 0 auto 1em 0; padding: 0; width: 90%; }
+.WikispacesContent tr.odd td { background-image: url(/i/table-gradient.gif); background-color:#E0E0E0; background-position: top left; background-repeat: repeat-x; }
+.WikispacesContent tr.special td { background-color: #ECECFF; }
+.WikispacesContent th { font-weight: bold; color: #4F4F4F; text-align: left; border-bottom: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; padding: 0.2em; }
+.WikispacesContent td { border-bottom: 1px solid #E0E0E0; border-left: 1px solid #e0e0e0; padding: 0.4em 0.8em; }
+.WikispacesContent td { color: #404040; text-align: left; }
+.WikispacesContent thead th { background: url(/i/gray-table-gradient.jpg) top left repeat-x #D6D6D6; color: #333; font-size: 1.2em; text-align: center; vertical-align: bottom; }
+.WikispacesContent tfoot th { text-align: center; background: #ECECEC; }
+.WikispacesContent tfoot th strong { font-size: 1.2em; }
+.WikispacesContent table.pre { background-color: #DDD; }
+
+/* *** OTHER TABLE CLASSES *** */
+.WikispacesContent table.fullWidth { width: 100%; }
+.WikispacesContent table.fullWidth td { padding: 0.25em; }
+.WikispacesContent table.fullWidth td.alignRight { padding-right: 0; }
+.WikispacesContent table.left { margin: 0 auto 0 0; width: auto; }
+.WikispacesContent table.left th { padding: 0.2em 0.5em; }
+.WikispacesContent table.fixedWidthLeft { margin: 0; width: 35em; }
+.WikispacesContent table.centeredForm { border: 0; }
+.WikispacesContent table.centeredForm th { border: 0; font-weight: bold; padding-top: 7px; text-align: right; vertical-align: top; white-space: nowrap; width: 33%; }
+.WikispacesContent table.centeredForm td { border: 0; vertical-align: top; }
+.WikispacesContent table.ruledTable, .WikispacesContent table.ruledTable td { border-top: 0; border-left: 0; border-right: 0; }
+.WikispacesContent table.ruledTable td.borderLeft { border-left: 1px solid #E0E0E0; }
+.WikispacesContent table.ruledTable td.borderRight, .WikispacesContent table.ruledTable th.borderRight { border-right: 1px solid #E0E0E0; }
+.WikispacesContent table.lessPadding { margin-bottom: 0; }
+.WikispacesContent table.lessPadding th, .WikispacesContent table.lessPadding td { padding: 0.3em; }
+.WikispacesContent table.noborder, .WikispacesContent table.noborder td, .WikispacesContent table.noborder th, .WikispacesContent table.basic, .WikispacesContent td.noborder, .WikispacesContent tr.noborder td, .WikispacesContent tr.noborder th { border: 0; }
+.WikispacesContent table.labelWidth th { width: 6em; }
+.WikispacesContent table.labelWidth td { width: auto; }
+
+/* *** TABLES ON TABLE-LAYOUT PAGES *** */
+/* For layout of more complex pages */
+.WikispacesContent table tr.noBottomBorder td { border-bottom: 0; }
+
+/* *** TABLE HEADER AND CELL CLASSES *** */
+.WikispacesContent th.alignCenter, .WikispacesContent td.alignCenter { text-align: center; }
+.WikispacesContent tr.alignRowLeft th, .WikispacesContent tr.alignRowLeft td, .WikispacesContent th.alignLeft, .WikispacesContent td.alignLeft { text-align: left; padding-left: 0.8em !important; }
+.WikispacesContent th.alignRight, .WikispacesContent td.alignRight, .WikispacesContent th.action, .WikispacesContent td.action { text-align: right; }
+.WikispacesContent th.alignBottom, .WikispacesContent td.alignBottom { vertical-align: bottom; }
+.WikispacesContent th.alignTop, .WikispacesContent td.alignTop { vertical-align: top; }
+.WikispacesContent th.width20, .WikispacesContent td.width20 { white-space: nowrap; width: 20%; }
+.WikispacesContent th.width50, .WikispacesContent td.width50 { width: 50%; }
+.WikispacesContent tr.odd td.dataChanged, .WikispacesContent tr.even td.dataChanged { background-color: #AFA; }
+
+/* *** TABLE SORTING HEADERS *** */
+.WikispacesContent th a.w_sort { color: #333; text-decoration: none; display: block; }
+.WikispacesContent th a.w_sort:hover { color: #040; }
+.WikispacesContent th a.w_sort img { vertical-align: text-top; }
+.WikispacesContent th.w_sort_highlight { background: url(/i/green-table-gradient.jpg) top left repeat-x #B2CEB2; }
+
+/* *** TABLE LOOK ALIKE BOXES *** */
+.WikispacesContent div.table-box { border: 1px solid #E0E0E0; float: left; min-height: 155px; margin: 0 25px 25px 0; max-width: 200px; min-width: 150px; width: 20%; }
+.WikispacesContent div.table-box h2 { background: url(/i/gray-table-gradient.jpg) top left repeat-x #D6D6D6; color: #333; border-bottom: 1px solid #E0E0E0; font-size: 1.2em !important; font-family: arial,helvetica,sans-serif; font-weight: bold; margin: 0; padding: 0.3em 0.2em; text-align: center; }
+.WikispacesContent div.table-box img { display: block; margin: 10px auto; }
+.WikispacesContent div.table-box p { color: #555; font-size: 0.9em !important; padding: 0 10px; text-align: center; }
+.WikispacesContent div.table-box.clickable { cursor: pointer; }
+
+/* *** WIKISPACESBOX STYLES *** */
+.WikispacesContent .WikispacesBox .WikispacesBox_text h1, .WikispacesContent .WikispacesBox .WikispacesBox_text h2, .WikispacesContent .WikispacesBox .WikispacesBox_text h3 { padding: 0.2em 0; }
+.WikispacesContent .WikispacesBox .WikispacesBox_text { padding: 0.3em 0.9em; }
+.WikispacesContent .WikispacesBox .WikispacesBox_text p { margin: 0 !important; padding: 0.3em 0 !important; }
+.WikispacesContent form .WikispacesBox h1, .WikispacesContent form .WikispacesBox h2, .WikispacesContent form .WikispacesBox h3 { border-top: 0; margin-top: 0 !important; padding-top: 0 !important; }
+.WikispacesContent .WikispacesBox h2 { margin-top: 0; }
+.WikispacesContent .WikispacesBox table { border: 0; margin-bottom: 0; width: 100%; }
+.WikispacesContent .WikispacesBox table th, .WikispacesContent .WikispacesBox table td { background-color: inherit; color: #404040; }
+.WikispacesContent form .WikispacesBox { background-color: #DDF; }
+
+/* *** WIKISPACESCONTENT STEPS, FOR BULK USER PAGE *** */
+.WikispacesContent ul.w_steps { margin: 0; padding: 0; }
+.WikispacesContent ul.w_steps li { width: 180px; height: 35px; display: block; margin: 0; padding: 10px 0px 10px 10px; list-style: none; float: left; color: #999; background-color: #EBEBEB; background-image: url(/i/steps-base.gif); background-repeat: no-repeat; background-position: left -5px; }
+.WikispacesContent ul.w_steps li.w_first { width: 160px; background-image: none !important; }
+.WikispacesContent ul.w_steps li.w_current { color: #FFF; background-color: #159AC3; background-image: url(/i/steps-current.gif); }
+.WikispacesContent ul.w_steps li.w_next { background-color: #EBEBEB; background-image: url(/i/steps-next.gif); }
+.WikispacesContent ul.w_steps li.w_done { color: #FFF; background-color: #374184; background-image: url(/i/steps-done.gif); }
+.WikispacesContent ul.w_steps li span { margin-left: 40px; }
+.WikispacesContent ul.w_steps li.w_first span { margin-left: 10px; }
+.WikispacesContent ul.w_steps li span em { font-style: normal; font-weight: bold; }
+.WikispacesContent ul.w_steps li span span.w_label { display: block; margin-left: 40px; font-weight: normal; }
+.WikispacesContent ul.w_steps li.w_first span span.w_label { display: block; margin-left: 10px; font-weight: normal; }
+
+/* *** BULK USER BUTTONS *** */
+.WikispacesContent input.bulkForward, .WikispacesContent input.bulkForwardGray { background-image: url(/i/continue_arrow.gif); background-position: left top; border: 0 none; font-size: 1.4em; font-weight: bold; height: 40px; padding-right: 17px; text-align: center; width: 133px; }
+.WikispacesContent input.bulkForward { background-image: url(/i/continue_arrow.gif); color: #FFF; }
+.WikispacesContent input.bulkForwardGray { background-image: url(/i/continue_arrow_gray.gif); color: #999; }
+.WikispacesContent input.bulkBack { background-image: url(/i/back_arrow.gif); background-position: left top; border: 0 none; color: #FFF; font-size: 1.4em; font-weight: bold; height: 40px; padding-left: 17px; text-align: center; width: 133px; }
+.WikispacesContent input.bulkVerify { background-color: #14C23D; border: 0 none; color: #FFF; font-size: 1.4em; font-weight: bold; height: 40px; text-align: center; width: 160px; }
+.WikispacesContent input.bulkVerifyGray { background-color: #EBEBEB; border: 0 none; color: #999; font-size: 1.4em; font-weight: bold; height: 40px; text-align: center; width: 160px; }
+
+/* *** MANAGE WIKI PAGE *** */
+.WikispacesContent .WikispacesSettingsWrapper table { margin: 1em 0; width: 95%; }
+.WikispacesContent .WikispacesSettingsWrapper table td { margin: 0; min-width: 3.2em; padding: 0; text-align: center; width: 19%; vertical-align: top; }
+.WikispacesContent .WikispacesSettingsWrapper table td a { text-decoration: none; }
+.WikispacesContent .WikispacesSettingsWrapper table td a:hover { text-decoration: underline; }
+.WikispacesContent .WikispacesSettingsWrapper table td.secondLine { padding-top: 2em; }
+
+/* *** PERMISSIONS PAGE *** */
+.WikispacesContent .PermissionsSection { width: 75%; }
+

@@ -1,0 +1,534 @@
+<html>
+  <head>
+    <title>clojure contrib - monads API reference</title>
+    <link href="file/view/favicon.png" rel="icon" />
+    <link href="file/view/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="file/view/clojure-icon.gif" /></a>
+	<h1><a title="Clojure" href="index.html">Clojure</a></h1>
+      </div>
+      <div id="leftcolumn"><div><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <a class="wiki_link" href="index.html">Overview</a><br />
+    <a class="wiki_link" href="api-index.html">API Index</a><br />
+    <a class="wiki_link" href="#">Namespaces:</a>
+    <ul id="left-sidebar-list">
+      <li><a href="accumulators-api.html" class="wiki_link">accumulators</a></li><li><a href="agent-utils-api.html" class="wiki_link">agent-utils</a></li><li><a href="classpath-api.html" class="wiki_link">classpath</a></li><li><a href="combinatorics-api.html" class="wiki_link">combinatorics</a></li><li><a href="command-line-api.html" class="wiki_link">command-line</a></li><li><a href="complex-numbers-api.html" class="wiki_link">complex-numbers</a></li><li><a href="cond-api.html" class="wiki_link">cond</a></li><li><a href="condition-api.html" class="wiki_link">condition</a></li><li><a href="core-api.html" class="wiki_link">core</a></li><li><a href="dataflow-api.html" class="wiki_link">dataflow</a></li><li><a href="datalog-api.html" class="wiki_link">datalog</a></li><li><a href="def-api.html" class="wiki_link">def</a></li><li><a href="duck-streams-api.html" class="wiki_link">duck-streams</a></li><li><a href="error-kit-api.html" class="wiki_link">error-kit</a></li><li><a href="except-api.html" class="wiki_link">except</a></li><li><a href="fcase-api.html" class="wiki_link">fcase</a></li><li><a href="find-namespaces-api.html" class="wiki_link">find-namespaces</a></li><li><a href="fnmap-api.html" class="wiki_link">fnmap</a></li><li><a href="gen-html-docs-api.html" class="wiki_link">gen-html-docs</a></li><li><a href="generic.arithmetic-api.html" class="wiki_link">generic.arithmetic</a></li><li><a href="generic.collection-api.html" class="wiki_link">generic.collection</a></li><li><a href="generic.comparison-api.html" class="wiki_link">generic.comparison</a></li><li><a href="generic.functor-api.html" class="wiki_link">generic.functor</a></li><li><a href="generic.math-functions-api.html" class="wiki_link">generic.math-functions</a></li><li><a href="graph-api.html" class="wiki_link">graph</a></li><li><a href="greatest-least-api.html" class="wiki_link">greatest-least</a></li><li><a href="http.agent-api.html" class="wiki_link">http.agent</a></li><li><a href="http.connection-api.html" class="wiki_link">http.connection</a></li><li><a href="import-static-api.html" class="wiki_link">import-static</a></li><li><a href="jar-api.html" class="wiki_link">jar</a></li><li><a href="java-utils-api.html" class="wiki_link">java-utils</a></li><li><a href="javadoc.browse-api.html" class="wiki_link">javadoc.browse</a></li><li><a href="json.read-api.html" class="wiki_link">json.read</a></li><li><a href="json.write-api.html" class="wiki_link">json.write</a></li><li><a href="lazy-seqs-api.html" class="wiki_link">lazy-seqs</a></li><li><a href="lazy-xml-api.html" class="wiki_link">lazy-xml</a></li><li><a href="macro-utils-api.html" class="wiki_link">macro-utils</a></li><li><a href="macros-api.html" class="wiki_link">macros</a></li><li><a href="map-utils-api.html" class="wiki_link">map-utils</a></li><li><a href="math-api.html" class="wiki_link">math</a></li><li><a href="miglayout-api.html" class="wiki_link">miglayout</a></li><li><a href="mmap-api.html" class="wiki_link">mmap</a></li><li><a href="monadic-io-streams-api.html" class="wiki_link">monadic-io-streams</a></li><li><a href="monads-api.html" class="wiki_link">monads</a></li><li><a href="ns-utils-api.html" class="wiki_link">ns-utils</a></li><li><a href="pprint-api.html" class="wiki_link">pprint</a></li><li><a href="probabilities.finite-distributions-api.html" class="wiki_link">probabilities.finite-distributions</a></li><li><a href="probabilities.monte-carlo-api.html" class="wiki_link">probabilities.monte-carlo</a></li><li><a href="probabilities.random-numbers-api.html" class="wiki_link">probabilities.random-numbers</a></li><li><a href="profile-api.html" class="wiki_link">profile</a></li><li><a href="prxml-api.html" class="wiki_link">prxml</a></li><li><a href="repl-ln-api.html" class="wiki_link">repl-ln</a></li><li><a href="repl-utils-api.html" class="wiki_link">repl-utils</a></li><li><a href="seq-utils-api.html" class="wiki_link">seq-utils</a></li><li><a href="server-socket-api.html" class="wiki_link">server-socket</a></li><li><a href="set-api.html" class="wiki_link">set</a></li><li><a href="shell-out-api.html" class="wiki_link">shell-out</a></li><li><a href="singleton-api.html" class="wiki_link">singleton</a></li><li><a href="sql-api.html" class="wiki_link">sql</a></li><li><a href="str-utils-api.html" class="wiki_link">str-utils</a></li><li><a href="str-utils2-api.html" class="wiki_link">str-utils2</a></li><li><a href="stream-utils-api.html" class="wiki_link">stream-utils</a></li><li><a href="swing-utils-api.html" class="wiki_link">swing-utils</a></li><li><a href="trace-api.html" class="wiki_link">trace</a></li><li><a href="types-api.html" class="wiki_link">types</a></li><li><a href="with-ns-api.html" class="wiki_link">with-ns</a></li><li><a href="zip-filter-api.html" class="wiki_link">zip-filter</a></li>
+    </ul>
+  </div>
+</div>
+</div></div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div style="" id="WikiAdMargin">
+                <div id="content_view" class="wiki wikiPage">
+                  <!-- Temporary disclaimer -->
+                  <div style="background-color: #FF0000; font-weight: bold;">
+                    NOTE: These autogen pages are still under development. 
+                    Not all links work. Not all formatting in done.
+                    Contact Tom Faulhaber (tomfaulhaber on github, gmail, etc.)
+                    with any questions.
+                  </div>
+                  <div id="right-sidebar"><div><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/call-cc">call-cc</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/cont-m">cont-m</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/defmonad">defmonad</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/defmonadfn">defmonadfn</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/domonad">domonad</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/fetch-state">fetch-state</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/fetch-val">fetch-val</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/identity-m">identity-m</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-chain">m-chain</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-fmap">m-fmap</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-join">m-join</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-lift">m-lift</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-map">m-map</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-reduce">m-reduce</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-seq">m-seq</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-until">m-until</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-when">m-when</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/m-when-not">m-when-not</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/maybe-m">maybe-m</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/maybe-t">maybe-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/monad">monad</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/monad-transformer">monad-transformer</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/run-cont">run-cont</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/sequence-m">sequence-m</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/sequence-t">sequence-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/set-m">set-m</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/set-state">set-state</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/set-val">set-val</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/state-m">state-m</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/state-m-until">state-m-until</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/state-t">state-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/update-state">update-state</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/update-val">update-val</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/with-monad">with-monad</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/with-state-field">with-state-field</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#monads/writer-m">writer-m</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div></div>
+                  <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">monads</span></h1>
+by <span id="author">Konrad Hinsen</span><br />
+<br />Usage:
+<pre>
+(ns your-namespace
+  (:require <span id="long-name">clojure.contrib.monads</span>))
+</pre><pre>
+</pre><h2>Overview</h2>
+<pre id="namespace-docstr">This library contains the most commonly used monads as well
+as macros for defining and using monads and useful monadic
+functions.</pre>
+<span id="see-also">See also: 
+  <span id="see-also-link">
+    <a href="http://onclojure.com/2009/03/05/a-monad-tutorial-for-clojure-programmers-part-1/">Monad tutorial part 1</a>
+  </span><span id="see-also-link">
+    <a href="http://onclojure.com/2009/03/06/a-monad-tutorial-for-clojure-programmers-part-2/">Monad tutorial part 2</a>
+  </span><span id="see-also-link">
+    <a href="http://onclojure.com/2009/03/23/a-monad-tutorial-for-clojure-programmers-part-3/">Monad tutorial part 3</a>
+  </span><span id="see-also-link">
+    <a href="http://onclojure.com/2009/04/24/a-monad-tutorial-for-clojure-programmers-part-4/">Monad tutorial part 4</a>
+  </span><span id="see-also-link">
+    <a href="http://intensivesystems.net/tutorials/monads_101.html">Monads in Clojure part 1</a>
+  </span><span id="see-also-link">
+    <a href="http://intensivesystems.net/tutorials/monads_201.html">Monads in Clojure part 2</a>
+  </span><br />
+</span><br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <hr />
+  <h2 id="monads/call-cc">call-cc</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (call-cc f)
+</pre>
+  <pre id="var-docstr">A computation in the cont monad that calls function f with a single
+argument representing the current continuation. The function f should
+return a continuation (which becomes the return value of call-cc),
+or call the passed-in current continuation to terminate.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L456" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/cont-m">cont-m</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Monad describing computations in continuation-passing style. The monadic
+values are functions that are called with a single argument representing
+the continuation of the computation, to which they pass their result.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L440" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/defmonad">defmonad</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defmonad name doc-string operations)
+       (defmonad name operations)
+</pre>
+  <pre id="var-docstr">Define a named monad by defining the monad operations. The definitions
+are written like bindings to the monad operations m-bind and
+m-result (required) and m-zero and m-plus (optional).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L51" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/defmonadfn">defmonadfn</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defmonadfn name docstring? attr-map? args expr)
+       (defmonadfn name docstring? attr-map? (args expr) ...)
+</pre>
+  <pre id="var-docstr">Like defn, but for functions that use monad operations and are used inside
+a with-monad block.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L137" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/domonad">domonad</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (domonad steps expr)
+       (domonad name steps expr)
+</pre>
+  <pre id="var-docstr">Monad comprehension. Takes the name of a monad, a vector of steps
+given as binding-form/monadic-expression pairs, and a result value
+specified by expr. The monadic-expression terms can use the binding
+variables of the previous steps.
+If the monad contains a definition of m-zero, the step list can also
+contain conditions of the form :when p, where the predicate p can
+contain the binding variables from all previous steps.
+A clause of the form :let [binding-form expr ...], where the bindings
+are given as a vector as for the use in let, establishes additional
+bindings that can be used in the following steps.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L114" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/fetch-state">fetch-state</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (fetch-state)
+</pre>
+  <pre id="var-docstr">Return a state-monad function that returns the current state and does not
+modify it.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L359" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/fetch-val">fetch-val</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (fetch-val key)
+</pre>
+  <pre id="var-docstr">Return a state-monad function that assumes the state to be a map and
+returns the value corresponding to the given key. The state is not modified.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L365" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/identity-m">identity-m</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Monad describing plain computations. This monad does in fact nothing
+at all. It is useful for testing, for combination with monad
+transformers, and for code that is parameterized with a monad.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L286" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-chain">m-chain</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Chains together monadic computation steps that are each functions
+of one parameter. Each step is called with the result of the previous
+step as its argument. (m-chain (step1 step2)) is equivalent to
+(fn [x] (domonad [r1 (step1 x) r2 (step2 r1)] r2)).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L217" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-fmap">m-fmap</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Bind the monadic value m to the function returning (f x) for argument x</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L195" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-join">m-join</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Converts a monadic value containing a monadic value into a 'simple'
+monadic value.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L189" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-lift">m-lift</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (m-lift n f)
+</pre>
+  <pre id="var-docstr">Converts a function f of n arguments into a function of n
+monadic arguments returning a monadic value.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L180" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-map">m-map</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">'Executes' the sequence of monadic values resulting from mapping
+f onto the values xs. f must return a monadic value.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L211" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-reduce">m-reduce</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Return the reduction of (m-lift 2 f) over the list of monadic values mvs
+with initial value (m-result val).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L228" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-seq">m-seq</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">'Executes' the monadic values in ms and returns a sequence of the
+basic values contained in them.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L200" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-until">m-until</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">While (p x) is false, replace x by the value returned by the
+monadic computation (f x). Return (m-result x) for the first
+x for which (p x) is true.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L241" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-when">m-when</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (m-when test m-expr)
+</pre>
+  <pre id="var-docstr">If test is logical true, return monadic value m-expr, else return
+(m-result nil).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L253" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/m-when-not">m-when-not</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (m-when-not test m-expr)
+</pre>
+  <pre id="var-docstr">If test if logical false, return monadic value m-expr, else return
+(m-result nil).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L259" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/maybe-m">maybe-m</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Monad describing computations with possible failures. Failure is
+represented by nil, any other value is considered valid. As soon as
+a step returns nil, the whole computation will yield nil as well.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L296" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/maybe-t">maybe-t</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (maybe-t m)
+       (maybe-t m nothing)
+       (maybe-t m nothing which-m-plus)
+</pre>
+  <pre id="var-docstr">Monad transformer that transforms a monad m into a monad in which
+the base values can be invalid (represented by nothing, which defaults
+to nil). The third argument chooses if m-zero and m-plus are inherited
+from the base monad (use :m-plus-from-base) or adopt maybe-like
+behaviour (use :m-plus-from-transformer). The default is :m-plus-from-base
+if the base monad m has a definition for m-plus, and
+:m-plus-from-transformer otherwise.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L496" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/monad">monad</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (monad operations)
+</pre>
+  <pre id="var-docstr">Define a monad by defining the monad operations. The definitions
+are written like bindings to the monad operations m-bind and
+m-result (required) and m-zero and m-plus (optional).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L36" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/monad-transformer">monad-transformer</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (monad-transformer base which-m-plus operations)
+</pre>
+  <pre id="var-docstr">Define a monad transforer in terms of the monad operations and the base
+monad. The argument which-m-plus chooses if m-zero and m-plus are taken
+from the base monad or from the transformer.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L474" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/run-cont">run-cont</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (run-cont c)
+</pre>
+  <pre id="var-docstr">Execute the computation c in the cont monad and return its result.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L451" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/sequence-m">sequence-m</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Monad describing multi-valued computations, i.e. computations
+that can yield multiple values. Any object implementing the seq
+protocol can be used as a monadic value.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L309" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/sequence-t">sequence-t</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (sequence-t m)
+       (sequence-t m which-m-plus)
+</pre>
+  <pre id="var-docstr">Monad transformer that transforms a monad m into a monad in which
+the base values are sequences. The argument which-m-plus chooses
+if m-zero and m-plus are inherited from the base monad
+(use :m-plus-from-base) or adopt sequence-like
+behaviour (use :m-plus-from-transformer). The default is :m-plus-from-base
+if the base monad m has a definition for m-plus, and
+:m-plus-from-transformer otherwise.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L528" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/set-m">set-m</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Monad describing multi-valued computations, like sequence-m,
+but returning sets of results instead of sequences of results.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L323" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/set-state">set-state</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (set-state s)
+</pre>
+  <pre id="var-docstr">Return a state-monad function that replaces the current state by s and
+returns the previous state.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L353" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/set-val">set-val</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (set-val key val)
+</pre>
+  <pre id="var-docstr">Return a state-monad function that assumes the state to be a map and
+replaces the value associated with key by val. The old value is returned.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L383" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/state-m">state-m</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Monad describing stateful computations. The monadic values have the
+structure (fn [old-state] (list result new-state)).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L336" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/state-m-until">state-m-until</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (state-m-until p f x)
+</pre>
+  <pre id="var-docstr">An optimized implementation of m-until for the state monad that
+replaces recursion by a loop.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L401" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/state-t">state-t</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (state-t m)
+</pre>
+  <pre id="var-docstr">Monad transformer that transforms a monad m into a monad of stateful
+computations that have the base monad type as their result.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L555" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/update-state">update-state</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (update-state f)
+</pre>
+  <pre id="var-docstr">Return a state-monad function that replaces the current state by the
+result of f applied to the current state and that returns the old state.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L347" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/update-val">update-val</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (update-val key f)
+</pre>
+  <pre id="var-docstr">Return a state-monad function that assumes the state to be a map and
+replaces the value associated with the given key by the return value
+of f applied to the old value. The old value is returned.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L373" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/with-monad">with-monad</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-monad monad &amp; exprs)
+</pre>
+  <pre id="var-docstr">Evaluates an expression after replacing the keywords defining the
+monad operations by the functions associated with these keywords
+in the monad definition given by name.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L102" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/with-state-field">with-state-field</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (with-state-field key statement)
+</pre>
+  <pre id="var-docstr">Returns a state-monad function that expects a map as its state and
+runs statement (another state-monad function) on the state defined by
+the map entry corresponding to key. The map entry is updated with the
+new state returned by statement.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L389" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="monads/writer-m">writer-m</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (writer-m empty-accumulator)
+</pre>
+  <pre id="var-docstr">Monad describing computations that accumulate data on the side, e.g. for
+logging. The monadic values have the structure [value log]. Any of the
+accumulators from clojure.contrib.accumulators can be used for storing the
+log data. Its empty value is passed as a parameter.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/monads.clj#L413" id="var-source">Source</a>
+</div>
+
+
+</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;">
+            Copyright 2008-2009 Rich Hickey and the various contributors
+          </div>
+	</div>
+      </div>
+      <!-- /rightcolumn -->
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>

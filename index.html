@@ -1,21 +1,1719 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Clojure Contrib Overview</title>
-</head>
+<html>
+  <head>
+    <title>Clojure Contrib - Overview</title>
+    <link href="file/view/favicon.png" rel="icon" />
+    <link href="file/view/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="file/view/clojure-icon.gif" /></a>
+	<h1><a title="Clojure" href="index.html">Clojure</a></h1>
+      </div>
+      <div id="leftcolumn"><div><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <a class="wiki_link" href="index.html">Overview</a><br />
+    <a class="wiki_link" href="api-index.html">API Index</a><br />
+    <a class="wiki_link" href="#">Namespaces:</a>
+    <ul id="left-sidebar-list">
+      <li><a href="accumulators-api.html" class="wiki_link">accumulators</a></li><li><a href="agent-utils-api.html" class="wiki_link">agent-utils</a></li><li><a href="classpath-api.html" class="wiki_link">classpath</a></li><li><a href="combinatorics-api.html" class="wiki_link">combinatorics</a></li><li><a href="command-line-api.html" class="wiki_link">command-line</a></li><li><a href="complex-numbers-api.html" class="wiki_link">complex-numbers</a></li><li><a href="cond-api.html" class="wiki_link">cond</a></li><li><a href="condition-api.html" class="wiki_link">condition</a></li><li><a href="core-api.html" class="wiki_link">core</a></li><li><a href="dataflow-api.html" class="wiki_link">dataflow</a></li><li><a href="datalog-api.html" class="wiki_link">datalog</a></li><li><a href="def-api.html" class="wiki_link">def</a></li><li><a href="duck-streams-api.html" class="wiki_link">duck-streams</a></li><li><a href="error-kit-api.html" class="wiki_link">error-kit</a></li><li><a href="except-api.html" class="wiki_link">except</a></li><li><a href="fcase-api.html" class="wiki_link">fcase</a></li><li><a href="find-namespaces-api.html" class="wiki_link">find-namespaces</a></li><li><a href="fnmap-api.html" class="wiki_link">fnmap</a></li><li><a href="gen-html-docs-api.html" class="wiki_link">gen-html-docs</a></li><li><a href="generic.arithmetic-api.html" class="wiki_link">generic.arithmetic</a></li><li><a href="generic.collection-api.html" class="wiki_link">generic.collection</a></li><li><a href="generic.comparison-api.html" class="wiki_link">generic.comparison</a></li><li><a href="generic.functor-api.html" class="wiki_link">generic.functor</a></li><li><a href="generic.math-functions-api.html" class="wiki_link">generic.math-functions</a></li><li><a href="graph-api.html" class="wiki_link">graph</a></li><li><a href="greatest-least-api.html" class="wiki_link">greatest-least</a></li><li><a href="http.agent-api.html" class="wiki_link">http.agent</a></li><li><a href="http.connection-api.html" class="wiki_link">http.connection</a></li><li><a href="import-static-api.html" class="wiki_link">import-static</a></li><li><a href="jar-api.html" class="wiki_link">jar</a></li><li><a href="java-utils-api.html" class="wiki_link">java-utils</a></li><li><a href="javadoc.browse-api.html" class="wiki_link">javadoc.browse</a></li><li><a href="json.read-api.html" class="wiki_link">json.read</a></li><li><a href="json.write-api.html" class="wiki_link">json.write</a></li><li><a href="lazy-seqs-api.html" class="wiki_link">lazy-seqs</a></li><li><a href="lazy-xml-api.html" class="wiki_link">lazy-xml</a></li><li><a href="macro-utils-api.html" class="wiki_link">macro-utils</a></li><li><a href="macros-api.html" class="wiki_link">macros</a></li><li><a href="map-utils-api.html" class="wiki_link">map-utils</a></li><li><a href="math-api.html" class="wiki_link">math</a></li><li><a href="miglayout-api.html" class="wiki_link">miglayout</a></li><li><a href="mmap-api.html" class="wiki_link">mmap</a></li><li><a href="monadic-io-streams-api.html" class="wiki_link">monadic-io-streams</a></li><li><a href="monads-api.html" class="wiki_link">monads</a></li><li><a href="ns-utils-api.html" class="wiki_link">ns-utils</a></li><li><a href="pprint-api.html" class="wiki_link">pprint</a></li><li><a href="probabilities.finite-distributions-api.html" class="wiki_link">probabilities.finite-distributions</a></li><li><a href="probabilities.monte-carlo-api.html" class="wiki_link">probabilities.monte-carlo</a></li><li><a href="probabilities.random-numbers-api.html" class="wiki_link">probabilities.random-numbers</a></li><li><a href="profile-api.html" class="wiki_link">profile</a></li><li><a href="prxml-api.html" class="wiki_link">prxml</a></li><li><a href="repl-ln-api.html" class="wiki_link">repl-ln</a></li><li><a href="repl-utils-api.html" class="wiki_link">repl-utils</a></li><li><a href="seq-utils-api.html" class="wiki_link">seq-utils</a></li><li><a href="server-socket-api.html" class="wiki_link">server-socket</a></li><li><a href="set-api.html" class="wiki_link">set</a></li><li><a href="shell-out-api.html" class="wiki_link">shell-out</a></li><li><a href="singleton-api.html" class="wiki_link">singleton</a></li><li><a href="sql-api.html" class="wiki_link">sql</a></li><li><a href="str-utils-api.html" class="wiki_link">str-utils</a></li><li><a href="str-utils2-api.html" class="wiki_link">str-utils2</a></li><li><a href="stream-utils-api.html" class="wiki_link">stream-utils</a></li><li><a href="swing-utils-api.html" class="wiki_link">swing-utils</a></li><li><a href="trace-api.html" class="wiki_link">trace</a></li><li><a href="types-api.html" class="wiki_link">types</a></li><li><a href="with-ns-api.html" class="wiki_link">with-ns</a></li><li><a href="zip-filter-api.html" class="wiki_link">zip-filter</a></li>
+    </ul>
+  </div>
+</div>
+</div></div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div style="" id="WikiAdMargin">
+                <div id="content_view" class="wiki wikiPage">
+                  <!-- Temporary disclaimer -->
+                  <div style="background-color: #FF0000; font-weight: bold;">
+                    NOTE: These autogen pages are still under development. 
+                    Not all links work. Not all formatting in done.
+                    Contact Tom Faulhaber (tomfaulhaber on github, gmail, etc.)
+                    with any questions.
+                  </div>
+                  <div id="right-sidebar"><div><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#accumulators">accumulators</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#agent-utils">agent-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#classpath">classpath</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#combinatorics">combinatorics</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#command-line">command-line</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#complex-numbers">complex-numbers</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#cond">cond</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#condition">condition</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#core">core</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#dataflow">dataflow</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#datalog">datalog</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#def">def</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#duck-streams">duck-streams</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#error-kit">error-kit</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#except">except</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#fcase">fcase</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#find-namespaces">find-namespaces</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#fnmap">fnmap</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#gen-html-docs">gen-html-docs</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#generic.arithmetic">generic.arithmetic</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#generic.collection">generic.collection</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#generic.comparison">generic.comparison</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#generic.functor">generic.functor</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#generic.math-functions">generic.math-functions</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#graph">graph</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#greatest-least">greatest-least</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#http.agent">http.agent</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#http.connection">http.connection</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#import-static">import-static</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#jar">jar</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#java-utils">java-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#javadoc.browse">javadoc.browse</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#json.read">json.read</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#json.write">json.write</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#lazy-seqs">lazy-seqs</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#lazy-xml">lazy-xml</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#macro-utils">macro-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#macros">macros</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#map-utils">map-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#math">math</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#miglayout">miglayout</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#mmap">mmap</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#monadic-io-streams">monadic-io-streams</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#monads">monads</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#ns-utils">ns-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#pprint">pprint</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#probabilities.finite-distributions">probabilities.finite-distributions</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#probabilities.monte-carlo">probabilities.monte-carlo</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#probabilities.random-numbers">probabilities.random-numbers</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#profile">profile</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#prxml">prxml</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#repl-ln">repl-ln</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#repl-utils">repl-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#seq-utils">seq-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#server-socket">server-socket</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#set">set</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#shell-out">shell-out</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#singleton">singleton</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#sql">sql</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#str-utils">str-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#str-utils2">str-utils2</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#stream-utils">stream-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#swing-utils">swing-utils</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#trace">trace</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#types">types</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#with-ns">with-ns</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#zip-filter">zip-filter</a>
+    
+    <br />
+  </div>
+</div>
+</div></div>
+                  <div id="content-tag"><div><h1 id="toc0">An Overview of clojure.contrib</h1>
+<br />
+The user contributions library, clojure.contrib, is a collection
+of namespaces each of which implements features that we believe may be useful to 
+a large part of the clojure community. 
+<br /><br />
+This library was created by Rich Hickey but has been populated and is maintained by a 
+group of volunteers who are excited about the success of the Clojure language and 
+want to do our part to help it along. The current list of contributors is available 
+on the <a href="http://code.google.com/p/clojure-contrib/">clojure.contrib home page</a>.
+<br /><br />
+More contributions (and contributors) are welcome. If you wish to contribute, you will need
+to sign a contributor agreement (which allows Clojure and clojure.contrib to proceed
+without entanglements, see <a href="http://clojure.org/contributing">contributing</a>
+for more info). 
+<br /><br />
+The best way to start is to share a project you've written with the google group and gauge
+the interest in adding it to contrib. (Publishing it in an open source form on google code,
+github or some other easy-to-access place in the net will also help.) After general 
+discussion, Rich Hickey makes the final determination about what gets added to 
+clojure.contrib.
+<br /><br />
+Some parts of clojure.contrib may migrate into clojure.core if they prove to be so 
+generally useful that they justify being everywhere. (For example, condp started out
+as an extension in contrib, but was moved to core by popular acclamation.)
+<br /><br />
+The exact role of clojure.contrib and the future of the Clojure environment (standard 
+libraries, dependency models, packaging systems, etc.)
+is the subject of pretty much continuous discussion
+in the clojure google group and in #clojure on freenode. Feel free to join that 
+discussion and help shape the ways Clojure is extended.
+<br /><br />
+Like Clojure itself, clojure.contrib is made available under the 
+<a href="http://opensource.org/licenses/eclipse-1.0.php">Eclipse Public License (EPL)</a>. 
+clojure.contrib is copyright 2008-2009 Rich Hickey and the various contributors.
+<br /><br />
+<div id="namespace-entry">
+  <hr />
+  <h2 id="accumulators">accumulators</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="accumulators-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">A generic accumulator interface and implementations of various
+accumulators.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="accumulators-api.html#accumulators/add" id="var-tag">add</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/add-items" id="var-tag">add-items</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/combine" id="var-tag">combine</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-counter" id="var-tag">empty-counter</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-counter-with-total" id="var-tag">empty-counter-with-total</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-list" id="var-tag">empty-list</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-map" id="var-tag">empty-map</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-maximum" id="var-tag">empty-maximum</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-mean-variance" id="var-tag">empty-mean-variance</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-min-max" id="var-tag">empty-min-max</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-minimum" id="var-tag">empty-minimum</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-product" id="var-tag">empty-product</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-queue" id="var-tag">empty-queue</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-set" id="var-tag">empty-set</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-string" id="var-tag">empty-string</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-sum" id="var-tag">empty-sum</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-tuple" id="var-tag">empty-tuple</a> </span><span id="var-link"><a href="accumulators-api.html#accumulators/empty-vector" id="var-tag">empty-vector</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="agent-utils">agent-utils</h2>
+  by <span id="author">Christophe Grande</span><br />
+  API documentation <a href="agent-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Miscellaneous agent utilities
+(note to other contrib members: feel free to add to this lib)</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="agent-utils-api.html#agent-utils/capture-and-send" id="var-tag">capture-and-send</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="classpath">classpath</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="classpath-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Utilities for dealing with the JVM's classpath</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="classpath-api.html#classpath/classpath" id="var-tag">classpath</a> </span><span id="var-link"><a href="classpath-api.html#classpath/classpath-directories" id="var-tag">classpath-directories</a> </span><span id="var-link"><a href="classpath-api.html#classpath/classpath-jarfiles" id="var-tag">classpath-jarfiles</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="combinatorics">combinatorics</h2>
+  by <span id="author">Mark Engelberg</span><br />
+  API documentation <a href="combinatorics-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Efficient, functional algorithms for generating lazy
+sequences for common combinatorial functions. (See the source code 
+for a longer description.)</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="combinatorics-api.html#combinatorics/cartesian-product" id="var-tag">cartesian-product</a> </span><span id="var-link"><a href="combinatorics-api.html#combinatorics/combinations" id="var-tag">combinations</a> </span><span id="var-link"><a href="combinatorics-api.html#combinatorics/lex-permutations" id="var-tag">lex-permutations</a> </span><span id="var-link"><a href="combinatorics-api.html#combinatorics/permutations" id="var-tag">permutations</a> </span><span id="var-link"><a href="combinatorics-api.html#combinatorics/selections" id="var-tag">selections</a> </span><span id="var-link"><a href="combinatorics-api.html#combinatorics/subsets" id="var-tag">subsets</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="command-line">command-line</h2>
+  by <span id="author">Chris Houser</span><br />
+  API documentation <a href="command-line-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Process command-line arguments according to a given cmdspec</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="command-line-api.html#command-line/with-command-line" id="var-tag">with-command-line</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="complex-numbers">complex-numbers</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="complex-numbers-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Complex numbers
+NOTE: This library is in evolution. Most math functions are
+      not implemented yet.</pre>
+  
+  Public variables and functions:
+  <br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="cond">cond</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="cond-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Extensions to the basic cond function.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="cond-api.html#cond/cond-let" id="var-tag">cond-let</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="condition">condition</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="condition-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Flexible raising and handling of conditions:
 
-<body>
-  <h2>Overview of Clojure-Contrib</h2>
-  <p>
-This web page is a placeholder for the documentation pages
-that will soon be here. If you have questions, please contact Tom Faulhaber 
-(tomfaulhaber on gmail).
-</p>
-<p>
-In the meantime, the old pages on google code are still pretty up-to-date as a 
-guide to contrib: 
-<a href="http://code.google.com/p/clojure-contrib/wiki/OverviewOfContrib">see them here</a>.
-</p>
-</body>
+Functions:
+
+              raise: raises a condition
+       handler-case: dispatches raised conditions to appropriate handlers
+  print-stack-trace: prints abbreviated or full condition stack traces
+
+Data:
+
+  A condition is a map containing values for these keys:
+
+    - :type, a condition type specifier, typically a keyword
+    - :stack-trace, a stack trace to the site of the raise
+    - :message, a human-readable message (optional)
+    - :cause, a wrapped exception or condition (optional)
+    - other keys given as arguments to raise (optional)
+
+Note: requires AOT compilation.
+
+Based on an idea from Chouser:
+http://groups.google.com/group/clojure/browse_frm/thread/da1285c538f22bb5</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="condition-api.html#condition/*full-stack-traces*" id="var-tag">*full-stack-traces*</a> </span><span id="var-link"><a href="condition-api.html#condition/handler-case" id="var-tag">handler-case</a> </span><span id="var-link"><a href="condition-api.html#condition/print-stack-trace" id="var-tag">print-stack-trace</a> </span><span id="var-link"><a href="condition-api.html#condition/raise" id="var-tag">raise</a> </span><span id="var-link"><a href="condition-api.html#condition/stack-trace-info" id="var-tag">stack-trace-info</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="core">core</h2>
+  by <span id="author">Laurent Petit (and others)</span><br />
+  API documentation <a href="core-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Functions/macros variants of the ones that can be found in clojure.core 
+(note to other contrib members: feel free to add to this lib)</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="core-api.html#core/-?&gt;" id="var-tag">-?&gt;</a> </span><span id="var-link"><a href="core-api.html#core/.?." id="var-tag">.?.</a> </span><span id="var-link"><a href="core-api.html#core/dissoc-in" id="var-tag">dissoc-in</a> </span><span id="var-link"><a href="core-api.html#core/new-by-name" id="var-tag">new-by-name</a> </span><span id="var-link"><a href="core-api.html#core/seqable?" id="var-tag">seqable?</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="dataflow">dataflow</h2>
+  by <span id="author">Jeffrey Straszheim</span><br />
+  API documentation <a href="dataflow-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">A library to support a dataflow model of state</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="dataflow-api.html#dataflow/add-cell-watcher" id="var-tag">add-cell-watcher</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/add-cells" id="var-tag">add-cells</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/build-dataflow" id="var-tag">build-dataflow</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/build-source-cell" id="var-tag">build-source-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/build-standard-cell" id="var-tag">build-standard-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/build-validator-cell" id="var-tag">build-validator-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/cell" id="var-tag">cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/display-cell" id="var-tag">display-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/eval-cell" id="var-tag">eval-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-cell" id="var-tag">get-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-cells" id="var-tag">get-cells</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-old-value" id="var-tag">get-old-value</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-source-cells" id="var-tag">get-source-cells</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-value" id="var-tag">get-value</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-value-from-cell" id="var-tag">get-value-from-cell</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/get-values" id="var-tag">get-values</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/print-dataflow" id="var-tag">print-dataflow</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/remove-cells" id="var-tag">remove-cells</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/source-cell?" id="var-tag">source-cell?</a> </span><span id="var-link"><a href="dataflow-api.html#dataflow/update-values" id="var-tag">update-values</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="datalog">datalog</h2>
+  by <span id="author">Jeffrey Straszheim</span><br />
+  API documentation <a href="datalog-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">A Clojure implementation of Datalog</pre>
+  <span id="see-also">See also: 
+    <span id="see-also-link">
+      <a href="DatalogOverview">DatalogOverview</a>
+    </span><br />
+  </span>
+  Public variables and functions:
+  <span id="var-link"><a href="datalog-api.html#datalog/build-work-plan" id="var-tag">build-work-plan</a> </span><span id="var-link"><a href="datalog-api.html#datalog/run-work-plan" id="var-tag">run-work-plan</a> </span><br />
+  <span id="subspace">Variables and functions in
+    <span id="name">datalog.database</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/add-index">add-index</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/add-relation">add-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/add-tuple">add-tuple</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/add-tuples">add-tuples</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/any-match?">any-match?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/database-counts">database-counts</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/database-merge">database-merge</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/database-merge-parallel">database-merge-parallel</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/datalog-relation">datalog-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/ensure-relation">ensure-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/get-relation">get-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/make-database">make-database</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/merge-relations">merge-relations</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/remove-tuple">remove-tuple</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/replace-relation">replace-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.database/select">select</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">datalog.literals</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/adorned-literal">adorned-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/build-atom">build-atom</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/build-literal">build-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/build-seed-bindings">build-seed-bindings</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/delta-literal">delta-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/display-literal">display-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/get-adorned-bindings">get-adorned-bindings</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/get-base-predicate">get-base-predicate</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/get-cs-from-vs">get-cs-from-vs</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/get-self-bound-cs">get-self-bound-cs</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/get-vs-from-cs">get-vs-from-cs</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/join-literal">join-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/literal-appropriate?">literal-appropriate?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/literal-columns">literal-columns</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/literal-magic?">literal-magic?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/literal-predicate">literal-predicate</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/literal-vars">literal-vars</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/magic-literal">magic-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/negated-literal">negated-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/negated?">negated?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/negative-vars">negative-vars</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/positive-vars">positive-vars</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/positive?">positive?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.literals/project-literal">project-literal</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">datalog.magic</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/adorn-query">adorn-query</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/adorn-rules-set">adorn-rules-set</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/build-partial-tuple">build-partial-tuple</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/magic-transform">magic-transform</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/seed-predicate-for-insertion">seed-predicate-for-insertion</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/seed-relation">seed-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.magic/seed-rule">seed-rule</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">datalog.rules</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/&lt;-">&lt;-</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/?-">?-</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/all-predicates">all-predicates</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/apply-rule">apply-rule</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/compute-sip">compute-sip</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/display-query">display-query</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/display-rule">display-rule</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/is-safe?">is-safe?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/make-rules-set">make-rules-set</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/non-base-rules">non-base-rules</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/predicate-map">predicate-map</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/return-rule-data">return-rule-data</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.rules/rules-set">rules-set</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">datalog.softstrat</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#datalog.softstrat/build-soft-strat-work-plan">build-soft-strat-work-plan</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.softstrat/get-all-relations">get-all-relations</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">datalog.util</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/is-query-var?">is-query-var?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/is-var?">is-var?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/keys-to-vals">keys-to-vals</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/map-values">map-values</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/preduce">preduce</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/reverse-map">reverse-map</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#datalog.util/trace-datalog">trace-datalog</a>
+    </span>
+    <br />
+  </span>
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="def">def</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="def-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">def.clj provides variants of def that make including doc strings and
+making private definitions more succinct.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="def-api.html#def/defalias" id="var-tag">defalias</a> </span><span id="var-link"><a href="def-api.html#def/defhinted" id="var-tag">defhinted</a> </span><span id="var-link"><a href="def-api.html#def/defmacro-" id="var-tag">defmacro-</a> </span><span id="var-link"><a href="def-api.html#def/defn-memo" id="var-tag">defn-memo</a> </span><span id="var-link"><a href="def-api.html#def/defnk" id="var-tag">defnk</a> </span><span id="var-link"><a href="def-api.html#def/defonce-" id="var-tag">defonce-</a> </span><span id="var-link"><a href="def-api.html#def/defstruct-" id="var-tag">defstruct-</a> </span><span id="var-link"><a href="def-api.html#def/defunbound" id="var-tag">defunbound</a> </span><span id="var-link"><a href="def-api.html#def/defunbound-" id="var-tag">defunbound-</a> </span><span id="var-link"><a href="def-api.html#def/defvar" id="var-tag">defvar</a> </span><span id="var-link"><a href="def-api.html#def/defvar-" id="var-tag">defvar-</a> </span><span id="var-link"><a href="def-api.html#def/name-with-attributes" id="var-tag">name-with-attributes</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="duck-streams">duck-streams</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="duck-streams-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">This file defines "duck-typed" I/O utility functions for Clojure.
+The 'reader' and 'writer' functions will open and return an
+instance of java.io.BufferedReader and java.io.PrintWriter,
+respectively, for a variety of argument types -- filenames as
+strings, URLs, java.io.File's, etc.  'reader' even works on http
+URLs.
+
+Note: this is not really "duck typing" as implemented in languages
+like Ruby.  A better name would have been "do-what-I-mean-streams"
+or "just-give-me-a-stream", but ducks are funnier.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="duck-streams-api.html#duck-streams/*append-to-writer*" id="var-tag">*append-to-writer*</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/*buffer-size*" id="var-tag">*buffer-size*</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/*byte-array-type*" id="var-tag">*byte-array-type*</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/*default-encoding*" id="var-tag">*default-encoding*</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/append-spit" id="var-tag">append-spit</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/append-writer" id="var-tag">append-writer</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/copy" id="var-tag">copy</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/file-str" id="var-tag">file-str</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/make-parents" id="var-tag">make-parents</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/pwd" id="var-tag">pwd</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/read-lines" id="var-tag">read-lines</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/reader" id="var-tag">reader</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/slurp*" id="var-tag">slurp*</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/spit" id="var-tag">spit</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/to-byte-array" id="var-tag">to-byte-array</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/with-in-reader" id="var-tag">with-in-reader</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/with-out-append-writer" id="var-tag">with-out-append-writer</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/with-out-writer" id="var-tag">with-out-writer</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/write-lines" id="var-tag">write-lines</a> </span><span id="var-link"><a href="duck-streams-api.html#duck-streams/writer" id="var-tag">writer</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="error-kit">error-kit</h2>
+  by <span id="author">Chris Houser</span><br />
+  API documentation <a href="error-kit-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">EXPERIMENTAL
+System for defining and using custom errors
+Please contact Chouser if you have any suggestions for better names
+or API adjustments.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="error-kit-api.html#error-kit/bind-continue" id="var-tag">bind-continue</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/deferror" id="var-tag">deferror</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/do-not-handle" id="var-tag">do-not-handle</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/error" id="var-tag">error</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/handle" id="var-tag">handle</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/raise" id="var-tag">raise</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/raise*" id="var-tag">raise*</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/throw-msg" id="var-tag">throw-msg</a> </span><span id="var-link"><a href="error-kit-api.html#error-kit/with-handler" id="var-tag">with-handler</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="except">except</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="except-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Provides functions that make it easy to specify the class, cause, and
+message when throwing an Exception or Error. The optional message is
+formatted using clojure.core/format.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="except-api.html#except/throw-arg" id="var-tag">throw-arg</a> </span><span id="var-link"><a href="except-api.html#except/throw-if" id="var-tag">throw-if</a> </span><span id="var-link"><a href="except-api.html#except/throw-if-not" id="var-tag">throw-if-not</a> </span><span id="var-link"><a href="except-api.html#except/throwf" id="var-tag">throwf</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="fcase">fcase</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="fcase-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">This file defines a generic "case" macro called "fcase" which takes
+the equality-testing function as an argument.  It also defines a
+traditional "case" macro that tests using "=" and variants that
+test for regular expressions and class membership.
+
+
+Note (December 23, 2008): This library has been supplanted by the
+inclusion of "condp" in clojure.core as of Clojure SVN rev. 1180.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="fcase-api.html#fcase/case" id="var-tag">case</a> </span><span id="var-link"><a href="fcase-api.html#fcase/fcase" id="var-tag">fcase</a> </span><span id="var-link"><a href="fcase-api.html#fcase/in-case" id="var-tag">in-case</a> </span><span id="var-link"><a href="fcase-api.html#fcase/instance-case" id="var-tag">instance-case</a> </span><span id="var-link"><a href="fcase-api.html#fcase/re-case" id="var-tag">re-case</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="find-namespaces">find-namespaces</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="find-namespaces-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Search for ns declarations in dirs, JARs, or CLASSPATH</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="find-namespaces-api.html#find-namespaces/clojure-source-file?" id="var-tag">clojure-source-file?</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/clojure-sources-in-jar" id="var-tag">clojure-sources-in-jar</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/comment?" id="var-tag">comment?</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-clojure-sources-in-dir" id="var-tag">find-clojure-sources-in-dir</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-namespaces-in-dir" id="var-tag">find-namespaces-in-dir</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-namespaces-in-jarfile" id="var-tag">find-namespaces-in-jarfile</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-namespaces-on-classpath" id="var-tag">find-namespaces-on-classpath</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-ns-decls-in-dir" id="var-tag">find-ns-decls-in-dir</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-ns-decls-in-jarfile" id="var-tag">find-ns-decls-in-jarfile</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/find-ns-decls-on-classpath" id="var-tag">find-ns-decls-on-classpath</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/ns-decl?" id="var-tag">ns-decl?</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/read-file-ns-decl" id="var-tag">read-file-ns-decl</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/read-ns-decl" id="var-tag">read-ns-decl</a> </span><span id="var-link"><a href="find-namespaces-api.html#find-namespaces/read-ns-decl-from-jarfile-entry" id="var-tag">read-ns-decl-from-jarfile-entry</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="fnmap">fnmap</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="fnmap-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Maps that dispatch get/assoc to user-defined functions.
+
+Note: requires AOT-compilation</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="fnmap-api.html#fnmap/fnmap" id="var-tag">fnmap</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="gen-html-docs">gen-html-docs</h2>
+  by <span id="author">Craig Andera</span><br />
+  API documentation <a href="gen-html-docs-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Generates a single HTML page that contains the documentation for
+one or more Clojure libraries.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="gen-html-docs-api.html#gen-html-docs/generate-documentation" id="var-tag">generate-documentation</a> </span><span id="var-link"><a href="gen-html-docs-api.html#gen-html-docs/generate-documentation-to-file" id="var-tag">generate-documentation-to-file</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="generic.arithmetic">generic.arithmetic</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="generic.arithmetic-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Generic arithmetic interface
+This library defines generic versions of + - * / as multimethods
+that can be defined for any type. The minimal required 
+implementations for a type are binary + and * plus unary - and /.
+Everything else is derived from these automatically. Explicit
+binary definitions for - and / can be provided for
+efficiency reasons.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="generic.arithmetic-api.html#generic.arithmetic/*" id="var-tag">*</a> </span><span id="var-link"><a href="generic.arithmetic-api.html#generic.arithmetic/+" id="var-tag">+</a> </span><span id="var-link"><a href="generic.arithmetic-api.html#generic.arithmetic/-" id="var-tag">-</a> </span><span id="var-link"><a href="generic.arithmetic-api.html#generic.arithmetic//" id="var-tag">/</a> </span><span id="var-link"><a href="generic.arithmetic-api.html#generic.arithmetic/defmethod*" id="var-tag">defmethod*</a> </span><span id="var-link"><a href="generic.arithmetic-api.html#generic.arithmetic/qsym" id="var-tag">qsym</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="generic.collection">generic.collection</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="generic.collection-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Generic arithmetic interface
+This library defines generic versions of common
+collection-related functions as multimethods that can be
+defined for any type.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="generic.collection-api.html#generic.collection/assoc" id="var-tag">assoc</a> </span><span id="var-link"><a href="generic.collection-api.html#generic.collection/conj" id="var-tag">conj</a> </span><span id="var-link"><a href="generic.collection-api.html#generic.collection/dissoc" id="var-tag">dissoc</a> </span><span id="var-link"><a href="generic.collection-api.html#generic.collection/empty" id="var-tag">empty</a> </span><span id="var-link"><a href="generic.collection-api.html#generic.collection/get" id="var-tag">get</a> </span><span id="var-link"><a href="generic.collection-api.html#generic.collection/into" id="var-tag">into</a> </span><span id="var-link"><a href="generic.collection-api.html#generic.collection/seq" id="var-tag">seq</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="generic.comparison">generic.comparison</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="generic.comparison-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Generic comparison interface
+This library defines generic versions of = &lt; &gt; &lt;= &gt;= zero?
+as multimethods that can be defined for any type. Of the
+greater/less-than relations, types must minimally implement &gt;.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="generic.comparison-api.html#generic.comparison/&lt;" id="var-tag">&lt;</a> </span><span id="var-link"><a href="generic.comparison-api.html#generic.comparison/&lt;=" id="var-tag">&lt;=</a> </span><span id="var-link"><a href="generic.comparison-api.html#generic.comparison/=" id="var-tag">=</a> </span><span id="var-link"><a href="generic.comparison-api.html#generic.comparison/&gt;" id="var-tag">&gt;</a> </span><span id="var-link"><a href="generic.comparison-api.html#generic.comparison/&gt;=" id="var-tag">&gt;=</a> </span><span id="var-link"><a href="generic.comparison-api.html#generic.comparison/zero?" id="var-tag">zero?</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="generic.functor">generic.functor</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="generic.functor-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Generic functor interface (fmap)</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="generic.functor-api.html#generic.functor/fmap" id="var-tag">fmap</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="generic.math-functions">generic.math-functions</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="generic.math-functions-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Generic math function interface
+This library defines generic versions of common mathematical
+functions such as sqrt or sin as multimethods that can be
+defined for any type.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/abs" id="var-tag">abs</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/acos" id="var-tag">acos</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/approx=" id="var-tag">approx=</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/asin" id="var-tag">asin</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/atan" id="var-tag">atan</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/atan2" id="var-tag">atan2</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/ceil" id="var-tag">ceil</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/conjugate" id="var-tag">conjugate</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/cos" id="var-tag">cos</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/exp" id="var-tag">exp</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/floor" id="var-tag">floor</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/log" id="var-tag">log</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/pow" id="var-tag">pow</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/rint" id="var-tag">rint</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/round" id="var-tag">round</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/sgn" id="var-tag">sgn</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/sin" id="var-tag">sin</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/sqr" id="var-tag">sqr</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/sqrt" id="var-tag">sqrt</a> </span><span id="var-link"><a href="generic.math-functions-api.html#generic.math-functions/tan" id="var-tag">tan</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="graph">graph</h2>
+  by <span id="author">Jeffrey Straszheim</span><br />
+  API documentation <a href="graph-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Basic graph theory algorithms</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="graph-api.html#graph/add-loops" id="var-tag">add-loops</a> </span><span id="var-link"><a href="graph-api.html#graph/component-graph" id="var-tag">component-graph</a> </span><span id="var-link"><a href="graph-api.html#graph/dependency-list" id="var-tag">dependency-list</a> </span><span id="var-link"><a href="graph-api.html#graph/fixed-point" id="var-tag">fixed-point</a> </span><span id="var-link"><a href="graph-api.html#graph/get-neighbors" id="var-tag">get-neighbors</a> </span><span id="var-link"><a href="graph-api.html#graph/lazy-walk" id="var-tag">lazy-walk</a> </span><span id="var-link"><a href="graph-api.html#graph/post-ordered-nodes" id="var-tag">post-ordered-nodes</a> </span><span id="var-link"><a href="graph-api.html#graph/recursive-component?" id="var-tag">recursive-component?</a> </span><span id="var-link"><a href="graph-api.html#graph/remove-loops" id="var-tag">remove-loops</a> </span><span id="var-link"><a href="graph-api.html#graph/reverse-graph" id="var-tag">reverse-graph</a> </span><span id="var-link"><a href="graph-api.html#graph/scc" id="var-tag">scc</a> </span><span id="var-link"><a href="graph-api.html#graph/self-recursive-sets" id="var-tag">self-recursive-sets</a> </span><span id="var-link"><a href="graph-api.html#graph/stratification-list" id="var-tag">stratification-list</a> </span><span id="var-link"><a href="graph-api.html#graph/transitive-closure" id="var-tag">transitive-closure</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="greatest-least">greatest-least</h2>
+  by <span id="author">Vincent Foley</span><br />
+  API documentation <a href="greatest-least-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Various functions for finding greatest and least values in a collection</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="greatest-least-api.html#greatest-least/all-greatest" id="var-tag">all-greatest</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/all-greatest-by" id="var-tag">all-greatest-by</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/all-least" id="var-tag">all-least</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/all-least-by" id="var-tag">all-least-by</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/greatest" id="var-tag">greatest</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/greatest-by" id="var-tag">greatest-by</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/least" id="var-tag">least</a> </span><span id="var-link"><a href="greatest-least-api.html#greatest-least/least-by" id="var-tag">least-by</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="http.agent">http.agent</h2>
+  by <span id="author">unknown author</span><br />
+  API documentation <a href="http.agent-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Agent-based asynchronous HTTP client.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="http.agent-api.html#http.agent/http-agent" id="var-tag">http-agent</a> </span><span id="var-link"><a href="http.agent-api.html#http.agent/response-body-bytes" id="var-tag">response-body-bytes</a> </span><span id="var-link"><a href="http.agent-api.html#http.agent/response-body-str" id="var-tag">response-body-str</a> </span><span id="var-link"><a href="http.agent-api.html#http.agent/response-headers" id="var-tag">response-headers</a> </span><span id="var-link"><a href="http.agent-api.html#http.agent/response-headers-seq" id="var-tag">response-headers-seq</a> </span><span id="var-link"><a href="http.agent-api.html#http.agent/response-message" id="var-tag">response-message</a> </span><span id="var-link"><a href="http.agent-api.html#http.agent/response-status" id="var-tag">response-status</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="http.connection">http.connection</h2>
+  by <span id="author">unknown author</span><br />
+  API documentation <a href="http.connection-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Low-level HTTP client API around HttpURLConnection</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="http.connection-api.html#http.connection/http-connection" id="var-tag">http-connection</a> </span><span id="var-link"><a href="http.connection-api.html#http.connection/send-request-entity" id="var-tag">send-request-entity</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="import-static">import-static</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="import-static-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Import static Java methods/fields into Clojure</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="import-static-api.html#import-static/import-static" id="var-tag">import-static</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="jar">jar</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="jar-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Utilities for working with Java JAR files</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="jar-api.html#jar/filenames-in-jar" id="var-tag">filenames-in-jar</a> </span><span id="var-link"><a href="jar-api.html#jar/jar-file?" id="var-tag">jar-file?</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="java-utils">java-utils</h2>
+  by <span id="author">Stuart Halloway, Stephen C. Gilardi, Shawn Hoover, Perry Trolard, Stuart Sierra</span><br />
+  API documentation <a href="java-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">A set of utilties for dealing with Java stuff like files and properties.
+
+Design goals:
+
+(1) Ease-of-use. These APIs should be convenient. Performance is secondary.
+
+(2) Duck typing. I hate having to think about the difference between
+    a string that names a file, and a File. Ditto for a ton of other 
+    wrapper classes in the Java world (URL, InternetAddress). With these
+    APIs you should be able to think about domain equivalence, not type
+    equivalence.
+
+(3) No bossiness. I am not marking any of these functions as private
+    the docstrings will tell you the intended usage but do what works for you. 					
+
+Feedback welcome!
+
+If something in this module violates the principle of least surprise, please 
+let me (Stu) and the Clojure community know via the mailing list.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="java-utils-api.html#java-utils/as-file" id="var-tag">as-file</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/as-properties" id="var-tag">as-properties</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/as-str" id="var-tag">as-str</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/as-url" id="var-tag">as-url</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/file" id="var-tag">file</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/get-system-property" id="var-tag">get-system-property</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/read-properties" id="var-tag">read-properties</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/relative-path-string" id="var-tag">relative-path-string</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/set-system-properties" id="var-tag">set-system-properties</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/with-system-properties" id="var-tag">with-system-properties</a> </span><span id="var-link"><a href="java-utils-api.html#java-utils/write-properties" id="var-tag">write-properties</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="javadoc.browse">javadoc.browse</h2>
+  by <span id="author">Christophe Grand</span><br />
+  API documentation <a href="javadoc.browse-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Start a web browser from Clojure</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="javadoc.browse-api.html#javadoc.browse/open-url-in-browser" id="var-tag">open-url-in-browser</a> </span><span id="var-link"><a href="javadoc.browse-api.html#javadoc.browse/open-url-in-swing" id="var-tag">open-url-in-swing</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="json.read">json.read</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="json.read-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">JavaScript Object Notation (JSON) parser
+
+For more information on JSON, see http://www.json.org/
+
+This library parses data in JSON format.  This is a fairly strict
+implementation of JSON as described at json.org, not a full-fledged
+JavaScript parser.  JavaScript functions and object constructors
+are not supported.  Object field names must be quoted strings; they
+may not be bare symbols.
+
+If you want to convert map keys from strings to keywords, use
+clojure.contrib.walk/keywordize-keys</pre>
+  <span id="see-also">See also: 
+    <span id="see-also-link">
+      <a href="http://www.json.org">JSON Home Page</a>
+    </span><br />
+  </span>
+  Public variables and functions:
+  <span id="var-link"><a href="json.read-api.html#json.read/*json-keyword-keys*" id="var-tag">*json-keyword-keys*</a> </span><span id="var-link"><a href="json.read-api.html#json.read/read-json" id="var-tag">read-json</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="json.write">json.write</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="json.write-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">JavaScript Object Notation (JSON) generator.
+
+This library will generate JSON from the following types:
+ * nil
+ * all primitives (Boolean, Byte, Short, Integer, Long, Float, Double)
+ * String (actually any CharSequence)
+ * java.util.Map (including Clojure maps)
+ * java.util.Collection (including Clojure vectors, lists, and sets)
+ * Java arrays
+
+You can extend this library to handle new types by adding methods to
+print-json.
+
+This library does NOT attempt to preserve round-trip equality between
+JSON and Clojure data types. That is, if you write a JSON string with
+this library, then read it back with clojure.contrib.json.read, you
+won't necessarily get the exact same data structure.  For example,
+Clojure sets are written as JSON arrays, which will be read back as
+Clojure vectors.
+
+If you want indented output, try the clojure-json library at
+http://github.com/danlarkin/clojure-json
+
+This implementation attempts to follow the description of JSON at
+&lt;http://json.org/&gt;.  Maps become JSON objects, all other collections
+become JSON arrays.  JSON object keys are always converted to strings.
+Within strings, all non-ASCII characters are hexadecimal escaped.</pre>
+  <span id="see-also">See also: 
+    <span id="see-also-link">
+      <a href="http://json.org/">JSON Home Page</a>
+    </span><br />
+  </span>
+  Public variables and functions:
+  <span id="var-link"><a href="json.write-api.html#json.write/json-str" id="var-tag">json-str</a> </span><span id="var-link"><a href="json.write-api.html#json.write/print-json" id="var-tag">print-json</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="lazy-seqs">lazy-seqs</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="lazy-seqs-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">
+==== Lazy sequences ====
+
+ primes - based on the "naive" implemention described in [1] plus a
+          small "wheel" which eliminates multiples of 2, 3, 5, and
+          7 from consideration by incrementing past them. Also inspired
+          by code from Christophe Grand in [2].
+
+ fibs   - all the Fibonacci numbers
+
+ powers-of-2 - all the powers of 2
+
+ ==== Lazy sequence functions ====
+
+ (rotations, partition-all, shuffle, rand-elt  moved to seq_utils.clj)
+ (permutations and combinations moved to combinatorics.clj)
+
+ [1] http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf
+ [2] http://clj-me.blogspot.com/2008/06/primes.html</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="lazy-seqs-api.html#lazy-seqs/fibs" id="var-tag">fibs</a> </span><span id="var-link"><a href="lazy-seqs-api.html#lazy-seqs/powers-of-2" id="var-tag">powers-of-2</a> </span><span id="var-link"><a href="lazy-seqs-api.html#lazy-seqs/primes" id="var-tag">primes</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="lazy-xml">lazy-xml</h2>
+  by <span id="author">Chris Houser</span><br />
+  API documentation <a href="lazy-xml-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Functions to parse xml lazily and emit back to text.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="lazy-xml-api.html#lazy-xml/emit" id="var-tag">emit</a> </span><span id="var-link"><a href="lazy-xml-api.html#lazy-xml/emit-element" id="var-tag">emit-element</a> </span><span id="var-link"><a href="lazy-xml-api.html#lazy-xml/parse-seq" id="var-tag">parse-seq</a> </span><span id="var-link"><a href="lazy-xml-api.html#lazy-xml/parse-trim" id="var-tag">parse-trim</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="macro-utils">macro-utils</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="macro-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Local macros and symbol macros
+
+Local macros are defined by a macrolet form. They are usable only
+inside its body. Symbol macros can be defined globally
+(defsymbolmacro) or locally (symbol-macrolet). A symbol
+macro defines a form that replaces a symbol during macro
+expansion. Function arguments and symbols bound in let
+forms are not subject to symbol macro expansion.
+
+Local macros are most useful in the definition of the expansion
+of another macro, they may be used anywhere. Global symbol
+macros can be used only inside a with-symbol-macros form.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="macro-utils-api.html#macro-utils/defsymbolmacro" id="var-tag">defsymbolmacro</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/deftemplate" id="var-tag">deftemplate</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/macrolet" id="var-tag">macrolet</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/mexpand" id="var-tag">mexpand</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/mexpand-1" id="var-tag">mexpand-1</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/mexpand-all" id="var-tag">mexpand-all</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/symbol-macrolet" id="var-tag">symbol-macrolet</a> </span><span id="var-link"><a href="macro-utils-api.html#macro-utils/with-symbol-macros" id="var-tag">with-symbol-macros</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="macros">macros</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="macros-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Various small macros</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="macros-api.html#macros/const" id="var-tag">const</a> </span><span id="var-link"><a href="macros-api.html#macros/letfn-" id="var-tag">letfn-</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="map-utils">map-utils</h2>
+  by <span id="author">Jason Wolfe, Chris Houser</span><br />
+  API documentation <a href="map-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Utilities for operating on Clojure maps.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="map-utils-api.html#map-utils/deep-merge-with" id="var-tag">deep-merge-with</a> </span><span id="var-link"><a href="map-utils-api.html#map-utils/lazy-get" id="var-tag">lazy-get</a> </span><span id="var-link"><a href="map-utils-api.html#map-utils/safe-get" id="var-tag">safe-get</a> </span><span id="var-link"><a href="map-utils-api.html#map-utils/safe-get-in" id="var-tag">safe-get-in</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="math">math</h2>
+  by <span id="author">Mark Engelberg</span><br />
+  API documentation <a href="math-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Math functions that deal intelligently with the various
+types in Clojure's numeric tower, as well as math functions
+commonly found in Scheme implementations.
+
+expt - (expt x y) is x to the yth power, returns an exact number
+  if the base is an exact number, and the power is an integer,
+  otherwise returns a double.
+abs - (abs n) is the absolute value of n
+gcd - (gcd m n) returns the greatest common divisor of m and n
+lcm - (lcm m n) returns the least common multiple of m and n
+
+The behavior of the next three functions on doubles is consistent
+with the behavior of the corresponding functions
+in Java's Math library, but on exact numbers, returns an integer.
+
+floor - (floor n) returns the greatest integer less than or equal to n.
+  If n is an exact number, floor returns an integer,
+  otherwise a double.
+ceil - (ceil n) returns the least integer greater than or equal to n.
+  If n is an exact number, ceil returns an integer,
+  otherwise a double.
+round - (round n) rounds to the nearest integer.
+  round always returns an integer.  round rounds up for values
+  exactly in between two integers.
+
+
+sqrt - Implements the sqrt behavior I'm accustomed to from PLT Scheme,
+  specifically, if the input is an exact number, and is a square
+  of an exact number, the output will be exact.  The downside
+  is that for the common case (inexact square root), some extra
+  computation is done to look for an exact square root first.
+  So if you need blazingly fast square root performance, and you
+  know you're just going to need a double result, you're better
+  off calling java's Math/sqrt, or alternatively, you could just
+  convert your input to a double before calling this sqrt function.
+  If Clojure ever gets complex numbers, then this function will
+  need to be updated (so negative inputs yield complex outputs).
+exact-integer-sqrt - Implements a math function from the R6RS Scheme
+  standard.  (exact-integer-sqrt k) where k is a non-negative integer,
+  returns [s r] where k = s^2+r and k &lt; (s+1)^2.  In other words, it
+  returns the floor of the square root and the </pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="math-api.html#math/abs" id="var-tag">abs</a> </span><span id="var-link"><a href="math-api.html#math/ceil" id="var-tag">ceil</a> </span><span id="var-link"><a href="math-api.html#math/exact-integer-sqrt" id="var-tag">exact-integer-sqrt</a> </span><span id="var-link"><a href="math-api.html#math/expt" id="var-tag">expt</a> </span><span id="var-link"><a href="math-api.html#math/floor" id="var-tag">floor</a> </span><span id="var-link"><a href="math-api.html#math/gcd" id="var-tag">gcd</a> </span><span id="var-link"><a href="math-api.html#math/lcm" id="var-tag">lcm</a> </span><span id="var-link"><a href="math-api.html#math/round" id="var-tag">round</a> </span><span id="var-link"><a href="math-api.html#math/sqrt" id="var-tag">sqrt</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="miglayout">miglayout</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="miglayout-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Clojure support for the MiGLayout layout manager
+http://www.miglayout.com/
+
+Example:
+
+  (use '[clojure.contrib.miglayout.test :as mlt :only ()])
+  (dotimes [i 5] (mlt/run-test i))</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="miglayout-api.html#miglayout/components" id="var-tag">components</a> </span><span id="var-link"><a href="miglayout-api.html#miglayout/miglayout" id="var-tag">miglayout</a> </span><br />
+  <span id="subspace">Variables and functions in
+    <span id="name">miglayout.example</span>:
+    <span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.example/converter-ui">converter-ui</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.example/fahrenheit">fahrenheit</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.example/main">main</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">miglayout.internal</span>:
+    <span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/add-components">add-components</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/component?">component?</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/constraint?">constraint?</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/do-layout">do-layout</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/format-constraint">format-constraint</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/format-constraints">format-constraints</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/get-components">get-components</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/parse-component-constraint">parse-component-constraint</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.internal/parse-item-constraints">parse-item-constraints</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">miglayout.test</span>:
+    <span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.test/label">label</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.test/sep">sep</a>
+    </span><span id="sub-var-link">
+      <a href="miglayout-api.html#miglayout.test/text-field">text-field</a>
+    </span>
+    <br />
+  </span>
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="mmap">mmap</h2>
+  by <span id="author">Chris Houser</span><br />
+  API documentation <a href="mmap-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Functions for memory-mapping files, plus some functions that use a
+mmaped file for "normal" activies -- slurp, load-file, etc.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="mmap-api.html#mmap/buffer-stream" id="var-tag">buffer-stream</a> </span><span id="var-link"><a href="mmap-api.html#mmap/mmap" id="var-tag">mmap</a> </span><span id="var-link"><a href="mmap-api.html#mmap/slurp" id="var-tag">slurp</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="monadic-io-streams">monadic-io-streams</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="monadic-io-streams-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Monadic I/O with Java input/output streams
+Defines monadic I/O statements to be used in a state monad
+with an input or output stream as the state. The macro
+monadic-io creates a stream, runs a monadic I/O statement
+on it, and closes the stream. This structure permits the
+definition of purely functional compound I/O statements
+which are applied to streams that can never escape from the
+monadic statement sequence.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/flush" id="var-tag">flush</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/print" id="var-tag">print</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/println" id="var-tag">println</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/read-char" id="var-tag">read-char</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/read-line" id="var-tag">read-line</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/read-lines" id="var-tag">read-lines</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/skip-chars" id="var-tag">skip-chars</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/with-io-streams" id="var-tag">with-io-streams</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/with-reader" id="var-tag">with-reader</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/with-writer" id="var-tag">with-writer</a> </span><span id="var-link"><a href="monadic-io-streams-api.html#monadic-io-streams/write" id="var-tag">write</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="monads">monads</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="monads-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">This library contains the most commonly used monads as well
+as macros for defining and using monads and useful monadic
+functions.</pre>
+  <span id="see-also">See also: 
+    <span id="see-also-link">
+      <a href="http://onclojure.com/2009/03/05/a-monad-tutorial-for-clojure-programmers-part-1/">Monad tutorial part 1</a>
+    </span><span id="see-also-link">
+      <a href="http://onclojure.com/2009/03/06/a-monad-tutorial-for-clojure-programmers-part-2/">Monad tutorial part 2</a>
+    </span><span id="see-also-link">
+      <a href="http://onclojure.com/2009/03/23/a-monad-tutorial-for-clojure-programmers-part-3/">Monad tutorial part 3</a>
+    </span><span id="see-also-link">
+      <a href="http://onclojure.com/2009/04/24/a-monad-tutorial-for-clojure-programmers-part-4/">Monad tutorial part 4</a>
+    </span><span id="see-also-link">
+      <a href="http://intensivesystems.net/tutorials/monads_101.html">Monads in Clojure part 1</a>
+    </span><span id="see-also-link">
+      <a href="http://intensivesystems.net/tutorials/monads_201.html">Monads in Clojure part 2</a>
+    </span><br />
+  </span>
+  Public variables and functions:
+  <span id="var-link"><a href="monads-api.html#monads/call-cc" id="var-tag">call-cc</a> </span><span id="var-link"><a href="monads-api.html#monads/cont-m" id="var-tag">cont-m</a> </span><span id="var-link"><a href="monads-api.html#monads/defmonad" id="var-tag">defmonad</a> </span><span id="var-link"><a href="monads-api.html#monads/defmonadfn" id="var-tag">defmonadfn</a> </span><span id="var-link"><a href="monads-api.html#monads/domonad" id="var-tag">domonad</a> </span><span id="var-link"><a href="monads-api.html#monads/fetch-state" id="var-tag">fetch-state</a> </span><span id="var-link"><a href="monads-api.html#monads/fetch-val" id="var-tag">fetch-val</a> </span><span id="var-link"><a href="monads-api.html#monads/identity-m" id="var-tag">identity-m</a> </span><span id="var-link"><a href="monads-api.html#monads/m-chain" id="var-tag">m-chain</a> </span><span id="var-link"><a href="monads-api.html#monads/m-fmap" id="var-tag">m-fmap</a> </span><span id="var-link"><a href="monads-api.html#monads/m-join" id="var-tag">m-join</a> </span><span id="var-link"><a href="monads-api.html#monads/m-lift" id="var-tag">m-lift</a> </span><span id="var-link"><a href="monads-api.html#monads/m-map" id="var-tag">m-map</a> </span><span id="var-link"><a href="monads-api.html#monads/m-reduce" id="var-tag">m-reduce</a> </span><span id="var-link"><a href="monads-api.html#monads/m-seq" id="var-tag">m-seq</a> </span><span id="var-link"><a href="monads-api.html#monads/m-until" id="var-tag">m-until</a> </span><span id="var-link"><a href="monads-api.html#monads/m-when" id="var-tag">m-when</a> </span><span id="var-link"><a href="monads-api.html#monads/m-when-not" id="var-tag">m-when-not</a> </span><span id="var-link"><a href="monads-api.html#monads/maybe-m" id="var-tag">maybe-m</a> </span><span id="var-link"><a href="monads-api.html#monads/maybe-t" id="var-tag">maybe-t</a> </span><span id="var-link"><a href="monads-api.html#monads/monad" id="var-tag">monad</a> </span><span id="var-link"><a href="monads-api.html#monads/monad-transformer" id="var-tag">monad-transformer</a> </span><span id="var-link"><a href="monads-api.html#monads/run-cont" id="var-tag">run-cont</a> </span><span id="var-link"><a href="monads-api.html#monads/sequence-m" id="var-tag">sequence-m</a> </span><span id="var-link"><a href="monads-api.html#monads/sequence-t" id="var-tag">sequence-t</a> </span><span id="var-link"><a href="monads-api.html#monads/set-m" id="var-tag">set-m</a> </span><span id="var-link"><a href="monads-api.html#monads/set-state" id="var-tag">set-state</a> </span><span id="var-link"><a href="monads-api.html#monads/set-val" id="var-tag">set-val</a> </span><span id="var-link"><a href="monads-api.html#monads/state-m" id="var-tag">state-m</a> </span><span id="var-link"><a href="monads-api.html#monads/state-m-until" id="var-tag">state-m-until</a> </span><span id="var-link"><a href="monads-api.html#monads/state-t" id="var-tag">state-t</a> </span><span id="var-link"><a href="monads-api.html#monads/update-state" id="var-tag">update-state</a> </span><span id="var-link"><a href="monads-api.html#monads/update-val" id="var-tag">update-val</a> </span><span id="var-link"><a href="monads-api.html#monads/with-monad" id="var-tag">with-monad</a> </span><span id="var-link"><a href="monads-api.html#monads/with-state-field" id="var-tag">with-state-field</a> </span><span id="var-link"><a href="monads-api.html#monads/writer-m" id="var-tag">writer-m</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="ns-utils">ns-utils</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="ns-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Namespace utilities</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="ns-utils-api.html#ns-utils/dir" id="var-tag">dir</a> </span><span id="var-link"><a href="ns-utils-api.html#ns-utils/docs" id="var-tag">docs</a> </span><span id="var-link"><a href="ns-utils-api.html#ns-utils/get-ns" id="var-tag">get-ns</a> </span><span id="var-link"><a href="ns-utils-api.html#ns-utils/ns-vars" id="var-tag">ns-vars</a> </span><span id="var-link"><a href="ns-utils-api.html#ns-utils/print-dir" id="var-tag">print-dir</a> </span><span id="var-link"><a href="ns-utils-api.html#ns-utils/print-docs" id="var-tag">print-docs</a> </span><span id="var-link"><a href="ns-utils-api.html#ns-utils/vars" id="var-tag">vars</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="pprint">pprint</h2>
+  by <span id="author">Tom Faulhaber</span><br />
+  API documentation <a href="pprint-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">This module comprises two elements:
+1) A pretty printer for Clojure data structures, implemented in the function "pprint"
+2) A Common Lisp compatible format function, implemented as "cl-format" because
+   Clojure is using the name "format" for its own format.
+
+Complete documentation is available on the wiki at the contrib google code site.</pre>
+  <span id="see-also">See also: 
+    <span id="see-also-link">
+      <a href="PrettyPrinting">Documentation for the pretty printer</a>
+    </span><span id="see-also-link">
+      <a href="CommonLispFormat">Documentation for Common Lisp format function</a>
+    </span><br />
+  </span>
+  Public variables and functions:
+  <span id="var-link"><a href="pprint-api.html#pprint/*code-dispatch*" id="var-tag">*code-dispatch*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-base*" id="var-tag">*print-base*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-circle*" id="var-tag">*print-circle*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-lines*" id="var-tag">*print-lines*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-miser-width*" id="var-tag">*print-miser-width*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-pprint-dispatch*" id="var-tag">*print-pprint-dispatch*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-pretty*" id="var-tag">*print-pretty*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-radix*" id="var-tag">*print-radix*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-right-margin*" id="var-tag">*print-right-margin*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-shared*" id="var-tag">*print-shared*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-suppress-namespaces*" id="var-tag">*print-suppress-namespaces*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*simple-dispatch*" id="var-tag">*simple-dispatch*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/cl-format" id="var-tag">cl-format</a> </span><span id="var-link"><a href="pprint-api.html#pprint/compile-format" id="var-tag">compile-format</a> </span><span id="var-link"><a href="pprint-api.html#pprint/formatter" id="var-tag">formatter</a> </span><span id="var-link"><a href="pprint-api.html#pprint/formatter-out" id="var-tag">formatter-out</a> </span><span id="var-link"><a href="pprint-api.html#pprint/fresh-line" id="var-tag">fresh-line</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pp" id="var-tag">pp</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint" id="var-tag">pprint</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-indent" id="var-tag">pprint-indent</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-logical-block" id="var-tag">pprint-logical-block</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-newline" id="var-tag">pprint-newline</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-tab" id="var-tag">pprint-tab</a> </span><span id="var-link"><a href="pprint-api.html#pprint/set-pprint-dispatch" id="var-tag">set-pprint-dispatch</a> </span><span id="var-link"><a href="pprint-api.html#pprint/use-method" id="var-tag">use-method</a> </span><span id="var-link"><a href="pprint-api.html#pprint/with-pprint-dispatch" id="var-tag">with-pprint-dispatch</a> </span><span id="var-link"><a href="pprint-api.html#pprint/write" id="var-tag">write</a> </span><span id="var-link"><a href="pprint-api.html#pprint/write-out" id="var-tag">write-out</a> </span><br />
+  <span id="subspace">Variables and functions in
+    <span id="name">pprint.examples.json</span>:
+    <span id="sub-var-link">
+      <a href="pprint-api.html#pprint.examples.json/dispatch-json">dispatch-json</a>
+    </span><span id="sub-var-link">
+      <a href="pprint-api.html#pprint.examples.json/json-str">json-str</a>
+    </span><span id="sub-var-link">
+      <a href="pprint-api.html#pprint.examples.json/print-json">print-json</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">pprint.examples.xml</span>:
+    <span id="sub-var-link">
+      <a href="pprint-api.html#pprint.examples.xml/*html-compatible*">*html-compatible*</a>
+    </span><span id="sub-var-link">
+      <a href="pprint-api.html#pprint.examples.xml/*prxml-indent*">*prxml-indent*</a>
+    </span><span id="sub-var-link">
+      <a href="pprint-api.html#pprint.examples.xml/prxml">prxml</a>
+    </span>
+    <br />
+  </span>
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="probabilities.finite-distributions">probabilities.finite-distributions</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="probabilities.finite-distributions-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Finite probability distributions
+This library defines a monad for combining finite probability
+distributions.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/certainly" id="var-tag">certainly</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/choose" id="var-tag">choose</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/cond-dist-m" id="var-tag">cond-dist-m</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/cond-prob" id="var-tag">cond-prob</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/dist-m" id="var-tag">dist-m</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/join-with" id="var-tag">join-with</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/make-distribution" id="var-tag">make-distribution</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/normalize" id="var-tag">normalize</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/prob" id="var-tag">prob</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/uniform" id="var-tag">uniform</a> </span><span id="var-link"><a href="probabilities.finite-distributions-api.html#probabilities.finite-distributions/zipf" id="var-tag">zipf</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="probabilities.monte-carlo">probabilities.monte-carlo</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="probabilities.monte-carlo-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Monte-Carlo method support
+
+Monte-Carlo methods transform an input random number stream
+(usually having a continuous uniform distribution in the
+interval [0, 1)) into a random number stream whose distribution
+satisfies certain conditions (usually the expectation value
+is equal to some desired quantity). They are thus
+transformations from one probability distribution to another one.
+
+This library represents a Monte-Carlo method by a function that
+takes as input the state of a random number stream with
+uniform distribution (see
+clojure.contrib.probabilities.random-numbers) and returns a
+vector containing one sample value of the desired output
+distribution and the final state of the input random number
+stream. Such functions are state monad values and can be
+composed using operations defined in clojure.contrib.monads.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/discrete" id="var-tag">discrete</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/exponential" id="var-tag">exponential</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/lognormal" id="var-tag">lognormal</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/n-sphere" id="var-tag">n-sphere</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/normal" id="var-tag">normal</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/normal-box-muller" id="var-tag">normal-box-muller</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/random-stream" id="var-tag">random-stream</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/reject" id="var-tag">reject</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample" id="var-tag">sample</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-mean" id="var-tag">sample-mean</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-mean-variance" id="var-tag">sample-mean-variance</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-reduce" id="var-tag">sample-reduce</a> </span><span id="var-link"><a href="probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-sum" id="var-tag">sample-sum</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="probabilities.random-numbers">probabilities.random-numbers</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="probabilities.random-numbers-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Random number streams
+
+This library provides random number generators with a common
+stream interface. They all produce pseudo-random numbers that are
+uniformly distributed in the interval [0, 1), i.e. 0 is a
+possible value but 1 isn't. For transformations to other
+distributions, see clojure.contrib.probabilities.monte-carlo.
+
+At the moment, the only generator provided is a rather simple
+linear congruential generator.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="probabilities.random-numbers-api.html#probabilities.random-numbers/lcg" id="var-tag">lcg</a> </span><span id="var-link"><a href="probabilities.random-numbers-api.html#probabilities.random-numbers/rand-stream" id="var-tag">rand-stream</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="profile">profile</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="profile-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Simple code profiling &amp; timing measurement.
+
+Wrap any section of code in the prof macro, giving it a name, like this:
+
+       (defn my-function [x y]
+         (let [sum (prof :addition (+ x y))
+               product (prof :multiplication (* x y))]
+           [sum product]))
+
+The run your code in the profile macro, like this:
+
+       (profile (dotimes [i 10000] (my-function 3 4)))
+
+Which prints a report for each named section of code:
+
+          Name      mean       min       max     count       sum
+      addition       265         0     37000     10000   2655000
+multiplication       274         0     53000     10000   2747000
+
+Times are measured in nanoseconds, to the maximum precision available
+under the JVM.  See the function documentation for more details.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="profile-api.html#profile/*enable-profiling*" id="var-tag">*enable-profiling*</a> </span><span id="var-link"><a href="profile-api.html#profile/print-summary" id="var-tag">print-summary</a> </span><span id="var-link"><a href="profile-api.html#profile/prof" id="var-tag">prof</a> </span><span id="var-link"><a href="profile-api.html#profile/profile" id="var-tag">profile</a> </span><span id="var-link"><a href="profile-api.html#profile/summarize" id="var-tag">summarize</a> </span><span id="var-link"><a href="profile-api.html#profile/with-profile-data" id="var-tag">with-profile-data</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="prxml">prxml</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="prxml-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Compact syntax for generating XML. See the documentation of "prxml" 
+for details.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="prxml-api.html#prxml/*html-compatible*" id="var-tag">*html-compatible*</a> </span><span id="var-link"><a href="prxml-api.html#prxml/*prxml-indent*" id="var-tag">*prxml-indent*</a> </span><span id="var-link"><a href="prxml-api.html#prxml/prxml" id="var-tag">prxml</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="repl-ln">repl-ln</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="repl-ln-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">A repl with that provides support for lines and line numbers in the
+input stream.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="repl-ln-api.html#repl-ln/print-repl-info" id="var-tag">print-repl-info</a> </span><span id="var-link"><a href="repl-ln-api.html#repl-ln/repl" id="var-tag">repl</a> </span><span id="var-link"><a href="repl-ln-api.html#repl-ln/repl-info" id="var-tag">repl-info</a> </span><span id="var-link"><a href="repl-ln-api.html#repl-ln/repl-prompt" id="var-tag">repl-prompt</a> </span><span id="var-link"><a href="repl-ln-api.html#repl-ln/set-repl-name" id="var-tag">set-repl-name</a> </span><span id="var-link"><a href="repl-ln-api.html#repl-ln/set-repl-prompt" id="var-tag">set-repl-prompt</a> </span><span id="var-link"><a href="repl-ln-api.html#repl-ln/stream-repl" id="var-tag">stream-repl</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="repl-utils">repl-utils</h2>
+  by <span id="author">Chris Houser, Christophe Grand, Stephen Gilardi</span><br />
+  API documentation <a href="repl-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Utilities meant to be used interactively at the REPL</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="repl-utils-api.html#repl-utils/*local-javadocs*" id="var-tag">*local-javadocs*</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/*remote-javadocs*" id="var-tag">*remote-javadocs*</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/add-break-thread!" id="var-tag">add-break-thread!</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/add-local-javadoc" id="var-tag">add-local-javadoc</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/add-remote-javadoc" id="var-tag">add-remote-javadoc</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/break-threads" id="var-tag">break-threads</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/expression-info" id="var-tag">expression-info</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/find-javadoc-url" id="var-tag">find-javadoc-url</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/get-source" id="var-tag">get-source</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/javadoc" id="var-tag">javadoc</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/run" id="var-tag">run</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/run*" id="var-tag">run*</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/show" id="var-tag">show</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/source" id="var-tag">source</a> </span><span id="var-link"><a href="repl-utils-api.html#repl-utils/start-handling-break" id="var-tag">start-handling-break</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="seq-utils">seq-utils</h2>
+  by <span id="author">Stuart Sierra (and others)</span><br />
+  API documentation <a href="seq-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Sequence utilities for Clojure</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="seq-utils-api.html#seq-utils/find-first" id="var-tag">find-first</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/flatten" id="var-tag">flatten</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/frequencies" id="var-tag">frequencies</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/group-by" id="var-tag">group-by</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/includes?" id="var-tag">includes?</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/indexed" id="var-tag">indexed</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/partition-all" id="var-tag">partition-all</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/partition-by" id="var-tag">partition-by</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/rand-elt" id="var-tag">rand-elt</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/rec-cat" id="var-tag">rec-cat</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/rec-seq" id="var-tag">rec-seq</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/reductions" id="var-tag">reductions</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/rotations" id="var-tag">rotations</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/separate" id="var-tag">separate</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/seq-on" id="var-tag">seq-on</a> </span><span id="var-link"><a href="seq-utils-api.html#seq-utils/shuffle" id="var-tag">shuffle</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="server-socket">server-socket</h2>
+  by <span id="author">Craig McDaniel</span><br />
+  API documentation <a href="server-socket-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Server socket library - includes REPL on socket</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="server-socket-api.html#server-socket/create-repl-server" id="var-tag">create-repl-server</a> </span><span id="var-link"><a href="server-socket-api.html#server-socket/create-server" id="var-tag">create-server</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="set">set</h2>
+  by <span id="author">Jason Wolfe</span><br />
+  API documentation <a href="set-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Clojure functions for operating on sets (supplemental to clojure.set)</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="set-api.html#set/proper-subset?" id="var-tag">proper-subset?</a> </span><span id="var-link"><a href="set-api.html#set/proper-superset?" id="var-tag">proper-superset?</a> </span><span id="var-link"><a href="set-api.html#set/subset?" id="var-tag">subset?</a> </span><span id="var-link"><a href="set-api.html#set/superset?" id="var-tag">superset?</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="shell-out">shell-out</h2>
+  by <span id="author">Chris Houser</span><br />
+  API documentation <a href="shell-out-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Conveniently launch a sub-process providing to its stdin and
+collecting its stdout</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="shell-out-api.html#shell-out/sh" id="var-tag">sh</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="singleton">singleton</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="singleton-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Singleton functions</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="singleton-api.html#singleton/global-singleton" id="var-tag">global-singleton</a> </span><span id="var-link"><a href="singleton-api.html#singleton/per-thread-singleton" id="var-tag">per-thread-singleton</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="sql">sql</h2>
+  by <span id="author">Stephen C. Gilardi</span><br />
+  API documentation <a href="sql-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">A Clojure interface to sql databases via jdbc
+
+See clojure.contrib.sql.test for an example</pre>
+  <span id="see-also">See also: 
+    <span id="see-also-link">
+      <a href="http://code.google.com/p/clojure-contrib/source/browse/trunk/src/clojure/contrib/sql/test.clj">Example code</a>
+    </span><br />
+  </span>
+  Public variables and functions:
+  <span id="var-link"><a href="sql-api.html#sql/connection" id="var-tag">connection</a> </span><span id="var-link"><a href="sql-api.html#sql/create-table" id="var-tag">create-table</a> </span><span id="var-link"><a href="sql-api.html#sql/delete-rows" id="var-tag">delete-rows</a> </span><span id="var-link"><a href="sql-api.html#sql/do-commands" id="var-tag">do-commands</a> </span><span id="var-link"><a href="sql-api.html#sql/do-prepared" id="var-tag">do-prepared</a> </span><span id="var-link"><a href="sql-api.html#sql/drop-table" id="var-tag">drop-table</a> </span><span id="var-link"><a href="sql-api.html#sql/find-connection" id="var-tag">find-connection</a> </span><span id="var-link"><a href="sql-api.html#sql/insert-records" id="var-tag">insert-records</a> </span><span id="var-link"><a href="sql-api.html#sql/insert-rows" id="var-tag">insert-rows</a> </span><span id="var-link"><a href="sql-api.html#sql/insert-values" id="var-tag">insert-values</a> </span><span id="var-link"><a href="sql-api.html#sql/is-rollback-only" id="var-tag">is-rollback-only</a> </span><span id="var-link"><a href="sql-api.html#sql/set-rollback-only" id="var-tag">set-rollback-only</a> </span><span id="var-link"><a href="sql-api.html#sql/transaction" id="var-tag">transaction</a> </span><span id="var-link"><a href="sql-api.html#sql/update-or-insert-values" id="var-tag">update-or-insert-values</a> </span><span id="var-link"><a href="sql-api.html#sql/update-values" id="var-tag">update-values</a> </span><span id="var-link"><a href="sql-api.html#sql/with-connection" id="var-tag">with-connection</a> </span><span id="var-link"><a href="sql-api.html#sql/with-query-results" id="var-tag">with-query-results</a> </span><br />
+  <span id="subspace">Variables and functions in
+    <span id="name">sql.internal</span>:
+    <span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/connection*">connection*</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/find-connection*">find-connection*</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/get-connection">get-connection</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/print-sql-exception">print-sql-exception</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/print-sql-exception-chain">print-sql-exception-chain</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/print-update-counts">print-update-counts</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/rollback">rollback</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/throw-rollback">throw-rollback</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/transaction*">transaction*</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/with-connection*">with-connection*</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.internal/with-query-results*">with-query-results*</a>
+    </span>
+    <br />
+  </span><span id="subspace">Variables and functions in
+    <span id="name">sql.test</span>:
+    <span id="sub-var-link">
+      <a href="sql-api.html#sql.test/create-fruit">create-fruit</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-batchupdate-exception">db-batchupdate-exception</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-exception">db-exception</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-get-tables">db-get-tables</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-grade-a">db-grade-a</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-grade-range">db-grade-range</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-read">db-read</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-read-all">db-read-all</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-rollback">db-rollback</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-sql-exception">db-sql-exception</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-update">db-update</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-update-appearance-cost">db-update-appearance-cost</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-update-or-insert">db-update-or-insert</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/db-write">db-write</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/drop-fruit">drop-fruit</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/insert-records-fruit">insert-records-fruit</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/insert-rows-fruit">insert-rows-fruit</a>
+    </span><span id="sub-var-link">
+      <a href="sql-api.html#sql.test/insert-values-fruit">insert-values-fruit</a>
+    </span>
+    <br />
+  </span>
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="str-utils">str-utils</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="str-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">String utilities for Clojure</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="str-utils-api.html#str-utils/chomp" id="var-tag">chomp</a> </span><span id="var-link"><a href="str-utils-api.html#str-utils/chop" id="var-tag">chop</a> </span><span id="var-link"><a href="str-utils-api.html#str-utils/re-gsub" id="var-tag">re-gsub</a> </span><span id="var-link"><a href="str-utils-api.html#str-utils/re-partition" id="var-tag">re-partition</a> </span><span id="var-link"><a href="str-utils-api.html#str-utils/re-split" id="var-tag">re-split</a> </span><span id="var-link"><a href="str-utils-api.html#str-utils/re-sub" id="var-tag">re-sub</a> </span><span id="var-link"><a href="str-utils-api.html#str-utils/str-join" id="var-tag">str-join</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="str-utils2">str-utils2</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="str-utils2-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">This is a library of string manipulation functions.  It
+is intented as a replacement for clojure.contrib.str-utils.
+
+You cannot (use 'clojure.contrib.str-utils2) because it defines
+functions with the same names as functions in clojure.core.
+Instead, do (require '[clojure.contrib.str-utils2 :as s]) 
+or something similar.
+
+Goals:
+  1. Be functional
+  2. String argument first, to work with -&gt;
+  3. Performance linear in string length
+
+Some ideas are borrowed from
+http://github.com/francoisdevlin/devlinsf-clojure-utils/</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="str-utils2-api.html#str-utils2/blank?" id="var-tag">blank?</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/butlast" id="var-tag">butlast</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/chomp" id="var-tag">chomp</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/chop" id="var-tag">chop</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/codepoints" id="var-tag">codepoints</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/contains?" id="var-tag">contains?</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/dochars" id="var-tag">dochars</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/docodepoints" id="var-tag">docodepoints</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/escape" id="var-tag">escape</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/get" id="var-tag">get</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/join" id="var-tag">join</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/lower-case" id="var-tag">lower-case</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/ltrim" id="var-tag">ltrim</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/partition" id="var-tag">partition</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/replace" id="var-tag">replace</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/replace-first" id="var-tag">replace-first</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/rtrim" id="var-tag">rtrim</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/split" id="var-tag">split</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/split-lines" id="var-tag">split-lines</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/tail" id="var-tag">tail</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/take" id="var-tag">take</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/trim" id="var-tag">trim</a> </span><span id="var-link"><a href="str-utils2-api.html#str-utils2/upper-case" id="var-tag">upper-case</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="stream-utils">stream-utils</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="stream-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Functions for setting up computational pipelines via data streams.
+
+NOTE: This library is experimental. It may change significantly
+      with future release.
+
+This library defines:
+- an abstract stream type, whose interface consists of the
+  multimethod stream-next
+- a macro for implementing streams
+- implementations of stream for
+  1) Clojure sequences, and vectors
+  2) nil, representing an empty stream
+- tools for writing stream transformers, including the
+  monad stream-m
+- various utility functions for working with streams
+
+Streams are building blocks in the construction of computational
+pipelines. A stream is represented by its current state plus
+a function that takes a stream state and obtains the next item
+in the stream as well as the new stream state. The state is
+implemented as a Java class or a Clojure type (as defined by the
+function clojure.core/type), and the function is provided as an
+implementation of the multimethod stream-next for this class or type.
+
+While setting up pipelines using this mechanism is somewhat more
+cumbersome than using Clojure's lazy seq mechanisms, there are a
+few advantages:
+- The state of a stream can be stored in any Clojure data structure,
+  and the stream can be re-generated from it any number of times.
+  Any number of states can be stored this way.
+- The elements of the stream are never cached, so keeping a reference
+  to a stream state does not incur an uncontrollable memory penalty.
+
+Note that the stream mechanism is thread-safe as long as the
+concrete stream implementations do not use any mutable state.
+
+Stream transformers take any number of input streams and produce one
+output stream. They are typically written using the stream-m
+monad. In the definition of a stream transformer, (pick s) returns
+the next value of stream argument s, whereas pick-all returns the
+next value of all stream arguments in the form of a vector.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="stream-utils-api.html#stream-utils/defst" id="var-tag">defst</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/defstream" id="var-tag">defstream</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/pick" id="var-tag">pick</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/pick-all" id="var-tag">pick-all</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-drop" id="var-tag">stream-drop</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-filter" id="var-tag">stream-filter</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-flatten" id="var-tag">stream-flatten</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-m" id="var-tag">stream-m</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-map" id="var-tag">stream-map</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-next" id="var-tag">stream-next</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-seq" id="var-tag">stream-seq</a> </span><span id="var-link"><a href="stream-utils-api.html#stream-utils/stream-type" id="var-tag">stream-type</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="swing-utils">swing-utils</h2>
+  by <span id="author">unknown author</span><br />
+  API documentation <a href="swing-utils-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr"></pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="swing-utils-api.html#swing-utils/action-translation-table" id="var-tag">action-translation-table</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/add-action-listener" id="var-tag">add-action-listener</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/add-key-typed-listener" id="var-tag">add-key-typed-listener</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/add-menu-item" id="var-tag">add-menu-item</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/do-swing" id="var-tag">do-swing</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/do-swing*" id="var-tag">do-swing*</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/do-swing-and-wait" id="var-tag">do-swing-and-wait</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/make-action" id="var-tag">make-action</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/make-menubar" id="var-tag">make-menubar</a> </span><span id="var-link"><a href="swing-utils-api.html#swing-utils/menu-constructor-dispatch" id="var-tag">menu-constructor-dispatch</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="trace">trace</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="trace-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">This file defines simple "tracing" macros to help you see what your
+code is doing.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="trace-api.html#trace/*trace-depth*" id="var-tag">*trace-depth*</a> </span><span id="var-link"><a href="trace-api.html#trace/deftrace" id="var-tag">deftrace</a> </span><span id="var-link"><a href="trace-api.html#trace/trace" id="var-tag">trace</a> </span><span id="var-link"><a href="trace-api.html#trace/trace-fn-call" id="var-tag">trace-fn-call</a> </span><span id="var-link"><a href="trace-api.html#trace/trace-indent" id="var-tag">trace-indent</a> </span><span id="var-link"><a href="trace-api.html#trace/tracer" id="var-tag">tracer</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="types">types</h2>
+  by <span id="author">Konrad Hinsen</span><br />
+  API documentation <a href="types-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">General and algebraic data types</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="types-api.html#types/defadt" id="var-tag">defadt</a> </span><span id="var-link"><a href="types-api.html#types/deftype" id="var-tag">deftype</a> </span><span id="var-link"><a href="types-api.html#types/deftype-" id="var-tag">deftype-</a> </span><span id="var-link"><a href="types-api.html#types/match" id="var-tag">match</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="with-ns">with-ns</h2>
+  by <span id="author">Stuart Sierra</span><br />
+  API documentation <a href="with-ns-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">Temporary namespace macro</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="with-ns-api.html#with-ns/with-ns" id="var-tag">with-ns</a> </span><span id="var-link"><a href="with-ns-api.html#with-ns/with-temp-ns" id="var-tag">with-temp-ns</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <hr />
+  <h2 id="zip-filter">zip-filter</h2>
+  by <span id="author">Chris Houser</span><br />
+  API documentation <a href="zip-filter-api.html" id="api-link">here</a><br />
+  <pre id="namespace-docstr">System for filtering trees and nodes generated by zip.clj in
+general, and xml trees in particular.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="zip-filter-api.html#zip-filter/ancestors" id="var-tag">ancestors</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/children" id="var-tag">children</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/children-auto" id="var-tag">children-auto</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/descendants" id="var-tag">descendants</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/left-locs" id="var-tag">left-locs</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/leftmost?" id="var-tag">leftmost?</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/right-locs" id="var-tag">right-locs</a> </span><span id="var-link"><a href="zip-filter-api.html#zip-filter/rightmost?" id="var-tag">rightmost?</a> </span><br />
+  <span id="subspace">Variables and functions in
+    <span id="name">zip-filter.xml</span>:
+    <span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/attr">attr</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/attr=">attr=</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/seq-test">seq-test</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/tag=">tag=</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/text">text</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/text=">text=</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/xml-&gt;">xml-&gt;</a>
+    </span><span id="sub-var-link">
+      <a href="zip-filter-api.html#zip-filter.xml/xml1-&gt;">xml1-&gt;</a>
+    </span>
+    <br />
+  </span>
+</div>
+</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;">
+            Copyright 2008-2009 Rich Hickey and the various contributors
+          </div>
+	</div>
+      </div>
+      <!-- /rightcolumn -->
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
 </html>

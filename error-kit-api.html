@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <title>clojure contrib - error-kit API reference</title>
+    <link href="file/view/favicon.png" rel="icon" />
+    <link href="file/view/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="file/view/clojure-icon.gif" /></a>
+	<h1><a title="Clojure" href="index.html">Clojure</a></h1>
+      </div>
+      <div id="leftcolumn"><div><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <a class="wiki_link" href="index.html">Overview</a><br />
+    <a class="wiki_link" href="api-index.html">API Index</a><br />
+    <a class="wiki_link" href="#">Namespaces:</a>
+    <ul id="left-sidebar-list">
+      <li><a href="accumulators-api.html" class="wiki_link">accumulators</a></li><li><a href="agent-utils-api.html" class="wiki_link">agent-utils</a></li><li><a href="classpath-api.html" class="wiki_link">classpath</a></li><li><a href="combinatorics-api.html" class="wiki_link">combinatorics</a></li><li><a href="command-line-api.html" class="wiki_link">command-line</a></li><li><a href="complex-numbers-api.html" class="wiki_link">complex-numbers</a></li><li><a href="cond-api.html" class="wiki_link">cond</a></li><li><a href="condition-api.html" class="wiki_link">condition</a></li><li><a href="core-api.html" class="wiki_link">core</a></li><li><a href="dataflow-api.html" class="wiki_link">dataflow</a></li><li><a href="datalog-api.html" class="wiki_link">datalog</a></li><li><a href="def-api.html" class="wiki_link">def</a></li><li><a href="duck-streams-api.html" class="wiki_link">duck-streams</a></li><li><a href="error-kit-api.html" class="wiki_link">error-kit</a></li><li><a href="except-api.html" class="wiki_link">except</a></li><li><a href="fcase-api.html" class="wiki_link">fcase</a></li><li><a href="find-namespaces-api.html" class="wiki_link">find-namespaces</a></li><li><a href="fnmap-api.html" class="wiki_link">fnmap</a></li><li><a href="gen-html-docs-api.html" class="wiki_link">gen-html-docs</a></li><li><a href="generic.arithmetic-api.html" class="wiki_link">generic.arithmetic</a></li><li><a href="generic.collection-api.html" class="wiki_link">generic.collection</a></li><li><a href="generic.comparison-api.html" class="wiki_link">generic.comparison</a></li><li><a href="generic.functor-api.html" class="wiki_link">generic.functor</a></li><li><a href="generic.math-functions-api.html" class="wiki_link">generic.math-functions</a></li><li><a href="graph-api.html" class="wiki_link">graph</a></li><li><a href="greatest-least-api.html" class="wiki_link">greatest-least</a></li><li><a href="http.agent-api.html" class="wiki_link">http.agent</a></li><li><a href="http.connection-api.html" class="wiki_link">http.connection</a></li><li><a href="import-static-api.html" class="wiki_link">import-static</a></li><li><a href="jar-api.html" class="wiki_link">jar</a></li><li><a href="java-utils-api.html" class="wiki_link">java-utils</a></li><li><a href="javadoc.browse-api.html" class="wiki_link">javadoc.browse</a></li><li><a href="json.read-api.html" class="wiki_link">json.read</a></li><li><a href="json.write-api.html" class="wiki_link">json.write</a></li><li><a href="lazy-seqs-api.html" class="wiki_link">lazy-seqs</a></li><li><a href="lazy-xml-api.html" class="wiki_link">lazy-xml</a></li><li><a href="macro-utils-api.html" class="wiki_link">macro-utils</a></li><li><a href="macros-api.html" class="wiki_link">macros</a></li><li><a href="map-utils-api.html" class="wiki_link">map-utils</a></li><li><a href="math-api.html" class="wiki_link">math</a></li><li><a href="miglayout-api.html" class="wiki_link">miglayout</a></li><li><a href="mmap-api.html" class="wiki_link">mmap</a></li><li><a href="monadic-io-streams-api.html" class="wiki_link">monadic-io-streams</a></li><li><a href="monads-api.html" class="wiki_link">monads</a></li><li><a href="ns-utils-api.html" class="wiki_link">ns-utils</a></li><li><a href="pprint-api.html" class="wiki_link">pprint</a></li><li><a href="probabilities.finite-distributions-api.html" class="wiki_link">probabilities.finite-distributions</a></li><li><a href="probabilities.monte-carlo-api.html" class="wiki_link">probabilities.monte-carlo</a></li><li><a href="probabilities.random-numbers-api.html" class="wiki_link">probabilities.random-numbers</a></li><li><a href="profile-api.html" class="wiki_link">profile</a></li><li><a href="prxml-api.html" class="wiki_link">prxml</a></li><li><a href="repl-ln-api.html" class="wiki_link">repl-ln</a></li><li><a href="repl-utils-api.html" class="wiki_link">repl-utils</a></li><li><a href="seq-utils-api.html" class="wiki_link">seq-utils</a></li><li><a href="server-socket-api.html" class="wiki_link">server-socket</a></li><li><a href="set-api.html" class="wiki_link">set</a></li><li><a href="shell-out-api.html" class="wiki_link">shell-out</a></li><li><a href="singleton-api.html" class="wiki_link">singleton</a></li><li><a href="sql-api.html" class="wiki_link">sql</a></li><li><a href="str-utils-api.html" class="wiki_link">str-utils</a></li><li><a href="str-utils2-api.html" class="wiki_link">str-utils2</a></li><li><a href="stream-utils-api.html" class="wiki_link">stream-utils</a></li><li><a href="swing-utils-api.html" class="wiki_link">swing-utils</a></li><li><a href="trace-api.html" class="wiki_link">trace</a></li><li><a href="types-api.html" class="wiki_link">types</a></li><li><a href="with-ns-api.html" class="wiki_link">with-ns</a></li><li><a href="zip-filter-api.html" class="wiki_link">zip-filter</a></li>
+    </ul>
+  </div>
+</div>
+</div></div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div style="" id="WikiAdMargin">
+                <div id="content_view" class="wiki wikiPage">
+                  <!-- Temporary disclaimer -->
+                  <div style="background-color: #FF0000; font-weight: bold;">
+                    NOTE: These autogen pages are still under development. 
+                    Not all links work. Not all formatting in done.
+                    Contact Tom Faulhaber (tomfaulhaber on github, gmail, etc.)
+                    with any questions.
+                  </div>
+                  <div id="right-sidebar"><div><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/bind-continue">bind-continue</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/deferror">deferror</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/do-not-handle">do-not-handle</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/error">error</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/handle">handle</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/raise">raise</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/raise*">raise*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/throw-msg">throw-msg</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#error-kit/with-handler">with-handler</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div></div>
+                  <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">error-kit</span></h1>
+by <span id="author">Chris Houser</span><br />
+<br />Usage:
+<pre>
+(ns your-namespace
+  (:require <span id="long-name">clojure.contrib.error-kit</span>))
+</pre><pre>
+</pre><h2>Overview</h2>
+<pre id="namespace-docstr">EXPERIMENTAL
+System for defining and using custom errors
+Please contact Chouser if you have any suggestions for better names
+or API adjustments.</pre>
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <hr />
+  <h2 id="error-kit/bind-continue">bind-continue</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (bind-continue continue-name [args*] &amp; body)
+</pre>
+  <pre id="var-docstr">Special form to be used inside a 'with-handler'.
+Control can be passed to this 'continue' form from a 'raise' enclosed
+in this with-handler's dynamic scope, when this 'continue-name' is
+given to a 'continue' form.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L150" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/deferror">deferror</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (deferror name [parent-error?] doc-string? [args*] &amp; body)
+       (deferror name [parent-error?] doc-string? args-destruct-map &amp; body)
+</pre>
+  <pre id="var-docstr">Define a new error type</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L59" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/do-not-handle">do-not-handle</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (do-not-handle)
+</pre>
+  <pre id="var-docstr">Use in a tail position of a 'handle' form to indicate 'raise' should
+not consider the error handled, but should continue searching for an
+appropriate 'handle' form.  Allows finer-grain control over catching
+than just the error type.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L117" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/error">error</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (error details)
+</pre>
+  <pre id="var-docstr">Base type for all error-kit errors</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L46" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/handle">handle</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (handle error-name? [args*] &amp; body)
+       (handle error-name? args-destruct-map-args &amp; body)
+</pre>
+  <pre id="var-docstr">Special form to be used inside a 'with-handler'.  When
+any error is 'raised' from withing the dynamic scope of 'body' that
+is of error-name's type or a derived type, the args will be bound
+and the body executed.  If no 'error-name' is given, the body will
+be executed for regardless of the type of error raised.  The body
+may return a value, in which case that will be the return value of
+the entire 'with-handler' form, or it may use any of the special
+return forms, 'do-not-handle', 'continue-with', or 'continue'.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L138" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/raise">raise</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (raise err-name &amp; args)
+</pre>
+  <pre id="var-docstr">Raise an error of the type err-name, constructed with the given args</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L110" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/raise*">raise*</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (raise* err)
+</pre>
+  <pre id="var-docstr">Raise the given error object, best if created by an error
+constructor defined with deferror.  See also 'raise' macro.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L86" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/throw-msg">throw-msg</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (throw-msg class-name)
+</pre>
+  <pre id="var-docstr">Returns a function that throws a Java Exception with the given
+name.  Useful to associate a new error-kit error type with a
+particular Java Exception class, via the :unhandled error key.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L39" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="error-kit/with-handler">with-handler</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-handler &amp; forms)
+</pre>
+  <pre id="var-docstr">This is error-kit's dynamic scope form.  The body will be executed
+in a dynamic context that includes all of the following 'handle' and
+'bind-continue' forms.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/error_kit.clj#L163" id="var-source">Source</a>
+</div>
+
+
+</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;">
+            Copyright 2008-2009 Rich Hickey and the various contributors
+          </div>
+	</div>
+      </div>
+      <!-- /rightcolumn -->
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
