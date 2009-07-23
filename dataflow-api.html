@@ -47,7 +47,7 @@ namespace.
                   <!-- Temporary disclaimer -->
                   <div style="background-color: #FF0000; font-weight: bold;">
                     NOTE: These autogen pages are still under development. 
-                    Not all links work. Not all formatting in done.
+                    Not all links work. Not all formatting is done.
                     Contact Tom Faulhaber (tomfaulhaber on github, gmail, etc.)
                     with any questions.
                   </div>
@@ -121,7 +121,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
 function of 4 values: a key, the cell, its old value, its new
 value.  This is implemented using Clojure's add-watch to the
 underlying ref, and shared its sematics</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L460" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L460" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/add-cells">add-cells</h2>
@@ -129,7 +129,7 @@ underlying ref, and shared its sematics</pre>
   <pre id="var-usage">Usage: (add-cells df cells)
 </pre>
   <pre id="var-docstr">Given a collection of cells, add them to the dataflow.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L210" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L210" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/build-dataflow">build-dataflow</h2>
@@ -137,7 +137,7 @@ underlying ref, and shared its sematics</pre>
   <pre id="var-usage">Usage: (build-dataflow cs)
 </pre>
   <pre id="var-docstr">Given a collection of cells, build and return a dataflow object</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L188" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L188" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/build-source-cell">build-source-cell</h2>
@@ -145,7 +145,7 @@ underlying ref, and shared its sematics</pre>
   <pre id="var-usage">Usage: (build-source-cell name init)
 </pre>
   <pre id="var-docstr">Builds a source cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L231" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L231" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/build-standard-cell">build-standard-cell</h2>
@@ -153,7 +153,7 @@ underlying ref, and shared its sematics</pre>
   <pre id="var-usage">Usage: (build-standard-cell name deps fun expr)
 </pre>
   <pre id="var-docstr">Builds a standard cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L292" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L292" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/build-validator-cell">build-validator-cell</h2>
@@ -161,7 +161,7 @@ underlying ref, and shared its sematics</pre>
   <pre id="var-usage">Usage: (build-validator-cell deps fun expr)
 </pre>
   <pre id="var-docstr">Builds a validator cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L298" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L298" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/cell">cell</h2>
@@ -194,21 +194,21 @@ Or:
                        (throwf "%s must be greater than %s" ?fred ?sally))
 
 Which will perform the validation</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L304" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L304" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/display-cell">display-cell</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">A 'readable' form of the cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L348" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L348" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/eval-cell">eval-cell</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Evaluate a dataflow cell.  Return [changed, old val]</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L372" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L372" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-cell">get-cell</h2>
@@ -216,7 +216,7 @@ Which will perform the validation</pre>
   <pre id="var-usage">Usage: (get-cell df name)
 </pre>
   <pre id="var-docstr">Get the single cell named by name</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L94" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L94" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-cells">get-cells</h2>
@@ -224,7 +224,7 @@ Which will perform the validation</pre>
   <pre id="var-usage">Usage: (get-cells df name)
 </pre>
   <pre id="var-docstr">Get all the cells named by name</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L89" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L89" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-old-value">get-old-value</h2>
@@ -232,7 +232,7 @@ Which will perform the validation</pre>
   <pre id="var-usage">Usage: (get-old-value df env name)
 </pre>
   <pre id="var-docstr">Looks up an old value</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L136" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L136" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-source-cells">get-source-cells</h2>
@@ -240,7 +240,7 @@ Which will perform the validation</pre>
   <pre id="var-usage">Usage: (get-source-cells df)
 </pre>
   <pre id="var-docstr">Returns a collection of source cells from the dataflow</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L108" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L108" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-value">get-value</h2>
@@ -250,7 +250,7 @@ Which will perform the validation</pre>
   <pre id="var-docstr">Gets a value from the df matching the passed symbol.
 Signals an error if the name is not present, or if it not a single
 value.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L115" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L115" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-value-from-cell">get-value-from-cell</h2>
@@ -258,7 +258,7 @@ value.</pre>
   <pre id="var-usage">Usage: (get-value-from-cell cell)
 </pre>
   <pre id="var-docstr">Given a cell, get its value</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L143" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L143" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/get-values">get-values</h2>
@@ -266,7 +266,7 @@ value.</pre>
   <pre id="var-usage">Usage: (get-values df name)
 </pre>
   <pre id="var-docstr">Gets a collection of values from the df by name</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L126" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L126" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/print-dataflow">print-dataflow</h2>
@@ -274,7 +274,7 @@ value.</pre>
   <pre id="var-usage">Usage: (print-dataflow df)
 </pre>
   <pre id="var-docstr">Prints a dataflow, one cell per line</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L199" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L199" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/remove-cells">remove-cells</h2>
@@ -282,7 +282,7 @@ value.</pre>
   <pre id="var-usage">Usage: (remove-cells df cells)
 </pre>
   <pre id="var-docstr">Given a collection of cells, remove them from the dataflow.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L218" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L218" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/source-cell?">source-cell?</h2>
@@ -290,7 +290,7 @@ value.</pre>
   <pre id="var-usage">Usage: (source-cell? cell)
 </pre>
   <pre id="var-docstr">Is this cell a source cell?</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L103" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L103" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="dataflow/update-values">update-values</h2>
@@ -300,7 +300,7 @@ value.</pre>
   <pre id="var-docstr">Given a dataflow, and a map of name-value pairs, update the
 dataflow by binding the new values.  Each name must be of a source
 cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/dataflow.clj#L438" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/dataflow.clj#L438" id="var-source">Source</a>
 </div>
 
 

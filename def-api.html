@@ -47,7 +47,7 @@ namespace.
                   <!-- Temporary disclaimer -->
                   <div style="background-color: #FF0000; font-weight: bold;">
                     NOTE: These autogen pages are still under development. 
-                    Not all links work. Not all formatting in done.
+                    Not all links work. Not all formatting is done.
                     Contact Tom Faulhaber (tomfaulhaber on github, gmail, etc.)
                     with any questions.
                   </div>
@@ -106,7 +106,7 @@ making private definitions more succinct.</pre>
   <pre id="var-docstr">Defines an alias for a var: a new var with the same root binding (if
 any) and similar metadata. The metadata of the alias is its initial
 metadata (as provided by def) merged into the metadata of the original.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L66" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L66" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defhinted">defhinted</h2>
@@ -116,7 +116,7 @@ metadata (as provided by def) merged into the metadata of the original.</pre>
   <pre id="var-docstr">Defines a var with a type hint matching the class of the given
 init.  Be careful about using any form of 'def' or 'binding' to a
 value of a different type.  See http://paste.lisp.org/display/73344</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L83" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L83" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defmacro-">defmacro-</h2>
@@ -124,7 +124,7 @@ value of a different type.  See http://paste.lisp.org/display/73344</pre>
   <pre id="var-usage">Usage: (defmacro- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defmacro but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L39" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L39" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defn-memo">defn-memo</h2>
@@ -132,7 +132,7 @@ value of a different type.  See http://paste.lisp.org/display/73344</pre>
   <pre id="var-usage">Usage: (defn-memo fn-name &amp; defn-stuff)
 </pre>
   <pre id="var-docstr">Just like defn, but memoizes the function using clojure.core/memoize</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L141" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L141" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defnk">defnk</h2>
@@ -145,7 +145,7 @@ an alternating sequence of keywords and defaults values is expected. The
 values of the keyword arguments are available in the function body by
 virtue of the symbol corresponding to the keyword (cf. :keys destructuring).
 defnk accepts an optional docstring as well as an optional metadata map.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L120" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L120" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defonce-">defonce-</h2>
@@ -154,7 +154,7 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
        (defonce- name expr doc)
 </pre>
   <pre id="var-docstr">Same as defonce but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L59" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L59" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defstruct-">defstruct-</h2>
@@ -162,7 +162,7 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
   <pre id="var-usage">Usage: (defstruct- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defstruct but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L54" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L54" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defunbound">defunbound</h2>
@@ -171,7 +171,7 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
        (defunbound name doc)
 </pre>
   <pre id="var-docstr">Defines an unbound var with optional doc string</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L32" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L32" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defunbound-">defunbound-</h2>
@@ -179,7 +179,7 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
   <pre id="var-usage">Usage: (defunbound- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defunbound but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L49" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L49" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defvar">defvar</h2>
@@ -189,7 +189,7 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
        (defvar name init doc)
 </pre>
   <pre id="var-docstr">Defines a var with an optional intializer and doc string</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L23" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L23" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/defvar-">defvar-</h2>
@@ -197,7 +197,7 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
   <pre id="var-usage">Usage: (defvar- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defvar but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L44" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L44" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="def/name-with-attributes">name-with-attributes</h2>
@@ -213,7 +213,7 @@ added to the name's metadata map and the map is removed from the
 macro argument list. The return value is a vector containing the name
 with its extended metadata map and the list of unprocessed macro
 arguments.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6fea921c91d453c750586c960ec92caacf4fa5e6/src/clojure/contrib/def.clj#L94" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/def.clj#L94" id="var-source">Source</a>
 </div>
 
 
