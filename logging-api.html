@@ -131,7 +131,7 @@ needs to be specified to namespace the output.</pre>
 </pre>
   <pre id="var-docstr">Creates a log-system struct using the Apache commons-logging API, 
 if present; otherwise nil.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L55" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L55" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/direct-log">direct-log</h2>
@@ -140,7 +140,7 @@ if present; otherwise nil.</pre>
 </pre>
   <pre id="var-docstr">Logs the message immediately if the specific logging level is enabled. Use 
 the log macro in prefernce to this.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L129" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L129" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/enabled?">enabled?</h2>
@@ -151,7 +151,7 @@ the log macro in prefernce to this.</pre>
   <pre id="var-docstr">Returns true if the specific logging level is enabled.  This function should 
 only be necessary if one needs to execute alternate code paths beyond whether 
 the log should be written to.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L175" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L175" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/java-logging">java-logging</h2>
@@ -159,7 +159,7 @@ the log should be written to.</pre>
   <pre id="var-usage">Usage: (java-logging)
 </pre>
   <pre id="var-docstr">Creates a log-system struct using the java.util.logging API.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L106" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L106" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log">log</h2>
@@ -169,7 +169,7 @@ the log should be written to.</pre>
        (log level message throwable log-name)
 </pre>
   <pre id="var-docstr">Logs a message, either directly or via an agent.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L162" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L162" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-capture!">log-capture!</h2>
@@ -180,7 +180,7 @@ the log should be written to.</pre>
 to :info and :error logging, respectively. The specified log-name value will 
 be used for all redirected logging. NOTE: this will not redirect output of 
 *out* or *err*; for that use with-logs</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L210" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L210" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-stream">log-stream</h2>
@@ -188,7 +188,7 @@ be used for all redirected logging. NOTE: this will not redirect output of
   <pre id="var-usage">Usage: (log-stream level log-name)
 </pre>
   <pre id="var-docstr">Creates a logging output stream that will output to the log.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L193" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L193" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-uncapture!">log-uncapture!</h2>
@@ -196,7 +196,7 @@ be used for all redirected logging. NOTE: this will not redirect output of
   <pre id="var-usage">Usage: (log-uncapture!)
 </pre>
   <pre id="var-docstr">Restores System/out and System/err to their original values.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L226" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L226" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log4j-logging">log4j-logging</h2>
@@ -204,7 +204,7 @@ be used for all redirected logging. NOTE: this will not redirect output of
   <pre id="var-usage">Usage: (log4j-logging)
 </pre>
   <pre id="var-docstr">Creates a log-system struct using the log4j API, if present; otherwise nil.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L83" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L83" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/send-log">send-log</h2>
@@ -214,7 +214,7 @@ be used for all redirected logging. NOTE: this will not redirect output of
   <pre id="var-docstr">Sends the message to a logging agent, which will in turn write to the log if 
 the specific logging level is enabled. Use the log macro in preference to 
 this.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L138" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L138" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/spy">spy</h2>
@@ -223,7 +223,7 @@ this.</pre>
 </pre>
   <pre id="var-docstr">Evaluates expr and outputs the form and its result to the debug log; returns 
 the result of expr.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L186" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L186" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/with-logs">with-logs</h2>
@@ -232,7 +232,7 @@ the result of expr.</pre>
 </pre>
   <pre id="var-docstr">Evaluates exprs in a context in which *out* and *err* are bound to :info and 
 :error logging, respectively.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/logging.clj#L236" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/logging.clj#L236" id="var-source">Source</a>
 </div>
 
 
