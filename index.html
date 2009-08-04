@@ -1044,38 +1044,38 @@ Within strings, all non-ASCII characters are hexadecimal escaped.</pre>
   <h2 id="logging">logging</h2>
   by <span id="author">Alex Taggart, Timothy Pratley</span><br />
   API documentation <a href="logging-api.html" id="api-link">here</a><br />
-  <pre id="namespace-docstr">Logging macros which delegate to a specific logging 
-implementation. At runtime a specific implementation is selected from, in 
-order, Apache commons-logging, log4j, and finally java.util.logging.
+  <pre id="namespace-docstr">Logging macros which delegate to a specific logging implementation. At
+macro-expansion-time a specific implementation is selected from, in order,
+Apache commons-logging, log4j, and finally java.util.logging.
 
-Logging levels are specified by clojure keywords corresponding to the 
+Logging levels are specified by clojure keywords corresponding to the
 values used in log4j/commons-logging:
-  :trace, :debug, :info, :warn, :error, :fatal  
+  :trace, :debug, :info, :warn, :error, :fatal
 
-Logging occurs with the log macro which writes either directly or via an 
-agent.  By default direct logging is disabled, but can be enabled via the 
-*allow-direct-logging* boolean ref.  If log is invoked within a transaction it
-will always use an agent.
+Logging occurs with the log macro, or the level-specific convenience macros,
+which write either directly or via an agent.  By default direct logging is
+disabled, but can be enabled via the *allow-direct-logging* boolean atom. If
+logging is invoked within a transaction it will always use an agent.
 
-The log macro will not evaluate its 'message' unless the specific logging
+The log macros will not evaluate their 'message' unless the specific logging
 level is in effect.
 
-Alternately, you can use the spy function when you have code that needs to be
-evaluated, and also want to output its result to the debug log.
+Alternately, you can use the spy macro when you have code that needs to be
+evaluated, and also want to output the code and its result to the debug log.
 
 Unless otherwise specified, the current namespace (as identified by *ns*) will
-be used as the log-name (similar to how the java class name is usually used).
+be used as the log-ns (similar to how the java class name is usually used).
 
-Use the enabled? function to write conditional code against the logging level 
+Use the enabled? function to write conditional code against the logging level
 (beyond simply whether or not to call log, which is handled automatically).
 
-You can redirect all java writes of System.out and System.err to the log 
-system by calling log-capture!.  To rebind *out* and *err* to the log system 
-invoke with-logs.  In both cases a log-name (e.g., "com.example.captured")
+You can redirect all java writes of System.out and System.err to the log
+system by calling log-capture!.  To rebind *out* and *err* to the log system
+invoke with-logs.  In both cases a log-ns (e.g., "com.example.captured")
 needs to be specified to namespace the output.</pre>
   
   Public variables and functions:
-  <span id="var-link"><a href="logging-api.html#logging/*allow-direct-logging*" id="var-tag">*allow-direct-logging*</a> </span><span id="var-link"><a href="logging-api.html#logging/*log-system*" id="var-tag">*log-system*</a> </span><span id="var-link"><a href="logging-api.html#logging/*log-system-agent*" id="var-tag">*log-system-agent*</a> </span><span id="var-link"><a href="logging-api.html#logging/*old-std-streams*" id="var-tag">*old-std-streams*</a> </span><span id="var-link"><a href="logging-api.html#logging/commons-logging" id="var-tag">commons-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/do-log" id="var-tag">do-log</a> </span><span id="var-link"><a href="logging-api.html#logging/enabled?" id="var-tag">enabled?</a> </span><span id="var-link"><a href="logging-api.html#logging/java-logging" id="var-tag">java-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/log" id="var-tag">log</a> </span><span id="var-link"><a href="logging-api.html#logging/log-capture!" id="var-tag">log-capture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log-stream" id="var-tag">log-stream</a> </span><span id="var-link"><a href="logging-api.html#logging/log-system" id="var-tag">log-system</a> </span><span id="var-link"><a href="logging-api.html#logging/log-uncapture!" id="var-tag">log-uncapture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log4j-logging" id="var-tag">log4j-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/spy" id="var-tag">spy</a> </span><span id="var-link"><a href="logging-api.html#logging/with-logs" id="var-tag">with-logs</a> </span><br />
+  <span id="var-link"><a href="logging-api.html#logging/*allow-direct-logging*" id="var-tag">*allow-direct-logging*</a> </span><span id="var-link"><a href="logging-api.html#logging/*log-system*" id="var-tag">*log-system*</a> </span><span id="var-link"><a href="logging-api.html#logging/*log-system-agent*" id="var-tag">*log-system-agent*</a> </span><span id="var-link"><a href="logging-api.html#logging/*old-std-streams*" id="var-tag">*old-std-streams*</a> </span><span id="var-link"><a href="logging-api.html#logging/commons-logging" id="var-tag">commons-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/debug" id="var-tag">debug</a> </span><span id="var-link"><a href="logging-api.html#logging/do-log" id="var-tag">do-log</a> </span><span id="var-link"><a href="logging-api.html#logging/enabled?" id="var-tag">enabled?</a> </span><span id="var-link"><a href="logging-api.html#logging/error" id="var-tag">error</a> </span><span id="var-link"><a href="logging-api.html#logging/fatal" id="var-tag">fatal</a> </span><span id="var-link"><a href="logging-api.html#logging/info" id="var-tag">info</a> </span><span id="var-link"><a href="logging-api.html#logging/java-logging" id="var-tag">java-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/log" id="var-tag">log</a> </span><span id="var-link"><a href="logging-api.html#logging/log-capture!" id="var-tag">log-capture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log-stream" id="var-tag">log-stream</a> </span><span id="var-link"><a href="logging-api.html#logging/log-system" id="var-tag">log-system</a> </span><span id="var-link"><a href="logging-api.html#logging/log-uncapture!" id="var-tag">log-uncapture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log4j-logging" id="var-tag">log4j-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/spy" id="var-tag">spy</a> </span><span id="var-link"><a href="logging-api.html#logging/trace" id="var-tag">trace</a> </span><span id="var-link"><a href="logging-api.html#logging/warn" id="var-tag">warn</a> </span><span id="var-link"><a href="logging-api.html#logging/with-logs" id="var-tag">with-logs</a> </span><br />
   
 </div><div id="namespace-entry">
   <hr />

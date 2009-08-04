@@ -66,9 +66,17 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#logging/commons-logging">commons-logging</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#logging/debug">debug</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#logging/do-log">do-log</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#logging/enabled?">enabled?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#logging/error">error</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#logging/fatal">fatal</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#logging/info">info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#logging/java-logging">java-logging</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -86,6 +94,10 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#logging/spy">spy</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#logging/trace">trace</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#logging/warn">warn</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#logging/with-logs">with-logs</a>
     </div>
     <br />
@@ -100,34 +112,34 @@ by <span id="author">Alex Taggart, Timothy Pratley</span><br />
   (:require <span id="long-name">clojure.contrib.logging</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">Logging macros which delegate to a specific logging 
-implementation. At runtime a specific implementation is selected from, in 
-order, Apache commons-logging, log4j, and finally java.util.logging.
+<pre id="namespace-docstr">Logging macros which delegate to a specific logging implementation. At
+macro-expansion-time a specific implementation is selected from, in order,
+Apache commons-logging, log4j, and finally java.util.logging.
 
-Logging levels are specified by clojure keywords corresponding to the 
+Logging levels are specified by clojure keywords corresponding to the
 values used in log4j/commons-logging:
-  :trace, :debug, :info, :warn, :error, :fatal  
+  :trace, :debug, :info, :warn, :error, :fatal
 
-Logging occurs with the log macro which writes either directly or via an 
-agent.  By default direct logging is disabled, but can be enabled via the 
-*allow-direct-logging* boolean ref.  If log is invoked within a transaction it
-will always use an agent.
+Logging occurs with the log macro, or the level-specific convenience macros,
+which write either directly or via an agent.  By default direct logging is
+disabled, but can be enabled via the *allow-direct-logging* boolean atom. If
+logging is invoked within a transaction it will always use an agent.
 
-The log macro will not evaluate its 'message' unless the specific logging
+The log macros will not evaluate their 'message' unless the specific logging
 level is in effect.
 
-Alternately, you can use the spy function when you have code that needs to be
-evaluated, and also want to output its result to the debug log.
+Alternately, you can use the spy macro when you have code that needs to be
+evaluated, and also want to output the code and its result to the debug log.
 
 Unless otherwise specified, the current namespace (as identified by *ns*) will
-be used as the log-name (similar to how the java class name is usually used).
+be used as the log-ns (similar to how the java class name is usually used).
 
-Use the enabled? function to write conditional code against the logging level 
+Use the enabled? function to write conditional code against the logging level
 (beyond simply whether or not to call log, which is handled automatically).
 
-You can redirect all java writes of System.out and System.err to the log 
-system by calling log-capture!.  To rebind *out* and *err* to the log system 
-invoke with-logs.  In both cases a log-name (e.g., "com.example.captured")
+You can redirect all java writes of System.out and System.err to the log
+system by calling log-capture!.  To rebind *out* and *err* to the log system
+invoke with-logs.  In both cases a log-ns (e.g., "com.example.captured")
 needs to be specified to namespace the output.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
@@ -136,32 +148,32 @@ needs to be specified to namespace the output.</pre>
   <h2 id="logging/*allow-direct-logging*">*allow-direct-logging*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
-  <pre id="var-docstr">A flag indicating wether logging can be directly (as opposed to via an agent)
-when not operating from within a transaction. Defaults to false.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L160" id="var-source">Source</a>
+  <pre id="var-docstr">A boolean atom indicating whether direct logging (as opposed to via an agent)
+is allowed when not operating from within a transaction. Defaults to false.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L164" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/*log-system*">*log-system*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
-  <pre id="var-docstr">The default log-system initialized to the first implementation found from:
-Apache commons-logging, log4j, java.util.logging.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L146" id="var-source">Source</a>
+  <pre id="var-docstr">An atom holding the default log-system initialized to the first
+implementation found from: Apache commons-logging, log4j, java.util.logging.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L147" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/*log-system-agent*">*log-system-agent*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
-  <pre id="var-docstr">The default agent referecing *log-system*.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L155" id="var-source">Source</a>
+  <pre id="var-docstr">The default agent referencing *log-system*.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L159" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/*old-std-streams*">*old-std-streams*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
-  <pre id="var-docstr">Used by log-capture! to maintain a reference to the original System.out and
-System.err streams.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L213" id="var-source">Source</a>
+  <pre id="var-docstr">A ref used by log-capture! to maintain a reference to the original System.out
+and System.err streams.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L218" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/commons-logging">commons-logging</h2>
@@ -169,28 +181,64 @@ System.err streams.</pre>
   <pre id="var-usage">Usage: (commons-logging)
 </pre>
   <pre id="var-docstr">Creates a log-system struct using the Apache commons-logging API, 
-if present; otherwise nil. End-users should not need to invoke this macro.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L59" id="var-source">Source</a>
+if present, otherwise nil. End-users should not need to invoke this macro.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L60" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="logging/debug">debug</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (debug message)
+       (debug message throwable)
+</pre>
+  <pre id="var-docstr">Logs a message at the debug level.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L269" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/do-log">do-log</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (do-log system-ref level message throwable log-name)
+  <pre id="var-usage">Usage: (do-log system-ref level message throwable log-ns)
 </pre>
   <pre id="var-docstr">Logs the message immediately if the specific logging level is enabled. Use
 the log macro in preference to this function.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L135" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L136" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/enabled?">enabled?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (enabled? level)
-       (enabled? level log-name)
+       (enabled? level log-ns)
 </pre>
-  <pre id="var-docstr">Returns true if the specific logging level is enabled.  This function should 
-only be necessary if one needs to execute alternate code paths beyond whether 
-the log should be written to.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L180" id="var-source">Source</a>
+  <pre id="var-docstr">Returns true if the specific logging level is enabled.  Use of this function
+should only be necessary if one needs to execute alternate code paths beyond
+whether the log should be written to.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L185" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="logging/error">error</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (error message)
+       (error message throwable)
+</pre>
+  <pre id="var-docstr">Logs a message at the error level.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L290" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="logging/fatal">fatal</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (fatal message)
+       (fatal message throwable)
+</pre>
+  <pre id="var-docstr">Logs a message at the fatal level.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L297" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="logging/info">info</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (info message)
+       (info message throwable)
+</pre>
+  <pre id="var-docstr">Logs a message at the info level.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L276" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/java-logging">java-logging</h2>
@@ -199,66 +247,67 @@ the log should be written to.</pre>
 </pre>
   <pre id="var-docstr">Creates a log-system struct using the java.util.logging API.  End-users
 should not need to invoke this macro.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L111" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L112" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log">log</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (log level message)
        (log level message throwable)
-       (log level message throwable log-name)
+       (log level message throwable log-ns)
 </pre>
-  <pre id="var-docstr">Logs a message, either directly or via an agent.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L166" id="var-source">Source</a>
+  <pre id="var-docstr">Logs a message, either directly or via an agent. See also the level-specific
+convenience macros.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L170" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-capture!">log-capture!</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (log-capture! log-name)
+  <pre id="var-usage">Usage: (log-capture! log-ns)
 </pre>
   <pre id="var-docstr">Captures System.out and System.err, redirecting all writes of those streams
-to :info and :error logging, respectively. The specified log-name value will 
+to :info and :error logging, respectively. The specified log-ns value will
 be used to namespace all redirected logging. NOTE: this will not redirect
 output of *out* or *err*; for that, use with-logs.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L219" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L224" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-stream">log-stream</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (log-stream level log-name)
+  <pre id="var-usage">Usage: (log-stream level log-ns)
 </pre>
   <pre id="var-docstr">Creates a PrintStream that will output to the log. End-users should not need
 to invoke this function.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L198" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L203" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-system">log-system</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
-  <pre id="var-docstr">A struct to abstract the functionality common to all implementations.
+  <pre id="var-docstr">A struct to abstract the functionality common to all logging implementations.
 The keys are as follows:
   :name     ; the name of the logging system used
-  :get-log  ; fn [name] to obtain a log by string name
+  :get-log  ; fn [log-ns] to obtain a log by string namespace
   :enabled? ; fn [log lvl] to check if a particular level is emabled
   :write    ; fn [log lvl msg ex] to a log a message</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L48" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L49" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log-uncapture!">log-uncapture!</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (log-uncapture!)
 </pre>
-  <pre id="var-docstr">Restores System/out and System/err to their original values.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L235" id="var-source">Source</a>
+  <pre id="var-docstr">Restores System.out and System.err to their original values.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L240" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/log4j-logging">log4j-logging</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (log4j-logging)
 </pre>
-  <pre id="var-docstr">Creates a log-system struct using the log4j API, if present; otherwise nil.
+  <pre id="var-docstr">Creates a log-system struct using the log4j API, if present, otherwise nil.
 End-users should not need to invoke this macro.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L87" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L88" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/spy">spy</h2>
@@ -267,17 +316,35 @@ End-users should not need to invoke this macro.</pre>
 </pre>
   <pre id="var-docstr">Evaluates expr and outputs the form and its result to the debug log; returns 
 the result of expr.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L191" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L196" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="logging/trace">trace</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (trace message)
+       (trace message throwable)
+</pre>
+  <pre id="var-docstr">Logs a message at the trace level.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L262" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="logging/warn">warn</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (warn message)
+       (warn message throwable)
+</pre>
+  <pre id="var-docstr">Logs a message at the warn level.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L283" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="logging/with-logs">with-logs</h2>
   <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-logs log-name &amp; body)
+  <pre id="var-usage">Usage: (with-logs log-ns &amp; body)
 </pre>
   <pre id="var-docstr">Evaluates exprs in a context in which *out* and *err* are bound to :info and
-:error logging, respectively. The specified log-name value will be used to
+:error logging, respectively. The specified log-ns value will be used to
 namespace all redirected logging.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dcec88467e840c0120e9f27f2020636857692800/src/clojure/contrib/logging.clj#L245" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6c95fe90829cc66f81345a011dc25fc487e4cf0b/src/clojure/contrib/logging.clj#L250" id="var-source">Source</a>
 </div>
 
 
