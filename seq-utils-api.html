@@ -117,7 +117,7 @@ time which will be pushed onto a queue, blocking if needed until
 this is possible.  fill-queue will return a lazy seq of the values
 filler-func has pushed onto the queue, blocking if needed until each
 next element becomes available.  filler-func's return value is ignored.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L179" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L179" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/find-first">find-first</h2>
@@ -127,7 +127,7 @@ next element becomes available.  filler-func's return value is ignored.</pre>
   <pre id="var-docstr">Returns the first item of coll for which (pred item) returns logical true.
 Consumes sequences up to the first match, will consume the entire sequence
 and return nil if no match is found.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L170" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L170" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/flatten">flatten</h2>
@@ -137,7 +137,7 @@ and return nil if no match is found.</pre>
   <pre id="var-docstr">Takes any nested combination of sequential things (lists, vectors,
 etc.) and returns their contents as a single, flat sequence.
 (flatten nil) returns nil.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L34" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L34" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/frequencies">frequencies</h2>
@@ -146,7 +146,7 @@ etc.) and returns their contents as a single, flat sequence.
 </pre>
   <pre id="var-docstr">Returns a map from distinct items in coll to the number of times
 they appear.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L89" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L89" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/group-by">group-by</h2>
@@ -156,7 +156,7 @@ they appear.</pre>
   <pre id="var-docstr">Returns a sorted map of the elements of coll keyed by the result of
 f on each element. The value at each key will be a vector of the
 corresponding elements, in the order they appeared in coll.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L65" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L65" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/includes?">includes?</h2>
@@ -165,7 +165,7 @@ corresponding elements, in the order they appeared in coll.</pre>
 </pre>
   <pre id="var-docstr">Returns true if coll contains something equal (with =) to x,
 in linear time.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L48" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L48" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/indexed">indexed</h2>
@@ -176,7 +176,7 @@ in linear time.</pre>
 from 's' and indexes count up from zero.
 
 (indexed '(a b c d))  =&gt;  ([0 a] [1 b] [2 c] [3 d])</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L55" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L55" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/partition-all">partition-all</h2>
@@ -186,7 +186,7 @@ from 's' and indexes count up from zero.
 </pre>
   <pre id="var-docstr">Returns a lazy sequence of lists like clojure.core/partition, but may
 include lists with fewer than n items at the end.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L135" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L135" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/partition-by">partition-by</h2>
@@ -195,7 +195,7 @@ include lists with fewer than n items at the end.</pre>
 </pre>
   <pre id="var-docstr">Applies f to each value in coll, splitting it each time f returns
 a new value.  Returns a lazy seq of lazy seqs.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L78" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L78" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/rand-elt">rand-elt</h2>
@@ -203,7 +203,7 @@ a new value.  Returns a lazy seq of lazy seqs.</pre>
   <pre id="var-usage">Usage: (rand-elt s)
 </pre>
   <pre id="var-docstr">Return a random element of this seq</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L152" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L152" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/rec-cat">rec-cat</h2>
@@ -212,7 +212,7 @@ a new value.  Returns a lazy seq of lazy seqs.</pre>
 </pre>
   <pre id="var-docstr">Similar to lazy-cat but binds the resulting sequence to the supplied 
 binding-name, allowing for recursive expressions.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L106" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L106" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/rec-seq">rec-seq</h2>
@@ -221,7 +221,7 @@ binding-name, allowing for recursive expressions.</pre>
 </pre>
   <pre id="var-docstr">Similar to lazy-seq but binds the resulting seq to the supplied 
 binding-name, allowing for recursive expressions.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L99" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L99" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/reductions">reductions</h2>
@@ -231,7 +231,7 @@ binding-name, allowing for recursive expressions.</pre>
 </pre>
   <pre id="var-docstr">Returns a lazy seq of the intermediate values of the reduction (as
 per reduce) of coll by f, starting with init.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L115" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L115" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/rotations">rotations</h2>
@@ -239,7 +239,7 @@ per reduce) of coll by f, starting with init.</pre>
   <pre id="var-usage">Usage: (rotations x)
 </pre>
   <pre id="var-docstr">Returns a lazy seq of all rotations of a seq</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L125" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L125" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/separate">separate</h2>
@@ -248,7 +248,7 @@ per reduce) of coll by f, starting with init.</pre>
 </pre>
   <pre id="var-docstr">Returns a vector:
 [ (filter f s), (filter (complement f) s) ]</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L42" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L42" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/seq-on">seq-on</h2>
@@ -257,7 +257,7 @@ per reduce) of coll by f, starting with init.</pre>
 </pre>
   <pre id="var-docstr">Returns a seq on the object s. Works like the built-in seq but as
 a multimethod that can have implementations for new classes and types.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L159" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L159" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="seq-utils/shuffle">shuffle</h2>
@@ -265,7 +265,7 @@ a multimethod that can have implementations for new classes and types.</pre>
   <pre id="var-usage">Usage: (shuffle coll)
 </pre>
   <pre id="var-docstr">Return a random permutation of coll</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/seq_utils.clj#L145" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/db7ac3aa9a5de29ac9c0107a21a790f90104ad3f/src/clojure/contrib/seq_utils.clj#L145" id="var-source">Source</a>
 </div>
 
 
