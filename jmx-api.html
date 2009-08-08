@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure contrib - dataflow API reference</title>
+    <title>clojure contrib - jmx API reference</title>
     <link href="file/view/favicon.png" rel="icon" />
     <link href="file/view/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -56,251 +56,257 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/add-cell-watcher">add-cell-watcher</a>
+      <a href="#jmx/*connection*">*connection*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/add-cells">add-cells</a>
+      <a href="#jmx/as-object-name">as-object-name</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-dataflow">build-dataflow</a>
+      <a href="#jmx/attribute-info">attribute-info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-source-cell">build-source-cell</a>
+      <a href="#jmx/attribute-names">attribute-names</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-standard-cell">build-standard-cell</a>
+      <a href="#jmx/build-attribute-info">build-attribute-info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-validator-cell">build-validator-cell</a>
+      <a href="#jmx/guess-attribute-typename">guess-attribute-typename</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/cell">cell</a>
+      <a href="#jmx/jmx-&gt;clj">jmx-&gt;clj</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/display-cell">display-cell</a>
+      <a href="#jmx/jmx-url">jmx-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/eval-cell">eval-cell</a>
+      <a href="#jmx/map-&gt;attribute-infos">map-&gt;attribute-infos</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-cell">get-cell</a>
+      <a href="#jmx/maybe-atomize">maybe-atomize</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-cells">get-cells</a>
+      <a href="#jmx/maybe-keywordize">maybe-keywordize</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-old-value">get-old-value</a>
+      <a href="#jmx/mbean">mbean</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-source-cells">get-source-cells</a>
+      <a href="#jmx/mbean-names">mbean-names</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-value">get-value</a>
+      <a href="#jmx/op-param-types">op-param-types</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-value-from-cell">get-value-from-cell</a>
+      <a href="#jmx/operation">operation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-values">get-values</a>
+      <a href="#jmx/operation-names">operation-names</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/print-dataflow">print-dataflow</a>
+      <a href="#jmx/operations">operations</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/remove-cells">remove-cells</a>
+      <a href="#jmx/raw-read">raw-read</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/source-cell?">source-cell?</a>
+      <a href="#jmx/read">read</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/update-values">update-values</a>
+      <a href="#jmx/read-exceptions">read-exceptions</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#jmx/read-supported">read-supported</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#jmx/readable?">readable?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#jmx/with-connection">with-connection</a>
     </div>
     <br />
   </div>
 </div>
 </div></div>
-                  <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">dataflow</span></h1>
-by <span id="author">Jeffrey Straszheim</span><br />
+                  <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">jmx</span></h1>
+by <span id="author">Unknown</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.dataflow</span>))
+  (:require <span id="long-name">clojure.contrib.jmx</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">A library to support a dataflow model of state</pre>
+<pre id="namespace-docstr"></pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <hr />
-  <h2 id="dataflow/add-cell-watcher">add-cell-watcher</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (add-cell-watcher cell key fun)
-</pre>
-  <pre id="var-docstr">Adds a watcher to a cell to respond to changes of value.  The is a
-function of 4 values: a key, the cell, its old value, its new
-value.  This is implemented using Clojure's add-watch to the
-underlying ref, and shared its sematics</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L460" id="var-source">Source</a>
+  <h2 id="jmx/*connection*">*connection*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">The connection to be used for JMX ops. Defaults to the local process.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx.clj#L86" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="dataflow/add-cells">add-cells</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (add-cells df cells)
-</pre>
-  <pre id="var-docstr">Given a collection of cells, add them to the dataflow.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L210" id="var-source">Source</a>
+  <h2 id="jmx/as-object-name">as-object-name</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">No usage documentation available</pre>
+  <pre id="var-docstr">Interpret an object as a JMX ObjectName</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L26" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="dataflow/build-dataflow">build-dataflow</h2>
+  <h2 id="jmx/attribute-info">attribute-info</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (build-dataflow cs)
+  <pre id="var-usage">Usage: (attribute-info object-name attr-name)
 </pre>
-  <pre id="var-docstr">Given a collection of cells, build and return a dataflow object</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L188" id="var-source">Source</a>
+  <pre id="var-docstr">Get the MBeanAttributeInfo for an attribute</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L69" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="dataflow/build-source-cell">build-source-cell</h2>
+  <h2 id="jmx/attribute-names">attribute-names</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (build-source-cell name init)
+  <pre id="var-usage">Usage: (attribute-names n)
 </pre>
-  <pre id="var-docstr">Builds a source cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L231" id="var-source">Source</a>
+  <pre id="var-docstr">All attribute names available on an MBean.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx.clj#L98" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="dataflow/build-standard-cell">build-standard-cell</h2>
+  <h2 id="jmx/build-attribute-info">build-attribute-info</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (build-standard-cell name deps fun expr)
+  <pre id="var-usage">Usage: (build-attribute-info attr-name attr-value)
+       (build-attribute-info name type desc readable? writable? is?)
 </pre>
-  <pre id="var-docstr">Builds a standard cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L292" id="var-source">Source</a>
+  <pre id="var-docstr">Construct an MBeanAttributeInfo. Normally called with a key/value pair from a Clojure map.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L88" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="dataflow/build-validator-cell">build-validator-cell</h2>
+  <h2 id="jmx/guess-attribute-typename">guess-attribute-typename</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (build-validator-cell deps fun expr)
+  <pre id="var-usage">Usage: (guess-attribute-typename value)
 </pre>
-  <pre id="var-docstr">Builds a validator cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L298" id="var-source">Source</a>
+  <pre id="var-docstr">Guess the attribute typename for MBeanAttributeInfo based on the attribute value.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L82" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="dataflow/cell">cell</h2>
+  <h2 id="jmx/jmx-&gt;clj">jmx-&gt;clj</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">No usage documentation available</pre>
+  <pre id="var-docstr">Coerce JMX data structures into Clojure data</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L63" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/jmx-url">jmx-url</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (jmx-url)
+       (jmx-url overrides)
+</pre>
+  <pre id="var-docstr">Build a JMX URL from options.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L19" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/map-&gt;attribute-infos">map-&gt;attribute-infos</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (map-&gt;attribute-infos attr-map)
+</pre>
+  <pre id="var-docstr">Construct an MBeanAttributeInfo[] from a Clojure associative.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L97" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/maybe-atomize">maybe-atomize</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (maybe-atomize k)
+</pre>
+  <pre id="var-docstr">Convert a list of length 1 into its contents, leaving other things alone.
+Used to simplify keys in the tabular data API.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L43" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/maybe-keywordize">maybe-keywordize</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (maybe-keywordize s)
+</pre>
+  <pre id="var-docstr">Convert a string key to a keyword, leaving other types alone. Used to
+simplify keys in the tabular data API.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/data.clj#L37" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/mbean">mbean</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (mbean n)
+</pre>
+  <pre id="var-docstr">Like clojure.core/bean, but for JMX beans. Returns a read-only map of
+a JMX bean's attributes. If an attribute it not supported, value is
+set to the exception thrown.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx.clj#L117" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/mbean-names">mbean-names</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (mbean-names n)
+</pre>
+  <pre id="var-docstr">Finds all MBeans matching a name on the current *connection*.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx.clj#L93" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/op-param-types">op-param-types</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (op-param-types n op)
+</pre>
+  <pre id="var-docstr">The parameter types (as class name strings) for operation op on n. Used for invoke.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L90" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/operation">operation</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (operation n op)
+</pre>
+  <pre id="var-docstr">The MBeanOperationInfo for operation op on mbean n. Used for invoke.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L85" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/operation-names">operation-names</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (operation-names n)
+</pre>
+  <pre id="var-docstr">All operation names available on an MBean.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx.clj#L104" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/operations">operations</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (operations n)
+</pre>
+  <pre id="var-docstr">All oeprations available on an MBean.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L80" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/raw-read">raw-read</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (raw-read n attr)
+</pre>
+  <pre id="var-docstr">Read an mbean property. Returns low-level Java object model for composites, tabulars, etc.
+Most callers should use read.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L30" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/read">read</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Read an mbean property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L36" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/read-exceptions">read-exceptions</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Exceptions that might be thrown if you try to read an unsupported attribute.
+by testing agains jconsole and Tomcat. This is dreadful and ad-hoc but I did not
+want to swallow all exceptions.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L40" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/read-supported">read-supported</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (read-supported n attr)
+</pre>
+  <pre id="var-docstr">Calls read to read an mbean property, *returning* unsupported operation exceptions instead of throwing them.
+Used to keep mbean from blowing up. Note that some terribly-behaved mbeans use java.lang.InternalError to
+indicate an unsupported operation!</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L50" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/readable?">readable?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (readable? n attr)
+</pre>
+  <pre id="var-docstr">Is attribute readable?</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L75" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="jmx/with-connection">with-connection</h2>
   <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (cell type &amp; data)
+  <pre id="var-usage">Usage: (with-connection opts &amp; body)
 </pre>
-  <pre id="var-docstr">Build a standard cell, like this:
-
- (cell fred
-    (* ?mary ?joe))
-
-Which creates a cell named fred that is the product of a cell mary and cell joe
-
-Or:
-
- (cell joe
-   (apply * ?*sally))
-
-Which creates a cell that applies * to the collection of all cells named sally
-
-Or:
-
- (cell :source fred 0)
-
-Which builds a source cell fred with initial value 0
-
-Or:
-
-  (cell :validator (when (&lt; ?fred ?sally)
-                       (throwf "%s must be greater than %s" ?fred ?sally))
-
-Which will perform the validation</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L304" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/display-cell">display-cell</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">No usage documentation available</pre>
-  <pre id="var-docstr">A 'readable' form of the cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L348" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/eval-cell">eval-cell</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">No usage documentation available</pre>
-  <pre id="var-docstr">Evaluate a dataflow cell.  Return [changed, old val]</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L372" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-cell">get-cell</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-cell df name)
-</pre>
-  <pre id="var-docstr">Get the single cell named by name</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L94" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-cells">get-cells</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-cells df name)
-</pre>
-  <pre id="var-docstr">Get all the cells named by name</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L89" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-old-value">get-old-value</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-old-value df env name)
-</pre>
-  <pre id="var-docstr">Looks up an old value</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L136" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-source-cells">get-source-cells</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-source-cells df)
-</pre>
-  <pre id="var-docstr">Returns a collection of source cells from the dataflow</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L108" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-value">get-value</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-value df name)
-</pre>
-  <pre id="var-docstr">Gets a value from the df matching the passed symbol.
-Signals an error if the name is not present, or if it not a single
-value.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L115" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-value-from-cell">get-value-from-cell</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-value-from-cell cell)
-</pre>
-  <pre id="var-docstr">Given a cell, get its value</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L143" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/get-values">get-values</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-values df name)
-</pre>
-  <pre id="var-docstr">Gets a collection of values from the df by name</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L126" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/print-dataflow">print-dataflow</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (print-dataflow df)
-</pre>
-  <pre id="var-docstr">Prints a dataflow, one cell per line</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L199" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/remove-cells">remove-cells</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (remove-cells df cells)
-</pre>
-  <pre id="var-docstr">Given a collection of cells, remove them from the dataflow.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L218" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/source-cell?">source-cell?</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (source-cell? cell)
-</pre>
-  <pre id="var-docstr">Is this cell a source cell?</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L103" id="var-source">Source</a>
-</div><div id="var-entry">
-  <hr />
-  <h2 id="dataflow/update-values">update-values</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (update-values df data)
-</pre>
-  <pre id="var-docstr">Given a dataflow, and a map of name-value pairs, update the
-dataflow by binding the new values.  Each name must be of a source
-cell</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/dataflow.clj#L438" id="var-source">Source</a>
+  <pre id="var-docstr">Execute body with JMX connection specified by opts (:port).</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6dd2205627cd524894b1175da20ce9c5ac65aef7/src/clojure/contrib/jmx/client.clj#L19" id="var-source">Source</a>
 </div>
 
 
