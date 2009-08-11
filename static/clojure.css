@@ -16,10 +16,6 @@ img {border: 0;}
 #Resources a:link, #Resources a:visited, #Resources a:hover, #Resources a:active {color: #4c5770;}
 #Resources a:hover {text-decoration: underline;}
 
-.WikiSearch {text-align: center;margin: 0;padding: 0;padding: 4px 0 7px 0;}
-.WikiSearchInput {font-size: 11px;border: 1px solid #aaa;width: 136px;height: 1.3em;margin: 0;padding: 0;}
-#search {background-color: #d6d6d6;border: 1px solid #aaa;margin: 0;vertical-align: top;font-size: 11px;}
-
 #leftcolumn {margin: 0 0 0 22px;float: left;width: 168px;padding-bottom: 18px;background: #c5d2eb url(/space/showimage/left-nav-bottom.gif) bottom no-repeat;}
 
 #leftcolumn ul {list-style: none;margin: 0;padding: 0;}
