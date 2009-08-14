@@ -55,7 +55,13 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/client-error?">client-error?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/error?">error?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/http-agent">http-agent</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/redirect?">redirect?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/response-body-bytes">response-body-bytes</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -69,7 +75,9 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/response-status">response-status</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-success?">response-success?</a>
+      <a href="#http.agent/server-error?">server-error?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/success?">success?</a>
     </div>
     <br />
   </div>
@@ -87,6 +95,23 @@ by <span id="author">Unknown</span><br />
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
+  <hr />
+  <h2 id="http.agent/client-error?">client-error?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (client-error? http-agnt)
+</pre>
+  <pre id="var-docstr">Returns true if the HTTP response code was in the 400-499 range.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L198" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="http.agent/error?">error?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (error? http-agnt)
+</pre>
+  <pre id="var-docstr">Returns true if the HTTP response code was in the 400-499 range OR
+the 500-599 range.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L208" id="var-source">Source</a>
+</div><div id="var-entry">
   <hr />
   <h2 id="http.agent/http-agent">http-agent</h2>
   <span id="var-type">function</span><br />
@@ -143,7 +168,19 @@ by this function will become agent-errors.  Any exceptions thrown by
 this function will be added to the agent's error queue (see
 agent-errors).
 </pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L58" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L58" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="http.agent/redirect?">redirect?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (redirect? http-agnt)
+</pre>
+  <pre id="var-docstr">Returns true if the HTTP response code was in the 300-399 range.
+
+Note: if the :follow-redirects option was true (the default),
+redirects will be followed automatically and a the agent will never
+return a 3xx response code.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L189" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="http.agent/response-body-bytes">response-body-bytes</h2>
@@ -151,7 +188,7 @@ agent-errors).
   <pre id="var-usage">Usage: (response-body-bytes a)
 </pre>
   <pre id="var-docstr">Returns a Java byte array of the content returned by the server.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L122" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L122" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="http.agent/response-body-str">response-body-str</h2>
@@ -165,7 +202,7 @@ encoding.
 If no encoding is given, uses the encoding specified in the server
 headers, or clojure.contrib.duck-streams/*default-encoding* if it is
 not specified.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L128" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L128" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="http.agent/response-headers">response-headers</h2>
@@ -175,7 +212,7 @@ not specified.</pre>
   <pre id="var-docstr">Returns a String=&gt;String map of HTTP response headers.  Header
 names are converted to all lower-case.  If a header appears more
 than once, only the last value is returned.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L158" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L158" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="http.agent/response-headers-seq">response-headers-seq</h2>
@@ -185,7 +222,7 @@ than once, only the last value is returned.</pre>
   <pre id="var-docstr">Returns the HTTP response headers in order as a sequence of
 [String,String] pairs.  The first 'header' name may be null for the
 HTTP status line.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L167" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L167" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="http.agent/response-message">response-message</h2>
@@ -193,7 +230,7 @@ HTTP status line.</pre>
   <pre id="var-usage">Usage: (response-message a)
 </pre>
   <pre id="var-docstr">Returns the HTTP response message (e.g. 'Not Found'), for this request.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L152" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L152" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="http.agent/response-status">response-status</h2>
@@ -201,15 +238,23 @@ HTTP status line.</pre>
   <pre id="var-usage">Usage: (response-status a)
 </pre>
   <pre id="var-docstr">Returns the Integer response status code (e.g. 200, 404) for this request.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L146" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L146" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="http.agent/response-success?">response-success?</h2>
+  <h2 id="http.agent/server-error?">server-error?</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-success? http-agnt)
+  <pre id="var-usage">Usage: (server-error? http-agnt)
+</pre>
+  <pre id="var-docstr">Returns true if the HTTP response code was in the 500-599 range.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L203" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="http.agent/success?">success?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (success? http-agnt)
 </pre>
   <pre id="var-docstr">Returns true if the HTTP response code was in the 200-299 range.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/3bd1a3506de189040fdbc26be9c4eba308d98a06/src/clojure/contrib/http/agent.clj#L180" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/54ee3b6fc9d625bb476f38b096f80b791cfa9b65/src/clojure/contrib/http/agent.clj#L184" id="var-source">Source</a>
 </div>
 
 
