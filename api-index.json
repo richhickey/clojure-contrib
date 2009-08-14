@@ -207,7 +207,7 @@
    "author":null,
    "doc":"Agent-based asynchronous HTTP client."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ebba2e312d18692934299ccf2a238e2e344e5d2c/src/clojure/contrib/http/connection.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/5f3988ffe6eb894448cbdc2bd4ec8b01ba2e10ce/src/clojure/contrib/http/connection.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/http.connection-api.html",
    "name":"clojure.contrib.http.connection",
@@ -2322,7 +2322,7 @@
    "Returns the Integer response status code (e.g. 200, 404) for this request.",
    "name":"response-status"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ebba2e312d18692934299ccf2a238e2e344e5d2c/src/clojure/contrib/http/connection.clj#L21",
+   "http://github.com/richhickey/clojure-contrib/blob/5f3988ffe6eb894448cbdc2bd4ec8b01ba2e10ce/src/clojure/contrib/http/connection.clj#L21",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.connection-api.html#http.connection/http-connection",
    "namespace":"clojure.contrib.http.connection",
@@ -2330,7 +2330,7 @@
    "doc":"Opens an HttpURLConnection at the URL, handled by as-url.",
    "name":"http-connection"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ebba2e312d18692934299ccf2a238e2e344e5d2c/src/clojure/contrib/http/connection.clj#L26",
+   "http://github.com/richhickey/clojure-contrib/blob/5f3988ffe6eb894448cbdc2bd4ec8b01ba2e10ce/src/clojure/contrib/http/connection.clj#L26",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.connection-api.html#http.connection/send-request-entity",
    "namespace":"clojure.contrib.http.connection",
