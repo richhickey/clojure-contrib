@@ -228,7 +228,7 @@
    "author":"Stuart Sierra",
    "doc":"Utilities for working with Java JAR files"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/java-utils-api.html",
    "name":"clojure.contrib.java-utils",
@@ -2435,7 +2435,7 @@
    "Returns true if file is a normal file with a .jar or .JAR extension.",
    "name":"jar-file?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L75",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L75",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-file",
    "namespace":"clojure.contrib.java-utils",
@@ -2443,7 +2443,7 @@
    "Interpret a String or a java.io.File as a File. Building block\nfor clojure.contrib.java-utils/file, which you should prefer\nin most cases.",
    "name":"as-file"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L134",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L134",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2452,7 +2452,7 @@
    "Convert any seq of pairs to a java.utils.Properties instance.\nUses as-str to convert both keys and values into strings.",
    "name":"as-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L92",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L92",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-str",
    "namespace":"clojure.contrib.java-utils",
@@ -2460,7 +2460,7 @@
    "doc":"Returns the name or string representation of x",
    "name":"as-str"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L160",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L160",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-url",
    "namespace":"clojure.contrib.java-utils",
@@ -2468,7 +2468,7 @@
    "doc":"Coerces argument (URL, URI, or String) to a java.net.URL.",
    "name":"as-url"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L83",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L83",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/file",
    "namespace":"clojure.contrib.java-utils",
@@ -2477,7 +2477,7 @@
    "doc":"Returns a java.io.File from string or file args.",
    "name":"file"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L99",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L99",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/get-system-property",
    "namespace":"clojure.contrib.java-utils",
@@ -2485,7 +2485,7 @@
    "doc":"Get a system property.",
    "name":"get-system-property"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L144",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L144",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/read-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2493,7 +2493,7 @@
    "doc":"Read properties from file-able.",
    "name":"read-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L62",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L62",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/relative-path-string",
    "namespace":"clojure.contrib.java-utils",
@@ -2501,7 +2501,7 @@
    "Interpret a String or java.io.File as a relative path string. \nBuilding block for clojure.contrib.java-utils/file.",
    "name":"relative-path-string"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L106",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L106",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/set-system-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2509,7 +2509,7 @@
    "doc":"Set some system properties. Nil clears a property.",
    "name":"set-system-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L114",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L114",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/with-system-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2518,7 +2518,7 @@
    "setting => property-name value\n\nSets the system properties to the supplied values, executes the body, and\nsets the properties back to their original values. Values of nil are\ntranslated to a clearing of the property.",
    "name":"with-system-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2bc54dbb3a479deeeded8ddfa09f9968bd4ad1/src/clojure/contrib/java_utils.clj#L151",
+   "http://github.com/richhickey/clojure-contrib/blob/c2f2b43fa22e3759a1844a1715fb8a32b18e9f6f/src/clojure/contrib/java_utils.clj#L151",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/write-properties",
    "namespace":"clojure.contrib.java-utils",
