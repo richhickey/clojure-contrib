@@ -242,7 +242,7 @@
    "author":"Christophe Grand",
    "doc":"Start a web browser from Clojure"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/jmx-api.html",
    "name":"clojure.contrib.jmx",
@@ -2543,7 +2543,7 @@
    "doc":"Opens url (a string) in a Swing window.",
    "name":"open-url-in-swing"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx.clj#L86",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj#L83",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/*connection*",
    "namespace":"clojure.contrib.jmx",
@@ -2551,11 +2551,12 @@
    "The connection to be used for JMX ops. Defaults to the local process.",
    "name":"*connection*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L26",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L26",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/as-object-name",
    "namespace":"clojure.contrib.jmx",
-   "doc":"Interpret an object as a JMX ObjectName",
+   "arglists":[["string-or-name"]],
+   "doc":"Interpret an object as a JMX ObjectName.",
    "name":"as-object-name"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/client.clj#L69",
@@ -2566,7 +2567,7 @@
    "doc":"Get the MBeanAttributeInfo for an attribute",
    "name":"attribute-info"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx.clj#L98",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj#L95",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/attribute-names",
    "namespace":"clojure.contrib.jmx",
@@ -2574,7 +2575,7 @@
    "doc":"All attribute names available on an MBean.",
    "name":"attribute-names"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L88",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L91",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/build-attribute-info",
    "namespace":"clojure.contrib.jmx",
@@ -2585,7 +2586,7 @@
    "Construct an MBeanAttributeInfo. Normally called with a key/value pair from a Clojure map.",
    "name":"build-attribute-info"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L82",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L85",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/guess-attribute-typename",
    "namespace":"clojure.contrib.jmx",
@@ -2594,14 +2595,15 @@
    "Guess the attribute typename for MBeanAttributeInfo based on the attribute value.",
    "name":"guess-attribute-typename"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L63",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L64",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/jmx->clj",
    "namespace":"clojure.contrib.jmx",
-   "doc":"Coerce JMX data structures into Clojure data",
+   "doc":
+   "Coerce JMX data structures into Clojure data.\nHandles CompositeData, TabularData, maps, and atoms.",
    "name":"jmx->clj"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L19",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L19",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/jmx-url",
    "namespace":"clojure.contrib.jmx",
@@ -2609,7 +2611,7 @@
    "doc":"Build a JMX URL from options.",
    "name":"jmx-url"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L97",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L100",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/map->attribute-infos",
    "namespace":"clojure.contrib.jmx",
@@ -2618,7 +2620,7 @@
    "Construct an MBeanAttributeInfo[] from a Clojure associative.",
    "name":"map->attribute-infos"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L43",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L44",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/maybe-atomize",
    "namespace":"clojure.contrib.jmx",
@@ -2627,7 +2629,7 @@
    "Convert a list of length 1 into its contents, leaving other things alone.\nUsed to simplify keys in the tabular data API.",
    "name":"maybe-atomize"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx/data.clj#L37",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx/data.clj#L38",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/maybe-keywordize",
    "namespace":"clojure.contrib.jmx",
@@ -2636,7 +2638,7 @@
    "Convert a string key to a keyword, leaving other types alone. Used to\nsimplify keys in the tabular data API.",
    "name":"maybe-keywordize"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx.clj#L117",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj#L114",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/mbean",
    "namespace":"clojure.contrib.jmx",
@@ -2645,7 +2647,7 @@
    "Like clojure.core/bean, but for JMX beans. Returns a read-only map of\na JMX bean's attributes. If an attribute it not supported, value is\nset to the exception thrown.",
    "name":"mbean"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx.clj#L93",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj#L90",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/mbean-names",
    "namespace":"clojure.contrib.jmx",
@@ -2672,7 +2674,7 @@
    "The MBeanOperationInfo for operation op on mbean n. Used for invoke.",
    "name":"operation"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f92114c9cce5e892765549cdb0df640dc3ab52a5/src/clojure/contrib/jmx.clj#L104",
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj#L101",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//jmx-api.html#jmx/operation-names",
    "namespace":"clojure.contrib.jmx",
