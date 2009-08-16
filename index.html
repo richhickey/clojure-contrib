@@ -956,9 +956,69 @@ defined for any type.</pre>
   <br />
   <hr />
   <h2 id="jmx">jmx</h2>
-  by <span id="author">unknown author</span><br />
+  by <span id="author">Stuart Halloway</span><br />
   API documentation <a href="jmx-api.html" id="api-link">here</a><br />
-  <pre id="namespace-docstr"></pre>
+  <pre id="namespace-docstr">JMX support for Clojure
+
+Requires post-Clojure 1.0 git edge for clojure.test, clojure.backtrace.
+This is prerelease.
+This API will change.
+Send reports to stu@thinkrelevance.com.
+
+Usage
+  (require '[clojure.contrib.jmx :as jmx])
+
+What beans do I have?
+
+  (jmx/mbean-names "*:*")
+  -&gt; #&lt;HashSet [java.lang:type=MemoryPool,name=CMS Old Gen, 
+                java.lang:type=Memory, ...]
+
+What attributes does a bean have?
+
+  (jmx/attribute-names "java.lang:type=Memory")
+  -&gt; (:Verbose :ObjectPendingFinalizationCount 
+      :HeapMemoryUsage :NonHeapMemoryUsage)
+
+What is the value of an attribute? 
+
+  (jmx/read "java.lang:type=Memory" :ObjectPendingFinalizationCount)
+  -&gt; 0
+
+Can't I just have *all* the attributes in a Clojure map?
+
+  (jmx/mbean "java.lang:type=Memory")
+  -&gt; {:NonHeapMemoryUsage
+       {:used 16674024, :max 138412032, :init 24317952, :committed 24317952},
+      :HeapMemoryUsage
+       {:used 18619064, :max 85393408, :init 0, :committed 83230720},
+      :ObjectPendingFinalizationCount 0,
+      :Verbose false}
+
+Can I find and invoke an operation?
+
+  (jmx/operation-names "java.lang:type=Memory")
+  -&gt; (:gc)  
+  (jmx/invoke "java.lang:type=Memory" :gc)
+  -&gt; nil
+
+What about some other process? Just run *any* of the above code
+inside a with-connection:
+
+  (jmx/with-connection {:host "localhost", :port 3000} 
+    (jmx/mbean "java.lang:type=Memory"))
+  -&gt; {:ObjectPendingFinalizationCount 0, 
+      :HeapMemoryUsage ... etc.}
+
+Can I serve my own beans?  Sure, just drop a Clojure ref
+into an instance of clojure.contrib.jmx.Bean, and the bean
+will expose read-only attributes for every key/value pair
+in the ref:
+
+  (jmx/register-mbean
+     (Bean.
+     (ref {:string-attribute "a-string"}))
+     "my.namespace:name=Value")</pre>
   
   Public variables and functions:
   <span id="var-link"><a href="jmx-api.html#jmx/*connection*" id="var-tag">*connection*</a> </span><span id="var-link"><a href="jmx-api.html#jmx/as-object-name" id="var-tag">as-object-name</a> </span><span id="var-link"><a href="jmx-api.html#jmx/attribute-info" id="var-tag">attribute-info</a> </span><span id="var-link"><a href="jmx-api.html#jmx/attribute-names" id="var-tag">attribute-names</a> </span><span id="var-link"><a href="jmx-api.html#jmx/build-attribute-info" id="var-tag">build-attribute-info</a> </span><span id="var-link"><a href="jmx-api.html#jmx/guess-attribute-typename" id="var-tag">guess-attribute-typename</a> </span><span id="var-link"><a href="jmx-api.html#jmx/jmx-&gt;clj" id="var-tag">jmx-&gt;clj</a> </span><span id="var-link"><a href="jmx-api.html#jmx/jmx-url" id="var-tag">jmx-url</a> </span><span id="var-link"><a href="jmx-api.html#jmx/map-&gt;attribute-infos" id="var-tag">map-&gt;attribute-infos</a> </span><span id="var-link"><a href="jmx-api.html#jmx/maybe-atomize" id="var-tag">maybe-atomize</a> </span><span id="var-link"><a href="jmx-api.html#jmx/maybe-keywordize" id="var-tag">maybe-keywordize</a> </span><span id="var-link"><a href="jmx-api.html#jmx/mbean" id="var-tag">mbean</a> </span><span id="var-link"><a href="jmx-api.html#jmx/mbean-names" id="var-tag">mbean-names</a> </span><span id="var-link"><a href="jmx-api.html#jmx/op-param-types" id="var-tag">op-param-types</a> </span><span id="var-link"><a href="jmx-api.html#jmx/operation" id="var-tag">operation</a> </span><span id="var-link"><a href="jmx-api.html#jmx/operation-names" id="var-tag">operation-names</a> </span><span id="var-link"><a href="jmx-api.html#jmx/operations" id="var-tag">operations</a> </span><span id="var-link"><a href="jmx-api.html#jmx/raw-read" id="var-tag">raw-read</a> </span><span id="var-link"><a href="jmx-api.html#jmx/read" id="var-tag">read</a> </span><span id="var-link"><a href="jmx-api.html#jmx/read-exceptions" id="var-tag">read-exceptions</a> </span><span id="var-link"><a href="jmx-api.html#jmx/read-supported" id="var-tag">read-supported</a> </span><span id="var-link"><a href="jmx-api.html#jmx/readable?" id="var-tag">readable?</a> </span><span id="var-link"><a href="jmx-api.html#jmx/with-connection" id="var-tag">with-connection</a> </span><br />

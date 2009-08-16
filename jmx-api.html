@@ -106,14 +106,74 @@ namespace.
 </div>
 </div></div>
                 <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">jmx</span></h1>
-by <span id="author">Unknown</span><br />
+by <span id="author">Stuart Halloway</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
   (:require <span id="long-name">clojure.contrib.jmx</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr"></pre>
+<pre id="namespace-docstr">JMX support for Clojure
+
+Requires post-Clojure 1.0 git edge for clojure.test, clojure.backtrace.
+This is prerelease.
+This API will change.
+Send reports to stu@thinkrelevance.com.
+
+Usage
+  (require '[clojure.contrib.jmx :as jmx])
+
+What beans do I have?
+
+  (jmx/mbean-names "*:*")
+  -&gt; #&lt;HashSet [java.lang:type=MemoryPool,name=CMS Old Gen, 
+                java.lang:type=Memory, ...]
+
+What attributes does a bean have?
+
+  (jmx/attribute-names "java.lang:type=Memory")
+  -&gt; (:Verbose :ObjectPendingFinalizationCount 
+      :HeapMemoryUsage :NonHeapMemoryUsage)
+
+What is the value of an attribute? 
+
+  (jmx/read "java.lang:type=Memory" :ObjectPendingFinalizationCount)
+  -&gt; 0
+
+Can't I just have *all* the attributes in a Clojure map?
+
+  (jmx/mbean "java.lang:type=Memory")
+  -&gt; {:NonHeapMemoryUsage
+       {:used 16674024, :max 138412032, :init 24317952, :committed 24317952},
+      :HeapMemoryUsage
+       {:used 18619064, :max 85393408, :init 0, :committed 83230720},
+      :ObjectPendingFinalizationCount 0,
+      :Verbose false}
+
+Can I find and invoke an operation?
+
+  (jmx/operation-names "java.lang:type=Memory")
+  -&gt; (:gc)  
+  (jmx/invoke "java.lang:type=Memory" :gc)
+  -&gt; nil
+
+What about some other process? Just run *any* of the above code
+inside a with-connection:
+
+  (jmx/with-connection {:host "localhost", :port 3000} 
+    (jmx/mbean "java.lang:type=Memory"))
+  -&gt; {:ObjectPendingFinalizationCount 0, 
+      :HeapMemoryUsage ... etc.}
+
+Can I serve my own beans?  Sure, just drop a Clojure ref
+into an instance of clojure.contrib.jmx.Bean, and the bean
+will expose read-only attributes for every key/value pair
+in the ref:
+
+  (jmx/register-mbean
+     (Bean.
+     (ref {:string-attribute "a-string"}))
+     "my.namespace:name=Value")</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
