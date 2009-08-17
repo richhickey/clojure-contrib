@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure contrib - accumulators API reference</title>
+    <title>accumulators API reference (clojure.contrib)</title>
     <link href="file/view/favicon.png" rel="icon" />
     <link href="file/view/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -108,6 +108,7 @@ accumulators.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/add">add</h2>
   <span id="var-type">multimethod</span><br />
@@ -117,6 +118,7 @@ accumulators.</pre>
 an item depends on the type of the accumulator.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L30" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/add-items">add-items</h2>
   <span id="var-type">function</span><br />
@@ -125,6 +127,7 @@ an item depends on the type of the accumulator.</pre>
   <pre id="var-docstr">Add all elements of a collection coll to the accumulator acc.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L36" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/combine">combine</h2>
   <span id="var-type">multimethod</span><br />
@@ -134,6 +137,7 @@ an item depends on the type of the accumulator.</pre>
 single accumulator of the same type.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L41" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-counter">empty-counter</h2>
   <span id="var-type">var</span><br />
@@ -142,6 +146,7 @@ single accumulator of the same type.</pre>
 every item the number of times it was added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L270" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-counter-with-total">empty-counter-with-total</h2>
   <span id="var-type">var</span><br />
@@ -151,6 +156,7 @@ accumulator, except that the total number of items added is stored as the
 value of the key :total.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L291" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-list">empty-list</h2>
   <span id="var-type">var</span><br />
@@ -158,6 +164,7 @@ value of the key :total.</pre>
   <pre id="var-docstr">An empty list accumulator. Adding an item appends it at the beginning.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L87" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-map">empty-map</h2>
   <span id="var-type">var</span><br />
@@ -165,6 +172,7 @@ value of the key :total.</pre>
   <pre id="var-docstr">An empty map accumulator. Items to be added must be [key value] pairs.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L144" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-maximum">empty-maximum</h2>
   <span id="var-type">var</span><br />
@@ -172,6 +180,7 @@ value of the key :total.</pre>
   <pre id="var-docstr">An empty maximum accumulator. Only numbers can be added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L184" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-mean-variance">empty-mean-variance</h2>
   <span id="var-type">var</span><br />
@@ -180,6 +189,7 @@ value of the key :total.</pre>
 sample variance. Only numbers can be added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L231" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-min-max">empty-min-max</h2>
   <span id="var-type">var</span><br />
@@ -188,6 +198,7 @@ sample variance. Only numbers can be added.</pre>
 Only numbers can be added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L206" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-minimum">empty-minimum</h2>
   <span id="var-type">var</span><br />
@@ -195,6 +206,7 @@ Only numbers can be added.</pre>
   <pre id="var-docstr">An empty minimum accumulator. Only numbers can be added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L190" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-product">empty-product</h2>
   <span id="var-type">var</span><br />
@@ -202,6 +214,7 @@ Only numbers can be added.</pre>
   <pre id="var-docstr">An empty sum accumulator. Only numbers can be added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L176" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-queue">empty-queue</h2>
   <span id="var-type">var</span><br />
@@ -209,6 +222,7 @@ Only numbers can be added.</pre>
   <pre id="var-docstr">An empty queue accumulator. Adding an item appends it at the end.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L101" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-set">empty-set</h2>
   <span id="var-type">var</span><br />
@@ -216,6 +230,7 @@ Only numbers can be added.</pre>
   <pre id="var-docstr">An empty set accumulator.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L115" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-string">empty-string</h2>
   <span id="var-type">var</span><br />
@@ -224,6 +239,7 @@ Only numbers can be added.</pre>
 appends it at the end.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L129" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-sum">empty-sum</h2>
   <span id="var-type">var</span><br />
@@ -231,6 +247,7 @@ appends it at the end.</pre>
   <pre id="var-docstr">An empty sum accumulator. Only numbers can be added.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L173" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-tuple">empty-tuple</h2>
   <span id="var-type">function</span><br />
@@ -242,6 +259,7 @@ work in parallel. Added items must be sequences whose number of elements
 matches the number of sub-accumulators.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L309" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="accumulators/empty-vector">empty-vector</h2>
   <span id="var-type">var</span><br />

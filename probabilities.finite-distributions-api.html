@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure contrib - probabilities.finite-distributions API reference</title>
+    <title>probabilities.finite-distributions API reference (clojure.contrib)</title>
     <link href="file/view/favicon.png" rel="icon" />
     <link href="file/view/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -95,6 +95,7 @@ distributions.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/certainly">certainly</h2>
   <span id="var-type">function</span><br />
@@ -103,6 +104,7 @@ distributions.</pre>
   <pre id="var-docstr">Returns a distribution in which the single value v has probability 1.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L148" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/choose">choose</h2>
   <span id="var-type">function</span><br />
@@ -114,6 +116,7 @@ pairs. In the last pair, the probability can be given by the keyword
 :else, which stands for 1 minus the total of the other probabilities.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L94" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/cond-dist-m">cond-dist-m</h2>
   <span id="var-type">var</span><br />
@@ -121,6 +124,7 @@ pairs. In the last pair, the probability can be given by the keyword
   <pre id="var-docstr">Variant of the dist monad that can handle undefined values.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L48" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/cond-prob">cond-prob</h2>
   <span id="var-type">function</span><br />
@@ -130,6 +134,7 @@ pairs. In the last pair, the probability can be given by the keyword
 the predicate pred.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L162" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/dist-m">dist-m</h2>
   <span id="var-type">var</span><br />
@@ -139,6 +144,7 @@ probability distribution for the possible values. A distribution is
 represented by a map from values to probabilities.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L28" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/join-with">join-with</h2>
   <span id="var-type">function</span><br />
@@ -147,6 +153,7 @@ represented by a map from values to probabilities.</pre>
   <pre id="var-docstr">Returns the distribution of (f x y) with x from dist1 and y from dist2.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L153" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/make-distribution">make-distribution</h2>
   <span id="var-type">function</span><br />
@@ -156,6 +163,7 @@ represented by a map from values to probabilities.</pre>
 has a probability proportional to (f x)</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L136" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/normalize">normalize</h2>
   <span id="var-type">function</span><br />
@@ -168,6 +176,7 @@ it is used for normalization. Otherwise, the sum is calculated
 explicitly. The :total key is removed from the resulting distribution.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L72" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/prob">prob</h2>
   <span id="var-type">function</span><br />
@@ -178,6 +187,7 @@ distribution dist, i.e. the sum of the probabilities of the values
 that satisfy pred.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L199" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/uniform">uniform</h2>
   <span id="var-type">function</span><br />
@@ -187,6 +197,7 @@ that satisfy pred.</pre>
 has the same probability.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/ce884883d8829276da9416a7d32d09a5b79456f2/src/clojure/contrib/probabilities/finite_distributions.clj#L86" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="probabilities.finite-distributions/zipf">zipf</h2>
   <span id="var-type">function</span><br />

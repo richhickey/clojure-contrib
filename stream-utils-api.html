@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure contrib - stream-utils API reference</title>
+    <title>stream-utils API reference (clojure.contrib)</title>
     <link href="file/view/favicon.png" rel="icon" />
     <link href="file/view/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -135,6 +135,7 @@ next value of all stream arguments in the form of a vector.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/defst">defst</h2>
   <span id="var-type">macro</span><br />
@@ -145,6 +146,7 @@ The non-stream arguments args and the stream arguments streams
 are given separately, with args being possibly empty.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L182" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/defstream">defstream</h2>
   <span id="var-type">macro</span><br />
@@ -156,6 +158,7 @@ a type-specific method for stream-next and derives type
 from stream-type.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L72" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/pick">pick</h2>
   <span id="var-type">function</span><br />
@@ -166,6 +169,7 @@ transformer. When used inside of defst, the name of the stream
 argument can be used instead of its index n.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L148" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/pick-all">pick-all</h2>
   <span id="var-type">function</span><br />
@@ -175,6 +179,7 @@ argument can be used instead of its index n.</pre>
 inside a stream transformer.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L159" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-drop">stream-drop</h2>
   <span id="var-type">function</span><br />
@@ -183,6 +188,7 @@ inside a stream transformer.</pre>
   <pre id="var-docstr">Return a stream containing all but the first n elements of stream.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L200" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-filter">stream-filter</h2>
   <span id="var-type">multimethod</span><br />
@@ -192,6 +198,7 @@ inside a stream transformer.</pre>
 that satisfy the predicate p.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L242" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-flatten">stream-flatten</h2>
   <span id="var-type">function</span><br />
@@ -202,6 +209,7 @@ sequences. Flattening is not recursive, only one level of nesting
 will be removed.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L270" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-m">stream-m</h2>
   <span id="var-type">var</span><br />
@@ -210,6 +218,7 @@ will be removed.</pre>
 of any type handled by stream-next.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L134" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-map">stream-map</h2>
   <span id="var-type">multimethod</span><br />
@@ -218,6 +227,7 @@ of any type handled by stream-next.</pre>
   <pre id="var-docstr">Return a new stream by mapping the function f on the given stream.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L218" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-next">stream-next</h2>
   <span id="var-type">multimethod</span><br />
@@ -229,6 +239,7 @@ is the new state of the stream. At the end of the stream,
 next-value and new-state are nil.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L90" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-seq">stream-seq</h2>
   <span id="var-type">function</span><br />
@@ -239,6 +250,7 @@ clojure.contrib.seq-utils/seq-on and
 clojure.contrib.generic.collection/seq for streams.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L112" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="stream-utils/stream-type">stream-type</h2>
   <span id="var-type">var</span><br />

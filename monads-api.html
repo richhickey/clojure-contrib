@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure contrib - monads API reference</title>
+    <title>monads API reference (clojure.contrib)</title>
     <link href="file/view/favicon.png" rel="icon" />
     <link href="file/view/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -159,6 +159,7 @@ functions.</pre>
 </span><br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/call-cc">call-cc</h2>
   <span id="var-type">function</span><br />
@@ -170,6 +171,7 @@ return a continuation (which becomes the return value of call-cc),
 or call the passed-in current continuation to terminate.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L456" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/cont-m">cont-m</h2>
   <span id="var-type">var</span><br />
@@ -179,6 +181,7 @@ values are functions that are called with a single argument representing
 the continuation of the computation, to which they pass their result.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L440" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/defmonad">defmonad</h2>
   <span id="var-type">macro</span><br />
@@ -190,6 +193,7 @@ are written like bindings to the monad operations m-bind and
 m-result (required) and m-zero and m-plus (optional).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L51" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/defmonadfn">defmonadfn</h2>
   <span id="var-type">macro</span><br />
@@ -200,6 +204,7 @@ m-result (required) and m-zero and m-plus (optional).</pre>
 a with-monad block.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L137" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/domonad">domonad</h2>
   <span id="var-type">macro</span><br />
@@ -218,6 +223,7 @@ are given as a vector as for the use in let, establishes additional
 bindings that can be used in the following steps.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L114" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/fetch-state">fetch-state</h2>
   <span id="var-type">function</span><br />
@@ -227,6 +233,7 @@ bindings that can be used in the following steps.</pre>
 modify it.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L359" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/fetch-val">fetch-val</h2>
   <span id="var-type">function</span><br />
@@ -236,6 +243,7 @@ modify it.</pre>
 returns the value corresponding to the given key. The state is not modified.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L365" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/identity-m">identity-m</h2>
   <span id="var-type">var</span><br />
@@ -245,6 +253,7 @@ at all. It is useful for testing, for combination with monad
 transformers, and for code that is parameterized with a monad.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L286" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-chain">m-chain</h2>
   <span id="var-type">var</span><br />
@@ -255,6 +264,7 @@ step as its argument. (m-chain (step1 step2)) is equivalent to
 (fn [x] (domonad [r1 (step1 x) r2 (step2 r1)] r2)).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L217" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-fmap">m-fmap</h2>
   <span id="var-type">var</span><br />
@@ -262,6 +272,7 @@ step as its argument. (m-chain (step1 step2)) is equivalent to
   <pre id="var-docstr">Bind the monadic value m to the function returning (f x) for argument x</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L195" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-join">m-join</h2>
   <span id="var-type">var</span><br />
@@ -270,6 +281,7 @@ step as its argument. (m-chain (step1 step2)) is equivalent to
 monadic value.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L189" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-lift">m-lift</h2>
   <span id="var-type">macro</span><br />
@@ -279,6 +291,7 @@ monadic value.</pre>
 monadic arguments returning a monadic value.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L180" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-map">m-map</h2>
   <span id="var-type">var</span><br />
@@ -287,6 +300,7 @@ monadic arguments returning a monadic value.</pre>
 f onto the values xs. f must return a monadic value.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L211" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-reduce">m-reduce</h2>
   <span id="var-type">var</span><br />
@@ -295,6 +309,7 @@ f onto the values xs. f must return a monadic value.</pre>
 with initial value (m-result val).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L228" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-seq">m-seq</h2>
   <span id="var-type">var</span><br />
@@ -303,6 +318,7 @@ with initial value (m-result val).</pre>
 basic values contained in them.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L200" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-until">m-until</h2>
   <span id="var-type">var</span><br />
@@ -312,6 +328,7 @@ monadic computation (f x). Return (m-result x) for the first
 x for which (p x) is true.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L241" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-when">m-when</h2>
   <span id="var-type">macro</span><br />
@@ -321,6 +338,7 @@ x for which (p x) is true.</pre>
 (m-result nil).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L253" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/m-when-not">m-when-not</h2>
   <span id="var-type">macro</span><br />
@@ -330,6 +348,7 @@ x for which (p x) is true.</pre>
 (m-result nil).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L259" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/maybe-m">maybe-m</h2>
   <span id="var-type">var</span><br />
@@ -339,6 +358,7 @@ represented by nil, any other value is considered valid. As soon as
 a step returns nil, the whole computation will yield nil as well.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L296" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/maybe-t">maybe-t</h2>
   <span id="var-type">function</span><br />
@@ -355,6 +375,7 @@ if the base monad m has a definition for m-plus, and
 :m-plus-from-transformer otherwise.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L496" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/monad">monad</h2>
   <span id="var-type">macro</span><br />
@@ -365,6 +386,7 @@ are written like bindings to the monad operations m-bind and
 m-result (required) and m-zero and m-plus (optional).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L36" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/monad-transformer">monad-transformer</h2>
   <span id="var-type">macro</span><br />
@@ -375,6 +397,7 @@ monad. The argument which-m-plus chooses if m-zero and m-plus are taken
 from the base monad or from the transformer.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L474" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/run-cont">run-cont</h2>
   <span id="var-type">function</span><br />
@@ -383,6 +406,7 @@ from the base monad or from the transformer.</pre>
   <pre id="var-docstr">Execute the computation c in the cont monad and return its result.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L451" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/sequence-m">sequence-m</h2>
   <span id="var-type">var</span><br />
@@ -392,6 +416,7 @@ that can yield multiple values. Any object implementing the seq
 protocol can be used as a monadic value.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L309" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/sequence-t">sequence-t</h2>
   <span id="var-type">function</span><br />
@@ -407,6 +432,7 @@ if the base monad m has a definition for m-plus, and
 :m-plus-from-transformer otherwise.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L528" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/set-m">set-m</h2>
   <span id="var-type">var</span><br />
@@ -415,6 +441,7 @@ if the base monad m has a definition for m-plus, and
 but returning sets of results instead of sequences of results.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L323" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/set-state">set-state</h2>
   <span id="var-type">function</span><br />
@@ -424,6 +451,7 @@ but returning sets of results instead of sequences of results.</pre>
 returns the previous state.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L353" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/set-val">set-val</h2>
   <span id="var-type">function</span><br />
@@ -433,6 +461,7 @@ returns the previous state.</pre>
 replaces the value associated with key by val. The old value is returned.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L383" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/state-m">state-m</h2>
   <span id="var-type">var</span><br />
@@ -441,6 +470,7 @@ replaces the value associated with key by val. The old value is returned.</pre>
 structure (fn [old-state] (list result new-state)).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L336" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/state-m-until">state-m-until</h2>
   <span id="var-type">function</span><br />
@@ -450,6 +480,7 @@ structure (fn [old-state] (list result new-state)).</pre>
 replaces recursion by a loop.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L401" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/state-t">state-t</h2>
   <span id="var-type">function</span><br />
@@ -459,6 +490,7 @@ replaces recursion by a loop.</pre>
 computations that have the base monad type as their result.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L555" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/update-state">update-state</h2>
   <span id="var-type">function</span><br />
@@ -468,6 +500,7 @@ computations that have the base monad type as their result.</pre>
 result of f applied to the current state and that returns the old state.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L347" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/update-val">update-val</h2>
   <span id="var-type">function</span><br />
@@ -478,6 +511,7 @@ replaces the value associated with the given key by the return value
 of f applied to the old value. The old value is returned.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L373" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/with-monad">with-monad</h2>
   <span id="var-type">macro</span><br />
@@ -488,6 +522,7 @@ monad operations by the functions associated with these keywords
 in the monad definition given by name.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L102" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/with-state-field">with-state-field</h2>
   <span id="var-type">function</span><br />
@@ -499,6 +534,7 @@ the map entry corresponding to key. The map entry is updated with the
 new state returned by statement.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L389" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="monads/writer-m">writer-m</h2>
   <span id="var-type">function</span><br />

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clojure contrib - graph API reference</title>
+    <title>graph API reference (clojure.contrib)</title>
     <link href="file/view/favicon.png" rel="icon" />
     <link href="file/view/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -99,6 +99,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/add-loops">add-loops</h2>
   <span id="var-type">function</span><br />
@@ -107,6 +108,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
   <pre id="var-docstr">For each node n, add the edge n-&gt;n if not already present.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L49" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/component-graph">component-graph</h2>
   <span id="var-type">function</span><br />
@@ -119,6 +121,7 @@ These sets are the strongly connected components.  Each edge will
 be the union of the corresponding edges of the prior graph.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L133" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/dependency-list">dependency-list</h2>
   <span id="var-type">function</span><br />
@@ -131,6 +134,7 @@ a set have no mutual dependencies.  Assume the input graph (which
 much be acyclic) has an edge a-&gt;b when a depends on b.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L190" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/fixed-point">fixed-point</h2>
   <span id="var-type">function</span><br />
@@ -141,6 +145,7 @@ returns true.  If max iterations occur, it will throw an
 exception.  Set max to nil for unlimited iterations.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L167" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/get-neighbors">get-neighbors</h2>
   <span id="var-type">function</span><br />
@@ -149,6 +154,7 @@ exception.  Set max to nil for unlimited iterations.</pre>
   <pre id="var-docstr">Get the neighbors of a node.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L29" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/lazy-walk">lazy-walk</h2>
   <span id="var-type">function</span><br />
@@ -160,6 +166,7 @@ provide a set of visited notes (v) and a collection of nodes to
 visit (ns).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L68" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/post-ordered-nodes">post-ordered-nodes</h2>
   <span id="var-type">function</span><br />
@@ -168,6 +175,7 @@ visit (ns).</pre>
   <pre id="var-docstr">Return a sequence of indexes of a post-ordered walk of the graph.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L110" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/recursive-component?">recursive-component?</h2>
   <span id="var-type">function</span><br />
@@ -176,6 +184,7 @@ visit (ns).</pre>
   <pre id="var-docstr">Is the component (recieved from scc) self recursive?</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L151" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/remove-loops">remove-loops</h2>
   <span id="var-type">function</span><br />
@@ -184,6 +193,7 @@ visit (ns).</pre>
   <pre id="var-docstr">For each node n, remove any edges n-&gt;n.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L57" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/reverse-graph">reverse-graph</h2>
   <span id="var-type">function</span><br />
@@ -193,6 +203,7 @@ visit (ns).</pre>
 order of the edges reversed.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L37" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/scc">scc</h2>
   <span id="var-type">function</span><br />
@@ -202,6 +213,7 @@ order of the edges reversed.</pre>
 of g.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L117" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/self-recursive-sets">self-recursive-sets</h2>
   <span id="var-type">function</span><br />
@@ -211,6 +223,7 @@ of g.</pre>
 self-recursive.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L158" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/stratification-list">stratification-list</h2>
   <span id="var-type">function</span><br />
@@ -223,6 +236,7 @@ depends on node b (meaning an edge a-&gt;b exists) in the second
 graph, node a must be equal or later in the sequence.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj#L207" id="var-source">Source</a>
 </div><div id="var-entry">
+  <br />
   <hr />
   <h2 id="graph/transitive-closure">transitive-closure</h2>
   <span id="var-type">function</span><br />

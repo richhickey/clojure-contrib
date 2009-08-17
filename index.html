@@ -1145,9 +1145,10 @@ values used in log4j and commons-logging:
   :trace, :debug, :info, :warn, :error, :fatal
 
 Logging occurs with the log macro, or the level-specific convenience macros,
-which write either directly or via an agent.  By default direct logging is
-disabled, but can be enabled via the *allow-direct-logging* boolean atom. If
-logging is invoked within a transaction it will always use an agent.
+which write either directly or via an agent.  For performance reasons, direct
+logging is enabled by default, but setting the *allow-direct-logging* boolean
+atom to false will disable it. If logging is invoked within a transaction it
+will always use an agent.
 
 The log macros will not evaluate their 'message' unless the specific logging
 level is in effect. Alternately, you can use the spy macro when you have code
@@ -1158,10 +1159,9 @@ Unless otherwise specified, the current namespace (as identified by *ns*) will
 be used as the log-ns (similar to how the java class name is usually used).
 Note: your log configuration should display the name that was passed to the
 logging implementation, and not perform stack-inspection, otherwise you'll see
-something like "clojure.contrib.logging$fn__72$write__39__auto____81 invoke"
-in your logs.
+something like "fn__72$impl_write_BANG__39__auto____81" in your logs.
 
-Use the enabled? function to write conditional code against the logging level
+Use the enabled? macro to write conditional code against the logging level
 (beyond simply whether or not to call log, which is handled automatically).
 
 You can redirect all java writes of System.out and System.err to the log
@@ -1170,7 +1170,7 @@ invoke with-logs.  In both cases a log-ns (e.g., "com.example.captured")
 needs to be specified to namespace the output.</pre>
   
   Public variables and functions:
-  <span id="var-link"><a href="logging-api.html#logging/*allow-direct-logging*" id="var-tag">*allow-direct-logging*</a> </span><span id="var-link"><a href="logging-api.html#logging/*log-system*" id="var-tag">*log-system*</a> </span><span id="var-link"><a href="logging-api.html#logging/*log-system-agent*" id="var-tag">*log-system-agent*</a> </span><span id="var-link"><a href="logging-api.html#logging/*old-std-streams*" id="var-tag">*old-std-streams*</a> </span><span id="var-link"><a href="logging-api.html#logging/commons-logging" id="var-tag">commons-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/debug" id="var-tag">debug</a> </span><span id="var-link"><a href="logging-api.html#logging/do-log" id="var-tag">do-log</a> </span><span id="var-link"><a href="logging-api.html#logging/enabled?" id="var-tag">enabled?</a> </span><span id="var-link"><a href="logging-api.html#logging/error" id="var-tag">error</a> </span><span id="var-link"><a href="logging-api.html#logging/fatal" id="var-tag">fatal</a> </span><span id="var-link"><a href="logging-api.html#logging/info" id="var-tag">info</a> </span><span id="var-link"><a href="logging-api.html#logging/java-logging" id="var-tag">java-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/log" id="var-tag">log</a> </span><span id="var-link"><a href="logging-api.html#logging/log-capture!" id="var-tag">log-capture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log-stream" id="var-tag">log-stream</a> </span><span id="var-link"><a href="logging-api.html#logging/log-system" id="var-tag">log-system</a> </span><span id="var-link"><a href="logging-api.html#logging/log-uncapture!" id="var-tag">log-uncapture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log4j-logging" id="var-tag">log4j-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/spy" id="var-tag">spy</a> </span><span id="var-link"><a href="logging-api.html#logging/trace" id="var-tag">trace</a> </span><span id="var-link"><a href="logging-api.html#logging/warn" id="var-tag">warn</a> </span><span id="var-link"><a href="logging-api.html#logging/with-logs" id="var-tag">with-logs</a> </span><br />
+  <span id="var-link"><a href="logging-api.html#logging/*allow-direct-logging*" id="var-tag">*allow-direct-logging*</a> </span><span id="var-link"><a href="logging-api.html#logging/*impl-name*" id="var-tag">*impl-name*</a> </span><span id="var-link"><a href="logging-api.html#logging/*logging-agent*" id="var-tag">*logging-agent*</a> </span><span id="var-link"><a href="logging-api.html#logging/agent-write!" id="var-tag">agent-write!</a> </span><span id="var-link"><a href="logging-api.html#logging/commons-logging" id="var-tag">commons-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/debug" id="var-tag">debug</a> </span><span id="var-link"><a href="logging-api.html#logging/enabled?" id="var-tag">enabled?</a> </span><span id="var-link"><a href="logging-api.html#logging/error" id="var-tag">error</a> </span><span id="var-link"><a href="logging-api.html#logging/fatal" id="var-tag">fatal</a> </span><span id="var-link"><a href="logging-api.html#logging/impl-enabled?" id="var-tag">impl-enabled?</a> </span><span id="var-link"><a href="logging-api.html#logging/impl-get-log" id="var-tag">impl-get-log</a> </span><span id="var-link"><a href="logging-api.html#logging/impl-write!" id="var-tag">impl-write!</a> </span><span id="var-link"><a href="logging-api.html#logging/info" id="var-tag">info</a> </span><span id="var-link"><a href="logging-api.html#logging/java-logging" id="var-tag">java-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/log" id="var-tag">log</a> </span><span id="var-link"><a href="logging-api.html#logging/log-capture!" id="var-tag">log-capture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log-stream" id="var-tag">log-stream</a> </span><span id="var-link"><a href="logging-api.html#logging/log-uncapture!" id="var-tag">log-uncapture!</a> </span><span id="var-link"><a href="logging-api.html#logging/log4j-logging" id="var-tag">log4j-logging</a> </span><span id="var-link"><a href="logging-api.html#logging/spy" id="var-tag">spy</a> </span><span id="var-link"><a href="logging-api.html#logging/trace" id="var-tag">trace</a> </span><span id="var-link"><a href="logging-api.html#logging/warn" id="var-tag">warn</a> </span><span id="var-link"><a href="logging-api.html#logging/with-logs" id="var-tag">with-logs</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
@@ -1401,18 +1401,15 @@ functions.</pre>
   by <span id="author">Tom Faulhaber</span><br />
   API documentation <a href="pprint-api.html" id="api-link">here</a><br />
   <pre id="namespace-docstr">This module comprises two elements:
-1) A pretty printer for Clojure data structures, implemented in the function "pprint"
-2) A Common Lisp compatible format function, implemented as "cl-format" because
-   Clojure is using the name "format" for its own format.
+1) A pretty printer for Clojure data structures, implemented in the 
+   function "pprint"
+2) A Common Lisp compatible format function, implemented as 
+   "cl-format" because Clojure is using the name "format" 
+   for its Java-based format function.
 
-Complete documentation is available on the wiki at the contrib google code site.</pre>
-  <span id="see-also">See also: 
-    <span id="see-also-link">
-      <a href="PrettyPrinting">Documentation for the pretty printer</a>
-    </span><span id="see-also-link">
-      <a href="CommonLispFormat">Documentation for Common Lisp format function</a>
-    </span><br />
-  </span>
+See documentation for those functions for more information or complete 
+documentation on the the clojure-contrib web site on github.</pre>
+  
   Public variables and functions:
   <span id="var-link"><a href="pprint-api.html#pprint/*code-dispatch*" id="var-tag">*code-dispatch*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-base*" id="var-tag">*print-base*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-circle*" id="var-tag">*print-circle*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-lines*" id="var-tag">*print-lines*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-miser-width*" id="var-tag">*print-miser-width*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-pprint-dispatch*" id="var-tag">*print-pprint-dispatch*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-pretty*" id="var-tag">*print-pretty*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-radix*" id="var-tag">*print-radix*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-right-margin*" id="var-tag">*print-right-margin*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-shared*" id="var-tag">*print-shared*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*print-suppress-namespaces*" id="var-tag">*print-suppress-namespaces*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/*simple-dispatch*" id="var-tag">*simple-dispatch*</a> </span><span id="var-link"><a href="pprint-api.html#pprint/cl-format" id="var-tag">cl-format</a> </span><span id="var-link"><a href="pprint-api.html#pprint/compile-format" id="var-tag">compile-format</a> </span><span id="var-link"><a href="pprint-api.html#pprint/formatter" id="var-tag">formatter</a> </span><span id="var-link"><a href="pprint-api.html#pprint/formatter-out" id="var-tag">formatter-out</a> </span><span id="var-link"><a href="pprint-api.html#pprint/fresh-line" id="var-tag">fresh-line</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pp" id="var-tag">pp</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint" id="var-tag">pprint</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-indent" id="var-tag">pprint-indent</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-logical-block" id="var-tag">pprint-logical-block</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-newline" id="var-tag">pprint-newline</a> </span><span id="var-link"><a href="pprint-api.html#pprint/pprint-tab" id="var-tag">pprint-tab</a> </span><span id="var-link"><a href="pprint-api.html#pprint/set-pprint-dispatch" id="var-tag">set-pprint-dispatch</a> </span><span id="var-link"><a href="pprint-api.html#pprint/use-method" id="var-tag">use-method</a> </span><span id="var-link"><a href="pprint-api.html#pprint/with-pprint-dispatch" id="var-tag">with-pprint-dispatch</a> </span><span id="var-link"><a href="pprint-api.html#pprint/write" id="var-tag">write</a> </span><span id="var-link"><a href="pprint-api.html#pprint/write-out" id="var-tag">write-out</a> </span><br />
   <span id="subspace"><br />Variables and functions in
