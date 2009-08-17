@@ -57,31 +57,41 @@ namespace.
     <div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/buffer-bytes">buffer-bytes</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/bytes">bytes</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/client-error?">client-error?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/done?">done?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/error?">error?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/headers">headers</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/headers-seq">headers-seq</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/http-agent">http-agent</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/message">message</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/method">method</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/redirect?">redirect?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-body-bytes">response-body-bytes</a>
+      <a href="#http.agent/request-body">request-body</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-body-str">response-body-str</a>
+      <a href="#http.agent/request-headers">request-headers</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-body-stream">response-body-stream</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-headers">response-headers</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-headers-seq">response-headers-seq</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-message">response-message</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/response-status">response-status</a>
+      <a href="#http.agent/request-uri">request-uri</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/result">result</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/server-error?">server-error?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/status">status</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/stream">stream</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#http.agent/string">string</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#http.agent/success?">success?</a>
     </div>
@@ -108,8 +118,19 @@ by <span id="author">Unknown</span><br />
   <pre id="var-usage">Usage: (buffer-bytes http-agnt)
 </pre>
   <pre id="var-docstr">The default HTTP agent result handler; it collects the response
-body in a java.io.ByteArrayOutputStream.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L73" id="var-source">Source</a>
+body in a java.io.ByteArrayOutputStream, which can later be
+retrieved with the 'stream', 'string', and 'bytes' functions.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L93" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/bytes">bytes</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (bytes http-agnt)
+</pre>
+  <pre id="var-docstr">Returns a Java byte array of the content returned by the server;
+nil if the content is not yet available.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L198" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -118,7 +139,16 @@ body in a java.io.ByteArrayOutputStream.</pre>
   <pre id="var-usage">Usage: (client-error? http-agnt)
 </pre>
   <pre id="var-docstr">Returns true if the HTTP response code was in the 400-499 range.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L243" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L306" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/done?">done?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (done? http-agnt)
+</pre>
+  <pre id="var-docstr">Returns true if the HTTP request/response has completed.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L246" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -128,13 +158,35 @@ body in a java.io.ByteArrayOutputStream.</pre>
 </pre>
   <pre id="var-docstr">Returns true if the HTTP response code was in the 400-499 range OR
 the 500-599 range.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L253" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L316" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/headers">headers</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (headers http-agnt)
+</pre>
+  <pre id="var-docstr">Returns a String=&gt;String map of HTTP response headers.  Header
+names are converted to all lower-case.  If a header appears more
+than once, only the last value is returned.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L267" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/headers-seq">headers-seq</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (headers-seq http-agnt)
+</pre>
+  <pre id="var-docstr">Returns the HTTP response headers in order as a sequence of
+[String,String] pairs.  The first 'header' name may be null for the
+HTTP status line.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L276" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="http.agent/http-agent">http-agent</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (http-agent url &amp; options)
+  <pre id="var-usage">Usage: (http-agent uri &amp; options)
 </pre>
   <pre id="var-docstr">Creates (and immediately returns) an Agent representing an HTTP
 request running in a new thread.
@@ -170,23 +222,40 @@ connection.  Default is zero, meaning no timeout.
 If true, HTTP 3xx redirects will be followed automatically.  Default
 is true.
 
-:on-success f
+:handler f
 
-Function to be called when the request succeeds with a 2xx response
-code.  The function will be called with the HTTP agent as its
-argument, and can use the response-body-stream function to read the
-response body.  The return value of this function will be stored in
-the state of the agent and can be retrieved with the 'result'
-function.  Any exceptions thrown by this function will be added to
-the agent's error queue (see agent-errors).  The default function
-collects the response stream into a byte array.
+Function to be called when the HTTP response body is ready.  If you
+do NOT provide a handler function, the default is to buffer the
+entire response body in memory.
 
-:on-failure f
-
-Like :on-success but this function will be called when the request
-fails with a 4xx or 5xx response code.
+The handler function will be called with the HTTP agent as its
+argument, and can use the 'stream' function to read the response
+body.  The return value of this function will be stored in the state
+of the agent and can be retrieved with the 'result' function.  Any
+exceptions thrown by this function will be added to the agent's
+error queue (see agent-errors).  The default function collects the
+response stream into a byte array.
 </pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L91" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L114" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/message">message</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (message http-agnt)
+</pre>
+  <pre id="var-docstr">Returns the HTTP response message (e.g. 'Not Found'), for this
+request, or nil if the response has not yet been received.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L260" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/method">method</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (method http-agnt)
+</pre>
+  <pre id="var-docstr">Returns the HTTP method name used by this HTTP agent, as a String.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L230" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -199,81 +268,37 @@ fails with a 4xx or 5xx response code.
 Note: if the :follow-redirects option was true (the default),
 redirects will be followed automatically and a the agent will never
 return a 3xx response code.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L234" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L297" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/response-body-bytes">response-body-bytes</h2>
+  <h2 id="http.agent/request-body">request-body</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-body-bytes http-agnt)
+  <pre id="var-usage">Usage: (request-body http-agnt)
 </pre>
-  <pre id="var-docstr">Returns a Java byte array of the content returned by the server;
-nil if the content is not yet available.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L165" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="http.agent/response-body-str">response-body-str</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-body-str http-agnt)
-       (response-body-str http-agnt encoding)
-</pre>
-  <pre id="var-docstr">Returns the HTTP response body as a string, using the given
-encoding.
+  <pre id="var-docstr">Returns the HTTP request body given to this HTTP agent.  
 
-If no encoding is given, uses the encoding specified in the server
-headers, or clojure.contrib.duck-streams/*default-encoding* if it is
-not specified.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L174" id="var-source">Source</a>
+Note: if the request body was an InputStream or a Reader, it will no
+longer be usable.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L235" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/response-body-stream">response-body-stream</h2>
+  <h2 id="http.agent/request-headers">request-headers</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-body-stream http-agnt)
+  <pre id="var-usage">Usage: (request-headers http-agnt)
 </pre>
-  <pre id="var-docstr">Returns an InputStream of the HTTP response body.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L65" id="var-source">Source</a>
+  <pre id="var-docstr">Returns the request headers specified for this HTTP agent.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L225" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/response-headers">response-headers</h2>
+  <h2 id="http.agent/request-uri">request-uri</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-headers a)
+  <pre id="var-usage">Usage: (request-uri http-agnt)
 </pre>
-  <pre id="var-docstr">Returns a String=&gt;String map of HTTP response headers.  Header
-names are converted to all lower-case.  If a header appears more
-than once, only the last value is returned.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L203" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="http.agent/response-headers-seq">response-headers-seq</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-headers-seq http-agnt)
-</pre>
-  <pre id="var-docstr">Returns the HTTP response headers in order as a sequence of
-[String,String] pairs.  The first 'header' name may be null for the
-HTTP status line.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L212" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="http.agent/response-message">response-message</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-message a)
-</pre>
-  <pre id="var-docstr">Returns the HTTP response message (e.g. 'Not Found'), for this request.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L197" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="http.agent/response-status">response-status</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (response-status a)
-</pre>
-  <pre id="var-docstr">Returns the Integer response status code (e.g. 200, 404) for this request.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L191" id="var-source">Source</a>
+  <pre id="var-docstr">Returns the URI/URL requested by this HTTP agent, as a String.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L220" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -281,11 +306,10 @@ HTTP status line.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (result http-agnt)
 </pre>
-  <pre id="var-docstr">Returns the value returned by the :on-success or :on-failure
-handler function of the HTTP agent; nil if the handler function has
-not yet finished.  The default handler function returns a
-ByteArrayOutputStream.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L156" id="var-source">Source</a>
+  <pre id="var-docstr">Returns the value returned by the :handler function of the HTTP
+agent; blocks until the HTTP request is completed.  The default
+handler function returns a ByteArrayOutputStream.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L177" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -294,7 +318,47 @@ ByteArrayOutputStream.</pre>
   <pre id="var-usage">Usage: (server-error? http-agnt)
 </pre>
   <pre id="var-docstr">Returns true if the HTTP response code was in the 500-599 range.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L248" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L311" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/status">status</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (status http-agnt)
+</pre>
+  <pre id="var-docstr">Returns the HTTP response status code (e.g. 200, 404) for this
+request, as an Integer, or nil if the status has not yet been
+received.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L252" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/stream">stream</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (stream http-agnt)
+</pre>
+  <pre id="var-docstr">Returns an InputStream of the HTTP response body.  When called by
+the handler function passed to http-agent, this is the raw
+HttpURLConnection stream.
+
+If the default handler function was used, this function returns a
+ByteArrayInputStream on the buffered response body.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L185" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="http.agent/string">string</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (string http-agnt)
+       (string http-agnt encoding)
+</pre>
+  <pre id="var-docstr">Returns the HTTP response body as a string, using the given
+encoding.
+
+If no encoding is given, uses the encoding specified in the server
+headers, or clojure.contrib.duck-streams/*default-encoding* if it is
+not specified.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L204" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -303,7 +367,7 @@ ByteArrayOutputStream.</pre>
   <pre id="var-usage">Usage: (success? http-agnt)
 </pre>
   <pre id="var-docstr">Returns true if the HTTP response code was in the 200-299 range.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ed89b92ef38056520a1cd7cfb725a4d6cedf980b/src/clojure/contrib/http/agent.clj#L229" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/74f64cdea1debc7e2442f9337f28a25a769792d2/src/clojure/contrib/http/agent.clj#L292" id="var-source">Source</a>
 </div>
 
 
