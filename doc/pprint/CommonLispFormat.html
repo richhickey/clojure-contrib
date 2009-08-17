@@ -1,0 +1,304 @@
+<html>
+  <head>
+    <title>Common Lisp-compatible Format function</title>
+    <link href="file/view/favicon.png" rel="icon" />
+    <link href="file/view/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="file/view/clojure-icon.gif" /></a>
+	<h1><a title="Clojure" href="index.html">Clojure</a></h1>
+      </div>
+      <div id="leftcolumn"><div><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <a class="wiki_link" href="index.html">Overview</a><br />
+    <a class="wiki_link" href="api-index.html">API Index</a><br />
+    <a class="wiki_link" href="#">Namespaces:</a>
+    <ul id="left-sidebar-list">
+      <li><a href="accumulators-api.html" class="wiki_link">accumulators</a></li><li><a href="agent-utils-api.html" class="wiki_link">agent-utils</a></li><li><a href="classpath-api.html" class="wiki_link">classpath</a></li><li><a href="combinatorics-api.html" class="wiki_link">combinatorics</a></li><li><a href="command-line-api.html" class="wiki_link">command-line</a></li><li><a href="complex-numbers-api.html" class="wiki_link">complex-numbers</a></li><li><a href="cond-api.html" class="wiki_link">cond</a></li><li><a href="condition-api.html" class="wiki_link">condition</a></li><li><a href="core-api.html" class="wiki_link">core</a></li><li><a href="dataflow-api.html" class="wiki_link">dataflow</a></li><li><a href="datalog-api.html" class="wiki_link">datalog</a></li><li><a href="def-api.html" class="wiki_link">def</a></li><li><a href="duck-streams-api.html" class="wiki_link">duck-streams</a></li><li><a href="error-kit-api.html" class="wiki_link">error-kit</a></li><li><a href="except-api.html" class="wiki_link">except</a></li><li><a href="fcase-api.html" class="wiki_link">fcase</a></li><li><a href="find-namespaces-api.html" class="wiki_link">find-namespaces</a></li><li><a href="fnmap-api.html" class="wiki_link">fnmap</a></li><li><a href="gen-html-docs-api.html" class="wiki_link">gen-html-docs</a></li><li><a href="generic.arithmetic-api.html" class="wiki_link">generic.arithmetic</a></li><li><a href="generic.collection-api.html" class="wiki_link">generic.collection</a></li><li><a href="generic.comparison-api.html" class="wiki_link">generic.comparison</a></li><li><a href="generic.functor-api.html" class="wiki_link">generic.functor</a></li><li><a href="generic.math-functions-api.html" class="wiki_link">generic.math-functions</a></li><li><a href="graph-api.html" class="wiki_link">graph</a></li><li><a href="greatest-least-api.html" class="wiki_link">greatest-least</a></li><li><a href="http.agent-api.html" class="wiki_link">http.agent</a></li><li><a href="http.connection-api.html" class="wiki_link">http.connection</a></li><li><a href="import-static-api.html" class="wiki_link">import-static</a></li><li><a href="jar-api.html" class="wiki_link">jar</a></li><li><a href="java-utils-api.html" class="wiki_link">java-utils</a></li><li><a href="javadoc.browse-api.html" class="wiki_link">javadoc.browse</a></li><li><a href="jmx-api.html" class="wiki_link">jmx</a></li><li><a href="json.read-api.html" class="wiki_link">json.read</a></li><li><a href="json.write-api.html" class="wiki_link">json.write</a></li><li><a href="lazy-seqs-api.html" class="wiki_link">lazy-seqs</a></li><li><a href="lazy-xml-api.html" class="wiki_link">lazy-xml</a></li><li><a href="logging-api.html" class="wiki_link">logging</a></li><li><a href="macro-utils-api.html" class="wiki_link">macro-utils</a></li><li><a href="macros-api.html" class="wiki_link">macros</a></li><li><a href="map-utils-api.html" class="wiki_link">map-utils</a></li><li><a href="math-api.html" class="wiki_link">math</a></li><li><a href="miglayout-api.html" class="wiki_link">miglayout</a></li><li><a href="mmap-api.html" class="wiki_link">mmap</a></li><li><a href="monadic-io-streams-api.html" class="wiki_link">monadic-io-streams</a></li><li><a href="monads-api.html" class="wiki_link">monads</a></li><li><a href="ns-utils-api.html" class="wiki_link">ns-utils</a></li><li><a href="pprint-api.html" class="wiki_link">pprint</a></li><li><a href="probabilities.finite-distributions-api.html" class="wiki_link">probabilities.finite-distributions</a></li><li><a href="probabilities.monte-carlo-api.html" class="wiki_link">probabilities.monte-carlo</a></li><li><a href="probabilities.random-numbers-api.html" class="wiki_link">probabilities.random-numbers</a></li><li><a href="profile-api.html" class="wiki_link">profile</a></li><li><a href="prxml-api.html" class="wiki_link">prxml</a></li><li><a href="repl-ln-api.html" class="wiki_link">repl-ln</a></li><li><a href="repl-utils-api.html" class="wiki_link">repl-utils</a></li><li><a href="seq-utils-api.html" class="wiki_link">seq-utils</a></li><li><a href="server-socket-api.html" class="wiki_link">server-socket</a></li><li><a href="set-api.html" class="wiki_link">set</a></li><li><a href="shell-out-api.html" class="wiki_link">shell-out</a></li><li><a href="singleton-api.html" class="wiki_link">singleton</a></li><li><a href="sql-api.html" class="wiki_link">sql</a></li><li><a href="str-utils-api.html" class="wiki_link">str-utils</a></li><li><a href="str-utils2-api.html" class="wiki_link">str-utils2</a></li><li><a href="stream-utils-api.html" class="wiki_link">stream-utils</a></li><li><a href="swing-utils-api.html" class="wiki_link">swing-utils</a></li><li><a href="trace-api.html" class="wiki_link">trace</a></li><li><a href="types-api.html" class="wiki_link">types</a></li><li><a href="with-ns-api.html" class="wiki_link">with-ns</a></li><li><a href="zip-filter-api.html" class="wiki_link">zip-filter</a></li>
+    </ul>
+  </div>
+</div>
+</div></div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <!-- Temporary disclaimer -->
+                <div style="background-color: #FF0000; font-weight: bold;">
+                  NOTE: These autogen pages are still under development. 
+                  Not all links work. Not all formatting is done.
+                  Contact Tom Faulhaber (tomfaulhaber on github, gmail, etc.)
+                  with any questions.
+                </div>
+                <div id="right-sidebar"></div>
+                <div id="content-tag"><html><body><h1>Common Lisp-compatible Format function</h1>
+
+<p>cl-format is an implementation of the incredibly baroque Common Lisp format function as specified 
+in <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node200.html#SECTION002633000000000000000">Common Lisp, the Language, 2nd edition, Chapter 22</a>.</p>
+
+<p>Format gives you an easy and powerful way to format text and data for output. It supports rich 
+formatting of strings and numbers, loops, conditionals, embedded formats, etc. It is really a 
+domain-specific language for formatting.</p>
+
+<p>This implementation for clojure has the following goals:</p>
+
+<ul>
+<li>Support the full feature set of the Common Lisp format function (including the X3J13 extensions) with the only exception being concepts that make no sense or are differently interpreted in Clojure.</li>
+<li>Make porting code from Common Lisp easier.</li>
+<li>Provide a more native feeling solution for Clojure programmers than the Java format method and its relatives.</li>
+<li>Be fast. This includes the ability to precompile formats that are going to be used reptitively.</li>
+<li>Include useful error handling and comprehensive documentation.</li>
+</ul>
+
+<h2>Why would I use cl-format?</h2>
+
+<p>For some people the answer to this question is that they are used to
+Common Lisp and, therefore, they already know the syntax of format
+strings and all the directives.</p>
+
+<p>A more interesting answer is that cl-format provides a way of
+rendering strings that is much more suited to Lisp and its data
+structures. </p>
+
+<p>Because iteration and conditionals are built into the directive
+structure of cl-format, it is possible to render sequences and other
+complex data structures directly without having to loop over the data
+structure. </p>
+
+<p>For example, to print the elements of a sequence separated by commas,
+you simply say:</p>
+
+<pre><code>(cl-format true "~{~a~^, ~}" aseq)
+</code></pre>
+
+<p>(This example is taken from 
+<a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a>
+by Peter Seibel.)</p>
+
+<p>The corresponding output using Clojure's Java-based <em>format</em> function
+would involve a nasty loop/recur with some code to figure out about
+the commas. Yuck!</p>
+
+<h2>Current Status of cl-format</h2>
+
+<p>cl-format is 100% compatible with the Common Lisp standard as
+specified in CLtLv2.
+This includes all of the functionality of Common
+Lisp's format function including iteration, conditionals, 
+text justification and rich
+options for displaying real and integer values. It also includes the
+directives to support pretty printing structured output.</p>
+
+<p>If you find a bug in a directive, drop me a line
+with a chunk of code that exhibits the bug and the version of
+cl-format you found it in and I'll try to get it fixed.</p>
+
+<p>I also intend to have good built-in documentation for the directives,
+but I haven't built that yet.</p>
+
+<p>The following directives are
+not yet supported: ~:T and ~@:T (but all other forms of ~T work) 
+and extensions with ~/. </p>
+
+<p>The pretty printer interface is similar, but not identical to the 
+interface in Common Lisp.</p>
+
+<p>The custom dispatch table functionality is not fully fleshed out yet.</p>
+
+<p>Next up: </p>
+
+<ul>
+<li>Support for ~/</li>
+<li>Restructure unit tests into modular chunks.</li>
+<li>Import tests from CLISP and SBCL.</li>
+<li>Unit tests for exception conditions.</li>
+<li>Interactive documentation</li>
+</ul>
+
+<h2>How to use cl-format</h2>
+
+<h3>Loading cl-format in your program</h3>
+
+<p>Once cl-format is in your path, adding it to your code is easy:</p>
+
+<pre><code>(ns your-namespace-here
+  (:use clojure.contrib.pprint))
+</code></pre>
+
+<p>If you want to refer to the cl-format function as "format" (rather
+than using the clojure function of that name), you can use this idiom:</p>
+
+<pre><code>(ns your-namespace-here
+  (:refer-clojure :exclude [format])
+  (:use clojure.contrib.pprint))
+
+(def format cl-format)
+</code></pre>
+
+<p>You might want to do this in code that you've ported from Common Lisp,
+for instance, or maybe just because old habits die hard.</p>
+
+<p>From the REPL, you can grab it using (use):</p>
+
+<pre><code>(use 'clojure.contrib.pprint)
+</code></pre>
+
+<h3>Calling cl-format</h3>
+
+<p>cl-format is a standard clojure function that takes a variable number
+of arguments. You call it like this:</p>
+
+<pre><code>(cl-format stream format args...)
+</code></pre>
+
+<p><em>stream</em> can be any Java Writer (that is java.io.Writer) or the values
+<em>true</em>, <em>false</em>, or <em>nil</em>. The argument <em>true</em> is identical to using
+<code>*</code>out<code>*</code> while <em>false</em> or <em>nil</em> indicate that cl-format should return
+its result as a string rather than writing it to a stream.</p>
+
+<p><em>format</em> is either a format string or a compiled format (see
+below). The format string controls the output that's written in a way
+that's similar to (but much more powerful than) the standard Clojure
+API format function (which is based on Java's
+java.lang.String.Format).</p>
+
+<p>Format strings consist of characters that are to be written to the
+output stream plus directives (which are marked by ~) as in "The
+answer is ~,2f". Format strings are documented in detail in 
+<a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node200.html#SECTION002633000000000000000"><em>Common Lisp the Language</em>, 2nd edition, Chapter 22</a>.</p>
+
+<p><em>args</em> is a set of arguments whose use is defined by the format.</p>
+
+<h3>Compiled formats</h3>
+
+<p>When you use a format string many times (for example, when you're outputting
+in a loop), you can improve your performance by compiling the format
+with <em>compile-format</em>. The result of compile format can be passed to
+<em>cl-format</em> just like a format string but it doesn't need to be
+parsed.</p>
+
+<p>For example:</p>
+
+<pre><code>(def log-format (compile-format "~2,'0D/~2,'0D/~D ~2D:~2,'0D ~:[PM,AM]: ~A~%"))
+
+(defn log [msg]
+  (let [[m d y h min am?] (some-date-decomposition-fn)]
+    (cl-format log-format m d y h min am? msg)))
+</code></pre>
+
+<h2>Using column aware streams across format invocations</h2>
+
+<p>Writers in Java have no real idea of current column or device page width, so the format
+directives that want to work relative to the current position on the
+page have nothing to work with. To deal with this, cl-format contains
+an extension to writer called PrettyWriter. PrettyWriter watches the
+output and keeps track of what column the current output is going to.</p>
+
+<p>When you call format and your format includes a directive that cares
+about what column it's in (~T, ~&amp;, ~&lt;...~&gt;), cl-format will
+automatically wrap the Writer you passed in with a PrettyWriter. This
+means that by default all cl-format statements act like they begin on
+a fresh line and have a page width of 72.</p>
+
+<p>For many applications, these assumptions are fine and you need to do
+nothing more. But sometimes you want to use multiple cl-format calls
+that output partial lines. You may also want to mix cl-format calls
+with the native clojure calls like print. If you want stay
+column-aware while doingg this you need to create a PrettyWriter of
+your own (and possibly bind it to <code>*</code>out<code>*</code>).</p>
+
+<p>As an example of this, this function takes a nested list and prints it
+as a table (returning the result as a string):</p>
+
+<pre><code>(defn list-to-table [aseq column-width]
+  (let [stream (PrettyWriter. (java.io.StringWriter.))]
+    (binding [*out* stream]
+     (doseq [row aseq]
+       (doseq [col row]
+         (cl-format true "~4D~7,vT" col column-width))
+       (prn)))
+    (.toString (.getWriter stream))))
+</code></pre>
+
+<p>(In reality, you'd probably do this as a single call to cl-format.)</p>
+
+<p>The constructor to PrettyWriter takes the Writer it's wrapping and
+(optionally) the page width (in columns) for use with ~&lt;...~&gt;. </p>
+
+<h2>Examples</h2>
+
+<p>The following function uses cl-format to dump a columnized table of the Java system properties:</p>
+
+<pre><code>(defn show-props [stream]
+  (let [p (mapcat 
+           #(vector (key %) (val %)) 
+           (sort-by key (System/getProperties)))]
+    (cl-format stream "~30A~A~%~{~20,,,'-A~10A~}~%~{~30A~S~%~}" 
+               "Property" "Value" ["" "" "" ""] p)))
+</code></pre>
+
+<p>There are some more examples in the clojure.contrib.pprint.examples
+package:</p>
+
+<ul>
+<li>hexdump - a program that uses cl-format to create a standard formatted hexdump of the requested stream.</li>
+<li>multiply - a function to show a formatted multipication table in a very "first-order" way.</li>
+<li>props - the show-props example shown above.</li>
+<li>show_doc - some utilities for showing documentation from various name spaces.</li>
+</ul>
+
+<h2>Differences from the Common Lisp format function</h2>
+
+<p>The floating point directives that show exponents (~E, ~G) show E for
+the exponent character in all cases (unless overridden with an
+<em>exponentchar</em>).  Clojure does not distinguish between floats and
+doubles in its printed representation and neither does cl-format.</p>
+
+<p>The ~A and ~S directives accept the colon prefix, but ignore it since
+() and nil are not equivalent in Clojure.</p>
+
+<p>Clojure has 3 different reader syntaxes for characters. The ~@c
+directive to cl-format has an argument extension to let you choose:</p>
+
+<ul>
+<li>~@c (with no argument) prints "\c" (backslash followed by the printed representation of the character or \newline, \space, \tab, \backspace, \return)</li>
+<li>~'o@c prints "\oDDD" where DDD are the octal digits representing the character. </li>
+<li>~'u@c prints "\uXXXX" prints the hex Unicode representation of the character.  </li>
+</ul>
+</body></html></div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;">
+            Copyright 2008-2009 Rich Hickey and the various contributors
+          </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
