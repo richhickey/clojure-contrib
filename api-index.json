@@ -91,7 +91,7 @@
    "author":null,
    "doc":null},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/duck-streams-api.html",
    "name":"clojure.contrib.duck-streams",
@@ -1244,7 +1244,7 @@
    "To be used in macro definitions.\nHandles optional docstrings and attribute maps for a name to be defined\nin a list of macro arguments. If the first macro argument is a string,\nit is added as a docstring to name and removed from the macro argument\nlist. If afterwards the first macro argument is a map, its entries are\nadded to the name's metadata map and the map is removed from the\nmacro argument list. The return value is a vector containing the name\nwith its extended metadata map and the list of unprocessed macro\narguments.",
    "name":"name-with-attributes"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L141",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L141",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/*append-to-writer*",
    "namespace":"clojure.contrib.duck-streams",
@@ -1252,7 +1252,7 @@
    "If true, writer and spit will open files in append mode.\nDefaults to false.  Use append-writer or append-spit.",
    "name":"*append-to-writer*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L76",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L76",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/*buffer-size*",
    "namespace":"clojure.contrib.duck-streams",
@@ -1260,14 +1260,14 @@
    "Size, in bytes or characters, of the buffer used when\ncopying streams.",
    "name":"*buffer-size*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L81",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L81",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/*byte-array-type*",
    "namespace":"clojure.contrib.duck-streams",
    "doc":"Type object for a Java primitive byte array.",
    "name":"*byte-array-type*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L70",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L70",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/*default-encoding*",
    "namespace":"clojure.contrib.duck-streams",
@@ -1275,7 +1275,7 @@
    "Name of the default encoding to use when reading & writing.\nDefault is UTF-8.",
    "name":"*default-encoding*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L257",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L257",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/append-spit",
    "namespace":"clojure.contrib.duck-streams",
@@ -1283,7 +1283,7 @@
    "doc":"Like spit but appends to file.",
    "name":"append-spit"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L209",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L209",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/append-writer",
    "namespace":"clojure.contrib.duck-streams",
@@ -1292,7 +1292,7 @@
    "Like writer but opens file for appending.  Does not work on streams\nthat are already open.",
    "name":"append-writer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L293",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L293",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/copy",
    "namespace":"clojure.contrib.duck-streams",
@@ -1301,7 +1301,7 @@
    "Copies input to output.  Returns nil.\nInput may be an InputStream, Reader, File, byte[], or String.\nOutput may be an OutputStream, Writer, or File.\n\nDoes not close any streams except those it opens itself \n(on a File).\n\nWriting a File fails if the parent directory does not exist.",
    "name":"copy"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L86",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L86",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/file-str",
    "namespace":"clojure.contrib.duck-streams",
@@ -1310,7 +1310,7 @@
    "Concatenates args as strings and returns a java.io.File.  Replaces\nall / and \\ with File/separatorChar.  Replaces ~ at the start of\nthe path with the user.home system property.",
    "name":"file-str"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L380",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L380",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/make-parents",
    "namespace":"clojure.contrib.duck-streams",
@@ -1318,7 +1318,7 @@
    "doc":"Creates all parent directories of file.",
    "name":"make-parents"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L263",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L263",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/pwd",
    "namespace":"clojure.contrib.duck-streams",
@@ -1327,7 +1327,7 @@
    "Returns current working directory as a String.  (Like UNIX 'pwd'.)\nNote: In Java, you cannot change the current working directory.",
    "name":"pwd"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L228",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L228",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/read-lines",
    "namespace":"clojure.contrib.duck-streams",
@@ -1336,7 +1336,7 @@
    "Like clojure.core/line-seq but opens f with reader.  Automatically\ncloses the reader AFTER YOU CONSUME THE ENTIRE SEQUENCE.",
    "name":"read-lines"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L100",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L100",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/reader",
    "namespace":"clojure.contrib.duck-streams",
@@ -1345,7 +1345,7 @@
    "Attempts to coerce its argument into an open\njava.io.BufferedReader.  Argument may be an instance of Reader,\nBufferedReader, InputStream, File, URI, URL, or String.\n\nIf argument is a String, it tries to resolve it first as a URI, then\nas a local file name.  URIs with a 'file' protocol are converted to\nlocal file names.  Uses *default-encoding* as the text encoding.\n\nShould be used inside with-open to ensure the Reader is properly\nclosed.",
    "name":"reader"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L239",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L239",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/slurp*",
    "namespace":"clojure.contrib.duck-streams",
@@ -1353,7 +1353,7 @@
    "doc":"Like clojure.core/slurp but opens f with reader.",
    "name":"slurp*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L250",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L250",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/spit",
    "namespace":"clojure.contrib.duck-streams",
@@ -1362,7 +1362,7 @@
    "Opposite of slurp.  Opens f with writer, writes content, then\ncloses f.",
    "name":"spit"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L385",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L385",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/to-byte-array",
    "namespace":"clojure.contrib.duck-streams",
@@ -1371,7 +1371,7 @@
    "Converts argument into a Java byte array.  Argument may be\na String, File, InputStream, or Reader.  If the argument is already\na byte array, returns it.",
    "name":"to-byte-array"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L286",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L286",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/with-in-reader",
    "namespace":"clojure.contrib.duck-streams",
@@ -1380,7 +1380,7 @@
    "Opens a PushbackReader on f, binds it to *in*, and evaluates body.",
    "name":"with-in-reader"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L279",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L279",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/with-out-append-writer",
    "namespace":"clojure.contrib.duck-streams",
@@ -1388,7 +1388,7 @@
    "doc":"Like with-out-writer but appends to file.",
    "name":"with-out-append-writer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L271",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L271",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/with-out-writer",
    "namespace":"clojure.contrib.duck-streams",
@@ -1397,7 +1397,7 @@
    "Opens a writer on f, binds it to *out*, and evalutes body.\nAnything printed within body will be written to f.",
    "name":"with-out-writer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L217",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L217",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/write-lines",
    "namespace":"clojure.contrib.duck-streams",
@@ -1406,7 +1406,7 @@
    "Writes lines (a seq) to f, separated by newlines.  f is opened with\nwriter, and automatically closed at the end of the sequence.",
    "name":"write-lines"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/94ce3fbbbc180e10fc8f5e4412f68f72cde938c6/src/clojure/contrib/duck_streams.clj#L148",
+   "http://github.com/richhickey/clojure-contrib/blob/386168c1b3c64f3402dbf7068f6626b55ac825ec/src/clojure/contrib/duck_streams.clj#L148",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//duck-streams-api.html#duck-streams/writer",
    "namespace":"clojure.contrib.duck-streams",
