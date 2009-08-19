@@ -290,7 +290,7 @@
    "doc":
    "Logging macros which delegate to a specific logging implementation. At\nmacro-expansion-time a specific implementation is selected from, in order,\nApache commons-logging, log4j, and finally java.util.logging.\n\nLogging levels are specified by clojure keywords corresponding to the\nvalues used in log4j and commons-logging:\n  :trace, :debug, :info, :warn, :error, :fatal\n\nLogging occurs with the log macro, or the level-specific convenience macros,\nwhich write either directly or via an agent.  For performance reasons, direct\nlogging is enabled by default, but setting the *allow-direct-logging* boolean\natom to false will disable it. If logging is invoked within a transaction it\nwill always use an agent.\n\nThe log macros will not evaluate their 'message' unless the specific logging\nlevel is in effect. Alternately, you can use the spy macro when you have code\nthat needs to be evaluated, and also want to output the code and its result to\nthe debug log.\n\nUnless otherwise specified, the current namespace (as identified by *ns*) will\nbe used as the log-ns (similar to how the java class name is usually used).\nNote: your log configuration should display the name that was passed to the\nlogging implementation, and not perform stack-inspection, otherwise you'll see\nsomething like \"fn__72$impl_write_BANG__39__auto____81\" in your logs.\n\nUse the enabled? macro to write conditional code against the logging level\n(beyond simply whether or not to call log, which is handled automatically).\n\nYou can redirect all java writes of System.out and System.err to the log\nsystem by calling log-capture!.  To rebind *out* and *err* to the log system\ninvoke with-logs.  In both cases a log-ns (e.g., \"com.example.captured\")\nneeds to be specified to namespace the output."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/macro-utils-api.html",
    "name":"clojure.contrib.macro-utils",
@@ -344,7 +344,7 @@
    "doc":
    "Monadic I/O with Java input/output streams\nDefines monadic I/O statements to be used in a state monad\nwith an input or output stream as the state. The macro\nmonadic-io creates a stream, runs a monadic I/O statement\non it, and closes the stream. This structure permits the\ndefinition of purely functional compound I/O statements\nwhich are applied to streams that can never escape from the\nmonadic statement sequence."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/monads-api.html",
    "name":"clojure.contrib.monads",
@@ -3076,7 +3076,7 @@
    "Evaluates exprs in a context in which *out* and *err* are bound to :info and\n:error logging, respectively. The specified log-ns value will be used to\nnamespace all redirected logging.",
    "name":"with-logs"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L200",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L199",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/defsymbolmacro",
    "namespace":"clojure.contrib.macro-utils",
@@ -3085,7 +3085,7 @@
    "Define a symbol macro. Because symbol macros are not part of\nClojure's built-in macro expansion system, they can be used only\ninside a with-symbol-macros form.",
    "name":"defsymbolmacro"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L214",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L213",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/deftemplate",
    "namespace":"clojure.contrib.macro-utils",
@@ -3094,7 +3094,7 @@
    "Define a macro that expands into forms after replacing the\nsymbols in params (a vector) by the corresponding parameters\ngiven in the macro call.",
    "name":"deftemplate"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L179",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L178",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/macrolet",
    "namespace":"clojure.contrib.macro-utils",
@@ -3103,7 +3103,7 @@
    "Define local macros that are used in the expansion of exprs. The\nsyntax is the same as for letfn forms.",
    "name":"macrolet"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L234",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L233",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/mexpand",
    "namespace":"clojure.contrib.macro-utils",
@@ -3112,7 +3112,7 @@
    "Like clojure.core/macroexpand, but takes into account symbol macros.",
    "name":"mexpand"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L226",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L225",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/mexpand-1",
    "namespace":"clojure.contrib.macro-utils",
@@ -3121,7 +3121,7 @@
    "Like clojure.core/macroexpand-1, but takes into account symbol macros.",
    "name":"mexpand-1"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L242",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L241",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/mexpand-all",
    "namespace":"clojure.contrib.macro-utils",
@@ -3129,7 +3129,7 @@
    "doc":"Perform a full recursive macro expansion of a form.",
    "name":"mexpand-all"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L189",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/symbol-macrolet",
    "namespace":"clojure.contrib.macro-utils",
@@ -3138,7 +3138,7 @@
    "Define local symbol macros that are used in the expansion of exprs.\nThe syntax is the same as for let forms.",
    "name":"symbol-macrolet"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/macro_utils.clj#L209",
+   "http://github.com/richhickey/clojure-contrib/blob/132f0e501ba181f6491ef0150d0db5cbccae5c3b/src/clojure/contrib/macro_utils.clj#L208",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#macro-utils/with-symbol-macros",
    "namespace":"clojure.contrib.macro-utils",
@@ -3409,7 +3409,7 @@
    "doc":"Write text (a string)",
    "name":"write"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L456",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L456",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/call-cc",
    "namespace":"clojure.contrib.monads",
@@ -3418,7 +3418,7 @@
    "A computation in the cont monad that calls function f with a single\nargument representing the current continuation. The function f should\nreturn a continuation (which becomes the return value of call-cc),\nor call the passed-in current continuation to terminate.",
    "name":"call-cc"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L440",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L440",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/cont-m",
    "namespace":"clojure.contrib.monads",
@@ -3426,7 +3426,7 @@
    "Monad describing computations in continuation-passing style. The monadic\nvalues are functions that are called with a single argument representing\nthe continuation of the computation, to which they pass their result.",
    "name":"cont-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L51",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L51",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/defmonad",
    "namespace":"clojure.contrib.monads",
@@ -3436,7 +3436,7 @@
    "Define a named monad by defining the monad operations. The definitions\nare written like bindings to the monad operations m-bind and\nm-result (required) and m-zero and m-plus (optional).",
    "name":"defmonad"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L137",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L137",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/defmonadfn",
    "namespace":"clojure.contrib.monads",
@@ -3447,7 +3447,7 @@
    "Like defn, but for functions that use monad operations and are used inside\na with-monad block.",
    "name":"defmonadfn"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L114",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L114",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/domonad",
    "namespace":"clojure.contrib.monads",
@@ -3456,7 +3456,7 @@
    "Monad comprehension. Takes the name of a monad, a vector of steps\ngiven as binding-form/monadic-expression pairs, and a result value\nspecified by expr. The monadic-expression terms can use the binding\nvariables of the previous steps.\nIf the monad contains a definition of m-zero, the step list can also\ncontain conditions of the form :when p, where the predicate p can\ncontain the binding variables from all previous steps.\nA clause of the form :let [binding-form expr ...], where the bindings\nare given as a vector as for the use in let, establishes additional\nbindings that can be used in the following steps.",
    "name":"domonad"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L359",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L359",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/fetch-state",
    "namespace":"clojure.contrib.monads",
@@ -3465,7 +3465,7 @@
    "Return a state-monad function that returns the current state and does not\nmodify it.",
    "name":"fetch-state"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L365",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L365",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/fetch-val",
    "namespace":"clojure.contrib.monads",
@@ -3474,7 +3474,7 @@
    "Return a state-monad function that assumes the state to be a map and\nreturns the value corresponding to the given key. The state is not modified.",
    "name":"fetch-val"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L286",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L286",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/identity-m",
    "namespace":"clojure.contrib.monads",
@@ -3482,7 +3482,7 @@
    "Monad describing plain computations. This monad does in fact nothing\nat all. It is useful for testing, for combination with monad\ntransformers, and for code that is parameterized with a monad.",
    "name":"identity-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L217",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L217",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-chain",
    "namespace":"clojure.contrib.monads",
@@ -3490,7 +3490,7 @@
    "Chains together monadic computation steps that are each functions\nof one parameter. Each step is called with the result of the previous\nstep as its argument. (m-chain (step1 step2)) is equivalent to\n(fn [x] (domonad [r1 (step1 x) r2 (step2 r1)] r2)).",
    "name":"m-chain"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L195",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L195",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-fmap",
    "namespace":"clojure.contrib.monads",
@@ -3498,7 +3498,7 @@
    "Bind the monadic value m to the function returning (f x) for argument x",
    "name":"m-fmap"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L189",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L189",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-join",
    "namespace":"clojure.contrib.monads",
@@ -3506,7 +3506,7 @@
    "Converts a monadic value containing a monadic value into a 'simple'\nmonadic value.",
    "name":"m-join"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L180",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L180",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-lift",
    "namespace":"clojure.contrib.monads",
@@ -3515,7 +3515,7 @@
    "Converts a function f of n arguments into a function of n\nmonadic arguments returning a monadic value.",
    "name":"m-lift"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L211",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L211",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-map",
    "namespace":"clojure.contrib.monads",
@@ -3523,7 +3523,7 @@
    "'Executes' the sequence of monadic values resulting from mapping\nf onto the values xs. f must return a monadic value.",
    "name":"m-map"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L228",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L228",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-reduce",
    "namespace":"clojure.contrib.monads",
@@ -3531,7 +3531,7 @@
    "Return the reduction of (m-lift 2 f) over the list of monadic values mvs\nwith initial value (m-result val).",
    "name":"m-reduce"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L200",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L200",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-seq",
    "namespace":"clojure.contrib.monads",
@@ -3539,7 +3539,7 @@
    "'Executes' the monadic values in ms and returns a sequence of the\nbasic values contained in them.",
    "name":"m-seq"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L241",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L241",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-until",
    "namespace":"clojure.contrib.monads",
@@ -3547,7 +3547,7 @@
    "While (p x) is false, replace x by the value returned by the\nmonadic computation (f x). Return (m-result x) for the first\nx for which (p x) is true.",
    "name":"m-until"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L253",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L253",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-when",
    "namespace":"clojure.contrib.monads",
@@ -3556,7 +3556,7 @@
    "If test is logical true, return monadic value m-expr, else return\n(m-result nil).",
    "name":"m-when"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L259",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L259",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/m-when-not",
    "namespace":"clojure.contrib.monads",
@@ -3565,7 +3565,7 @@
    "If test if logical false, return monadic value m-expr, else return\n(m-result nil).",
    "name":"m-when-not"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L296",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L296",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/maybe-m",
    "namespace":"clojure.contrib.monads",
@@ -3573,7 +3573,7 @@
    "Monad describing computations with possible failures. Failure is\nrepresented by nil, any other value is considered valid. As soon as\na step returns nil, the whole computation will yield nil as well.",
    "name":"maybe-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L496",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L496",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/maybe-t",
    "namespace":"clojure.contrib.monads",
@@ -3583,7 +3583,7 @@
    "Monad transformer that transforms a monad m into a monad in which\nthe base values can be invalid (represented by nothing, which defaults\nto nil). The third argument chooses if m-zero and m-plus are inherited\nfrom the base monad (use :m-plus-from-base) or adopt maybe-like\nbehaviour (use :m-plus-from-transformer). The default is :m-plus-from-base\nif the base monad m has a definition for m-plus, and\n:m-plus-from-transformer otherwise.",
    "name":"maybe-t"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L36",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L36",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/monad",
    "namespace":"clojure.contrib.monads",
@@ -3592,7 +3592,7 @@
    "Define a monad by defining the monad operations. The definitions\nare written like bindings to the monad operations m-bind and\nm-result (required) and m-zero and m-plus (optional).",
    "name":"monad"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L474",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L474",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/monad-transformer",
    "namespace":"clojure.contrib.monads",
@@ -3601,7 +3601,7 @@
    "Define a monad transforer in terms of the monad operations and the base\nmonad. The argument which-m-plus chooses if m-zero and m-plus are taken\nfrom the base monad or from the transformer.",
    "name":"monad-transformer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L451",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L451",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/run-cont",
    "namespace":"clojure.contrib.monads",
@@ -3610,7 +3610,7 @@
    "Execute the computation c in the cont monad and return its result.",
    "name":"run-cont"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L309",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L309",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/sequence-m",
    "namespace":"clojure.contrib.monads",
@@ -3618,7 +3618,7 @@
    "Monad describing multi-valued computations, i.e. computations\nthat can yield multiple values. Any object implementing the seq\nprotocol can be used as a monadic value.",
    "name":"sequence-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L528",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L528",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/sequence-t",
    "namespace":"clojure.contrib.monads",
@@ -3627,7 +3627,7 @@
    "Monad transformer that transforms a monad m into a monad in which\nthe base values are sequences. The argument which-m-plus chooses\nif m-zero and m-plus are inherited from the base monad\n(use :m-plus-from-base) or adopt sequence-like\nbehaviour (use :m-plus-from-transformer). The default is :m-plus-from-base\nif the base monad m has a definition for m-plus, and\n:m-plus-from-transformer otherwise.",
    "name":"sequence-t"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L323",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L323",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/set-m",
    "namespace":"clojure.contrib.monads",
@@ -3635,7 +3635,7 @@
    "Monad describing multi-valued computations, like sequence-m,\nbut returning sets of results instead of sequences of results.",
    "name":"set-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L353",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L353",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/set-state",
    "namespace":"clojure.contrib.monads",
@@ -3644,7 +3644,7 @@
    "Return a state-monad function that replaces the current state by s and\nreturns the previous state.",
    "name":"set-state"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L383",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L383",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/set-val",
    "namespace":"clojure.contrib.monads",
@@ -3653,15 +3653,15 @@
    "Return a state-monad function that assumes the state to be a map and\nreplaces the value associated with key by val. The old value is returned.",
    "name":"set-val"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L336",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L336",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/state-m",
    "namespace":"clojure.contrib.monads",
    "doc":
-   "Monad describing stateful computations. The monadic values have the\nstructure (fn [old-state] (list result new-state)).",
+   "Monad describing stateful computations. The monadic values have the\nstructure (fn [old-state] [result new-state]).",
    "name":"state-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L401",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L401",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/state-m-until",
    "namespace":"clojure.contrib.monads",
@@ -3670,7 +3670,7 @@
    "An optimized implementation of m-until for the state monad that\nreplaces recursion by a loop.",
    "name":"state-m-until"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L555",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L555",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/state-t",
    "namespace":"clojure.contrib.monads",
@@ -3679,7 +3679,7 @@
    "Monad transformer that transforms a monad m into a monad of stateful\ncomputations that have the base monad type as their result.",
    "name":"state-t"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L347",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L347",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/update-state",
    "namespace":"clojure.contrib.monads",
@@ -3688,7 +3688,7 @@
    "Return a state-monad function that replaces the current state by the\nresult of f applied to the current state and that returns the old state.",
    "name":"update-state"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L373",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L373",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/update-val",
    "namespace":"clojure.contrib.monads",
@@ -3697,7 +3697,7 @@
    "Return a state-monad function that assumes the state to be a map and\nreplaces the value associated with the given key by the return value\nof f applied to the old value. The old value is returned.",
    "name":"update-val"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L102",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L102",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/with-monad",
    "namespace":"clojure.contrib.monads",
@@ -3706,7 +3706,7 @@
    "Evaluates an expression after replacing the keywords defining the\nmonad operations by the functions associated with these keywords\nin the monad definition given by name.",
    "name":"with-monad"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L389",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L389",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/with-state-field",
    "namespace":"clojure.contrib.monads",
@@ -3715,7 +3715,7 @@
    "Returns a state-monad function that expects a map as its state and\nruns statement (another state-monad function) on the state defined by\nthe map entry corresponding to key. The map entry is updated with the\nnew state returned by statement.",
    "name":"with-state-field"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/6823c51380b69ec12f641fbef09d395237931e40/src/clojure/contrib/monads.clj#L413",
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj#L413",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//monads-api.html#monads/writer-m",
    "namespace":"clojure.contrib.monads",
