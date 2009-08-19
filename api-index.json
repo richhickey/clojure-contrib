@@ -16,6 +16,13 @@
    "doc":
    "Miscellaneous agent utilities\n(note to other contrib members: feel free to add to this lib)"},
   {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/b086e55310f9002dd09b61a5389a943a724897a5/src/clojure/contrib/base64.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/base64-api.html",
+   "name":"clojure.contrib.base64",
+   "author":null,
+   "doc":null},
+  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/a4b8d24cb2f4e79fa3856db37d5fcf1d94003b30/src/clojure/contrib/classpath.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/classpath-api.html",
@@ -779,6 +786,24 @@
    "doc":
    "Capture the current value of the specified vars and rebind \nthem on the agent thread before executing the action.\n\nExample:\n  (capture-and-send [*out*] a f b c)",
    "name":"capture-and-send"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/b086e55310f9002dd09b61a5389a943a724897a5/src/clojure/contrib/base64.clj#L22",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//base64-api.html#base64/encode",
+   "namespace":"clojure.contrib.base64",
+   "arglists":[["input", "output", "alphabet", "line-length"]],
+   "doc":
+   "Encodes bytes of input, writing Base 64 text on output.  alphabet\nis a 65-character String containing the 64 characters to use in the\nencoding; the 65th character is the pad character.  line-length is\nthe maximum number of characters per line, nil for no line breaks.",
+   "name":"encode"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/b086e55310f9002dd09b61a5389a943a724897a5/src/clojure/contrib/base64.clj#L69",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//base64-api.html#base64/encode-str",
+   "namespace":"clojure.contrib.base64",
+   "arglists":[["s"], ["s", "encoding", "line-length"]],
+   "doc":
+   "Encodes String in base 64; returns a String.  If not specified,\nencoding is UTF-8 and line-length is nil.",
+   "name":"encode-str"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/a4b8d24cb2f4e79fa3856db37d5fcf1d94003b30/src/clojure/contrib/classpath.clj#L23",
    "wiki-url":
