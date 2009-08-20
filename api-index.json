@@ -481,7 +481,7 @@
    "author":"Stuart Sierra",
    "doc":"String utilities for Clojure"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/str-utils2-api.html",
    "name":"clojure.contrib.str-utils2",
@@ -4989,7 +4989,7 @@
    "Returns a string of all elements in 'sequence', separated by\n'separator'.  Like Perl's 'join'.",
    "name":"str-join"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L102",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L102",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/blank?",
    "namespace":"clojure.contrib.str-utils2",
@@ -4997,7 +4997,7 @@
    "doc":"True if s is nil, empty, or contains only whitespace.",
    "name":"blank?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L127",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L127",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/butlast",
    "namespace":"clojure.contrib.str-utils2",
@@ -5006,7 +5006,7 @@
    "Returns s without the last n characters.  Returns an empty string\nif n is greater than the length of s.\n\nNote the argument order is the opposite of clojure.core/butlast;\nthis is to keep the string as the first argument for use with ->",
    "name":"butlast"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L282",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L282",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/capitalize",
    "namespace":"clojure.contrib.str-utils2",
@@ -5015,7 +5015,7 @@
    "Converts first character of the string to upper-case, all other\ncharacters to lower-case.",
    "name":"capitalize"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L255",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L255",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/chomp",
    "namespace":"clojure.contrib.str-utils2",
@@ -5024,7 +5024,7 @@
    "Removes all trailing newline \\n or return \\r characters from\nstring.  Note: String.trim() is similar and faster.",
    "name":"chomp"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L246",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L246",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/chop",
    "namespace":"clojure.contrib.str-utils2",
@@ -5033,7 +5033,7 @@
    "Removes the last character of string, does nothing on a zero-length\nstring.",
    "name":"chop"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L77",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L77",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/codepoints",
    "namespace":"clojure.contrib.str-utils2",
@@ -5042,7 +5042,7 @@
    "Returns a sequence of integer Unicode code points in s.  Handles\nUnicode supplementary characters (above U+FFFF) correctly.",
    "name":"codepoints"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L348",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L361",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/contains?",
    "namespace":"clojure.contrib.str-utils2",
@@ -5050,7 +5050,7 @@
    "doc":"True if s contains the substring.",
    "name":"contains?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L37",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L37",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/dochars",
    "namespace":"clojure.contrib.str-utils2",
@@ -5059,7 +5059,7 @@
    "bindings => [name string]\n\nRepeatedly executes body, with name bound to each character in\nstring.  Does NOT handle Unicode supplementary characters (above\nU+FFFF).",
    "name":"dochars"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L53",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L53",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/docodepoints",
    "namespace":"clojure.contrib.str-utils2",
@@ -5068,7 +5068,7 @@
    "bindings => [name string]\n\nRepeatedly executes body, with name bound to the integer code point\nof each Unicode character in the string.  Handles Unicode\nsupplementary characters (above U+FFFF) correctly.",
    "name":"docodepoints"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L90",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L90",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/escape",
    "namespace":"clojure.contrib.str-utils2",
@@ -5077,7 +5077,7 @@
    "Returns a new String by applying cmap (a function or a map) to each\ncharacter in s.  If cmap returns nil, the original character is\nadded to the output unchanged.",
    "name":"escape"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L353",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L366",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/get",
    "namespace":"clojure.contrib.str-utils2",
@@ -5085,7 +5085,7 @@
    "doc":"Gets the i'th character in string.",
    "name":"get"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L314",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L314",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/grep",
    "namespace":"clojure.contrib.str-utils2",
@@ -5094,7 +5094,7 @@
    "Filters elements of coll by a regular expression.  The String\nrepresentation (with str) of each element is tested with re-find.",
    "name":"grep"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L240",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L240",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/join",
    "namespace":"clojure.contrib.str-utils2",
@@ -5103,7 +5103,7 @@
    "Returns a string of all elements in coll, separated by\nseparator.  Like Perl's join.",
    "name":"join"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L332",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L345",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/lower-case",
    "namespace":"clojure.contrib.str-utils2",
@@ -5111,7 +5111,7 @@
    "doc":"Converts string to all lower-case.",
    "name":"lower-case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L291",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L291",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/ltrim",
    "namespace":"clojure.contrib.str-utils2",
@@ -5119,7 +5119,7 @@
    "doc":"Removes whitespace from the left side of string.",
    "name":"ltrim"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L307",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L307",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/map-str",
    "namespace":"clojure.contrib.str-utils2",
@@ -5128,7 +5128,16 @@
    "Apply f to each element of coll, concatenate all results into a\nString.",
    "name":"map-str"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L219",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L320",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/partial",
+   "namespace":"clojure.contrib.str-utils2",
+   "arglists":[["f", "&", "args"]],
+   "doc":
+   "Like clojure.core/partial for functions that take their primary\nargument first.\n\nTakes a function f and its arguments, NOT INCLUDING the first\nargument.  Returns a new function whose first argument will be the\nfirst argument to f.\n\nExample: (str-utils2/partial str-utils2/take 2)\n         ;;=> (fn [s] (str-utils2/take s 2))",
+   "name":"partial"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L219",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/partition",
    "namespace":"clojure.contrib.str-utils2",
@@ -5137,7 +5146,7 @@
    "Splits the string into a lazy sequence of substrings, alternating\nbetween substrings that match the patthern and the substrings\nbetween the matches.  The sequence always starts with the substring\nbefore the first match, or an empty string if the beginning of the\nstring matches.\n\nFor example: (partition \"abc123def\" #\"[a-z]+\")\nreturns: (\"\" \"abc\" \"123\" \"def\")",
    "name":"partition"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L145",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L145",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/repeat",
    "namespace":"clojure.contrib.str-utils2",
@@ -5145,7 +5154,7 @@
    "doc":"Returns a new String containing s repeated n times.",
    "name":"repeat"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L155",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L155",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/replace",
    "namespace":"clojure.contrib.str-utils2",
@@ -5154,7 +5163,7 @@
    "Replaces all instances of pattern in string with replacement.  \n\nAllowed argument types for pattern and replacement are:\n 1. String and String\n 2. Character and Character\n 3. regex Pattern and String\n    (Uses java.util.regex.Matcher.replaceAll)\n 4. regex Pattern and function\n    (Calls function with re-groups of each match, uses return \n     value as replacement.)",
    "name":"replace"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L190",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/replace-first",
    "namespace":"clojure.contrib.str-utils2",
@@ -5163,7 +5172,7 @@
    "Replaces the first instance of pattern in s with replacement.\n\nAllowed argument types for pattern and replacement are:\n 1. String and String\n 2. regex Pattern and String\n    (Uses java.util.regex.Matcher.replaceAll)\n 3. regex Pattern and function",
    "name":"replace-first"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L150",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L150",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/reverse",
    "namespace":"clojure.contrib.str-utils2",
@@ -5171,7 +5180,7 @@
    "doc":"Returns s with its characters reversed.",
    "name":"reverse"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L296",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L296",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/rtrim",
    "namespace":"clojure.contrib.str-utils2",
@@ -5179,7 +5188,7 @@
    "doc":"Removes whitespace from the right side of string.",
    "name":"rtrim"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L337",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L350",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/split",
    "namespace":"clojure.contrib.str-utils2",
@@ -5188,7 +5197,7 @@
    "Splits string on a regular expression.  Optional argument limit is\nthe maximum number of splits.",
    "name":"split"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L301",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L301",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/split-lines",
    "namespace":"clojure.contrib.str-utils2",
@@ -5196,7 +5205,7 @@
    "doc":"Splits s on \\n or \\r\\n.",
    "name":"split-lines"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L264",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L264",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/swap-case",
    "namespace":"clojure.contrib.str-utils2",
@@ -5205,7 +5214,7 @@
    "Changes upper case characters to lower case and vice-versa.\nHandles Unicode supplementary characters correctly.  Uses the\nlocale-sensitive String.toUpperCase() and String.toLowerCase()\nmethods.",
    "name":"swap-case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L138",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L138",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/tail",
    "namespace":"clojure.contrib.str-utils2",
@@ -5213,7 +5222,7 @@
    "doc":"Returns the last n characters of s.",
    "name":"tail"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L107",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L107",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/take",
    "namespace":"clojure.contrib.str-utils2",
@@ -5222,7 +5231,7 @@
    "Take first n characters from s, up to the length of s.\n\nNote the argument order is the opposite of clojure.core/take; this\nis to keep the string as the first argument for use with ->",
    "name":"take"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L343",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L356",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/trim",
    "namespace":"clojure.contrib.str-utils2",
@@ -5230,7 +5239,7 @@
    "doc":"Removes whitespace from both ends of string.",
    "name":"trim"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/aae84a8b7e47622a4ca324a2828757996b592ea4/src/clojure/contrib/str_utils2.clj#L327",
+   "http://github.com/richhickey/clojure-contrib/blob/ef69dc58760232c75b55e91d405116aa5ed03d51/src/clojure/contrib/str_utils2.clj#L340",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//str-utils2-api.html#str-utils2/upper-case",
    "namespace":"clojure.contrib.str-utils2",
