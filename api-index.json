@@ -16,12 +16,13 @@
    "doc":
    "Miscellaneous agent utilities\n(note to other contrib members: feel free to add to this lib)"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/54a19a97e34c04dd7f9410e7683b13c240241458/src/clojure/contrib/base64.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/7b661cfc55e2293d14bed4fd801c017b3f68d291/src/clojure/contrib/base64.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/base64-api.html",
    "name":"clojure.contrib.base64",
-   "author":null,
-   "doc":null},
+   "author":"Stuart Sierra",
+   "doc":
+   "Base-64 encoding and (maybe later) decoding.  \n\nThis is mainly here as an example.  It is much slower than the\nApache Commons Codec implementation or sun.misc.BASE64Encoder."},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/a4b8d24cb2f4e79fa3856db37d5fcf1d94003b30/src/clojure/contrib/classpath.clj",
    "wiki-url":
@@ -787,7 +788,7 @@
    "Capture the current value of the specified vars and rebind \nthem on the agent thread before executing the action.\n\nExample:\n  (capture-and-send [*out*] a f b c)",
    "name":"capture-and-send"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/54a19a97e34c04dd7f9410e7683b13c240241458/src/clojure/contrib/base64.clj#L22",
+   "http://github.com/richhickey/clojure-contrib/blob/7b661cfc55e2293d14bed4fd801c017b3f68d291/src/clojure/contrib/base64.clj#L27",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//base64-api.html#base64/encode",
    "namespace":"clojure.contrib.base64",
@@ -796,7 +797,7 @@
    "Encodes bytes of input, writing Base 64 text on output.  alphabet\nis a 65-character String containing the 64 characters to use in the\nencoding; the 65th character is the pad character.  line-length is\nthe maximum number of characters per line, nil for no line breaks.",
    "name":"encode"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/54a19a97e34c04dd7f9410e7683b13c240241458/src/clojure/contrib/base64.clj#L74",
+   "http://github.com/richhickey/clojure-contrib/blob/7b661cfc55e2293d14bed4fd801c017b3f68d291/src/clojure/contrib/base64.clj#L79",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//base64-api.html#base64/encode-str",
    "namespace":"clojure.contrib.base64",
