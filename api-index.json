@@ -85,7 +85,7 @@
    "author":"Jeffrey Straszheim",
    "doc":"A library to support a dataflow model of state"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/datalog.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/ab7e1757c4de4c5d05b8c286646c152d19e29825/src/clojure/contrib/datalog.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/datalog-api.html",
    "name":"clojure.contrib.datalog",
@@ -1152,7 +1152,7 @@
    "Given a dataflow, and a map of name-value pairs, update the\ndataflow by binding the new values.  Each name must be of a source\ncell",
    "name":"update-values"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/datalog.clj#L47",
+   "http://github.com/richhickey/clojure-contrib/blob/ab7e1757c4de4c5d05b8c286646c152d19e29825/src/clojure/contrib/datalog.clj#L46",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//datalog-api.html#datalog/build-work-plan",
    "namespace":"clojure.contrib.datalog",
@@ -1161,7 +1161,7 @@
    "Given a list of rules and a query, build a work plan that can be\nused to execute the query.",
    "name":"build-work-plan"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/datalog.clj#L57",
+   "http://github.com/richhickey/clojure-contrib/blob/ab7e1757c4de4c5d05b8c286646c152d19e29825/src/clojure/contrib/datalog.clj#L56",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//datalog-api.html#datalog/run-work-plan",
    "namespace":"clojure.contrib.datalog",
