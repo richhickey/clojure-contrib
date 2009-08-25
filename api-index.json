@@ -208,11 +208,11 @@
    "doc":
    "Various functions for finding greatest and least values in a collection"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/http.agent-api.html",
    "name":"clojure.contrib.http.agent",
-   "author":null,
+   "author":"Stuart Sierra",
    "doc":
    "Agent-based asynchronous HTTP client.\n\nThis is a HTTP client library based on Java's HttpURLConnection\nclass and Clojure's Agent system.  It allows you to make multiple\nHTTP requests in parallel.\n\nStart an HTTP request with the 'http-agent' function, which\nimmediately returns a Clojure Agent.  You will never deref this\nagent; that is handled by the accessor functions.  The agent will\nexecute the HTTP request on a separate thread.\n\nIf you pass a :handler function to http-agent, that function will be\ncalled as soon as the HTTP response body is ready.  The handler\nfunction is called with one argument, the HTTP agent itself.  The\nhandler can read the response body by calling the 'stream' function\non the agent.\n\nThe value returned by the handler function becomes part of the state\nof the agent, and you can retrieve it with the 'result' function.\nIf you call 'result' before the HTTP request has finished, it will\nblock until the handler function returns.\n\nIf you don't provide a handler function, the default handler will\nbuffer the entire response body in memory, which you can retrieve\nwith the 'bytes', 'string', or 'stream' functions.  Like 'result',\nthese functions will block until the HTTP request is completed.\n\nIf you want to check if an HTTP request is finished without\nblocking, use the 'done?' function.\n\nA single GET request could be as simple as:\n\n  (string (http-agent \"http://www.stuartsierra.com/\"))\n\nA simple POST might look like:\n\n  (http-agent \"http...\" :method \"POST\" :body \"foo=1\")\n\nAnd you could write the response directly to a file like this:\n\n  (require '[clojure.contrib.duck-streams :as d])\n\n  (http-agent \"http...\"\n              :handler (fn [agnt] \n                         (with-open [w (d/writer \"/tmp/out\")] \n                           (d/copy (stream agnt) w))))"},
   {"source-url":
@@ -2287,7 +2287,7 @@
    "doc":"Return the argument for which f yields the smallest value.",
    "name":"least-by"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L144",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L146",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/buffer-bytes",
    "namespace":"clojure.contrib.http.agent",
@@ -2296,7 +2296,7 @@
    "The default HTTP agent result handler; it collects the response\nbody in a java.io.ByteArrayOutputStream, which can later be\nretrieved with the 'stream', 'string', and 'bytes' functions.",
    "name":"buffer-bytes"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L250",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L252",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/bytes",
    "namespace":"clojure.contrib.http.agent",
@@ -2305,7 +2305,7 @@
    "Returns a Java byte array of the content returned by the server;\nnil if the content is not yet available.",
    "name":"bytes"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L360",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L362",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/client-error?",
    "namespace":"clojure.contrib.http.agent",
@@ -2314,7 +2314,7 @@
    "Returns true if the HTTP response code was in the 400-499 range.",
    "name":"client-error?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L299",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L301",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/done?",
    "namespace":"clojure.contrib.http.agent",
@@ -2322,7 +2322,7 @@
    "doc":"Returns true if the HTTP request/response has completed.",
    "name":"done?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L370",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L372",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/error?",
    "namespace":"clojure.contrib.http.agent",
@@ -2331,7 +2331,7 @@
    "Returns true if the HTTP response code was in the 400-499 range OR\nthe 500-599 range.",
    "name":"error?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L320",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L322",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/headers",
    "namespace":"clojure.contrib.http.agent",
@@ -2340,7 +2340,7 @@
    "Returns a map of HTTP response headers.  Header names are converted\nto keywords in all lower-case Header values are strings.  If a\nheader appears more than once, only the last value is returned.",
    "name":"headers"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L330",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L332",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/headers-seq",
    "namespace":"clojure.contrib.http.agent",
@@ -2349,7 +2349,7 @@
    "Returns the HTTP response headers in order as a sequence of\n[String,String] pairs.  The first 'header' name may be null for the\nHTTP status line.",
    "name":"headers-seq"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L165",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L167",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/http-agent",
    "namespace":"clojure.contrib.http.agent",
@@ -2358,7 +2358,7 @@
    "Creates (and immediately returns) an Agent representing an HTTP\nrequest running in a new thread.\n\noptions are key/value pairs:\n\n:method string\n\nThe HTTP method name.  Default is \"GET\".\n\n:headers h\n\nHTTP headers, as a Map or a sequence of pairs like \n([key1,value1], [key2,value2])  Default is nil.\n\n:body b\n\nHTTP request entity body, one of nil, String, byte[], InputStream,\nReader, or File.  Default is nil.\n\n:connect-timeout int\n\nTimeout value, in milliseconds, when opening a connection to the\nURL.  Default is zero, meaning no timeout.\n\n:read-timeout int\n\nTimeout value, in milliseconds, when reading data from the\nconnection.  Default is zero, meaning no timeout.\n\n:follow-redirects boolean\n\nIf true, HTTP 3xx redirects will be followed automatically.  Default\nis true.\n\n:handler f\n\nFunction to be called when the HTTP response body is ready.  If you\ndo not provide a handler function, the default is to buffer the\nentire response body in memory.\n\nThe handler function will be called with the HTTP agent as its\nargument, and can use the 'stream' function to read the response\nbody.  The return value of this function will be stored in the state\nof the agent and can be retrieved with the 'result' function.  Any\nexceptions thrown by this function will be added to the agent's\nerror queue (see agent-errors).  The default function collects the\nresponse stream in a memory buffer.\n",
    "name":"http-agent"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L313",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L315",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/message",
    "namespace":"clojure.contrib.http.agent",
@@ -2367,7 +2367,7 @@
    "Returns the HTTP response message (e.g. 'Not Found'), for this\nrequest, or nil if the response has not yet been received.",
    "name":"message"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L283",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L285",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/method",
    "namespace":"clojure.contrib.http.agent",
@@ -2376,7 +2376,7 @@
    "Returns the HTTP method name used by this HTTP agent, as a String.",
    "name":"method"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L351",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L353",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/redirect?",
    "namespace":"clojure.contrib.http.agent",
@@ -2385,7 +2385,7 @@
    "Returns true if the HTTP response code was in the 300-399 range.\n\nNote: if the :follow-redirects option was true (the default),\nredirects will be followed automatically and a the agent will never\nreturn a 3xx response code.",
    "name":"redirect?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L288",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L290",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/request-body",
    "namespace":"clojure.contrib.http.agent",
@@ -2394,7 +2394,7 @@
    "Returns the HTTP request body given to this HTTP agent.  \n\nNote: if the request body was an InputStream or a Reader, it will no\nlonger be usable.",
    "name":"request-body"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L278",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L280",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/request-headers",
    "namespace":"clojure.contrib.http.agent",
@@ -2402,7 +2402,7 @@
    "doc":"Returns the request headers specified for this HTTP agent.",
    "name":"request-headers"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L273",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L275",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/request-uri",
    "namespace":"clojure.contrib.http.agent",
@@ -2411,7 +2411,7 @@
    "Returns the URI/URL requested by this HTTP agent, as a String.",
    "name":"request-uri"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L228",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L230",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/result",
    "namespace":"clojure.contrib.http.agent",
@@ -2420,7 +2420,7 @@
    "Returns the value returned by the :handler function of the HTTP\nagent; blocks until the HTTP request is completed.  The default\nhandler function returns a ByteArrayOutputStream.",
    "name":"result"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L365",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L367",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/server-error?",
    "namespace":"clojure.contrib.http.agent",
@@ -2429,7 +2429,7 @@
    "Returns true if the HTTP response code was in the 500-599 range.",
    "name":"server-error?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L305",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L307",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/status",
    "namespace":"clojure.contrib.http.agent",
@@ -2438,7 +2438,7 @@
    "Returns the HTTP response status code (e.g. 200, 404) for this\nrequest, as an Integer, or nil if the status has not yet been\nreceived.",
    "name":"status"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L236",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L238",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/stream",
    "namespace":"clojure.contrib.http.agent",
@@ -2447,7 +2447,7 @@
    "Returns an InputStream of the HTTP response body.  When called by\nthe handler function passed to http-agent, this is the raw\nHttpURLConnection stream.\n\nIf the default handler function was used, this function returns a\nByteArrayInputStream on the buffered response body.",
    "name":"stream"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L256",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L258",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/string",
    "namespace":"clojure.contrib.http.agent",
@@ -2456,7 +2456,7 @@
    "Returns the HTTP response body as a string, using the given\nencoding.\n\nIf no encoding is given, uses the encoding specified in the server\nheaders, or clojure.contrib.duck-streams/*default-encoding* if it is\nnot specified.",
    "name":"string"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/1e0d828a9b7ff1a4cbc19365c7df5663419631e9/src/clojure/contrib/http/agent.clj#L346",
+   "http://github.com/richhickey/clojure-contrib/blob/e456075c7dfc280e3371e9681fd4ff83b4f14896/src/clojure/contrib/http/agent.clj#L348",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//http.agent-api.html#http.agent/success?",
    "namespace":"clojure.contrib.http.agent",
