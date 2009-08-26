@@ -123,6 +123,13 @@
    "doc":
    "Provides functions that make it easy to specify the class, cause, and\nmessage when throwing an Exception or Error. The optional message is\nformatted using clojure.core/format."},
   {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/expect-api.html",
+   "name":"clojure.contrib.expect",
+   "author":null,
+   "doc":null},
+  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/fcase-api.html",
@@ -237,7 +244,7 @@
    "author":"Stuart Sierra",
    "doc":"Utilities for working with Java JAR files"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/java-utils-api.html",
    "name":"clojure.contrib.java-utils",
@@ -360,7 +367,7 @@
    "doc":
    "This library contains the most commonly used monads as well\nas macros for defining and using monads and useful monadic\nfunctions."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/ns-utils-api.html",
    "name":"clojure.contrib.ns-utils",
@@ -430,7 +437,7 @@
    "author":"Chris Houser, Christophe Grand, Stephen Gilardi",
    "doc":"Utilities meant to be used interactively at the REPL"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/seq-utils-api.html",
    "name":"clojure.contrib.seq-utils",
@@ -574,6 +581,13 @@
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/datalog.util-api.html",
    "name":"clojure.contrib.datalog.util",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/0b8b47631efe950df74d17d8f410eb8196342359/src/clojure/contrib/expect/test_adapter.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/expect.test-adapter-api.html",
+   "name":"clojure.contrib.expect.test-adapter",
    "author":null,
    "doc":null},
   {"source-url":
@@ -1562,6 +1576,97 @@
    "Throws an Exception or Error with an optional message formatted using\nclojure.core/format. All arguments are optional:\n\n    class? cause? format? format-args*\n\n- class defaults to Exception, if present it must name a kind of\n  Throwable\n- cause defaults to nil, if present it must be a Throwable\n- format is a format string for clojure.core/format\n- format-args are objects that correspond to format specifiers in\n  format.",
    "name":"throwf"},
   {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L207",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/calls",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :calls key with a\nfunction that will be called with the given arguments. The return value from\nthis function will be returned returned by the expected function. If both this\nand returns are specified, the return value of \"calls\" will have precedence.\nUsage:\n(calls some-fn expectation-hash?)",
+   "name":"calls"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L256",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/expect",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["expect-bindings", "&", "body"]],
+   "doc":
+   "Use expect to redirect calls to dependent functions that are made within the\ncode under test. Instead of calling the functions that would normally be used,\ntemporary stubs are used, which can verify function parameters and call counts.\nReturn values can also be specified as needed.\nUsage:\n(expect [dep-fn (has-args [arg-pred1] (times n (returns x)))]\n  (function-under-test a b c))",
+   "name":"expect"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L219",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/has-args",
+   "namespace":"clojure.contrib.expect",
+   "arglists":
+   [["arg-pred-forms"], ["arg-pred-forms", "expect-hash-form"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :has-args key with\na value corresponding to a function that will either return true if its\nargument expectations are met or throw an exception with the details of the\nfirst failed argument it encounters.\nOnly specify as many predicates as you are interested in verifying. The rest\nof the values are safely ignored.\nUsage:\n(has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)",
+   "name":"has-args"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L96",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/has-matching-signature?",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["fn-name", "args"]],
+   "doc":
+   "Calls no-matching-function-signature if no match is found for the given\nfunction. If no argslist meta data is available for the function, it is\nnot called.",
+   "name":"has-matching-signature?"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L107",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/make-arg-checker",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["arg-preds", "arg-pred-forms"]],
+   "doc":
+   "Creates the argument verifying function for a replaced dependency within\nthe expectation bound scope. These functions take the additional argument\nof the name of the replaced function, then the rest of their args. It is\ndesigned to be called from the mock function generated in the first argument\nof the mock info object created by make-mock.",
+   "name":"make-arg-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L122",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/make-count-checker",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["pred", "pred-form"]],
+   "doc":
+   "creates the count checker that is invoked at the end of an expectation, after\nthe code under test has all been executed. The function returned takes the\nname of the associated dependency and the invocation count as arguments.",
+   "name":"make-count-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L141",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/make-mock",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["fn-name", "expectation-hash"]],
+   "doc":
+   "creates a vector containing the following information for the named function:\n1. dependent function replacement - verifies signature, calls arg checker,\nincreases count, returns return value.\n2. an atom containing the invocation count\n3. the invocation count checker function\n4. a symbol of the name of the function being replaced.",
+   "name":"make-mock"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L196",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/returns",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :returns key with\na value to be returned by the expectation after a successful invocation\nmatching its expected arguments (if applicable).\nUsage:\n(returns ret-value expectation-hash?)",
+   "name":"returns"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L237",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/times",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["times-fn"], ["times-fn", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :times key with a\nvalue corresponding to a predicate function which expects an integer value.\nThis function can either be specified as the first argument to times or can be\nthe result of calling times with an integer argument, in which case the\npredicate will default to being an exact match.  This predicate is called at\nthe end of an expect expression to validate that an expected dependency\nfunction was called the expected number of times.\nUsage:\n(times n)\n(times #(> n %))\n(times n expectation-hash)",
+   "name":"times"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L166",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/validate-counts",
+   "namespace":"clojure.contrib.expect",
+   "arglists":[["mock-data"]],
+   "doc":
+   "given the sequence of all mock data for the expectation, simply calls the\ncount checker for each dependency.",
+   "name":"validate-counts"},
+  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L77",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//fcase-api.html#fcase/case",
@@ -2507,7 +2612,7 @@
    "Returns true if file is a normal file with a .jar or .JAR extension.",
    "name":"jar-file?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L75",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L75",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-file",
    "namespace":"clojure.contrib.java-utils",
@@ -2515,7 +2620,7 @@
    "Interpret a String or a java.io.File as a File. Building block\nfor clojure.contrib.java-utils/file, which you should prefer\nin most cases.",
    "name":"as-file"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L152",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L152",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2524,7 +2629,7 @@
    "Convert any seq of pairs to a java.utils.Properties instance.\nUses as-str to convert both keys and values into strings.",
    "name":"as-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L92",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L92",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-str",
    "namespace":"clojure.contrib.java-utils",
@@ -2533,7 +2638,7 @@
    "Like clojure.core/str, but if an argument is a keyword or symbol,\nits name will be used instead of its literal representation.\n\nExample:\n   (str :foo :bar)     ;;=> \":foo:bar\"\n   (as-str :foo :bar)  ;;=> \"foobar\" \n\nNote that this does not apply to keywords or symbols nested within\ndata structures; they will be rendered as with str.\n\nExample:\n   (str {:foo :bar})     ;;=> \"{:foo :bar}\"\n   (as-str {:foo :bar})  ;;=> \"{:foo :bar}\" ",
    "name":"as-str"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L178",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L178",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/as-url",
    "namespace":"clojure.contrib.java-utils",
@@ -2541,7 +2646,7 @@
    "doc":"Coerces argument (URL, URI, or String) to a java.net.URL.",
    "name":"as-url"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L83",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L83",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/file",
    "namespace":"clojure.contrib.java-utils",
@@ -2550,7 +2655,7 @@
    "doc":"Returns a java.io.File from string or file args.",
    "name":"file"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L117",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L117",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/get-system-property",
    "namespace":"clojure.contrib.java-utils",
@@ -2558,7 +2663,7 @@
    "doc":"Get a system property.",
    "name":"get-system-property"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L162",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L162",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/read-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2566,7 +2671,7 @@
    "doc":"Read properties from file-able.",
    "name":"read-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L62",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L62",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/relative-path-string",
    "namespace":"clojure.contrib.java-utils",
@@ -2574,7 +2679,7 @@
    "Interpret a String or java.io.File as a relative path string. \nBuilding block for clojure.contrib.java-utils/file.",
    "name":"relative-path-string"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L124",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L124",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/set-system-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2582,7 +2687,7 @@
    "doc":"Set some system properties. Nil clears a property.",
    "name":"set-system-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L132",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L132",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/with-system-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -2591,7 +2696,7 @@
    "setting => property-name value\n\nSets the system properties to the supplied values, executes the body, and\nsets the properties back to their original values. Values of nil are\ntranslated to a clearing of the property.",
    "name":"with-system-properties"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/a0cadf5768c4cb1ce0cbeb23a264246bd82fe151/src/clojure/contrib/java_utils.clj#L169",
+   "http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L169",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//java-utils-api.html#java-utils/write-properties",
    "namespace":"clojure.contrib.java-utils",
@@ -3751,7 +3856,7 @@
    "Monad describing computations that accumulate data on the side, e.g. for\nlogging. The monadic values have the structure [value log]. Any of the\naccumulators from clojure.contrib.accumulators can be used for storing the\nlog data. Its empty value is passed as a parameter.",
    "name":"writer-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L81",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L84",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/dir",
    "namespace":"clojure.contrib.ns-utils",
@@ -3759,7 +3864,7 @@
    "doc":"Prints a sorted directory of public vars in a namespace",
    "name":"dir"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L86",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L89",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/docs",
    "namespace":"clojure.contrib.ns-utils",
@@ -3767,7 +3872,7 @@
    "doc":"Prints documentation for the public vars in a namespace",
    "name":"docs"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L47",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L50",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/get-ns",
    "namespace":"clojure.contrib.ns-utils",
@@ -3776,7 +3881,16 @@
    "Returns the namespace named by ns-sym or throws if the\nnamespace does not exist",
    "name":"get-ns"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L55",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L94",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/immigrate",
+   "namespace":"clojure.contrib.ns-utils",
+   "arglists":[["&", "ns-names"]],
+   "doc":
+   "Create a public var in this namespace for each public var in the\nnamespaces named by ns-names. The created vars have the same name, root\nbinding, and metadata as the original except that their :ns metadata\nvalue is this namespace.",
+   "name":"immigrate"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L58",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/ns-vars",
    "namespace":"clojure.contrib.ns-utils",
@@ -3785,7 +3899,7 @@
    "Returns a sorted seq of symbols naming public vars in\na namespace",
    "name":"ns-vars"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L61",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L64",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/print-dir",
    "namespace":"clojure.contrib.ns-utils",
@@ -3793,7 +3907,7 @@
    "doc":"Prints a sorted directory of public vars in a namespace",
    "name":"print-dir"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L67",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L70",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/print-docs",
    "namespace":"clojure.contrib.ns-utils",
@@ -3801,7 +3915,7 @@
    "doc":"Prints documentation for the public vars in a namespace",
    "name":"print-docs"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/ns_utils.clj#L75",
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj#L78",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//ns-utils-api.html#ns-utils/vars",
    "namespace":"clojure.contrib.ns-utils",
@@ -4548,7 +4662,7 @@
    "Register INT signal handler.  After calling this, Ctrl-C will cause\nall break-threads to be stopped.  See 'add-break-thread!'",
    "name":"start-handling-break"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L179",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L179",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/fill-queue",
    "namespace":"clojure.contrib.seq-utils",
@@ -4557,7 +4671,7 @@
    "filler-func will be called in another thread with a single arg\n'fill'.  filler-func may call fill repeatedly with one arg each\ntime which will be pushed onto a queue, blocking if needed until\nthis is possible.  fill-queue will return a lazy seq of the values\nfiller-func has pushed onto the queue, blocking if needed until each\nnext element becomes available.  filler-func's return value is ignored.",
    "name":"fill-queue"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L170",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L170",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/find-first",
    "namespace":"clojure.contrib.seq-utils",
@@ -4566,7 +4680,7 @@
    "Returns the first item of coll for which (pred item) returns logical true.\nConsumes sequences up to the first match, will consume the entire sequence\nand return nil if no match is found.",
    "name":"find-first"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L34",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L34",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/flatten",
    "namespace":"clojure.contrib.seq-utils",
@@ -4575,7 +4689,7 @@
    "Takes any nested combination of sequential things (lists, vectors,\netc.) and returns their contents as a single, flat sequence.\n(flatten nil) returns nil.",
    "name":"flatten"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L89",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L89",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/frequencies",
    "namespace":"clojure.contrib.seq-utils",
@@ -4584,7 +4698,7 @@
    "Returns a map from distinct items in coll to the number of times\nthey appear.",
    "name":"frequencies"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L65",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L65",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/group-by",
    "namespace":"clojure.contrib.seq-utils",
@@ -4593,7 +4707,7 @@
    "Returns a sorted map of the elements of coll keyed by the result of\nf on each element. The value at each key will be a vector of the\ncorresponding elements, in the order they appeared in coll.",
    "name":"group-by"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L48",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L48",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/includes?",
    "namespace":"clojure.contrib.seq-utils",
@@ -4602,7 +4716,7 @@
    "Returns true if coll contains something equal (with =) to x,\nin linear time.",
    "name":"includes?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L55",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L55",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/indexed",
    "namespace":"clojure.contrib.seq-utils",
@@ -4611,7 +4725,7 @@
    "Returns a lazy sequence of [index, item] pairs, where items come\nfrom 's' and indexes count up from zero.\n\n(indexed '(a b c d))  =>  ([0 a] [1 b] [2 c] [3 d])",
    "name":"indexed"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L135",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L135",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/partition-all",
    "namespace":"clojure.contrib.seq-utils",
@@ -4620,7 +4734,7 @@
    "Returns a lazy sequence of lists like clojure.core/partition, but may\ninclude lists with fewer than n items at the end.",
    "name":"partition-all"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L78",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L78",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/partition-by",
    "namespace":"clojure.contrib.seq-utils",
@@ -4629,7 +4743,16 @@
    "Applies f to each value in coll, splitting it each time f returns\na new value.  Returns a lazy seq of lazy seqs.",
    "name":"partition-by"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L152",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L214",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/positions",
+   "namespace":"clojure.contrib.seq-utils",
+   "arglists":[["pred", "coll"]],
+   "doc":
+   "Returns a lazy sequence containing the positions at which pred\nis true for items in coll.",
+   "name":"positions"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L152",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/rand-elt",
    "namespace":"clojure.contrib.seq-utils",
@@ -4637,7 +4760,7 @@
    "doc":"Return a random element of this seq",
    "name":"rand-elt"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L106",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L106",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/rec-cat",
    "namespace":"clojure.contrib.seq-utils",
@@ -4646,7 +4769,7 @@
    "Similar to lazy-cat but binds the resulting sequence to the supplied \nbinding-name, allowing for recursive expressions.",
    "name":"rec-cat"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L99",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L99",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/rec-seq",
    "namespace":"clojure.contrib.seq-utils",
@@ -4655,7 +4778,7 @@
    "Similar to lazy-seq but binds the resulting seq to the supplied \nbinding-name, allowing for recursive expressions.",
    "name":"rec-seq"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L115",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L115",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/reductions",
    "namespace":"clojure.contrib.seq-utils",
@@ -4664,7 +4787,7 @@
    "Returns a lazy seq of the intermediate values of the reduction (as\nper reduce) of coll by f, starting with init.",
    "name":"reductions"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L125",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L125",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/rotations",
    "namespace":"clojure.contrib.seq-utils",
@@ -4672,7 +4795,7 @@
    "doc":"Returns a lazy seq of all rotations of a seq",
    "name":"rotations"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L42",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L42",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/separate",
    "namespace":"clojure.contrib.seq-utils",
@@ -4681,7 +4804,7 @@
    "Returns a vector:\n[ (filter f s), (filter (complement f) s) ]",
    "name":"separate"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L159",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L159",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/seq-on",
    "namespace":"clojure.contrib.seq-utils",
@@ -4690,7 +4813,7 @@
    "Returns a seq on the object s. Works like the built-in seq but as\na multimethod that can have implementations for new classes and types.",
    "name":"seq-on"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/da640a5d9371d6e436b3dfaab36fde90fad2c2bd/src/clojure/contrib/seq_utils.clj#L145",
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj#L145",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//seq-utils-api.html#seq-utils/shuffle",
    "namespace":"clojure.contrib.seq-utils",
@@ -6191,6 +6314,97 @@
    "doc":
    "If *test-datalog* is set to true, run the enclosed commands",
    "name":"trace-datalog"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L207",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/calls",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :calls key with a\nfunction that will be called with the given arguments. The return value from\nthis function will be returned returned by the expected function. If both this\nand returns are specified, the return value of \"calls\" will have precedence.\nUsage:\n(calls some-fn expectation-hash?)",
+   "name":"calls"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L219",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/has-args",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":
+   [["arg-pred-forms"], ["arg-pred-forms", "expect-hash-form"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :has-args key with\na value corresponding to a function that will either return true if its\nargument expectations are met or throw an exception with the details of the\nfirst failed argument it encounters.\nOnly specify as many predicates as you are interested in verifying. The rest\nof the values are safely ignored.\nUsage:\n(has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)",
+   "name":"has-args"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L96",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/has-matching-signature?",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["fn-name", "args"]],
+   "doc":
+   "Calls no-matching-function-signature if no match is found for the given\nfunction. If no argslist meta data is available for the function, it is\nnot called.",
+   "name":"has-matching-signature?"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L107",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/make-arg-checker",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["arg-preds", "arg-pred-forms"]],
+   "doc":
+   "Creates the argument verifying function for a replaced dependency within\nthe expectation bound scope. These functions take the additional argument\nof the name of the replaced function, then the rest of their args. It is\ndesigned to be called from the mock function generated in the first argument\nof the mock info object created by make-mock.",
+   "name":"make-arg-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L122",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/make-count-checker",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["pred", "pred-form"]],
+   "doc":
+   "creates the count checker that is invoked at the end of an expectation, after\nthe code under test has all been executed. The function returned takes the\nname of the associated dependency and the invocation count as arguments.",
+   "name":"make-count-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L141",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/make-mock",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["fn-name", "expectation-hash"]],
+   "doc":
+   "creates a vector containing the following information for the named function:\n1. dependent function replacement - verifies signature, calls arg checker,\nincreases count, returns return value.\n2. an atom containing the invocation count\n3. the invocation count checker function\n4. a symbol of the name of the function being replaced.",
+   "name":"make-mock"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/0b8b47631efe950df74d17d8f410eb8196342359/src/clojure/contrib/expect/test_adapter.clj#L19",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/report-problem",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["fn-name", "expected", "actual", "msg"]],
+   "doc":
+   "This function is designed to be used in a binding macro to override\nthe report-problem function in the test-expect namespace. Instead of printing\nthe error to the console, the error is logged via test-is.",
+   "name":"report-problem"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L196",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/returns",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :returns key with\na value to be returned by the expectation after a successful invocation\nmatching its expected arguments (if applicable).\nUsage:\n(returns ret-value expectation-hash?)",
+   "name":"returns"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L237",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/times",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["times-fn"], ["times-fn", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :times key with a\nvalue corresponding to a predicate function which expects an integer value.\nThis function can either be specified as the first argument to times or can be\nthe result of calling times with an integer argument, in which case the\npredicate will default to being an exact match.  This predicate is called at\nthe end of an expect expression to validate that an expected dependency\nfunction was called the expected number of times.\nUsage:\n(times n)\n(times #(> n %))\n(times n expectation-hash)",
+   "name":"times"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L166",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/validate-counts",
+   "namespace":"clojure.contrib.expect.test-adapter",
+   "arglists":[["mock-data"]],
+   "doc":
+   "given the sequence of all mock data for the expectation, simply calls the\ncount checker for each dependency.",
+   "name":"validate-counts"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/df27c0a710440e2fef44f799dc5933f29ced44e1/src/clojure/contrib/miglayout/example.clj#L40",
    "wiki-url":
