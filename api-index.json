@@ -297,7 +297,7 @@
    "author":"Chris Houser",
    "doc":"Functions to parse xml lazily and emit back to text."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/logging-api.html",
    "name":"clojure.contrib.logging",
@@ -3012,7 +3012,7 @@
    "Parses the source s, which can be a File, InputStream or String\nnaming a URI. Returns a lazy tree of the clojure.xml/element\nstruct-map, which has the keys :tag, :attrs, and :content and\naccessor fns tag, attrs, and content, with the whitespace trimmed\nfrom around each content string. This format is compatible with what\nclojure.xml/parse produces, except :content is a lazy seq instead of\na vector.  Other SAX-compatible parsers can be supplied by passing\nstartparse, a fn taking a source and a ContentHandler and returning\na parser. If a parser is specified, it will be run in a separate\nthread and be allowed to get ahead by queue-size items, which\ndefaults to maxing.  If no parser is specified and\norg.xmlpull.v1.XmlPullParser is in the classpath, this superior pull\nparser will be used.",
    "name":"parse-trim"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L202",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L202",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/*allow-direct-logging*",
    "namespace":"clojure.contrib.logging",
@@ -3020,14 +3020,14 @@
    "A boolean indicating whether direct logging (as opposed to via an agent) is\nallowed when not operating from within a transaction. Defaults to true.",
    "name":"*allow-direct-logging*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L190",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/*impl-name*",
    "namespace":"clojure.contrib.logging",
    "doc":"The name of the logging implementation used.",
    "name":"*impl-name*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L196",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L196",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/*logging-agent*",
    "namespace":"clojure.contrib.logging",
@@ -3035,7 +3035,7 @@
    "The default agent used for performing logging durng a transaction or when\ndirect logging is disabled.",
    "name":"*logging-agent*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L208",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L208",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/agent-write!",
    "namespace":"clojure.contrib.logging",
@@ -3044,16 +3044,7 @@
    "Writes the message immediately, and ignores the first argument. Used by the\nlogging agent. End-users should never need to call this function.",
    "name":"agent-write!"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L91",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/commons-logging",
-   "namespace":"clojure.contrib.logging",
-   "arglists":[[]],
-   "doc":
-   "Defines the commons-logging-based implementations of the core logging\nfunctions. End-users should never need to call this macro.",
-   "name":"commons-logging"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L316",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L316",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/debug",
    "namespace":"clojure.contrib.logging",
@@ -3061,7 +3052,7 @@
    "doc":"Logs a message at the debug level.",
    "name":"debug"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L232",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L232",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/enabled?",
    "namespace":"clojure.contrib.logging",
@@ -3070,7 +3061,7 @@
    "Returns true if the specific logging level is enabled.  Use of this function\nshould only be necessary if one needs to execute alternate code paths beyond\nwhether the log should be written to.",
    "name":"enabled?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L337",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L337",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/error",
    "namespace":"clojure.contrib.logging",
@@ -3078,7 +3069,7 @@
    "doc":"Logs a message at the error level.",
    "name":"error"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L344",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L344",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/fatal",
    "namespace":"clojure.contrib.logging",
@@ -3086,7 +3077,7 @@
    "doc":"Logs a message at the fatal level.",
    "name":"fatal"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L190",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/impl-enabled?",
    "namespace":"clojure.contrib.logging",
@@ -3094,7 +3085,7 @@
    "Implementation-specific check if a particular level is enabled. End-users\nshould not need to call this function.",
    "name":"impl-enabled?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L190",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/impl-get-log",
    "namespace":"clojure.contrib.logging",
@@ -3102,7 +3093,7 @@
    "Returns an implementation-specific log by string namespace. End-users should\nnot need to call this function.",
    "name":"impl-get-log"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L190",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/impl-write!",
    "namespace":"clojure.contrib.logging",
@@ -3110,7 +3101,7 @@
    "Implementation-specific write of a log message. End-users should not need to\ncall this function.",
    "name":"impl-write!"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L323",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L323",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/info",
    "namespace":"clojure.contrib.logging",
@@ -3118,16 +3109,7 @@
    "doc":"Logs a message at the info level.",
    "name":"info"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L155",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/java-logging",
-   "namespace":"clojure.contrib.logging",
-   "arglists":[[]],
-   "doc":
-   "Defines the java-logging-based implementations of the core logging\nfunctions. End-users should never need to call this macro.",
-   "name":"java-logging"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L215",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L215",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/log",
    "namespace":"clojure.contrib.logging",
@@ -3138,7 +3120,7 @@
    "Logs a message, either directly or via an agent. Also see the level-specific\nconvenience macros.",
    "name":"log"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L271",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L271",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/log-capture!",
    "namespace":"clojure.contrib.logging",
@@ -3147,7 +3129,7 @@
    "Captures System.out and System.err, redirecting all writes of those streams\nto :info and :error logging, respectively. The specified log-ns value will\nbe used to namespace all redirected logging. NOTE: this will not redirect\noutput of *out* or *err*; for that, use with-logs.",
    "name":"log-capture!"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L249",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L249",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/log-stream",
    "namespace":"clojure.contrib.logging",
@@ -3156,7 +3138,7 @@
    "Creates a PrintStream that will output to the log. End-users should not need\nto invoke this function.",
    "name":"log-stream"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L287",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L287",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/log-uncapture!",
    "namespace":"clojure.contrib.logging",
@@ -3165,16 +3147,7 @@
    "Restores System.out and System.err to their original values.",
    "name":"log-uncapture!"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L125",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/log4j-logging",
-   "namespace":"clojure.contrib.logging",
-   "arglists":[[]],
-   "doc":
-   "Defines the log4j-based implementations of the core logging functions.\nEnd-users should never need to call this macro.",
-   "name":"log4j-logging"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L242",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L242",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/spy",
    "namespace":"clojure.contrib.logging",
@@ -3183,7 +3156,7 @@
    "Evaluates expr and outputs the form and its result to the debug log; returns \nthe result of expr.",
    "name":"spy"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L309",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L309",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/trace",
    "namespace":"clojure.contrib.logging",
@@ -3191,7 +3164,7 @@
    "doc":"Logs a message at the trace level.",
    "name":"trace"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L330",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L330",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/warn",
    "namespace":"clojure.contrib.logging",
@@ -3199,7 +3172,7 @@
    "doc":"Logs a message at the warn level.",
    "name":"warn"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/44e4c23000a7cdee5395006dadc2eb1b58bc9b9d/src/clojure/contrib/logging.clj#L297",
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj#L297",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//logging-api.html#logging/with-logs",
    "namespace":"clojure.contrib.logging",
