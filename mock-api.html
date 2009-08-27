@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>expect API reference (clojure.contrib)</title>
+    <title>mock API reference (clojure.contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -34,7 +34,7 @@ namespace.
     <a class="wiki_link" href="api-index.html">API Index</a><br />
     <a class="wiki_link" href="#">Namespaces:</a>
     <ul id="left-sidebar-list">
-      <li><a href="accumulators-api.html" class="wiki_link">accumulators</a></li><li><a href="agent-utils-api.html" class="wiki_link">agent-utils</a></li><li><a href="base64-api.html" class="wiki_link">base64</a></li><li><a href="classpath-api.html" class="wiki_link">classpath</a></li><li><a href="combinatorics-api.html" class="wiki_link">combinatorics</a></li><li><a href="command-line-api.html" class="wiki_link">command-line</a></li><li><a href="complex-numbers-api.html" class="wiki_link">complex-numbers</a></li><li><a href="cond-api.html" class="wiki_link">cond</a></li><li><a href="condition-api.html" class="wiki_link">condition</a></li><li><a href="core-api.html" class="wiki_link">core</a></li><li><a href="dataflow-api.html" class="wiki_link">dataflow</a></li><li><a href="datalog-api.html" class="wiki_link">datalog</a></li><li><a href="def-api.html" class="wiki_link">def</a></li><li><a href="duck-streams-api.html" class="wiki_link">duck-streams</a></li><li><a href="error-kit-api.html" class="wiki_link">error-kit</a></li><li><a href="except-api.html" class="wiki_link">except</a></li><li><a href="expect-api.html" class="wiki_link">expect</a></li><li><a href="fcase-api.html" class="wiki_link">fcase</a></li><li><a href="find-namespaces-api.html" class="wiki_link">find-namespaces</a></li><li><a href="fnmap-api.html" class="wiki_link">fnmap</a></li><li><a href="gen-html-docs-api.html" class="wiki_link">gen-html-docs</a></li><li><a href="generic.arithmetic-api.html" class="wiki_link">generic.arithmetic</a></li><li><a href="generic.collection-api.html" class="wiki_link">generic.collection</a></li><li><a href="generic.comparison-api.html" class="wiki_link">generic.comparison</a></li><li><a href="generic.functor-api.html" class="wiki_link">generic.functor</a></li><li><a href="generic.math-functions-api.html" class="wiki_link">generic.math-functions</a></li><li><a href="graph-api.html" class="wiki_link">graph</a></li><li><a href="greatest-least-api.html" class="wiki_link">greatest-least</a></li><li><a href="http.agent-api.html" class="wiki_link">http.agent</a></li><li><a href="http.connection-api.html" class="wiki_link">http.connection</a></li><li><a href="import-static-api.html" class="wiki_link">import-static</a></li><li><a href="jar-api.html" class="wiki_link">jar</a></li><li><a href="java-utils-api.html" class="wiki_link">java-utils</a></li><li><a href="javadoc.browse-api.html" class="wiki_link">javadoc.browse</a></li><li><a href="jmx-api.html" class="wiki_link">jmx</a></li><li><a href="json.read-api.html" class="wiki_link">json.read</a></li><li><a href="json.write-api.html" class="wiki_link">json.write</a></li><li><a href="lazy-seqs-api.html" class="wiki_link">lazy-seqs</a></li><li><a href="lazy-xml-api.html" class="wiki_link">lazy-xml</a></li><li><a href="logging-api.html" class="wiki_link">logging</a></li><li><a href="macro-utils-api.html" class="wiki_link">macro-utils</a></li><li><a href="macros-api.html" class="wiki_link">macros</a></li><li><a href="map-utils-api.html" class="wiki_link">map-utils</a></li><li><a href="math-api.html" class="wiki_link">math</a></li><li><a href="miglayout-api.html" class="wiki_link">miglayout</a></li><li><a href="mmap-api.html" class="wiki_link">mmap</a></li><li><a href="monadic-io-streams-api.html" class="wiki_link">monadic-io-streams</a></li><li><a href="monads-api.html" class="wiki_link">monads</a></li><li><a href="ns-utils-api.html" class="wiki_link">ns-utils</a></li><li><a href="pprint-api.html" class="wiki_link">pprint</a></li><li><a href="probabilities.finite-distributions-api.html" class="wiki_link">probabilities.finite-distributions</a></li><li><a href="probabilities.monte-carlo-api.html" class="wiki_link">probabilities.monte-carlo</a></li><li><a href="probabilities.random-numbers-api.html" class="wiki_link">probabilities.random-numbers</a></li><li><a href="profile-api.html" class="wiki_link">profile</a></li><li><a href="prxml-api.html" class="wiki_link">prxml</a></li><li><a href="repl-ln-api.html" class="wiki_link">repl-ln</a></li><li><a href="repl-utils-api.html" class="wiki_link">repl-utils</a></li><li><a href="seq-utils-api.html" class="wiki_link">seq-utils</a></li><li><a href="server-socket-api.html" class="wiki_link">server-socket</a></li><li><a href="set-api.html" class="wiki_link">set</a></li><li><a href="shell-out-api.html" class="wiki_link">shell-out</a></li><li><a href="singleton-api.html" class="wiki_link">singleton</a></li><li><a href="sql-api.html" class="wiki_link">sql</a></li><li><a href="str-utils-api.html" class="wiki_link">str-utils</a></li><li><a href="str-utils2-api.html" class="wiki_link">str-utils2</a></li><li><a href="stream-utils-api.html" class="wiki_link">stream-utils</a></li><li><a href="swing-utils-api.html" class="wiki_link">swing-utils</a></li><li><a href="trace-api.html" class="wiki_link">trace</a></li><li><a href="types-api.html" class="wiki_link">types</a></li><li><a href="with-ns-api.html" class="wiki_link">with-ns</a></li><li><a href="zip-filter-api.html" class="wiki_link">zip-filter</a></li>
+      <li><a href="accumulators-api.html" class="wiki_link">accumulators</a></li><li><a href="agent-utils-api.html" class="wiki_link">agent-utils</a></li><li><a href="base64-api.html" class="wiki_link">base64</a></li><li><a href="classpath-api.html" class="wiki_link">classpath</a></li><li><a href="combinatorics-api.html" class="wiki_link">combinatorics</a></li><li><a href="command-line-api.html" class="wiki_link">command-line</a></li><li><a href="complex-numbers-api.html" class="wiki_link">complex-numbers</a></li><li><a href="cond-api.html" class="wiki_link">cond</a></li><li><a href="condition-api.html" class="wiki_link">condition</a></li><li><a href="core-api.html" class="wiki_link">core</a></li><li><a href="dataflow-api.html" class="wiki_link">dataflow</a></li><li><a href="datalog-api.html" class="wiki_link">datalog</a></li><li><a href="def-api.html" class="wiki_link">def</a></li><li><a href="duck-streams-api.html" class="wiki_link">duck-streams</a></li><li><a href="error-kit-api.html" class="wiki_link">error-kit</a></li><li><a href="except-api.html" class="wiki_link">except</a></li><li><a href="fcase-api.html" class="wiki_link">fcase</a></li><li><a href="find-namespaces-api.html" class="wiki_link">find-namespaces</a></li><li><a href="fnmap-api.html" class="wiki_link">fnmap</a></li><li><a href="gen-html-docs-api.html" class="wiki_link">gen-html-docs</a></li><li><a href="generic.arithmetic-api.html" class="wiki_link">generic.arithmetic</a></li><li><a href="generic.collection-api.html" class="wiki_link">generic.collection</a></li><li><a href="generic.comparison-api.html" class="wiki_link">generic.comparison</a></li><li><a href="generic.functor-api.html" class="wiki_link">generic.functor</a></li><li><a href="generic.math-functions-api.html" class="wiki_link">generic.math-functions</a></li><li><a href="graph-api.html" class="wiki_link">graph</a></li><li><a href="greatest-least-api.html" class="wiki_link">greatest-least</a></li><li><a href="http.agent-api.html" class="wiki_link">http.agent</a></li><li><a href="http.connection-api.html" class="wiki_link">http.connection</a></li><li><a href="import-static-api.html" class="wiki_link">import-static</a></li><li><a href="jar-api.html" class="wiki_link">jar</a></li><li><a href="java-utils-api.html" class="wiki_link">java-utils</a></li><li><a href="javadoc.browse-api.html" class="wiki_link">javadoc.browse</a></li><li><a href="jmx-api.html" class="wiki_link">jmx</a></li><li><a href="json.read-api.html" class="wiki_link">json.read</a></li><li><a href="json.write-api.html" class="wiki_link">json.write</a></li><li><a href="lazy-seqs-api.html" class="wiki_link">lazy-seqs</a></li><li><a href="lazy-xml-api.html" class="wiki_link">lazy-xml</a></li><li><a href="logging-api.html" class="wiki_link">logging</a></li><li><a href="macro-utils-api.html" class="wiki_link">macro-utils</a></li><li><a href="macros-api.html" class="wiki_link">macros</a></li><li><a href="map-utils-api.html" class="wiki_link">map-utils</a></li><li><a href="math-api.html" class="wiki_link">math</a></li><li><a href="miglayout-api.html" class="wiki_link">miglayout</a></li><li><a href="mmap-api.html" class="wiki_link">mmap</a></li><li><a href="mock-api.html" class="wiki_link">mock</a></li><li><a href="monadic-io-streams-api.html" class="wiki_link">monadic-io-streams</a></li><li><a href="monads-api.html" class="wiki_link">monads</a></li><li><a href="ns-utils-api.html" class="wiki_link">ns-utils</a></li><li><a href="pprint-api.html" class="wiki_link">pprint</a></li><li><a href="probabilities.finite-distributions-api.html" class="wiki_link">probabilities.finite-distributions</a></li><li><a href="probabilities.monte-carlo-api.html" class="wiki_link">probabilities.monte-carlo</a></li><li><a href="probabilities.random-numbers-api.html" class="wiki_link">probabilities.random-numbers</a></li><li><a href="profile-api.html" class="wiki_link">profile</a></li><li><a href="prxml-api.html" class="wiki_link">prxml</a></li><li><a href="repl-ln-api.html" class="wiki_link">repl-ln</a></li><li><a href="repl-utils-api.html" class="wiki_link">repl-utils</a></li><li><a href="seq-utils-api.html" class="wiki_link">seq-utils</a></li><li><a href="server-socket-api.html" class="wiki_link">server-socket</a></li><li><a href="set-api.html" class="wiki_link">set</a></li><li><a href="shell-out-api.html" class="wiki_link">shell-out</a></li><li><a href="singleton-api.html" class="wiki_link">singleton</a></li><li><a href="sql-api.html" class="wiki_link">sql</a></li><li><a href="str-utils-api.html" class="wiki_link">str-utils</a></li><li><a href="str-utils2-api.html" class="wiki_link">str-utils2</a></li><li><a href="stream-utils-api.html" class="wiki_link">stream-utils</a></li><li><a href="swing-utils-api.html" class="wiki_link">swing-utils</a></li><li><a href="trace-api.html" class="wiki_link">trace</a></li><li><a href="types-api.html" class="wiki_link">types</a></li><li><a href="with-ns-api.html" class="wiki_link">with-ns</a></li><li><a href="zip-filter-api.html" class="wiki_link">zip-filter</a></li>
     </ul>
   </div>
 </div>
@@ -48,60 +48,60 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/calls">calls</a>
+      <a href="#mock/calls">calls</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/expect">expect</a>
+      <a href="#mock/expect">expect</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/has-args">has-args</a>
+      <a href="#mock/has-args">has-args</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/has-matching-signature?">has-matching-signature?</a>
+      <a href="#mock/has-matching-signature?">has-matching-signature?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/make-arg-checker">make-arg-checker</a>
+      <a href="#mock/make-arg-checker">make-arg-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/make-count-checker">make-count-checker</a>
+      <a href="#mock/make-count-checker">make-count-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/make-mock">make-mock</a>
+      <a href="#mock/make-mock">make-mock</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/returns">returns</a>
+      <a href="#mock/returns">returns</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/times">times</a>
+      <a href="#mock/times">times</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect/validate-counts">validate-counts</a>
+      <a href="#mock/validate-counts">validate-counts</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#expect.test-adapter">expect.test-adapter</a>
+    <a href="#mock.test-adapter">mock.test-adapter</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/calls">calls</a>
+      <a href="#mock.test-adapter/calls">calls</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/has-args">has-args</a>
+      <a href="#mock.test-adapter/has-args">has-args</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/has-matching-signature?">has-matching-signature?</a>
+      <a href="#mock.test-adapter/has-matching-signature?">has-matching-signature?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/make-arg-checker">make-arg-checker</a>
+      <a href="#mock.test-adapter/make-arg-checker">make-arg-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/make-count-checker">make-count-checker</a>
+      <a href="#mock.test-adapter/make-count-checker">make-count-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/make-mock">make-mock</a>
+      <a href="#mock.test-adapter/make-mock">make-mock</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/report-problem">report-problem</a>
+      <a href="#mock.test-adapter/report-problem">report-problem</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/returns">returns</a>
+      <a href="#mock.test-adapter/returns">returns</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/times">times</a>
+      <a href="#mock.test-adapter/times">times</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#expect.test-adapter/validate-counts">validate-counts</a>
+      <a href="#mock.test-adapter/validate-counts">validate-counts</a>
     </div>
     <br />
   </div>
 </div>
 </div></div>
-                <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">expect</span></h1>
+                <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">mock</span></h1>
 by <span id="author">Unknown</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.expect</span>))
+  (:require <span id="long-name">clojure.contrib.mock</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
 <pre id="namespace-docstr"></pre>
@@ -110,7 +110,7 @@ by <span id="author">Unknown</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/calls">calls</h2>
+  <h2 id="mock/calls">calls</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (calls val)
        (calls val expectation-hash)
@@ -121,11 +121,11 @@ this function will be returned returned by the expected function. If both this
 and returns are specified, the return value of "calls" will have precedence.
 Usage:
 (calls some-fn expectation-hash?)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L207" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L209" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/expect">expect</h2>
+  <h2 id="mock/expect">expect</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (expect expect-bindings &amp; body)
 </pre>
@@ -136,11 +136,11 @@ Return values can also be specified as needed.
 Usage:
 (expect [dep-fn (has-args [arg-pred1] (times n (returns x)))]
   (function-under-test a b c))</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L256" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L258" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/has-args">has-args</h2>
+  <h2 id="mock/has-args">has-args</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (has-args arg-pred-forms)
        (has-args arg-pred-forms expect-hash-form)
@@ -153,22 +153,22 @@ Only specify as many predicates as you are interested in verifying. The rest
 of the values are safely ignored.
 Usage:
 (has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L219" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L221" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/has-matching-signature?">has-matching-signature?</h2>
+  <h2 id="mock/has-matching-signature?">has-matching-signature?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (has-matching-signature? fn-name args)
 </pre>
   <pre id="var-docstr">Calls no-matching-function-signature if no match is found for the given
 function. If no argslist meta data is available for the function, it is
 not called.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L96" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L98" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/make-arg-checker">make-arg-checker</h2>
+  <h2 id="mock/make-arg-checker">make-arg-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-arg-checker arg-preds arg-pred-forms)
 </pre>
@@ -177,22 +177,22 @@ the expectation bound scope. These functions take the additional argument
 of the name of the replaced function, then the rest of their args. It is
 designed to be called from the mock function generated in the first argument
 of the mock info object created by make-mock.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L107" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L109" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/make-count-checker">make-count-checker</h2>
+  <h2 id="mock/make-count-checker">make-count-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-count-checker pred pred-form)
 </pre>
   <pre id="var-docstr">creates the count checker that is invoked at the end of an expectation, after
 the code under test has all been executed. The function returned takes the
 name of the associated dependency and the invocation count as arguments.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L122" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L124" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/make-mock">make-mock</h2>
+  <h2 id="mock/make-mock">make-mock</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-mock fn-name expectation-hash)
 </pre>
@@ -202,11 +202,11 @@ increases count, returns return value.
 2. an atom containing the invocation count
 3. the invocation count checker function
 4. a symbol of the name of the function being replaced.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L141" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L143" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/returns">returns</h2>
+  <h2 id="mock/returns">returns</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (returns val)
        (returns val expectation-hash)
@@ -216,11 +216,11 @@ a value to be returned by the expectation after a successful invocation
 matching its expected arguments (if applicable).
 Usage:
 (returns ret-value expectation-hash?)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L196" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L198" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/times">times</h2>
+  <h2 id="mock/times">times</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (times times-fn)
        (times times-fn expectation-hash)
@@ -236,24 +236,24 @@ Usage:
 (times n)
 (times #(&gt; n %))
 (times n expectation-hash)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L237" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L239" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="expect/validate-counts">validate-counts</h2>
+  <h2 id="mock/validate-counts">validate-counts</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (validate-counts mock-data)
 </pre>
   <pre id="var-docstr">given the sequence of all mock data for the expectation, simply calls the
 count checker for each dependency.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L166" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L168" id="var-source">Source</a>
 </div>
-<div><h2 id="namespace-name">expect.test-adapter</h2>
+<div><h2 id="namespace-name">mock.test-adapter</h2>
 <pre id="namespace-docstr"></pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/calls">calls</h2>
+  <h2 id="mock.test-adapter/calls">calls</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (calls val)
        (calls val expectation-hash)
@@ -264,10 +264,10 @@ this function will be returned returned by the expected function. If both this
 and returns are specified, the return value of "calls" will have precedence.
 Usage:
 (calls some-fn expectation-hash?)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L207" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L209" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/has-args">has-args</h2>
+  <h2 id="mock.test-adapter/has-args">has-args</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (has-args arg-pred-forms)
        (has-args arg-pred-forms expect-hash-form)
@@ -280,20 +280,20 @@ Only specify as many predicates as you are interested in verifying. The rest
 of the values are safely ignored.
 Usage:
 (has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L219" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L221" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/has-matching-signature?">has-matching-signature?</h2>
+  <h2 id="mock.test-adapter/has-matching-signature?">has-matching-signature?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (has-matching-signature? fn-name args)
 </pre>
   <pre id="var-docstr">Calls no-matching-function-signature if no match is found for the given
 function. If no argslist meta data is available for the function, it is
 not called.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L96" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L98" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/make-arg-checker">make-arg-checker</h2>
+  <h2 id="mock.test-adapter/make-arg-checker">make-arg-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-arg-checker arg-preds arg-pred-forms)
 </pre>
@@ -302,20 +302,20 @@ the expectation bound scope. These functions take the additional argument
 of the name of the replaced function, then the rest of their args. It is
 designed to be called from the mock function generated in the first argument
 of the mock info object created by make-mock.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L107" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L109" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/make-count-checker">make-count-checker</h2>
+  <h2 id="mock.test-adapter/make-count-checker">make-count-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-count-checker pred pred-form)
 </pre>
   <pre id="var-docstr">creates the count checker that is invoked at the end of an expectation, after
 the code under test has all been executed. The function returned takes the
 name of the associated dependency and the invocation count as arguments.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L122" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L124" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/make-mock">make-mock</h2>
+  <h2 id="mock.test-adapter/make-mock">make-mock</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-mock fn-name expectation-hash)
 </pre>
@@ -325,20 +325,20 @@ increases count, returns return value.
 2. an atom containing the invocation count
 3. the invocation count checker function
 4. a symbol of the name of the function being replaced.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L141" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L143" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/report-problem">report-problem</h2>
+  <h2 id="mock.test-adapter/report-problem">report-problem</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (report-problem fn-name expected actual msg)
 </pre>
   <pre id="var-docstr">This function is designed to be used in a binding macro to override
-the report-problem function in the test-expect namespace. Instead of printing
-the error to the console, the error is logged via test-is.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/0b8b47631efe950df74d17d8f410eb8196342359/src/clojure/contrib/expect/test_adapter.clj#L19" id="var-source">Source</a>
+the report-problem function in clojure.contrib.mock. Instead of printing
+the error to the console, the error is logged via clojure.test.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock/test_adapter.clj#L19" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/returns">returns</h2>
+  <h2 id="mock.test-adapter/returns">returns</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (returns val)
        (returns val expectation-hash)
@@ -348,10 +348,10 @@ a value to be returned by the expectation after a successful invocation
 matching its expected arguments (if applicable).
 Usage:
 (returns ret-value expectation-hash?)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L196" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L198" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/times">times</h2>
+  <h2 id="mock.test-adapter/times">times</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (times times-fn)
        (times times-fn expectation-hash)
@@ -367,16 +367,16 @@ Usage:
 (times n)
 (times #(&gt; n %))
 (times n expectation-hash)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L237" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L239" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="expect.test-adapter/validate-counts">validate-counts</h2>
+  <h2 id="mock.test-adapter/validate-counts">validate-counts</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (validate-counts mock-data)
 </pre>
   <pre id="var-docstr">given the sequence of all mock data for the expectation, simply calls the
 count checker for each dependency.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L166" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L168" id="var-source">Source</a>
 </div>
 </div>
 

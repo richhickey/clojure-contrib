@@ -123,13 +123,6 @@
    "doc":
    "Provides functions that make it easy to specify the class, cause, and\nmessage when throwing an Exception or Error. The optional message is\nformatted using clojure.core/format."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/expect-api.html",
-   "name":"clojure.contrib.expect",
-   "author":null,
-   "doc":null},
-  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/fcase-api.html",
@@ -350,6 +343,13 @@
    "author":"Chris Houser",
    "doc":
    "Functions for memory-mapping files, plus some functions that use a\nmmaped file for \"normal\" activies -- slurp, load-file, etc."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/mock-api.html",
+   "name":"clojure.contrib.mock",
+   "author":null,
+   "doc":null},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/f9b111c67752220c9d45a7d6ef22c6eecf400c87/src/clojure/contrib/monadic_io_streams.clj",
    "wiki-url":
@@ -584,13 +584,6 @@
    "author":null,
    "doc":null},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0b8b47631efe950df74d17d8f410eb8196342359/src/clojure/contrib/expect/test_adapter.clj",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/expect.test-adapter-api.html",
-   "name":"clojure.contrib.expect.test-adapter",
-   "author":null,
-   "doc":null},
-  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/df27c0a710440e2fef44f799dc5933f29ced44e1/src/clojure/contrib/miglayout/example.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/miglayout.example-api.html",
@@ -609,6 +602,13 @@
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/miglayout.test-api.html",
    "name":"clojure.contrib.miglayout.test",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock/test_adapter.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/mock.test-adapter-api.html",
+   "name":"clojure.contrib.mock.test-adapter",
    "author":null,
    "doc":null},
   {"source-url":
@@ -1575,97 +1575,6 @@
    "doc":
    "Throws an Exception or Error with an optional message formatted using\nclojure.core/format. All arguments are optional:\n\n    class? cause? format? format-args*\n\n- class defaults to Exception, if present it must name a kind of\n  Throwable\n- cause defaults to nil, if present it must be a Throwable\n- format is a format string for clojure.core/format\n- format-args are objects that correspond to format specifiers in\n  format.",
    "name":"throwf"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L207",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/calls",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["val"], ["val", "expectation-hash"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :calls key with a\nfunction that will be called with the given arguments. The return value from\nthis function will be returned returned by the expected function. If both this\nand returns are specified, the return value of \"calls\" will have precedence.\nUsage:\n(calls some-fn expectation-hash?)",
-   "name":"calls"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L256",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/expect",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["expect-bindings", "&", "body"]],
-   "doc":
-   "Use expect to redirect calls to dependent functions that are made within the\ncode under test. Instead of calling the functions that would normally be used,\ntemporary stubs are used, which can verify function parameters and call counts.\nReturn values can also be specified as needed.\nUsage:\n(expect [dep-fn (has-args [arg-pred1] (times n (returns x)))]\n  (function-under-test a b c))",
-   "name":"expect"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L219",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/has-args",
-   "namespace":"clojure.contrib.expect",
-   "arglists":
-   [["arg-pred-forms"], ["arg-pred-forms", "expect-hash-form"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :has-args key with\na value corresponding to a function that will either return true if its\nargument expectations are met or throw an exception with the details of the\nfirst failed argument it encounters.\nOnly specify as many predicates as you are interested in verifying. The rest\nof the values are safely ignored.\nUsage:\n(has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)",
-   "name":"has-args"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L96",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/has-matching-signature?",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["fn-name", "args"]],
-   "doc":
-   "Calls no-matching-function-signature if no match is found for the given\nfunction. If no argslist meta data is available for the function, it is\nnot called.",
-   "name":"has-matching-signature?"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L107",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/make-arg-checker",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["arg-preds", "arg-pred-forms"]],
-   "doc":
-   "Creates the argument verifying function for a replaced dependency within\nthe expectation bound scope. These functions take the additional argument\nof the name of the replaced function, then the rest of their args. It is\ndesigned to be called from the mock function generated in the first argument\nof the mock info object created by make-mock.",
-   "name":"make-arg-checker"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L122",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/make-count-checker",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["pred", "pred-form"]],
-   "doc":
-   "creates the count checker that is invoked at the end of an expectation, after\nthe code under test has all been executed. The function returned takes the\nname of the associated dependency and the invocation count as arguments.",
-   "name":"make-count-checker"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L141",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/make-mock",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["fn-name", "expectation-hash"]],
-   "doc":
-   "creates a vector containing the following information for the named function:\n1. dependent function replacement - verifies signature, calls arg checker,\nincreases count, returns return value.\n2. an atom containing the invocation count\n3. the invocation count checker function\n4. a symbol of the name of the function being replaced.",
-   "name":"make-mock"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L196",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/returns",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["val"], ["val", "expectation-hash"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :returns key with\na value to be returned by the expectation after a successful invocation\nmatching its expected arguments (if applicable).\nUsage:\n(returns ret-value expectation-hash?)",
-   "name":"returns"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L237",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/times",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["times-fn"], ["times-fn", "expectation-hash"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :times key with a\nvalue corresponding to a predicate function which expects an integer value.\nThis function can either be specified as the first argument to times or can be\nthe result of calling times with an integer argument, in which case the\npredicate will default to being an exact match.  This predicate is called at\nthe end of an expect expression to validate that an expected dependency\nfunction was called the expected number of times.\nUsage:\n(times n)\n(times #(> n %))\n(times n expectation-hash)",
-   "name":"times"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L166",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect/validate-counts",
-   "namespace":"clojure.contrib.expect",
-   "arglists":[["mock-data"]],
-   "doc":
-   "given the sequence of all mock data for the expectation, simply calls the\ncount checker for each dependency.",
-   "name":"validate-counts"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L77",
    "wiki-url":
@@ -3422,6 +3331,97 @@
    "arglists":[["f"]],
    "doc":"Reads the file named by f and returns it as a string.",
    "name":"slurp"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L209",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/calls",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :calls key with a\nfunction that will be called with the given arguments. The return value from\nthis function will be returned returned by the expected function. If both this\nand returns are specified, the return value of \"calls\" will have precedence.\nUsage:\n(calls some-fn expectation-hash?)",
+   "name":"calls"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L258",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/expect",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["expect-bindings", "&", "body"]],
+   "doc":
+   "Use expect to redirect calls to dependent functions that are made within the\ncode under test. Instead of calling the functions that would normally be used,\ntemporary stubs are used, which can verify function parameters and call counts.\nReturn values can also be specified as needed.\nUsage:\n(expect [dep-fn (has-args [arg-pred1] (times n (returns x)))]\n  (function-under-test a b c))",
+   "name":"expect"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L221",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/has-args",
+   "namespace":"clojure.contrib.mock",
+   "arglists":
+   [["arg-pred-forms"], ["arg-pred-forms", "expect-hash-form"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :has-args key with\na value corresponding to a function that will either return true if its\nargument expectations are met or throw an exception with the details of the\nfirst failed argument it encounters.\nOnly specify as many predicates as you are interested in verifying. The rest\nof the values are safely ignored.\nUsage:\n(has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)",
+   "name":"has-args"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L98",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/has-matching-signature?",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["fn-name", "args"]],
+   "doc":
+   "Calls no-matching-function-signature if no match is found for the given\nfunction. If no argslist meta data is available for the function, it is\nnot called.",
+   "name":"has-matching-signature?"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L109",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/make-arg-checker",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["arg-preds", "arg-pred-forms"]],
+   "doc":
+   "Creates the argument verifying function for a replaced dependency within\nthe expectation bound scope. These functions take the additional argument\nof the name of the replaced function, then the rest of their args. It is\ndesigned to be called from the mock function generated in the first argument\nof the mock info object created by make-mock.",
+   "name":"make-arg-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L124",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/make-count-checker",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["pred", "pred-form"]],
+   "doc":
+   "creates the count checker that is invoked at the end of an expectation, after\nthe code under test has all been executed. The function returned takes the\nname of the associated dependency and the invocation count as arguments.",
+   "name":"make-count-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L143",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/make-mock",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["fn-name", "expectation-hash"]],
+   "doc":
+   "creates a vector containing the following information for the named function:\n1. dependent function replacement - verifies signature, calls arg checker,\nincreases count, returns return value.\n2. an atom containing the invocation count\n3. the invocation count checker function\n4. a symbol of the name of the function being replaced.",
+   "name":"make-mock"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L198",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/returns",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :returns key with\na value to be returned by the expectation after a successful invocation\nmatching its expected arguments (if applicable).\nUsage:\n(returns ret-value expectation-hash?)",
+   "name":"returns"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L239",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/times",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["times-fn"], ["times-fn", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :times key with a\nvalue corresponding to a predicate function which expects an integer value.\nThis function can either be specified as the first argument to times or can be\nthe result of calling times with an integer argument, in which case the\npredicate will default to being an exact match.  This predicate is called at\nthe end of an expect expression to validate that an expected dependency\nfunction was called the expected number of times.\nUsage:\n(times n)\n(times #(> n %))\n(times n expectation-hash)",
+   "name":"times"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L168",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock/validate-counts",
+   "namespace":"clojure.contrib.mock",
+   "arglists":[["mock-data"]],
+   "doc":
+   "given the sequence of all mock data for the expectation, simply calls the\ncount checker for each dependency.",
+   "name":"validate-counts"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/f9b111c67752220c9d45a7d6ef22c6eecf400c87/src/clojure/contrib/monadic_io_streams.clj#L62",
    "wiki-url":
@@ -6288,97 +6288,6 @@
    "If *test-datalog* is set to true, run the enclosed commands",
    "name":"trace-datalog"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L207",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/calls",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["val"], ["val", "expectation-hash"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :calls key with a\nfunction that will be called with the given arguments. The return value from\nthis function will be returned returned by the expected function. If both this\nand returns are specified, the return value of \"calls\" will have precedence.\nUsage:\n(calls some-fn expectation-hash?)",
-   "name":"calls"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L219",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/has-args",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":
-   [["arg-pred-forms"], ["arg-pred-forms", "expect-hash-form"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :has-args key with\na value corresponding to a function that will either return true if its\nargument expectations are met or throw an exception with the details of the\nfirst failed argument it encounters.\nOnly specify as many predicates as you are interested in verifying. The rest\nof the values are safely ignored.\nUsage:\n(has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)",
-   "name":"has-args"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L96",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/has-matching-signature?",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["fn-name", "args"]],
-   "doc":
-   "Calls no-matching-function-signature if no match is found for the given\nfunction. If no argslist meta data is available for the function, it is\nnot called.",
-   "name":"has-matching-signature?"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L107",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/make-arg-checker",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["arg-preds", "arg-pred-forms"]],
-   "doc":
-   "Creates the argument verifying function for a replaced dependency within\nthe expectation bound scope. These functions take the additional argument\nof the name of the replaced function, then the rest of their args. It is\ndesigned to be called from the mock function generated in the first argument\nof the mock info object created by make-mock.",
-   "name":"make-arg-checker"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L122",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/make-count-checker",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["pred", "pred-form"]],
-   "doc":
-   "creates the count checker that is invoked at the end of an expectation, after\nthe code under test has all been executed. The function returned takes the\nname of the associated dependency and the invocation count as arguments.",
-   "name":"make-count-checker"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L141",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/make-mock",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["fn-name", "expectation-hash"]],
-   "doc":
-   "creates a vector containing the following information for the named function:\n1. dependent function replacement - verifies signature, calls arg checker,\nincreases count, returns return value.\n2. an atom containing the invocation count\n3. the invocation count checker function\n4. a symbol of the name of the function being replaced.",
-   "name":"make-mock"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0b8b47631efe950df74d17d8f410eb8196342359/src/clojure/contrib/expect/test_adapter.clj#L19",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/report-problem",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["fn-name", "expected", "actual", "msg"]],
-   "doc":
-   "This function is designed to be used in a binding macro to override\nthe report-problem function in the test-expect namespace. Instead of printing\nthe error to the console, the error is logged via test-is.",
-   "name":"report-problem"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L196",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/returns",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["val"], ["val", "expectation-hash"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :returns key with\na value to be returned by the expectation after a successful invocation\nmatching its expected arguments (if applicable).\nUsage:\n(returns ret-value expectation-hash?)",
-   "name":"returns"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L237",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/times",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["times-fn"], ["times-fn", "expectation-hash"]],
-   "doc":
-   "Creates or associates to an existing expectation hash the :times key with a\nvalue corresponding to a predicate function which expects an integer value.\nThis function can either be specified as the first argument to times or can be\nthe result of calling times with an integer argument, in which case the\npredicate will default to being an exact match.  This predicate is called at\nthe end of an expect expression to validate that an expected dependency\nfunction was called the expected number of times.\nUsage:\n(times n)\n(times #(> n %))\n(times n expectation-hash)",
-   "name":"times"},
-  {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/36f995f88d31a23d509c11fab889887d79a4a768/src/clojure/contrib/expect.clj#L166",
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib//expect-api.html#expect.test-adapter/validate-counts",
-   "namespace":"clojure.contrib.expect.test-adapter",
-   "arglists":[["mock-data"]],
-   "doc":
-   "given the sequence of all mock data for the expectation, simply calls the\ncount checker for each dependency.",
-   "name":"validate-counts"},
-  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/df27c0a710440e2fef44f799dc5933f29ced44e1/src/clojure/contrib/miglayout/example.clj#L40",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//miglayout-api.html#miglayout.example/converter-ui",
@@ -6505,6 +6414,97 @@
    "arglists":[[], ["width"]],
    "doc":"Returns a swing text field",
    "name":"text-field"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L209",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/calls",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :calls key with a\nfunction that will be called with the given arguments. The return value from\nthis function will be returned returned by the expected function. If both this\nand returns are specified, the return value of \"calls\" will have precedence.\nUsage:\n(calls some-fn expectation-hash?)",
+   "name":"calls"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L221",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/has-args",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":
+   [["arg-pred-forms"], ["arg-pred-forms", "expect-hash-form"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :has-args key with\na value corresponding to a function that will either return true if its\nargument expectations are met or throw an exception with the details of the\nfirst failed argument it encounters.\nOnly specify as many predicates as you are interested in verifying. The rest\nof the values are safely ignored.\nUsage:\n(has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)",
+   "name":"has-args"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L98",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/has-matching-signature?",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["fn-name", "args"]],
+   "doc":
+   "Calls no-matching-function-signature if no match is found for the given\nfunction. If no argslist meta data is available for the function, it is\nnot called.",
+   "name":"has-matching-signature?"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L109",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/make-arg-checker",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["arg-preds", "arg-pred-forms"]],
+   "doc":
+   "Creates the argument verifying function for a replaced dependency within\nthe expectation bound scope. These functions take the additional argument\nof the name of the replaced function, then the rest of their args. It is\ndesigned to be called from the mock function generated in the first argument\nof the mock info object created by make-mock.",
+   "name":"make-arg-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L124",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/make-count-checker",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["pred", "pred-form"]],
+   "doc":
+   "creates the count checker that is invoked at the end of an expectation, after\nthe code under test has all been executed. The function returned takes the\nname of the associated dependency and the invocation count as arguments.",
+   "name":"make-count-checker"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L143",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/make-mock",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["fn-name", "expectation-hash"]],
+   "doc":
+   "creates a vector containing the following information for the named function:\n1. dependent function replacement - verifies signature, calls arg checker,\nincreases count, returns return value.\n2. an atom containing the invocation count\n3. the invocation count checker function\n4. a symbol of the name of the function being replaced.",
+   "name":"make-mock"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock/test_adapter.clj#L19",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/report-problem",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["fn-name", "expected", "actual", "msg"]],
+   "doc":
+   "This function is designed to be used in a binding macro to override\nthe report-problem function in clojure.contrib.mock. Instead of printing\nthe error to the console, the error is logged via clojure.test.",
+   "name":"report-problem"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L198",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/returns",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["val"], ["val", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :returns key with\na value to be returned by the expectation after a successful invocation\nmatching its expected arguments (if applicable).\nUsage:\n(returns ret-value expectation-hash?)",
+   "name":"returns"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L239",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/times",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["times-fn"], ["times-fn", "expectation-hash"]],
+   "doc":
+   "Creates or associates to an existing expectation hash the :times key with a\nvalue corresponding to a predicate function which expects an integer value.\nThis function can either be specified as the first argument to times or can be\nthe result of calling times with an integer argument, in which case the\npredicate will default to being an exact match.  This predicate is called at\nthe end of an expect expression to validate that an expected dependency\nfunction was called the expected number of times.\nUsage:\n(times n)\n(times #(> n %))\n(times n expectation-hash)",
+   "name":"times"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/79c2e7205965d84ad5101ee283d9c61a59e4b649/src/clojure/contrib/mock.clj#L168",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//mock-api.html#mock.test-adapter/validate-counts",
+   "namespace":"clojure.contrib.mock.test-adapter",
+   "arglists":[["mock-data"]],
+   "doc":
+   "given the sequence of all mock data for the expectation, simply calls the\ncount checker for each dependency.",
+   "name":"validate-counts"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj#L28",
    "wiki-url":
