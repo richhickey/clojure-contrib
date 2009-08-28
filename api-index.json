@@ -512,6 +512,14 @@
    "author":null,
    "doc":null},
   {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/test-is-api.html",
+   "name":"clojure.contrib.test-is",
+   "author":"Stuart Sierra",
+   "doc":
+   "Backwards-compatibility for clojure.contrib.test-is\n\nThe clojure.contrib.test-is library moved from Contrib into the\nClojure distribution as clojure.test.\n\nThis happened on or around clojure-contrib Git commit\n82cf0409d0fcb71be477ebfc4da18ee2128a2ad1 on June 25, 2009.\n\nThis file makes the clojure.test interface available under the old\nnamespace clojure.contrib.test-is.\n\nThis includes support for the old syntax of the 'are' macro.\n\nThis was suggested by Howard Lewis Ship in ticket #26, \nhttp://www.assembla.com/spaces/clojure-contrib/tickets/26"},
+  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/trace-api.html",
@@ -5546,6 +5554,302 @@
    "doc":
    "An atom containing the dispatch set for the add-menu-item method.",
    "name":"menu-constructor-dispatch"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L468",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/*load-tests*",
+   "namespace":"clojure.contrib.test-is",
+   "doc":
+   "True by default.  If set to false, no test functions will\nbe created by deftest, set-test, or with-test.  Use this to omit\ntests when compiling or loading production code.",
+   "name":"*load-tests*"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L474",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/*stack-trace-depth*",
+   "namespace":"clojure.contrib.test-is",
+   "doc":
+   "The maximum depth of stack traces to print when an Exception\nis thrown during a test.  Defaults to nil, which means print the \ncomplete stack trace.",
+   "name":"*stack-trace-depth*"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L76",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/apply-template",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["expr", "values"]],
+   "doc":
+   "Replaces _1, _2, _3, etc. in expr with corresponding elements of\nvalues.  Returns the modified expression.  For use in macros.",
+   "name":"apply-template"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L104",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/are",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["expr", "&", "args"]],
+   "doc":
+   "Checks multiple assertions with a template expression.\nSee clojure.contrib.template/do-template for an explanation of\ntemplates.\n\nExample: (are (= _1 _2)  \n              2 (+ 1 1)\n              4 (* 2 2))\nExpands to: \n         (do (is (= 2 (+ 1 1)))\n             (is (= 4 (* 2 2))))\n\nNote: This breaks some reporting features, such as line numbers.",
+   "name":"are"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L633",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/assert-any",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["msg", "form"]],
+   "doc":
+   "Returns generic assertion code for any test, including macros, Java\nmethod calls, or isolated symbols.",
+   "name":"assert-any"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L615",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/assert-predicate",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["msg", "form"]],
+   "doc":
+   "Returns generic assertion code for any functional predicate.  The\n'expected' argument to 'report' will contains the original form, the\n'actual' argument will contain the form with all its sub-forms\nevaluated.  If the predicate returns false, the 'actual' form will\nbe wrapped in (not...).",
+   "name":"assert-predicate"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L843",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/compose-fixtures",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["f1", "f2"]],
+   "doc":
+   "Composes two fixture functions, creating a new fixture function\nthat combines their behavior.",
+   "name":"compose-fixtures"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L786",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/deftest",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["name", "&", "body"]],
+   "doc":
+   "Defines a test function with no arguments.  Test functions may call\nother tests, so tests may be composed.  If you compose tests, you\nshould also define a function named test-ns-hook; run-tests will\ncall test-ns-hook instead of testing all vars.\n\nNote: Actually, the test body goes in the :test metadata on the var,\nand the real function (the value of the var) calls test-var on\nitself.\n\nWhen *load-tests* is false, deftest is ignored.",
+   "name":"deftest"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L802",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/deftest-",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["name", "&", "body"]],
+   "doc":"Like deftest but creates a private var.",
+   "name":"deftest-"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L87",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/do-template",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["expr", "&", "args"]],
+   "doc":
+   "Repeatedly evaluates template expr (in a do block) using values in\nargs.  args are grouped by the number of holes in the template.\nExample: (do-template (check _1 _2) :a :b :c :d)\nexpands to (do (check :a :b) (check :c :d))",
+   "name":"do-template"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L504",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/file-position",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["n"]],
+   "doc":
+   "Returns a vector [filename line-number] for the nth call up the\nstack.",
+   "name":"file-position"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L51",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/find-holes",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["form"]],
+   "doc":"Recursively finds all symbols starting with _ in form.",
+   "name":"find-holes"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L57",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/find-pure-exprs",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["form"]],
+   "doc":
+   "Recursively finds all sub-expressions in form that do not contain\nany symbols starting with _",
+   "name":"find-pure-exprs"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L46",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/find-symbols",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["form"]],
+   "doc":"Recursively finds all symbols in form.",
+   "name":"find-symbols"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L65",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/flatten-map",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["m"]],
+   "doc":"Transforms a map into a vector like [key value key value].",
+   "name":"flatten-map"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L604",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/function?",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["x"]],
+   "doc":
+   "Returns true if argument is a function or a symbol that resolves to\na function (not a macro).",
+   "name":"function?"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L597",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/get-possibly-unbound-var",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["v"]],
+   "doc":"Like var-get but returns nil if the var is unbound.",
+   "name":"get-possibly-unbound-var"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L529",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/inc-report-counter",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["name"]],
+   "doc":
+   "Increments the named counter in *report-counters*, a ref to a map.\nDoes nothing if *report-counters* is nil.",
+   "name":"inc-report-counter"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L730",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/is",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["form"], ["form", "msg"]],
+   "doc":
+   "Generic assertion macro.  'form' is any predicate test.\n'msg' is an optional message to attach to the assertion.\n\nExample: (is (= 4 (+ 2 2)) \"Two plus two should be 4\")\n\nSpecial forms:\n\n(is (thrown? c body)) checks that an instance of c is thrown from\nbody, fails if not; then returns the thing thrown.\n\n(is (thrown-with-msg? c re body)) checks that an instance of c is\nthrown AND that the message on the exception matches (with\nre-matches) the regular expression re.",
+   "name":"is"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L849",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/join-fixtures",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["fixtures"]],
+   "doc":
+   "Composes a collection of fixtures, in order.  Always returns a valid\nfixture function, even if the collection is empty.",
+   "name":"join-fixtures"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L541",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/report",
+   "namespace":"clojure.contrib.test-is",
+   "doc":
+   "Generic reporting function, may be overridden to plug in\ndifferent report formats (e.g., TAP, JUnit).  Assertions such as\n'is' call 'report' to indicate results.  The argument given to\n'report' will be a map with a :type key.  See the documentation at\nthe top of test_is.clj for more information on the types of\narguments for 'report'.",
+   "name":"report"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L917",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/run-all-tests",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[[], ["re"]],
+   "doc":
+   "Runs all tests in all namespaces; prints results.\nOptional argument is a regular expression; only namespaces with\nnames matching the regular expression (with re-matches) will be\ntested.",
+   "name":"run-all-tests"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L909",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/run-tests",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[[], ["&", "namespaces"]],
+   "doc":
+   "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given.",
+   "name":"run-tests"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L810",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/set-test",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["name", "&", "body"]],
+   "doc":
+   "Experimental.\nSets :test metadata of the named var to a fn with the given body.\nThe var must already exist.  Does not modify the value of the var.\n\nWhen *load-tests* is false, set-test is ignored.",
+   "name":"set-test"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj#L71",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/template?",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["form"]],
+   "doc":"Returns true if form is a valid template expression.",
+   "name":"template?"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L874",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/test-all-vars",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["ns"]],
+   "doc":
+   "Calls test-var on every var interned in the namespace, with fixtures.",
+   "name":"test-all-vars"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L885",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/test-ns",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["ns"]],
+   "doc":
+   "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*inital-report-counters*.  Returns the final, dereferenced state of\n*report-counters*.",
+   "name":"test-ns"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L860",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/test-var",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["v"]],
+   "doc":
+   "If v has a function in its :test metadata, calls that function,\nwith *testing-vars* bound to (conj *testing-vars* v).",
+   "name":"test-var"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L763",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/testing",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["string", "&", "body"]],
+   "doc":
+   "Adds a new string to the list of testing contexts.  May be nested,\nbut must occur inside a test function (deftest).",
+   "name":"testing"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L523",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/testing-contexts-str",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[[]],
+   "doc":
+   "Returns a string representation of the current test context. Joins\nstrings in *testing-contexts* with spaces.",
+   "name":"testing-contexts-str"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L511",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/testing-vars-str",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[[]],
+   "doc":
+   "Returns a string representation of the current test.  Renders names\nin *testing-vars* as a list, then the source file and line of\ncurrent assertion.",
+   "name":"testing-vars-str"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L715",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/try-expr",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["msg", "form"]],
+   "doc":
+   "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this.",
+   "name":"try-expr"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L774",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/with-test",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["definition", "&", "body"]],
+   "doc":
+   "Takes any definition form (that returns a Var) as the first argument.\nRemaining body goes in the :test metadata function for that Var.\n\nWhen *load-tests* is false, only evaluates the definition, ignoring\nthe tests.",
+   "name":"with-test"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L494",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/with-test-out",
+   "namespace":"clojure.contrib.test-is",
+   "arglists":[["&", "body"]],
+   "doc":"Runs body with *out* bound to the value of *test-out*.",
+   "name":"with-test-out"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L40",
    "wiki-url":
