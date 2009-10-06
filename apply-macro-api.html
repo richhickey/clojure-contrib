@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>fcase API reference (clojure.contrib)</title>
+    <title>apply-macro API reference (clojure.contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -48,113 +48,40 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#fcase/case">case</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#fcase/fcase">fcase</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#fcase/in-case">in-case</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#fcase/instance-case">instance-case</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#fcase/re-case">re-case</a>
+      <a href="#apply-macro/apply-macro">apply-macro</a>
     </div>
     <br />
   </div>
 </div>
 </div></div>
-                <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">fcase</span></h1>
-by <span id="author">Stuart Sierra</span><br />
+                <div id="content-tag"><div><h1 id="overview">API for <span id="namespace-name">apply-macro</span></h1>
+by <span id="author">Unknown</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.fcase</span>))
+  (:require <span id="long-name">clojure.contrib.apply-macro</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">This file defines a generic "case" macro called "fcase" which takes
-the equality-testing function as an argument.  It also defines a
-traditional "case" macro that tests using "=" and variants that
-test for regular expressions and class membership.
-
-
-Note (December 23, 2008): This library has been supplanted by the
-inclusion of "condp" in clojure.core as of Clojure SVN rev. 1180.</pre>
+<pre id="namespace-docstr"></pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="fcase/case">case</h2>
+  <h2 id="apply-macro/apply-macro">apply-macro</h2>
   <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (case test-value &amp; clauses)
+  <pre id="var-usage">Usage: (apply-macro macro &amp; args)
 </pre>
-  <pre id="var-docstr">Like cond, but test-value is compared against the value of each
-test expression with =.  If they are equal, executes the "body"
-expression.  Optional last expression is executed if none of the
-test expressions match.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L77" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="fcase/fcase">fcase</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (fcase compare-fn case-value &amp; test-expr-clauses)
-</pre>
-  <pre id="var-docstr">Generic switch/case macro.  'fcase' is short for 'function case'.
+  <pre id="var-docstr">This is evil.  Don't ever use it.  It makes a macro behave like a
+function.  Seriously, how messed up is that?
 
-The 'compare-fn' is a fn of two arguments.
+Evaluates all args, then uses them as arguments to the macro as with
+apply.
 
-The 'test-expr-clauses' are value-expression pairs without
-surrounding parentheses, like in Clojure's 'cond'.
-
-The 'case-value' is evaluated once and cached.  Then, 'compare-fn'
-is called once for each clause, with the clause's test value as its
-first argument and 'case-value' as its second argument.  If
-'compare-fn' returns logical true, the clause's expression is
-evaluated and returned.  If 'compare-fn' returns false/nil, we go to
-the next test value.
-
-If 'test-expr-clauses' contains an odd number of items, the last
-item is the default expression evaluated if no case-value matches.
-If there is no default expression and no case-value matches, fcase
-returns nil.
-
-See specific forms of this macro in 'case' and 're-case'.
-
-The test expressions in 'fcase' are always evaluated linearly, in
-order.  For a large number of case expressions it may be more
-efficient to use a hash lookup.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L38" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="fcase/in-case">in-case</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (in-case test-value &amp; clauses)
-</pre>
-  <pre id="var-docstr">Like case, but test expressions are sequences.  The test expression
-is true if any item in the sequence is equal (tested with '=') to
-the test value.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L101" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="fcase/instance-case">instance-case</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (instance-case test-value &amp; clauses)
-</pre>
-  <pre id="var-docstr">Like case, but the test expressions are Java class names, tested with
-'instance?'.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L91" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="fcase/re-case">re-case</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (re-case test-value &amp; clauses)
-</pre>
-  <pre id="var-docstr">Like case, but the test expressions are regular expressions, tested
-with re-find.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L85" id="var-source">Source</a>
+(def things [true true false])
+(apply-macro and things)
+;; Expands to:  (and true true false)</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/apply_macro.clj#L32" id="var-source">Source</a>
 </div>
 
 

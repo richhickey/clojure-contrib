@@ -16,6 +16,13 @@
    "doc":
    "Miscellaneous agent utilities\n(note to other contrib members: feel free to add to this lib)"},
   {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/apply_macro.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/apply-macro-api.html",
+   "name":"clojure.contrib.apply-macro",
+   "author":null,
+   "doc":null},
+  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/7b661cfc55e2293d14bed4fd801c017b3f68d291/src/clojure/contrib/base64.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/base64-api.html",
@@ -146,7 +153,7 @@
    "doc":
    "Maps that dispatch get/assoc to user-defined functions.\n\nNote: requires AOT-compilation"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/gen_html_docs.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/gen_html_docs.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/gen-html-docs-api.html",
    "name":"clojure.contrib.gen-html-docs",
@@ -809,6 +816,15 @@
    "doc":
    "Capture the current value of the specified vars and rebind \nthem on the agent thread before executing the action.\n\nExample:\n  (capture-and-send [*out*] a f b c)",
    "name":"capture-and-send"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/apply_macro.clj#L32",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//apply-macro-api.html#apply-macro/apply-macro",
+   "namespace":"clojure.contrib.apply-macro",
+   "arglists":[["macro", "&", "args"]],
+   "doc":
+   "This is evil.  Don't ever use it.  It makes a macro behave like a\nfunction.  Seriously, how messed up is that?\n\nEvaluates all args, then uses them as arguments to the macro as with\napply.\n\n(def things [true true false])\n(apply-macro and things)\n;; Expands to:  (and true true false)",
+   "name":"apply-macro"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/7b661cfc55e2293d14bed4fd801c017b3f68d291/src/clojure/contrib/base64.clj#L27",
    "wiki-url":
@@ -1764,7 +1780,7 @@
    "Creates a fnmap, or functional map.  A fnmap behaves like an\nordinary Clojure map, except that calls to get and assoc are\nfiltered through user-defined getter and setter functions, which\noperate on an internal map.\n\n(getter m key) should return a value for key.\n\n(setter m key value) should assoc key with value and return a new\nmap for m.\n\nAll other map operations are passed through to the internal map.",
    "name":"fnmap"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/gen_html_docs.clj#L430",
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/gen_html_docs.clj#L430",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//gen-html-docs-api.html#gen-html-docs/generate-documentation",
    "namespace":"clojure.contrib.gen-html-docs",
@@ -1773,7 +1789,7 @@
    "Returns a string which is the HTML documentation for the libraries\nnamed by libs. Libs is a vector of symbols identifying Clojure\nlibraries.",
    "name":"generate-documentation"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/gen_html_docs.clj#L456",
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/gen_html_docs.clj#L456",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//gen-html-docs-api.html#gen-html-docs/generate-documentation-to-file",
    "namespace":"clojure.contrib.gen-html-docs",
