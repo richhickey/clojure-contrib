@@ -1,6 +1,6 @@
 {"namespaces":
  [{"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/accumulators-api.html",
    "name":"clojure.contrib.accumulators",
@@ -54,7 +54,7 @@
    "doc":
    "Process command-line arguments according to a given cmdspec"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/71ec4dc38cb977c5623d1892e87e20739fda85fb/src/clojure/contrib/complex_numbers.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/complex_numbers.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/complex-numbers-api.html",
    "name":"clojure.contrib.complex-numbers",
@@ -397,7 +397,7 @@
    "doc":
    "Finite probability distributions\nThis library defines a monad for combining finite probability\ndistributions."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/probabilities.monte-carlo-api.html",
    "name":"clojure.contrib.probabilities.monte-carlo",
@@ -405,7 +405,7 @@
    "doc":
    "Monte-Carlo method support\n\nMonte-Carlo methods transform an input random number stream\n(usually having a continuous uniform distribution in the\ninterval [0, 1)) into a random number stream whose distribution\nsatisfies certain conditions (usually the expectation value\nis equal to some desired quantity). They are thus\ntransformations from one probability distribution to another one.\n\nThis library represents a Monte-Carlo method by a function that\ntakes as input the state of a random number stream with\nuniform distribution (see\nclojure.contrib.probabilities.random-numbers) and returns a\nvector containing one sample value of the desired output\ndistribution and the final state of the input random number\nstream. Such functions are state monad values and can be\ncomposed using operations defined in clojure.contrib.monads."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/random_numbers.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/random_numbers.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/probabilities.random-numbers-api.html",
    "name":"clojure.contrib.probabilities.random-numbers",
@@ -504,7 +504,7 @@
    "doc":
    "This is a library of string manipulation functions.  It\nis intented as a replacement for clojure.contrib.str-utils.\n\nYou cannot (use 'clojure.contrib.str-utils2) because it defines\nfunctions with the same names as functions in clojure.core.\nInstead, do (require '[clojure.contrib.str-utils2 :as s]) \nor something similar.\n\nGoals:\n  1. Be functional\n  2. String argument first, to work with ->\n  3. Performance linear in string length\n\nSome ideas are borrowed from\nhttp://github.com/francoisdevlin/devlinsf-clojure-utils/"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/stream-utils-api.html",
    "name":"clojure.contrib.stream-utils",
@@ -535,7 +535,7 @@
    "doc":
    "This file defines simple \"tracing\" macros to help you see what your\ncode is doing."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/types.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/types-api.html",
    "name":"clojure.contrib.types",
@@ -665,7 +665,7 @@
    "doc":null}],
  "vars":
  [{"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L30",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L31",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/add",
    "namespace":"clojure.contrib.accumulators",
@@ -674,7 +674,7 @@
    "Add item to the accumulator acc. The exact meaning of adding an\nan item depends on the type of the accumulator.",
    "name":"add"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L36",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L37",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/add-items",
    "namespace":"clojure.contrib.accumulators",
@@ -683,7 +683,7 @@
    "Add all elements of a collection coll to the accumulator acc.",
    "name":"add-items"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L41",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L42",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/combine",
    "namespace":"clojure.contrib.accumulators",
@@ -692,7 +692,7 @@
    "Combine the values of the accumulators acc1 and acc2 into a\nsingle accumulator of the same type.",
    "name":"combine"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L270",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L271",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-counter",
    "namespace":"clojure.contrib.accumulators",
@@ -700,7 +700,7 @@
    "An empty counter accumulator. Its value is a map that stores for\nevery item the number of times it was added.",
    "name":"empty-counter"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L291",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L292",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-counter-with-total",
    "namespace":"clojure.contrib.accumulators",
@@ -708,7 +708,7 @@
    "An empty counter-with-total accumulator. It works like the counter\naccumulator, except that the total number of items added is stored as the\nvalue of the key :total.",
    "name":"empty-counter-with-total"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L87",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L88",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-list",
    "namespace":"clojure.contrib.accumulators",
@@ -716,7 +716,7 @@
    "An empty list accumulator. Adding an item appends it at the beginning.",
    "name":"empty-list"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L144",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L145",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-map",
    "namespace":"clojure.contrib.accumulators",
@@ -724,14 +724,14 @@
    "An empty map accumulator. Items to be added must be [key value] pairs.",
    "name":"empty-map"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L184",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L185",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-maximum",
    "namespace":"clojure.contrib.accumulators",
    "doc":"An empty maximum accumulator. Only numbers can be added.",
    "name":"empty-maximum"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L231",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L232",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-mean-variance",
    "namespace":"clojure.contrib.accumulators",
@@ -739,7 +739,7 @@
    "An empty mean-variance accumulator, combining sample mean and\nsample variance. Only numbers can be added.",
    "name":"empty-mean-variance"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L206",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L207",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-min-max",
    "namespace":"clojure.contrib.accumulators",
@@ -747,21 +747,21 @@
    "An empty min-max accumulator, combining minimum and maximum.\nOnly numbers can be added.",
    "name":"empty-min-max"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L190",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L191",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-minimum",
    "namespace":"clojure.contrib.accumulators",
    "doc":"An empty minimum accumulator. Only numbers can be added.",
    "name":"empty-minimum"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L176",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L177",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-product",
    "namespace":"clojure.contrib.accumulators",
    "doc":"An empty sum accumulator. Only numbers can be added.",
    "name":"empty-product"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L101",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L102",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-queue",
    "namespace":"clojure.contrib.accumulators",
@@ -769,14 +769,14 @@
    "An empty queue accumulator. Adding an item appends it at the end.",
    "name":"empty-queue"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L115",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L116",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-set",
    "namespace":"clojure.contrib.accumulators",
    "doc":"An empty set accumulator.",
    "name":"empty-set"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L129",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L130",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-string",
    "namespace":"clojure.contrib.accumulators",
@@ -784,14 +784,14 @@
    "An empty string accumulator. Adding an item (string or character)\nappends it at the end.",
    "name":"empty-string"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L173",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L174",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-sum",
    "namespace":"clojure.contrib.accumulators",
    "doc":"An empty sum accumulator. Only numbers can be added.",
    "name":"empty-sum"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L309",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L310",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-tuple",
    "namespace":"clojure.contrib.accumulators",
@@ -800,7 +800,7 @@
    "Returns an accumulator tuple with the supplied empty-accumulators\nas its value. Accumulator tuples consist of several accumulators that\nwork in parallel. Added items must be sequences whose number of elements\nmatches the number of sub-accumulators.",
    "name":"empty-tuple"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/074963a22d9d8547ff5bb408191850e1760e364d/src/clojure/contrib/accumulators.clj#L73",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj#L74",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//accumulators-api.html#accumulators/empty-vector",
    "namespace":"clojure.contrib.accumulators",
@@ -4275,7 +4275,7 @@
    "Returns the Zipf distribution in which the numbers k=1..n have\nprobabilities proportional to 1/k^s.",
    "name":"zipf"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L86",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L87",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/discrete",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4284,7 +4284,7 @@
    "A discrete distribution, defined by a map dist mapping values\nto probabilities. The sum of probabilities must be one.",
    "name":"discrete"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L145",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L146",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/exponential",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4293,7 +4293,7 @@
    "Transform a sequence of uniform random numbers in the interval [0, 1)\ninto a sequence of exponential random numbers with parameter lambda.",
    "name":"exponential"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L136",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L137",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/lognormal",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4302,7 +4302,7 @@
    "Transform a sequence of uniform random numbesr in the interval [0, 1)\ninto a sequence of lognormal random numbers with mean mu and standard\ndeviation sigma.",
    "name":"lognormal"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L227",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L228",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/n-sphere",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4311,7 +4311,7 @@
    "Return a uniform distribution of n-dimensional vectors inside an\nn-sphere of radius r.",
    "name":"n-sphere"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L115",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L116",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/normal",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4320,7 +4320,7 @@
    "Transform a sequence urs of uniform random number in the interval [0, 1)\ninto a sequence of normal random numbers with mean mu and standard\ndeviation sigma.",
    "name":"normal"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L162",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L163",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/normal-box-muller",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4329,7 +4329,7 @@
    "Transform a sequence of uniform random numbers in the interval [0, 1)\ninto a sequence of normal random numbers with mean mu and standard\ndeviation sigma.",
    "name":"normal-box-muller"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L61",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L62",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/random-stream",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4338,7 +4338,7 @@
    "Define a random stream by a distribution and the state of a\nrandom number stream with uniform distribution in [0, 1).",
    "name":"random-stream"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L73",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L74",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/reject",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4347,7 +4347,7 @@
    "Return the distribution that results from rejecting the values from\ndist that do not satisfy predicate p.",
    "name":"reject"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L181",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L182",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4356,7 +4356,7 @@
    "Return the distribution of samples of length n from the\ndistribution dist",
    "name":"sample"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L181",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L182",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-mean",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4365,7 +4365,7 @@
    "Return the distribution of the mean over n samples from the\ndistribution dist",
    "name":"sample-mean"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L181",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L182",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-mean-variance",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4374,7 +4374,7 @@
    "Return the distribution of the mean-and-variance (a vector containing\nthe mean and the variance) over n samples from the distribution dist",
    "name":"sample-mean-variance"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L181",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L182",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-reduce",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4383,7 +4383,7 @@
    "Returns the distribution of the reduction of f over n samples from the\ndistribution dist.",
    "name":"sample-reduce"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/monte_carlo.clj#L181",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj#L182",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.monte-carlo-api.html#probabilities.monte-carlo/sample-sum",
    "namespace":"clojure.contrib.probabilities.monte-carlo",
@@ -4392,7 +4392,7 @@
    "Return the distribution of the sum over n samples from the\ndistribution dist.",
    "name":"sample-sum"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/random_numbers.clj#L34",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/random_numbers.clj#L35",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.random-numbers-api.html#probabilities.random-numbers/lcg",
    "namespace":"clojure.contrib.probabilities.random-numbers",
@@ -4400,7 +4400,7 @@
    "doc":"Create a linear congruential generator",
    "name":"lcg"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/probabilities/random_numbers.clj#L55",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/random_numbers.clj#L56",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//probabilities.random-numbers-api.html#probabilities.random-numbers/rand-stream",
    "namespace":"clojure.contrib.probabilities.random-numbers",
@@ -5396,7 +5396,7 @@
    "doc":"Converts string to all upper-case.",
    "name":"upper-case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L182",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L183",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/defst",
    "namespace":"clojure.contrib.stream-utils",
@@ -5405,7 +5405,7 @@
    "Define the stream transformer name by body.\nThe non-stream arguments args and the stream arguments streams\nare given separately, with args being possibly empty.",
    "name":"defst"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L72",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L73",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/defstream",
    "namespace":"clojure.contrib.stream-utils",
@@ -5414,7 +5414,7 @@
    "Define object of the given type as a stream whose implementation\nof stream-next is defined by args and body. This macro adds\na type-specific method for stream-next and derives type\nfrom stream-type.",
    "name":"defstream"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L148",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L149",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/pick",
    "namespace":"clojure.contrib.stream-utils",
@@ -5423,7 +5423,7 @@
    "Return the next value of stream argument n inside a stream\ntransformer. When used inside of defst, the name of the stream\nargument can be used instead of its index n.",
    "name":"pick"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L159",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L160",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/pick-all",
    "namespace":"clojure.contrib.stream-utils",
@@ -5432,7 +5432,7 @@
    "Return a vector containing the next value of each stream argument\ninside a stream transformer.",
    "name":"pick-all"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L200",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L201",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-drop",
    "namespace":"clojure.contrib.stream-utils",
@@ -5441,7 +5441,7 @@
    "Return a stream containing all but the first n elements of stream.",
    "name":"stream-drop"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L242",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L243",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-filter",
    "namespace":"clojure.contrib.stream-utils",
@@ -5450,7 +5450,7 @@
    "Return a new stream that contrains the elements of stream\nthat satisfy the predicate p.",
    "name":"stream-filter"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L270",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L271",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-flatten",
    "namespace":"clojure.contrib.stream-utils",
@@ -5459,7 +5459,7 @@
    "Converts a stream of sequences into a stream of the elements of the\nsequences. Flattening is not recursive, only one level of nesting\nwill be removed.",
    "name":"stream-flatten"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L134",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L135",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-m",
    "namespace":"clojure.contrib.stream-utils",
@@ -5467,7 +5467,7 @@
    "Monad describing stream computations. The monadic values can be\nof any type handled by stream-next.",
    "name":"stream-m"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L218",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L219",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-map",
    "namespace":"clojure.contrib.stream-utils",
@@ -5476,7 +5476,7 @@
    "Return a new stream by mapping the function f on the given stream.",
    "name":"stream-map"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L90",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L91",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-next",
    "namespace":"clojure.contrib.stream-utils",
@@ -5485,7 +5485,7 @@
    "Returns a vector [next-value new-state] where next-value is the next\nitem in the data stream defined by stream-state and new-state\nis the new state of the stream. At the end of the stream,\nnext-value and new-state are nil.",
    "name":"stream-next"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L112",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L113",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-seq",
    "namespace":"clojure.contrib.stream-utils",
@@ -5494,7 +5494,7 @@
    "Return a lazy seq on the stream. Also accessible via\nclojure.contrib.seq-utils/seq-on and\nclojure.contrib.generic.collection/seq for streams.",
    "name":"stream-seq"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/stream_utils.clj#L68",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj#L69",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//stream-utils-api.html#stream-utils/stream-type",
    "namespace":"clojure.contrib.stream-utils",
@@ -5936,7 +5936,7 @@
    "This function is called by trace.  Prints to standard output, but\nmay be rebound to do anything you like.  'name' is optional.",
    "name":"tracer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/types.clj#L127",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L128",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#types/defadt",
    "namespace":"clojure.contrib.types",
@@ -5945,7 +5945,7 @@
    "Define an algebraic data type name by an exhaustive list of constructors.\nEach constructor can be a symbol (argument-free constructor) or a\nlist consisting of a tag symbol followed by the argument symbols.\nThe data type tag must be a keyword.",
    "name":"defadt"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/types.clj#L53",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L54",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#types/deftype",
    "namespace":"clojure.contrib.types",
@@ -5959,7 +5959,7 @@
    "Define a data type by a type tag (a namespace-qualified keyword)\nand a symbol naming the constructor function. Optionally, a\nconstructor and a deconstructor function can be given as well,\nthe defaults being clojure.core/identity and clojure.core/list.\nThe full constructor associated with constructor-name calls the\nconstructor function and attaches the type tag to its result\nas metadata. The deconstructor function must return the arguments\nto be passed to the constructor in order to create an equivalent\nobject. It is used for printing and matching.",
    "name":"deftype"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/types.clj#L87",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L88",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#types/deftype-",
    "namespace":"clojure.contrib.types",
@@ -5967,7 +5967,7 @@
    "doc":"Same as deftype but the constructor is private.",
    "name":"deftype-"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/types.clj#L240",
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L241",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#types/match",
    "namespace":"clojure.contrib.types",
