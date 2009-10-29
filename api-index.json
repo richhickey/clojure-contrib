@@ -130,7 +130,7 @@
    "doc":
    "Provides functions that make it easy to specify the class, cause, and\nmessage when throwing an Exception or Error. The optional message is\nformatted using clojure.core/format."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/fcase-api.html",
    "name":"clojure.contrib.fcase",
@@ -1600,7 +1600,7 @@
    "Throws an Exception or Error with an optional message formatted using\nclojure.core/format. All arguments are optional:\n\n    class? cause? format? format-args*\n\n- class defaults to Exception, if present it must name a kind of\n  Throwable\n- cause defaults to nil, if present it must be a Throwable\n- format is a format string for clojure.core/format\n- format-args are objects that correspond to format specifiers in\n  format.",
    "name":"throwf"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L77",
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj#L79",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//fcase-api.html#fcase/case",
    "namespace":"clojure.contrib.fcase",
@@ -1609,7 +1609,7 @@
    "Like cond, but test-value is compared against the value of each\ntest expression with =.  If they are equal, executes the \"body\"\nexpression.  Optional last expression is executed if none of the\ntest expressions match.",
    "name":"case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L38",
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj#L40",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//fcase-api.html#fcase/fcase",
    "namespace":"clojure.contrib.fcase",
@@ -1619,7 +1619,7 @@
    "Generic switch/case macro.  'fcase' is short for 'function case'.\n\nThe 'compare-fn' is a fn of two arguments.\n\nThe 'test-expr-clauses' are value-expression pairs without\nsurrounding parentheses, like in Clojure's 'cond'.\n\nThe 'case-value' is evaluated once and cached.  Then, 'compare-fn'\nis called once for each clause, with the clause's test value as its\nfirst argument and 'case-value' as its second argument.  If\n'compare-fn' returns logical true, the clause's expression is\nevaluated and returned.  If 'compare-fn' returns false/nil, we go to\nthe next test value.\n\nIf 'test-expr-clauses' contains an odd number of items, the last\nitem is the default expression evaluated if no case-value matches.\nIf there is no default expression and no case-value matches, fcase\nreturns nil.\n\nSee specific forms of this macro in 'case' and 're-case'.\n\nThe test expressions in 'fcase' are always evaluated linearly, in\norder.  For a large number of case expressions it may be more\nefficient to use a hash lookup.",
    "name":"fcase"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L101",
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj#L103",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//fcase-api.html#fcase/in-case",
    "namespace":"clojure.contrib.fcase",
@@ -1628,7 +1628,7 @@
    "Like case, but test expressions are sequences.  The test expression\nis true if any item in the sequence is equal (tested with '=') to\nthe test value.",
    "name":"in-case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L91",
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj#L93",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//fcase-api.html#fcase/instance-case",
    "namespace":"clojure.contrib.fcase",
@@ -1637,7 +1637,7 @@
    "Like case, but the test expressions are Java class names, tested with\n'instance?'.",
    "name":"instance-case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/80ec9a2db42de7a527ef838acbae6dbab8f49cb3/src/clojure/contrib/fcase.clj#L85",
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj#L87",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//fcase-api.html#fcase/re-case",
    "namespace":"clojure.contrib.fcase",
