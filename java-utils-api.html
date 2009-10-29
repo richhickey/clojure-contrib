@@ -56,6 +56,10 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#java-utils/as-url">as-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#java-utils/delete-file">delete-file</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#java-utils/delete-file-recursively">delete-file-recursively</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#java-utils/file">file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#java-utils/get-system-property">get-system-property</a>
@@ -94,7 +98,7 @@ by <span id="author">Unknown</span><br />
   <pre id="var-docstr">Interpret a String or a java.io.File as a File. Building block
 for clojure.contrib.java-utils/file, which you should prefer
 in most cases.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L75" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L75" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -104,7 +108,7 @@ in most cases.</pre>
 </pre>
   <pre id="var-docstr">Convert any seq of pairs to a java.utils.Properties instance.
 Uses as-str to convert both keys and values into strings.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L152" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L152" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -127,7 +131,7 @@ data structures; they will be rendered as with str.
 Example:
    (str {:foo :bar})     ;;=&gt; "{:foo :bar}"
    (as-str {:foo :bar})  ;;=&gt; "{:foo :bar}" </pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L92" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L92" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -136,7 +140,26 @@ Example:
   <pre id="var-usage">Usage: (as-url arg)
 </pre>
   <pre id="var-docstr">Coerces argument (URL, URI, or String) to a java.net.URL.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L178" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L195" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="java-utils/delete-file">delete-file</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (delete-file f &amp; [silently])
+</pre>
+  <pre id="var-docstr">Delete file f. Raise an exception if it fails unless silently is true.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L178" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="java-utils/delete-file-recursively">delete-file-recursively</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (delete-file-recursively f &amp; [silently])
+</pre>
+  <pre id="var-docstr">Delete file f. If it's a directory, recursively delete all its contents.
+Raise an exception if any deletion fails unless silently is true.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L185" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -147,7 +170,7 @@ Example:
        (file parent child &amp; more)
 </pre>
   <pre id="var-docstr">Returns a java.io.File from string or file args.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L83" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L83" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -157,7 +180,7 @@ Example:
        (get-system-property stringable default)
 </pre>
   <pre id="var-docstr">Get a system property.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L117" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L117" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -166,7 +189,7 @@ Example:
   <pre id="var-usage">Usage: (read-properties file-able)
 </pre>
   <pre id="var-docstr">Read properties from file-able.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L162" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L162" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -175,7 +198,7 @@ Example:
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Interpret a String or java.io.File as a relative path string. 
 Building block for clojure.contrib.java-utils/file.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L62" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L62" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -184,7 +207,7 @@ Building block for clojure.contrib.java-utils/file.</pre>
   <pre id="var-usage">Usage: (set-system-properties settings)
 </pre>
   <pre id="var-docstr">Set some system properties. Nil clears a property.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L124" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L124" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -197,7 +220,7 @@ Building block for clojure.contrib.java-utils/file.</pre>
 Sets the system properties to the supplied values, executes the body, and
 sets the properties back to their original values. Values of nil are
 translated to a clearing of the property.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L132" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L132" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -207,7 +230,7 @@ translated to a clearing of the property.</pre>
        (write-properties m file-able comments)
 </pre>
   <pre id="var-docstr">Write properties to file-able.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/6b763062af9568c1b069d5f86c8d5481a3fdfeea/src/clojure/contrib/java_utils.clj#L169" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/8eef617aac7b077421d4aa9c84a2df189af6ee17/src/clojure/contrib/java_utils.clj#L169" id="var-source">Source</a>
 </div>
 
 
