@@ -112,6 +112,8 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#test-is/try-expr">try-expr</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#test-is/use-fixtures">use-fixtures</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#test-is/with-test">with-test</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#test-is/with-test-out">with-test-out</a>
@@ -232,7 +234,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L615" id="var-sou
   <pre id="var-docstr">Composes two fixture functions, creating a new fixture function
 that combines their behavior.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L843" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L847" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -387,7 +389,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L730" id="var-sou
   <pre id="var-docstr">Composes a collection of fixtures, in order.  Always returns a valid
 fixture function, even if the collection is empty.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L849" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L853" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -415,7 +417,7 @@ Optional argument is a regular expression; only namespaces with
 names matching the regular expression (with re-matches) will be
 tested.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L917" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L921" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -427,7 +429,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L917" id="var-sou
   <pre id="var-docstr">Runs all tests in the given namespaces; prints results.
 Defaults to current namespace if none given.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L909" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L913" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -460,7 +462,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L810" id="var-sou
 </pre>
   <pre id="var-docstr">Calls test-var on every var interned in the namespace, with fixtures.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L874" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L878" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -476,7 +478,7 @@ Internally binds *report-counters* to a ref initialized to
 *inital-report-counters*.  Returns the final, dereferenced state of
 *report-counters*.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L885" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L889" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -487,7 +489,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L885" id="var-sou
   <pre id="var-docstr">If v has a function in its :test metadata, calls that function,
 with *testing-vars* bound to (conj *testing-vars* v).</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/clojure/test.clj#L860" id="var-source">Source</a>
+Use '--' to separate paths from revisions/src/clojure/test.clj#L864" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -533,6 +535,17 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L511" id="var-sou
 You don't call this.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
 Use '--' to separate paths from revisions/src/clojure/test.clj#L715" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="test-is/use-fixtures">use-fixtures</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">No usage documentation available</pre>
+  <pre id="var-docstr">Wrap test runs in a fixture function to perform setup and
+teardown. Using a fixture-type of :each wraps every test
+individually, while:once wraps the whole run in a single function.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions/src/clojure/test.clj#L830" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />

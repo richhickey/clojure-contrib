@@ -4034,7 +4034,7 @@
    "The pretty print dispatch function for simple data structure format.",
    "name":"*simple-dispatch*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/cl-format.clj#L26",
+   "http://github.com/richhickey/clojure-contrib/blob/6f9e9c276bf53b0fce2275abf29a25f9735a6409/src/clojure/contrib/pprint/cl-format.clj#L26",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/cl-format",
    "namespace":"clojure.contrib.pprint",
@@ -4043,7 +4043,7 @@
    "An implementation of a Common Lisp compatible format function. cl-format formats its\narguments to an output stream or string based on the format control string given. It \nsupports sophisticated formatting of structured data.\n\nWriter is an instance of java.io.Writer, true to output to *out* or nil to output \nto a string, format-in is the format control string and the remaining arguments \nare the data to be formatted.\n\nThe format control string is a string to be output with embedded 'format directives' \ndescribing how to format the various arguments passed in.\n\nIf writer is nil, cl-format returns the formatted result string. Otherwise, cl-format \nreturns nil.\n\nFor example:\n (let [results [46 38 22]]\n        (cl-format true \"There ~[are~;is~:;are~]~:* ~d result~:p: ~{~d~^, ~}~%\" \n                   (count results) results))\n\nPrints to *out*:\n There are 3 results: 46, 38, 22\n\nDetailed documentation on format control strings is available in the \"Common Lisp the \nLanguage, 2nd edition\", Chapter 22 (available online at:\nhttp://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node200.html#SECTION002633000000000000000) \nand in the Common Lisp HyperSpec at \nhttp://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm",
    "name":"cl-format"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/cl-format.clj#L1747",
+   "http://github.com/richhickey/clojure-contrib/blob/6f9e9c276bf53b0fce2275abf29a25f9735a6409/src/clojure/contrib/pprint/cl-format.clj#L1749",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/compile-format",
    "namespace":"clojure.contrib.pprint",
@@ -4052,7 +4052,7 @@
    "Compiles format-str into a compiled format which can be used as an argument\nto cl-format just like a plain format string. Use this function for improved \nperformance when you're using the same format string repeatedly",
    "name":"compile-format"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/cl-format.clj#L1815",
+   "http://github.com/richhickey/clojure-contrib/blob/6f9e9c276bf53b0fce2275abf29a25f9735a6409/src/clojure/contrib/pprint/cl-format.clj#L1817",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/formatter",
    "namespace":"clojure.contrib.pprint",
@@ -4061,7 +4061,7 @@
    "Makes a function which can directly run format-in. The function is\nfn [stream & args] ... and returns nil unless the stream is nil (meaning \noutput to a string) in which case it returns the resulting string.\n\nformat-in can be either a control string or a previously compiled format.",
    "name":"formatter"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/cl-format.clj#L1829",
+   "http://github.com/richhickey/clojure-contrib/blob/6f9e9c276bf53b0fce2275abf29a25f9735a6409/src/clojure/contrib/pprint/cl-format.clj#L1831",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/formatter-out",
    "namespace":"clojure.contrib.pprint",
@@ -4070,7 +4070,7 @@
    "Makes a function which can directly run format-in. The function is\nfn [& args] ... and returns nil. This version of the formatter macro is\ndesigned to be used with *out* set to an appropriate Writer. In particular,\nthis is meant to be used as part of a pretty printer dispatch method.\n\nformat-in can be either a control string or a previously compiled format.",
    "name":"formatter-out"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/cl-format.clj#L1151",
+   "http://github.com/richhickey/clojure-contrib/blob/6f9e9c276bf53b0fce2275abf29a25f9735a6409/src/clojure/contrib/pprint/cl-format.clj#L1153",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/fresh-line",
    "namespace":"clojure.contrib.pprint",
@@ -5641,7 +5641,7 @@
    "Returns generic assertion code for any functional predicate.  The\n'expected' argument to 'report' will contains the original form, the\n'actual' argument will contain the form with all its sub-forms\nevaluated.  If the predicate returns false, the 'actual' form will\nbe wrapped in (not...).",
    "name":"assert-predicate"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L843",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L847",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/compose-fixtures",
    "namespace":"clojure.contrib.test-is",
@@ -5753,7 +5753,7 @@
    "Generic assertion macro.  'form' is any predicate test.\n'msg' is an optional message to attach to the assertion.\n\nExample: (is (= 4 (+ 2 2)) \"Two plus two should be 4\")\n\nSpecial forms:\n\n(is (thrown? c body)) checks that an instance of c is thrown from\nbody, fails if not; then returns the thing thrown.\n\n(is (thrown-with-msg? c re body)) checks that an instance of c is\nthrown AND that the message on the exception matches (with\nre-matches) the regular expression re.",
    "name":"is"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L849",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L853",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/join-fixtures",
    "namespace":"clojure.contrib.test-is",
@@ -5770,7 +5770,7 @@
    "Generic reporting function, may be overridden to plug in\ndifferent report formats (e.g., TAP, JUnit).  Assertions such as\n'is' call 'report' to indicate results.  The argument given to\n'report' will be a map with a :type key.  See the documentation at\nthe top of test_is.clj for more information on the types of\narguments for 'report'.",
    "name":"report"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L917",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L921",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/run-all-tests",
    "namespace":"clojure.contrib.test-is",
@@ -5779,7 +5779,7 @@
    "Runs all tests in all namespaces; prints results.\nOptional argument is a regular expression; only namespaces with\nnames matching the regular expression (with re-matches) will be\ntested.",
    "name":"run-all-tests"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L909",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L913",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/run-tests",
    "namespace":"clojure.contrib.test-is",
@@ -5805,7 +5805,7 @@
    "doc":"Returns true if form is a valid template expression.",
    "name":"template?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L874",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L878",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/test-all-vars",
    "namespace":"clojure.contrib.test-is",
@@ -5814,7 +5814,7 @@
    "Calls test-var on every var interned in the namespace, with fixtures.",
    "name":"test-all-vars"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L885",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L889",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/test-ns",
    "namespace":"clojure.contrib.test-is",
@@ -5823,7 +5823,7 @@
    "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*inital-report-counters*.  Returns the final, dereferenced state of\n*report-counters*.",
    "name":"test-ns"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L860",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L864",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/test-var",
    "namespace":"clojure.contrib.test-is",
@@ -5867,6 +5867,14 @@
    "doc":
    "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this.",
    "name":"try-expr"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L830",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//test-is-api.html#test-is/use-fixtures",
+   "namespace":"clojure.contrib.test-is",
+   "doc":
+   "Wrap test runs in a fixture function to perform setup and\nteardown. Using a fixture-type of :each wraps every test\nindividually, while:once wraps the whole run in a single function.",
+   "name":"use-fixtures"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L774",
    "wiki-url":
