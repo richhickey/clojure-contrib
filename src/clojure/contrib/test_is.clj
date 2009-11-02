@@ -505,7 +505,7 @@ Chas Emerick, Allen Rohner, and Stuart Halloway",
   "Returns a vector [filename line-number] for the nth call up the
   stack."
   [n]
-  (let [s (nth (.getStackTrace (new java.lang.Throwable)) n)]
+  (let [#^StackTraceElement s (nth (.getStackTrace (new java.lang.Throwable)) n)]
     [(.getFileName s) (.getLineNumber s)]))
 
 (defn testing-vars-str
@@ -825,9 +825,13 @@ Chas Emerick, Allen Rohner, and Stuart Halloway",
   "Adds elements in coll to the current namespace metadata as the
   value of key."
   [key coll]
-  (alter-meta! *ns* assoc key (concat (key (meta *ns*)) coll)))
+  (alter-meta! *ns* assoc key coll))
 
-(defmulti use-fixtures (fn [fixture-type & args] fixture-type))
+(defmulti use-fixtures
+  "Wrap test runs in a fixture function to perform setup and
+  teardown. Using a fixture-type of :each wraps every test
+  individually, while:once wraps the whole run in a single function."
+  (fn [fixture-type & args] fixture-type))
 
 (defmethod use-fixtures :each [fixture-type & args]
   (add-ns-meta ::each-fixtures args))
