@@ -527,11 +527,11 @@
    "doc":
    "Backwards-compatibility for clojure.contrib.test-is\n\nThe clojure.contrib.test-is library moved from Contrib into the\nClojure distribution as clojure.test.\n\nThis happened on or around clojure-contrib Git commit\n82cf0409d0fcb71be477ebfc4da18ee2128a2ad1 on June 25, 2009.\n\nThis file makes the clojure.test interface available under the old\nnamespace clojure.contrib.test-is.\n\nThis includes support for the old syntax of the 'are' macro.\n\nThis was suggested by Howard Lewis Ship in ticket #26, \nhttp://www.assembla.com/spaces/clojure-contrib/tickets/26"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/trace-api.html",
    "name":"clojure.contrib.trace",
-   "author":"Stuart Sierra",
+   "author":"Stuart Sierra, Michel Salim",
    "doc":
    "This file defines simple \"tracing\" macros to help you see what your\ncode is doing."},
   {"source-url":
@@ -5893,14 +5893,14 @@
    "doc":"Runs body with *out* bound to the value of *test-out*.",
    "name":"with-test-out"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L40",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L40",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/*trace-depth*",
    "namespace":"clojure.contrib.trace",
    "doc":"Current stack depth of traced function calls.",
    "name":"*trace-depth*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L75",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L75",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/deftrace",
    "namespace":"clojure.contrib.trace",
@@ -5909,7 +5909,16 @@
    "Use in place of defn; traces each call/return of this fn, including\narguments.  Nested calls to deftrace'd functions will print a\ntree-like structure.",
    "name":"deftrace"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L50",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L86",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/dotrace",
+   "namespace":"clojure.contrib.trace",
+   "arglists":[["fns", "&", "exprs"]],
+   "doc":
+   "Given a sequence of function identifiers, evaluate the body\nexpressions in an environment in which the identifiers are bound to\nthe traced functions.  Does not work on inlined functions,\nsuch as clojure.core/+",
+   "name":"dotrace"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L50",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/trace",
    "namespace":"clojure.contrib.trace",
@@ -5918,7 +5927,7 @@
    "Sends name (optional) and value to the tracer function, then\nreturns value.  May be wrapped around any expression without\naffecting the result.",
    "name":"trace"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L64",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L64",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/trace-fn-call",
    "namespace":"clojure.contrib.trace",
@@ -5927,7 +5936,7 @@
    "Traces a single call to a function f with args.  'name' is the\nsymbol name of the function.",
    "name":"trace-fn-call"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L59",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L59",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/trace-indent",
    "namespace":"clojure.contrib.trace",
@@ -5935,7 +5944,7 @@
    "doc":"Returns an indentation string based on *trace-depth*",
    "name":"trace-indent"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/2d0079c159a37740173bbe289daca41e48723bfd/src/clojure/contrib/trace.clj#L44",
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj#L44",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//trace-api.html#trace/tracer",
    "namespace":"clojure.contrib.trace",
