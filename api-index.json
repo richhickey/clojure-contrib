@@ -437,7 +437,7 @@
    "doc":
    "A repl with that provides support for lines and line numbers in the\ninput stream."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/repl-utils-api.html",
    "name":"clojure.contrib.repl-utils",
@@ -4580,7 +4580,7 @@
    "Ref to a map from package name prefixes to URLs for remote\nJavadocs.",
    "name":"*remote-javadocs*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L149",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L150",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/add-break-thread!",
    "namespace":"clojure.contrib.repl-utils",
@@ -4606,7 +4606,7 @@
    "Adds to the list of remote Javadoc URLs.  package-prefix is the\nbeginning of the package name that has docs at this URL.",
    "name":"add-remote-javadoc"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L130",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L131",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/break-threads",
    "namespace":"clojure.contrib.repl-utils",
@@ -4614,7 +4614,7 @@
    "Threads to stop when Ctrl-C is pressed.  See 'add-break-thread!'",
    "name":"break-threads"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L162",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L163",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/expression-info",
    "namespace":"clojure.contrib.repl-utils",
@@ -4632,7 +4632,7 @@
    "Searches for a URL for the given class name.  Tries\n*local-javadocs* first, then *remote-javadocs*.  Returns a string.",
    "name":"find-javadoc-url"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L97",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L97",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/get-source",
    "namespace":"clojure.contrib.repl-utils",
@@ -4650,7 +4650,7 @@
    "Opens a browser window displaying the javadoc for the argument.\nTries *local-javadocs* first, then *remote-javadocs*.",
    "name":"javadoc"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L187",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L188",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/run",
    "namespace":"clojure.contrib.repl-utils",
@@ -4659,7 +4659,7 @@
    "Loads the specified namespace and invokes its \"main\" function with\noptional args. ns-name is not evaluated.",
    "name":"run"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L180",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L181",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/run*",
    "namespace":"clojure.contrib.repl-utils",
@@ -4668,7 +4668,7 @@
    "Loads the specified namespace and invokes its \"main\" function with\noptional args.",
    "name":"run*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L59",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L59",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/show",
    "namespace":"clojure.contrib.repl-utils",
@@ -4677,7 +4677,7 @@
    "With one arg prints all static and instance members of x or (class x).\nEach member is listed with a number which can be given as 'selector'\nto return the member object -- the REPL will print more details for\nthat member.\n\nThe selector also may be a string or regex, in which case only\nmembers whose names match 'selector' as a case-insensitive regex\nwill be printed.\n\nFinally, the selector also may be a predicate, in which case only\nmembers for which the predicate returns true will be printed.  The\npredicate will be passed a single argument, a map that includes the\n:text that will be printed and the :member object itself, as well as\nall the properies of the member object as translated by 'bean'.\n\nExamples: (show Integer)  (show [])  (show String 23)  (show String \"case\")",
    "name":"show"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L118",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L119",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/source",
    "namespace":"clojure.contrib.repl-utils",
@@ -4686,7 +4686,7 @@
    "Prints the source code for the given symbol, if it can find it.\nThis requires that the symbol resolve to a Var defined in a\nnamespace for which the .clj is in the classpath.\n\nExample: (source filter)",
    "name":"source"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f0f48b03c2704a9247ef462b9d009cb752b57649/src/clojure/contrib/repl_utils.clj#L134",
+   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L135",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#repl-utils/start-handling-break",
    "namespace":"clojure.contrib.repl-utils",
