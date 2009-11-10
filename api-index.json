@@ -451,7 +451,7 @@
    "author":"Stuart Sierra (and others)",
    "doc":"Sequence utilities for Clojure"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/server_socket.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/37dad8c37622669271357cfceec03e391cc10e17/src/clojure/contrib/server_socket.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/server-socket-api.html",
    "name":"clojure.contrib.server-socket",
@@ -4854,7 +4854,7 @@
    "doc":"Return a random permutation of coll",
    "name":"shuffle"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/server_socket.clj#L87",
+   "http://github.com/richhickey/clojure-contrib/blob/37dad8c37622669271357cfceec03e391cc10e17/src/clojure/contrib/server_socket.clj#L87",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//server-socket-api.html#server-socket/create-repl-server",
    "namespace":"clojure.contrib.server-socket",
@@ -4863,7 +4863,7 @@
    "doc":"create a repl on a socket",
    "name":"create-repl-server"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/server_socket.clj#L53",
+   "http://github.com/richhickey/clojure-contrib/blob/37dad8c37622669271357cfceec03e391cc10e17/src/clojure/contrib/server_socket.clj#L53",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//server-socket-api.html#server-socket/create-server",
    "namespace":"clojure.contrib.server-socket",
