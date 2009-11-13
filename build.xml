@@ -87,7 +87,7 @@
       <arg value="clojure.contrib.pprint.PrettyWriter"/>
       <arg value="clojure.contrib.fnmap.PersistentFnMap"/>
       <arg value="clojure.contrib.condition.Condition"/>
-      <arg value="clojure.contrib.jmx.Bean"/>
+      <arg value="clojure.contrib.jmx"/>
     </java>
   </target>
 

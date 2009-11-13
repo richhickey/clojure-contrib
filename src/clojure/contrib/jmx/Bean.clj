@@ -1,35 +1,26 @@
-(ns clojure.contrib.jmx.Bean
-  (:gen-class
-   :implements [javax.management.DynamicMBean]
-   :init init
-   :state state
-   :constructors {[Object] []})
-  (:require [clojure.contrib.jmx :as jmx])
-  (:import [javax.management DynamicMBean MBeanInfo AttributeList]))
-
-(defn -init [derefable]
-  [[] derefable])
+(in-ns 'clojure.contrib.jmx)
+(import '[javax.management DynamicMBean MBeanInfo AttributeList])
 
 ; TODO: rest of the arguments, as needed
-(defn generate-mbean-info [clj-bean]
-  (MBeanInfo. (.. clj-bean getClass getName)                      ; class name
+(defn generate-mbean-info [reference]
+  (MBeanInfo. "clojure.contrib.jmx.Bean"                          ; class name
               "Clojure Dynamic MBean"                             ; description
-              (jmx/map->attribute-infos @(.state clj-bean))       ; attributes
+              (map->attribute-infos @reference)                   ; attributes
               nil                                                 ; constructors
               nil                                                 ; operations
               nil))                                               ; notifications                                          
 
-(defn -getMBeanInfo
-  [this]
-  (generate-mbean-info this))
+(deftype Bean [reference] [javax.management.DynamicMBean]
+  (.getMBeanInfo
+   []
+   (generate-mbean-info reference))
+  (.getAttribute
+   [attr]
+   (@reference (keyword attr)))
+  (.getAttributes
+   [attrs]
+   (let [result (AttributeList.)]
+     (doseq [attr attrs]
+       (.add result (.getAttribute this attr)))
+     result)))
 
-(defn -getAttribute
-  [this attr]
-  (@(.state this) (keyword attr)))
-
-(defn -getAttributes
-  [this attrs]
-  (let [result (AttributeList.)]
-    (doseq [attr attrs]
-      (.add result (.getAttribute this attr)))
-    result))

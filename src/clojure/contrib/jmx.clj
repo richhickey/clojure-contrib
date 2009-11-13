@@ -86,6 +86,7 @@
 (load "jmx/data")
 (load "jmx/client")
 (load "jmx/server")
+(load "jmx/Bean")
 
 (defn mbean-names
   "Finds all MBeans matching a name on the current *connection*."
@@ -118,4 +119,6 @@
   [n]
   (into {} (map (fn [attr-name] [(keyword attr-name) (read-supported n attr-name)])
                 (attribute-names n))))
+
+
 
