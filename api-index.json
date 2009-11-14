@@ -46,7 +46,7 @@
    "doc":
    "Efficient, functional algorithms for generating lazy\nsequences for common combinatorial functions. (See the source code \nfor a longer description.)"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ffa868411cda6c617105b52b4f6f9e0f37ee8c24/src/clojure/contrib/command_line.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/ddd7bc2226927634dc0216554194877fa6f170e1/src/clojure/contrib/command_line.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/command-line-api.html",
    "name":"clojure.contrib.command-line",
@@ -922,7 +922,7 @@
    "doc":"All the subsets of items",
    "name":"subsets"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ffa868411cda6c617105b52b4f6f9e0f37ee8c24/src/clojure/contrib/command_line.clj#L91",
+   "http://github.com/richhickey/clojure-contrib/blob/ddd7bc2226927634dc0216554194877fa6f170e1/src/clojure/contrib/command_line.clj#L91",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//command-line-api.html#command-line/with-command-line",
    "namespace":"clojure.contrib.command-line",
