@@ -313,7 +313,7 @@
    "doc":
    "Local macros and symbol macros\n\nLocal macros are defined by a macrolet form. They are usable only\ninside its body. Symbol macros can be defined globally\n(defsymbolmacro) or locally (symbol-macrolet). A symbol\nmacro defines a form that replaces a symbol during macro\nexpansion. Function arguments and symbols bound in let\nforms are not subject to symbol macro expansion.\n\nLocal macros are most useful in the definition of the expansion\nof another macro, they may be used anywhere. Global symbol\nmacros can be used only inside a with-symbol-macros form."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/macros.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/macros-api.html",
    "name":"clojure.contrib.macros",
@@ -3220,7 +3220,7 @@
    "doc":"Fully expand exprs, including symbol macros.",
    "name":"with-symbol-macros"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/macros.clj#L18",
+   "http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj#L18",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macros-api.html#macros/const",
    "namespace":"clojure.contrib.macros",
@@ -3228,7 +3228,7 @@
    "doc":"Evaluate the constant expression expr at compile time.",
    "name":"const"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/macros.clj#L28",
+   "http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj#L28",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macros-api.html#macros/letfn-",
    "namespace":"clojure.contrib.macros",
@@ -3236,6 +3236,15 @@
    "doc":
    "OBSOLETE: use clojure.core/letfn\nA variant of let for local function definitions. fn-bindings consists\nof name/args/body triples, with (letfn [name args body] ...)\nbeing equivalent to (let [name (fn name args body)] ...).",
    "name":"letfn-"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj#L68",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib//macros-api.html#macros/with-direct-linking",
+   "namespace":"clojure.contrib.macros",
+   "arglists":[["symbols?", "&", "body"]],
+   "doc":
+   "EXPERIMENTAL!\nCompiles the functions in body with direct links to the functions\nnamed in symbols, i.e. without a var lookup for each invocation.\nSymbols is a vector of symbols that name either vars or namespaces.\nA namespace reference is replaced by the list of all symbols in the\nnamespace that are bound to functions. If symbols is not provided,\nthe default value ['clojure.core] is used. The symbol *ns* can be\nused to refer to the current namespace.",
+   "name":"with-direct-linking"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/map_utils.clj#L41",
    "wiki-url":

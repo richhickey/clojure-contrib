@@ -51,6 +51,8 @@ namespace.
       <a href="#macros/const">const</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#macros/letfn-">letfn-</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#macros/with-direct-linking">with-direct-linking</a>
     </div>
     <br />
   </div>
@@ -75,7 +77,7 @@ by <span id="author">Konrad Hinsen</span><br />
   <pre id="var-usage">Usage: (const expr)
 </pre>
   <pre id="var-docstr">Evaluate the constant expression expr at compile time.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/macros.clj#L18" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj#L18" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -87,7 +89,23 @@ by <span id="author">Konrad Hinsen</span><br />
 A variant of let for local function definitions. fn-bindings consists
 of name/args/body triples, with (letfn [name args body] ...)
 being equivalent to (let [name (fn name args body)] ...).</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/macros.clj#L28" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj#L28" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="macros/with-direct-linking">with-direct-linking</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-direct-linking symbols? &amp; body)
+</pre>
+  <pre id="var-docstr">EXPERIMENTAL!
+Compiles the functions in body with direct links to the functions
+named in symbols, i.e. without a var lookup for each invocation.
+Symbols is a vector of symbols that name either vars or namespaces.
+A namespace reference is replaced by the list of all symbols in the
+namespace that are bound to functions. If symbols is not provided,
+the default value ['clojure.core] is used. The symbol *ns* can be
+used to refer to the current namespace.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj#L68" id="var-source">Source</a>
 </div>
 
 
