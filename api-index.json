@@ -3966,7 +3966,7 @@
    "Returns a sorted seq of symbols naming public vars in\na namespace",
    "name":"vars"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/d5fc2809405d09e46e6b92933c28747b3e579860/src/clojure/contrib/pprint/dispatch.clj#L353",
+   "http://github.com/richhickey/clojure-contrib/blob/b902ebe3c80ec86d4f80f8cce6d2faabc8da5278/src/clojure/contrib/pprint/dispatch.clj#L353",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/*code-dispatch*",
    "namespace":"clojure.contrib.pprint",
@@ -4052,7 +4052,7 @@
    "Don't print namespaces with symbols. This is particularly useful when \npretty printing the results of macro expansions",
    "name":"*print-suppress-namespaces*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/d5fc2809405d09e46e6b92933c28747b3e579860/src/clojure/contrib/pprint/dispatch.clj#L124",
+   "http://github.com/richhickey/clojure-contrib/blob/b902ebe3c80ec86d4f80f8cce6d2faabc8da5278/src/clojure/contrib/pprint/dispatch.clj#L124",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/*simple-dispatch*",
    "namespace":"clojure.contrib.pprint",
@@ -4169,7 +4169,7 @@
    "Set the pretty print dispatch function to a function matching (fn [obj] ...)\nwhere obj is the object to pretty print. That function will be called with *out* set\nto a pretty printing writer to which it should do its printing.\n\nFor example functions, see *simple-dispatch* and *code-dispatch* in \nclojure.contrib.pprint.dispatch.clj.",
    "name":"set-pprint-dispatch"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/d5fc2809405d09e46e6b92933c28747b3e579860/src/clojure/contrib/pprint/dispatch.clj#L19",
+   "http://github.com/richhickey/clojure-contrib/blob/b902ebe3c80ec86d4f80f8cce6d2faabc8da5278/src/clojure/contrib/pprint/dispatch.clj#L19",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#pprint/use-method",
    "namespace":"clojure.contrib.pprint",
