@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>dataflow API reference (clojure.contrib)</title>
+    <title>dataflow API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,45 +48,45 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/add-cell-watcher">add-cell-watcher</a>
+      <a href="#clojure.contrib.dataflow/add-cell-watcher">add-cell-watcher</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/add-cells">add-cells</a>
+      <a href="#clojure.contrib.dataflow/add-cells">add-cells</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-dataflow">build-dataflow</a>
+      <a href="#clojure.contrib.dataflow/build-dataflow">build-dataflow</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-source-cell">build-source-cell</a>
+      <a href="#clojure.contrib.dataflow/build-source-cell">build-source-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-standard-cell">build-standard-cell</a>
+      <a href="#clojure.contrib.dataflow/build-standard-cell">build-standard-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/build-validator-cell">build-validator-cell</a>
+      <a href="#clojure.contrib.dataflow/build-validator-cell">build-validator-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/cell">cell</a>
+      <a href="#clojure.contrib.dataflow/cell">cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/display-cell">display-cell</a>
+      <a href="#clojure.contrib.dataflow/display-cell">display-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/eval-cell">eval-cell</a>
+      <a href="#clojure.contrib.dataflow/eval-cell">eval-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-cell">get-cell</a>
+      <a href="#clojure.contrib.dataflow/get-cell">get-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-cells">get-cells</a>
+      <a href="#clojure.contrib.dataflow/get-cells">get-cells</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-old-value">get-old-value</a>
+      <a href="#clojure.contrib.dataflow/get-old-value">get-old-value</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-source-cells">get-source-cells</a>
+      <a href="#clojure.contrib.dataflow/get-source-cells">get-source-cells</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-value">get-value</a>
+      <a href="#clojure.contrib.dataflow/get-value">get-value</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-value-from-cell">get-value-from-cell</a>
+      <a href="#clojure.contrib.dataflow/get-value-from-cell">get-value-from-cell</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/get-values">get-values</a>
+      <a href="#clojure.contrib.dataflow/get-values">get-values</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/print-dataflow">print-dataflow</a>
+      <a href="#clojure.contrib.dataflow/print-dataflow">print-dataflow</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/remove-cells">remove-cells</a>
+      <a href="#clojure.contrib.dataflow/remove-cells">remove-cells</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/source-cell?">source-cell?</a>
+      <a href="#clojure.contrib.dataflow/source-cell?">source-cell?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#dataflow/update-values">update-values</a>
+      <a href="#clojure.contrib.dataflow/update-values">update-values</a>
     </div>
     <br />
   </div>
@@ -106,7 +106,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/add-cell-watcher">add-cell-watcher</h2>
+  <h2 id="clojure.contrib.dataflow/add-cell-watcher">add-cell-watcher</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-cell-watcher cell key fun)
 </pre>
@@ -118,7 +118,7 @@ underlying ref, and shared its sematics</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/add-cells">add-cells</h2>
+  <h2 id="clojure.contrib.dataflow/add-cells">add-cells</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-cells df cells)
 </pre>
@@ -127,7 +127,7 @@ underlying ref, and shared its sematics</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/build-dataflow">build-dataflow</h2>
+  <h2 id="clojure.contrib.dataflow/build-dataflow">build-dataflow</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-dataflow cs)
 </pre>
@@ -136,7 +136,7 @@ underlying ref, and shared its sematics</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/build-source-cell">build-source-cell</h2>
+  <h2 id="clojure.contrib.dataflow/build-source-cell">build-source-cell</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-source-cell name init)
 </pre>
@@ -145,7 +145,7 @@ underlying ref, and shared its sematics</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/build-standard-cell">build-standard-cell</h2>
+  <h2 id="clojure.contrib.dataflow/build-standard-cell">build-standard-cell</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-standard-cell name deps fun expr)
 </pre>
@@ -154,7 +154,7 @@ underlying ref, and shared its sematics</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/build-validator-cell">build-validator-cell</h2>
+  <h2 id="clojure.contrib.dataflow/build-validator-cell">build-validator-cell</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-validator-cell deps fun expr)
 </pre>
@@ -163,7 +163,7 @@ underlying ref, and shared its sematics</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/cell">cell</h2>
+  <h2 id="clojure.contrib.dataflow/cell">cell</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (cell type &amp; data)
 </pre>
@@ -197,7 +197,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/display-cell">display-cell</h2>
+  <h2 id="clojure.contrib.dataflow/display-cell">display-cell</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">A 'readable' form of the cell</pre>
@@ -205,7 +205,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/eval-cell">eval-cell</h2>
+  <h2 id="clojure.contrib.dataflow/eval-cell">eval-cell</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Evaluate a dataflow cell.  Return [changed, old val]</pre>
@@ -213,7 +213,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-cell">get-cell</h2>
+  <h2 id="clojure.contrib.dataflow/get-cell">get-cell</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-cell df name)
 </pre>
@@ -222,7 +222,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-cells">get-cells</h2>
+  <h2 id="clojure.contrib.dataflow/get-cells">get-cells</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-cells df name)
 </pre>
@@ -231,7 +231,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-old-value">get-old-value</h2>
+  <h2 id="clojure.contrib.dataflow/get-old-value">get-old-value</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-old-value df env name)
 </pre>
@@ -240,7 +240,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-source-cells">get-source-cells</h2>
+  <h2 id="clojure.contrib.dataflow/get-source-cells">get-source-cells</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-source-cells df)
 </pre>
@@ -249,7 +249,7 @@ Which will perform the validation</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-value">get-value</h2>
+  <h2 id="clojure.contrib.dataflow/get-value">get-value</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-value df name)
 </pre>
@@ -260,7 +260,7 @@ value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-value-from-cell">get-value-from-cell</h2>
+  <h2 id="clojure.contrib.dataflow/get-value-from-cell">get-value-from-cell</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-value-from-cell cell)
 </pre>
@@ -269,7 +269,7 @@ value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/get-values">get-values</h2>
+  <h2 id="clojure.contrib.dataflow/get-values">get-values</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-values df name)
 </pre>
@@ -278,7 +278,7 @@ value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/print-dataflow">print-dataflow</h2>
+  <h2 id="clojure.contrib.dataflow/print-dataflow">print-dataflow</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (print-dataflow df)
 </pre>
@@ -287,7 +287,7 @@ value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/remove-cells">remove-cells</h2>
+  <h2 id="clojure.contrib.dataflow/remove-cells">remove-cells</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (remove-cells df cells)
 </pre>
@@ -296,7 +296,7 @@ value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/source-cell?">source-cell?</h2>
+  <h2 id="clojure.contrib.dataflow/source-cell?">source-cell?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (source-cell? cell)
 </pre>
@@ -305,7 +305,7 @@ value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="dataflow/update-values">update-values</h2>
+  <h2 id="clojure.contrib.dataflow/update-values">update-values</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (update-values df data)
 </pre>
@@ -322,9 +322,7 @@ cell</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

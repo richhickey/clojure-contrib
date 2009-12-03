@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>find-namespaces API reference (clojure.contrib)</title>
+    <title>find-namespaces API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,33 +48,33 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/clojure-source-file?">clojure-source-file?</a>
+      <a href="#clojure.contrib.find-namespaces/clojure-source-file?">clojure-source-file?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/clojure-sources-in-jar">clojure-sources-in-jar</a>
+      <a href="#clojure.contrib.find-namespaces/clojure-sources-in-jar">clojure-sources-in-jar</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/comment?">comment?</a>
+      <a href="#clojure.contrib.find-namespaces/comment?">comment?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-clojure-sources-in-dir">find-clojure-sources-in-dir</a>
+      <a href="#clojure.contrib.find-namespaces/find-clojure-sources-in-dir">find-clojure-sources-in-dir</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-namespaces-in-dir">find-namespaces-in-dir</a>
+      <a href="#clojure.contrib.find-namespaces/find-namespaces-in-dir">find-namespaces-in-dir</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-namespaces-in-jarfile">find-namespaces-in-jarfile</a>
+      <a href="#clojure.contrib.find-namespaces/find-namespaces-in-jarfile">find-namespaces-in-jarfile</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-namespaces-on-classpath">find-namespaces-on-classpath</a>
+      <a href="#clojure.contrib.find-namespaces/find-namespaces-on-classpath">find-namespaces-on-classpath</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-ns-decls-in-dir">find-ns-decls-in-dir</a>
+      <a href="#clojure.contrib.find-namespaces/find-ns-decls-in-dir">find-ns-decls-in-dir</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-ns-decls-in-jarfile">find-ns-decls-in-jarfile</a>
+      <a href="#clojure.contrib.find-namespaces/find-ns-decls-in-jarfile">find-ns-decls-in-jarfile</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/find-ns-decls-on-classpath">find-ns-decls-on-classpath</a>
+      <a href="#clojure.contrib.find-namespaces/find-ns-decls-on-classpath">find-ns-decls-on-classpath</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/ns-decl?">ns-decl?</a>
+      <a href="#clojure.contrib.find-namespaces/ns-decl?">ns-decl?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/read-file-ns-decl">read-file-ns-decl</a>
+      <a href="#clojure.contrib.find-namespaces/read-file-ns-decl">read-file-ns-decl</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/read-ns-decl">read-ns-decl</a>
+      <a href="#clojure.contrib.find-namespaces/read-ns-decl">read-ns-decl</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#find-namespaces/read-ns-decl-from-jarfile-entry">read-ns-decl-from-jarfile-entry</a>
+      <a href="#clojure.contrib.find-namespaces/read-ns-decl-from-jarfile-entry">read-ns-decl-from-jarfile-entry</a>
     </div>
     <br />
   </div>
@@ -94,7 +94,7 @@ by <span id="author">Stuart Sierra</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/clojure-source-file?">clojure-source-file?</h2>
+  <h2 id="clojure.contrib.find-namespaces/clojure-source-file?">clojure-source-file?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (clojure-source-file? file)
 </pre>
@@ -103,7 +103,7 @@ by <span id="author">Stuart Sierra</span><br />
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/clojure-sources-in-jar">clojure-sources-in-jar</h2>
+  <h2 id="clojure.contrib.find-namespaces/clojure-sources-in-jar">clojure-sources-in-jar</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (clojure-sources-in-jar jar-file)
 </pre>
@@ -112,7 +112,7 @@ by <span id="author">Stuart Sierra</span><br />
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/comment?">comment?</h2>
+  <h2 id="clojure.contrib.find-namespaces/comment?">comment?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (comment? form)
 </pre>
@@ -121,7 +121,7 @@ by <span id="author">Stuart Sierra</span><br />
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-clojure-sources-in-dir">find-clojure-sources-in-dir</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-clojure-sources-in-dir">find-clojure-sources-in-dir</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-clojure-sources-in-dir dir)
 </pre>
@@ -131,7 +131,7 @@ Returns a sequence of File objects, in breadth-first sort order.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-namespaces-in-dir">find-namespaces-in-dir</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-namespaces-in-dir">find-namespaces-in-dir</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-namespaces-in-dir dir)
 </pre>
@@ -141,7 +141,7 @@ source files; returns the symbol names of the declared namespaces.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-namespaces-in-jarfile">find-namespaces-in-jarfile</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-namespaces-in-jarfile">find-namespaces-in-jarfile</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-namespaces-in-jarfile jarfile)
 </pre>
@@ -152,7 +152,7 @@ declared namespaces.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-namespaces-on-classpath">find-namespaces-on-classpath</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-namespaces-on-classpath">find-namespaces-on-classpath</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-namespaces-on-classpath)
 </pre>
@@ -163,7 +163,7 @@ of the symbol names of the declared namespaces.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-ns-decls-in-dir">find-ns-decls-in-dir</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-ns-decls-in-dir">find-ns-decls-in-dir</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-ns-decls-in-dir dir)
 </pre>
@@ -173,7 +173,7 @@ source files; returns the unevaluated ns declarations.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-ns-decls-in-jarfile">find-ns-decls-in-jarfile</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-ns-decls-in-jarfile">find-ns-decls-in-jarfile</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-ns-decls-in-jarfile jarfile)
 </pre>
@@ -183,7 +183,7 @@ declarations; returns the unevaluated ns declarations.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/find-ns-decls-on-classpath">find-ns-decls-on-classpath</h2>
+  <h2 id="clojure.contrib.find-namespaces/find-ns-decls-on-classpath">find-ns-decls-on-classpath</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-ns-decls-on-classpath)
 </pre>
@@ -194,7 +194,7 @@ of the unevaluated ns declaration forms.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/ns-decl?">ns-decl?</h2>
+  <h2 id="clojure.contrib.find-namespaces/ns-decl?">ns-decl?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (ns-decl? form)
 </pre>
@@ -203,7 +203,7 @@ of the unevaluated ns declaration forms.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/read-file-ns-decl">read-file-ns-decl</h2>
+  <h2 id="clojure.contrib.find-namespaces/read-file-ns-decl">read-file-ns-decl</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (read-file-ns-decl file)
 </pre>
@@ -214,7 +214,7 @@ is not a ns declaration.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/read-ns-decl">read-ns-decl</h2>
+  <h2 id="clojure.contrib.find-namespaces/read-ns-decl">read-ns-decl</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (read-ns-decl rdr)
 </pre>
@@ -226,7 +226,7 @@ in the file, except for (comment ...)  forms.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="find-namespaces/read-ns-decl-from-jarfile-entry">read-ns-decl-from-jarfile-entry</h2>
+  <h2 id="clojure.contrib.find-namespaces/read-ns-decl-from-jarfile-entry">read-ns-decl-from-jarfile-entry</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (read-ns-decl-from-jarfile-entry jarfile entry-name)
 </pre>
@@ -243,9 +243,7 @@ fails, or if the first form is not a ns declaration.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

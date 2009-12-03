@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>stream-utils API reference (clojure.contrib)</title>
+    <title>stream-utils API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,29 +48,29 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/defst">defst</a>
+      <a href="#clojure.contrib.stream-utils/defst">defst</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/defstream">defstream</a>
+      <a href="#clojure.contrib.stream-utils/defstream">defstream</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/pick">pick</a>
+      <a href="#clojure.contrib.stream-utils/pick">pick</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/pick-all">pick-all</a>
+      <a href="#clojure.contrib.stream-utils/pick-all">pick-all</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-drop">stream-drop</a>
+      <a href="#clojure.contrib.stream-utils/stream-drop">stream-drop</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-filter">stream-filter</a>
+      <a href="#clojure.contrib.stream-utils/stream-filter">stream-filter</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-flatten">stream-flatten</a>
+      <a href="#clojure.contrib.stream-utils/stream-flatten">stream-flatten</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-m">stream-m</a>
+      <a href="#clojure.contrib.stream-utils/stream-m">stream-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-map">stream-map</a>
+      <a href="#clojure.contrib.stream-utils/stream-map">stream-map</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-next">stream-next</a>
+      <a href="#clojure.contrib.stream-utils/stream-next">stream-next</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-seq">stream-seq</a>
+      <a href="#clojure.contrib.stream-utils/stream-seq">stream-seq</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#stream-utils/stream-type">stream-type</a>
+      <a href="#clojure.contrib.stream-utils/stream-type">stream-type</a>
     </div>
     <br />
   </div>
@@ -130,7 +130,7 @@ next value of all stream arguments in the form of a vector.</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/defst">defst</h2>
+  <h2 id="clojure.contrib.stream-utils/defst">defst</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (defst name args streams &amp; body)
 </pre>
@@ -141,7 +141,7 @@ are given separately, with args being possibly empty.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/defstream">defstream</h2>
+  <h2 id="clojure.contrib.stream-utils/defstream">defstream</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (defstream type-tag args &amp; body)
 </pre>
@@ -153,7 +153,7 @@ from stream-type.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/pick">pick</h2>
+  <h2 id="clojure.contrib.stream-utils/pick">pick</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (pick n)
 </pre>
@@ -164,7 +164,7 @@ argument can be used instead of its index n.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/pick-all">pick-all</h2>
+  <h2 id="clojure.contrib.stream-utils/pick-all">pick-all</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (pick-all streams)
 </pre>
@@ -174,7 +174,7 @@ inside a stream transformer.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-drop">stream-drop</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-drop">stream-drop</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (stream-drop n stream)
 </pre>
@@ -183,7 +183,7 @@ inside a stream transformer.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-filter">stream-filter</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-filter">stream-filter</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (stream-filter p stream)
 </pre>
@@ -193,7 +193,7 @@ that satisfy the predicate p.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-flatten">stream-flatten</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-flatten">stream-flatten</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (stream-flatten s)
 </pre>
@@ -204,7 +204,7 @@ will be removed.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-m">stream-m</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-m">stream-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing stream computations. The monadic values can be
@@ -213,7 +213,7 @@ of any type handled by stream-next.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-map">stream-map</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-map">stream-map</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (stream-map f stream)
 </pre>
@@ -222,7 +222,7 @@ of any type handled by stream-next.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-next">stream-next</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-next">stream-next</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (stream-next stream-state)
 </pre>
@@ -234,7 +234,7 @@ next-value and new-state are nil.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-seq">stream-seq</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-seq">stream-seq</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (stream-seq s)
 </pre>
@@ -245,7 +245,7 @@ clojure.contrib.generic.collection/seq for streams.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="stream-utils/stream-type">stream-type</h2>
+  <h2 id="clojure.contrib.stream-utils/stream-type">stream-type</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The root type for the stream hierarchy. For each stream type,
@@ -260,9 +260,7 @@ add a derivation from this type.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

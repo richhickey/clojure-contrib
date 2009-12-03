@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>seq-utils API reference (clojure.contrib)</title>
+    <title>seq-utils API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,41 +48,41 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/fill-queue">fill-queue</a>
+      <a href="#clojure.contrib.seq-utils/fill-queue">fill-queue</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/find-first">find-first</a>
+      <a href="#clojure.contrib.seq-utils/find-first">find-first</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/flatten">flatten</a>
+      <a href="#clojure.contrib.seq-utils/flatten">flatten</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/frequencies">frequencies</a>
+      <a href="#clojure.contrib.seq-utils/frequencies">frequencies</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/group-by">group-by</a>
+      <a href="#clojure.contrib.seq-utils/group-by">group-by</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/includes?">includes?</a>
+      <a href="#clojure.contrib.seq-utils/includes?">includes?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/indexed">indexed</a>
+      <a href="#clojure.contrib.seq-utils/indexed">indexed</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/partition-all">partition-all</a>
+      <a href="#clojure.contrib.seq-utils/partition-all">partition-all</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/partition-by">partition-by</a>
+      <a href="#clojure.contrib.seq-utils/partition-by">partition-by</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/positions">positions</a>
+      <a href="#clojure.contrib.seq-utils/positions">positions</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/rand-elt">rand-elt</a>
+      <a href="#clojure.contrib.seq-utils/rand-elt">rand-elt</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/rec-cat">rec-cat</a>
+      <a href="#clojure.contrib.seq-utils/rec-cat">rec-cat</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/rec-seq">rec-seq</a>
+      <a href="#clojure.contrib.seq-utils/rec-seq">rec-seq</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/reductions">reductions</a>
+      <a href="#clojure.contrib.seq-utils/reductions">reductions</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/rotations">rotations</a>
+      <a href="#clojure.contrib.seq-utils/rotations">rotations</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/separate">separate</a>
+      <a href="#clojure.contrib.seq-utils/separate">separate</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/seq-on">seq-on</a>
+      <a href="#clojure.contrib.seq-utils/seq-on">seq-on</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#seq-utils/shuffle">shuffle</a>
+      <a href="#clojure.contrib.seq-utils/shuffle">shuffle</a>
     </div>
     <br />
   </div>
@@ -102,7 +102,7 @@ by <span id="author">Stuart Sierra (and others)</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/fill-queue">fill-queue</h2>
+  <h2 id="clojure.contrib.seq-utils/fill-queue">fill-queue</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (fill-queue filler-func &amp; optseq)
 </pre>
@@ -116,7 +116,7 @@ next element becomes available.  filler-func's return value is ignored.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/find-first">find-first</h2>
+  <h2 id="clojure.contrib.seq-utils/find-first">find-first</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-first pred coll)
 </pre>
@@ -127,7 +127,7 @@ and return nil if no match is found.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/flatten">flatten</h2>
+  <h2 id="clojure.contrib.seq-utils/flatten">flatten</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (flatten x)
 </pre>
@@ -138,7 +138,7 @@ etc.) and returns their contents as a single, flat sequence.
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/frequencies">frequencies</h2>
+  <h2 id="clojure.contrib.seq-utils/frequencies">frequencies</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (frequencies coll)
 </pre>
@@ -148,7 +148,7 @@ they appear.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/group-by">group-by</h2>
+  <h2 id="clojure.contrib.seq-utils/group-by">group-by</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (group-by f coll)
 </pre>
@@ -159,7 +159,7 @@ corresponding elements, in the order they appeared in coll.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/includes?">includes?</h2>
+  <h2 id="clojure.contrib.seq-utils/includes?">includes?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (includes? coll x)
 </pre>
@@ -169,7 +169,7 @@ in linear time.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/indexed">indexed</h2>
+  <h2 id="clojure.contrib.seq-utils/indexed">indexed</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (indexed s)
 </pre>
@@ -181,7 +181,7 @@ from 's' and indexes count up from zero.
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/partition-all">partition-all</h2>
+  <h2 id="clojure.contrib.seq-utils/partition-all">partition-all</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (partition-all n coll)
        (partition-all n step coll)
@@ -192,7 +192,7 @@ include lists with fewer than n items at the end.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/partition-by">partition-by</h2>
+  <h2 id="clojure.contrib.seq-utils/partition-by">partition-by</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (partition-by f coll)
 </pre>
@@ -202,7 +202,7 @@ a new value.  Returns a lazy seq of lazy seqs.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/positions">positions</h2>
+  <h2 id="clojure.contrib.seq-utils/positions">positions</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (positions pred coll)
 </pre>
@@ -212,7 +212,7 @@ is true for items in coll.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/rand-elt">rand-elt</h2>
+  <h2 id="clojure.contrib.seq-utils/rand-elt">rand-elt</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (rand-elt s)
 </pre>
@@ -221,7 +221,7 @@ is true for items in coll.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/rec-cat">rec-cat</h2>
+  <h2 id="clojure.contrib.seq-utils/rec-cat">rec-cat</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (rec-cat binding-name &amp; exprs)
 </pre>
@@ -231,7 +231,7 @@ binding-name, allowing for recursive expressions.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/rec-seq">rec-seq</h2>
+  <h2 id="clojure.contrib.seq-utils/rec-seq">rec-seq</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (rec-seq binding-name &amp; body)
 </pre>
@@ -241,7 +241,7 @@ binding-name, allowing for recursive expressions.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/reductions">reductions</h2>
+  <h2 id="clojure.contrib.seq-utils/reductions">reductions</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (reductions f coll)
        (reductions f init coll)
@@ -252,7 +252,7 @@ per reduce) of coll by f, starting with init.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/rotations">rotations</h2>
+  <h2 id="clojure.contrib.seq-utils/rotations">rotations</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (rotations x)
 </pre>
@@ -261,7 +261,7 @@ per reduce) of coll by f, starting with init.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/separate">separate</h2>
+  <h2 id="clojure.contrib.seq-utils/separate">separate</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (separate f s)
 </pre>
@@ -271,7 +271,7 @@ per reduce) of coll by f, starting with init.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/seq-on">seq-on</h2>
+  <h2 id="clojure.contrib.seq-utils/seq-on">seq-on</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (seq-on s)
 </pre>
@@ -281,7 +281,7 @@ a multimethod that can have implementations for new classes and types.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="seq-utils/shuffle">shuffle</h2>
+  <h2 id="clojure.contrib.seq-utils/shuffle">shuffle</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (shuffle coll)
 </pre>
@@ -296,9 +296,7 @@ a multimethod that can have implementations for new classes and types.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

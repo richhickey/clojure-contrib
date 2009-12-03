@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>repl-utils API reference (clojure.contrib)</title>
+    <title>repl-utils API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,35 +48,35 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/*local-javadocs*">*local-javadocs*</a>
+      <a href="#clojure.contrib.repl-utils/*local-javadocs*">*local-javadocs*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/*remote-javadocs*">*remote-javadocs*</a>
+      <a href="#clojure.contrib.repl-utils/*remote-javadocs*">*remote-javadocs*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/add-break-thread!">add-break-thread!</a>
+      <a href="#clojure.contrib.repl-utils/add-break-thread!">add-break-thread!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/add-local-javadoc">add-local-javadoc</a>
+      <a href="#clojure.contrib.repl-utils/add-local-javadoc">add-local-javadoc</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/add-remote-javadoc">add-remote-javadoc</a>
+      <a href="#clojure.contrib.repl-utils/add-remote-javadoc">add-remote-javadoc</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/break-threads">break-threads</a>
+      <a href="#clojure.contrib.repl-utils/break-threads">break-threads</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/expression-info">expression-info</a>
+      <a href="#clojure.contrib.repl-utils/expression-info">expression-info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/find-javadoc-url">find-javadoc-url</a>
+      <a href="#clojure.contrib.repl-utils/find-javadoc-url">find-javadoc-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/get-source">get-source</a>
+      <a href="#clojure.contrib.repl-utils/get-source">get-source</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/javadoc">javadoc</a>
+      <a href="#clojure.contrib.repl-utils/javadoc">javadoc</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/run">run</a>
+      <a href="#clojure.contrib.repl-utils/run">run</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/run*">run*</a>
+      <a href="#clojure.contrib.repl-utils/run*">run*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/show">show</a>
+      <a href="#clojure.contrib.repl-utils/show">show</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/source">source</a>
+      <a href="#clojure.contrib.repl-utils/source">source</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#repl-utils/start-handling-break">start-handling-break</a>
+      <a href="#clojure.contrib.repl-utils/start-handling-break">start-handling-break</a>
     </div>
     <br />
   </div>
@@ -96,7 +96,7 @@ by <span id="author">Chris Houser, Christophe Grand, Stephen Gilardi</span><br /
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/*local-javadocs*">*local-javadocs*</h2>
+  <h2 id="clojure.contrib.repl-utils/*local-javadocs*">*local-javadocs*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Ref to a list of local paths for Javadoc-generated HTML
@@ -105,7 +105,7 @@ files.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/*remote-javadocs*">*remote-javadocs*</h2>
+  <h2 id="clojure.contrib.repl-utils/*remote-javadocs*">*remote-javadocs*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Ref to a map from package name prefixes to URLs for remote
@@ -114,7 +114,7 @@ Javadocs.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/add-break-thread!">add-break-thread!</h2>
+  <h2 id="clojure.contrib.repl-utils/add-break-thread!">add-break-thread!</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-break-thread!)
        (add-break-thread! t)
@@ -126,7 +126,7 @@ you.  Adds the current thread if none is given.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/add-local-javadoc">add-local-javadoc</h2>
+  <h2 id="clojure.contrib.repl-utils/add-local-javadoc">add-local-javadoc</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-local-javadoc path)
 </pre>
@@ -135,7 +135,7 @@ you.  Adds the current thread if none is given.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/add-remote-javadoc">add-remote-javadoc</h2>
+  <h2 id="clojure.contrib.repl-utils/add-remote-javadoc">add-remote-javadoc</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-remote-javadoc package-prefix url)
 </pre>
@@ -145,7 +145,7 @@ beginning of the package name that has docs at this URL.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/break-threads">break-threads</h2>
+  <h2 id="clojure.contrib.repl-utils/break-threads">break-threads</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Threads to stop when Ctrl-C is pressed.  See 'add-break-thread!'</pre>
@@ -153,7 +153,7 @@ beginning of the package name that has docs at this URL.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/expression-info">expression-info</h2>
+  <h2 id="clojure.contrib.repl-utils/expression-info">expression-info</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (expression-info expr)
 </pre>
@@ -168,7 +168,7 @@ Returns: {:class float, :primitive? true}</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/find-javadoc-url">find-javadoc-url</h2>
+  <h2 id="clojure.contrib.repl-utils/find-javadoc-url">find-javadoc-url</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-javadoc-url classname)
 </pre>
@@ -178,7 +178,7 @@ Returns: {:class float, :primitive? true}</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/get-source">get-source</h2>
+  <h2 id="clojure.contrib.repl-utils/get-source">get-source</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-source x)
 </pre>
@@ -193,7 +193,7 @@ Example: (get-source 'filter)</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/javadoc">javadoc</h2>
+  <h2 id="clojure.contrib.repl-utils/javadoc">javadoc</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (javadoc class-or-object)
 </pre>
@@ -203,7 +203,7 @@ Tries *local-javadocs* first, then *remote-javadocs*.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/run">run</h2>
+  <h2 id="clojure.contrib.repl-utils/run">run</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (run ns-name &amp; args)
 </pre>
@@ -213,7 +213,7 @@ optional args. ns-name is not evaluated.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/run*">run*</h2>
+  <h2 id="clojure.contrib.repl-utils/run*">run*</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (run* ns-sym &amp; args)
 </pre>
@@ -223,7 +223,7 @@ optional args.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/show">show</h2>
+  <h2 id="clojure.contrib.repl-utils/show">show</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (show x)
        (show x selector)
@@ -248,7 +248,7 @@ Examples: (show Integer)  (show [])  (show String 23)  (show String "case")</pre
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/source">source</h2>
+  <h2 id="clojure.contrib.repl-utils/source">source</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (source n)
 </pre>
@@ -261,7 +261,7 @@ Example: (source filter)</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="repl-utils/start-handling-break">start-handling-break</h2>
+  <h2 id="clojure.contrib.repl-utils/start-handling-break">start-handling-break</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (start-handling-break)
 </pre>
@@ -277,9 +277,7 @@ all break-threads to be stopped.  See 'add-break-thread!'</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

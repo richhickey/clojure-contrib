@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>datalog API reference (clojure.contrib)</title>
+    <title>datalog API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,171 +48,171 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog/build-work-plan">build-work-plan</a>
+      <a href="#clojure.contrib.datalog/build-work-plan">build-work-plan</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog/run-work-plan">run-work-plan</a>
+      <a href="#clojure.contrib.datalog/run-work-plan">run-work-plan</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#datalog.database">datalog.database</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/add-index">add-index</a>
+      <a href="#clojure.contrib.datalog.database/add-index">add-index</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/add-relation">add-relation</a>
+      <a href="#clojure.contrib.datalog.database/add-relation">add-relation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/add-tuple">add-tuple</a>
+      <a href="#clojure.contrib.datalog.database/add-tuple">add-tuple</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/add-tuples">add-tuples</a>
+      <a href="#clojure.contrib.datalog.database/add-tuples">add-tuples</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/any-match?">any-match?</a>
+      <a href="#clojure.contrib.datalog.database/any-match?">any-match?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/database-counts">database-counts</a>
+      <a href="#clojure.contrib.datalog.database/database-counts">database-counts</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/database-merge">database-merge</a>
+      <a href="#clojure.contrib.datalog.database/database-merge">database-merge</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/database-merge-parallel">database-merge-parallel</a>
+      <a href="#clojure.contrib.datalog.database/database-merge-parallel">database-merge-parallel</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/datalog-relation">datalog-relation</a>
+      <a href="#clojure.contrib.datalog.database/datalog-relation">datalog-relation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/ensure-relation">ensure-relation</a>
+      <a href="#clojure.contrib.datalog.database/ensure-relation">ensure-relation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/get-relation">get-relation</a>
+      <a href="#clojure.contrib.datalog.database/get-relation">get-relation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/make-database">make-database</a>
+      <a href="#clojure.contrib.datalog.database/make-database">make-database</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/merge-relations">merge-relations</a>
+      <a href="#clojure.contrib.datalog.database/merge-relations">merge-relations</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/remove-tuple">remove-tuple</a>
+      <a href="#clojure.contrib.datalog.database/remove-tuple">remove-tuple</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/replace-relation">replace-relation</a>
+      <a href="#clojure.contrib.datalog.database/replace-relation">replace-relation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.database/select">select</a>
+      <a href="#clojure.contrib.datalog.database/select">select</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#datalog.literals">datalog.literals</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/adorned-literal">adorned-literal</a>
+      <a href="#clojure.contrib.datalog.literals/adorned-literal">adorned-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/build-atom">build-atom</a>
+      <a href="#clojure.contrib.datalog.literals/build-atom">build-atom</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/build-literal">build-literal</a>
+      <a href="#clojure.contrib.datalog.literals/build-literal">build-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/build-seed-bindings">build-seed-bindings</a>
+      <a href="#clojure.contrib.datalog.literals/build-seed-bindings">build-seed-bindings</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/delta-literal">delta-literal</a>
+      <a href="#clojure.contrib.datalog.literals/delta-literal">delta-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/display-literal">display-literal</a>
+      <a href="#clojure.contrib.datalog.literals/display-literal">display-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/get-adorned-bindings">get-adorned-bindings</a>
+      <a href="#clojure.contrib.datalog.literals/get-adorned-bindings">get-adorned-bindings</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/get-base-predicate">get-base-predicate</a>
+      <a href="#clojure.contrib.datalog.literals/get-base-predicate">get-base-predicate</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/get-cs-from-vs">get-cs-from-vs</a>
+      <a href="#clojure.contrib.datalog.literals/get-cs-from-vs">get-cs-from-vs</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/get-self-bound-cs">get-self-bound-cs</a>
+      <a href="#clojure.contrib.datalog.literals/get-self-bound-cs">get-self-bound-cs</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/get-vs-from-cs">get-vs-from-cs</a>
+      <a href="#clojure.contrib.datalog.literals/get-vs-from-cs">get-vs-from-cs</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/join-literal">join-literal</a>
+      <a href="#clojure.contrib.datalog.literals/join-literal">join-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/literal-appropriate?">literal-appropriate?</a>
+      <a href="#clojure.contrib.datalog.literals/literal-appropriate?">literal-appropriate?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/literal-columns">literal-columns</a>
+      <a href="#clojure.contrib.datalog.literals/literal-columns">literal-columns</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/literal-magic?">literal-magic?</a>
+      <a href="#clojure.contrib.datalog.literals/literal-magic?">literal-magic?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/literal-predicate">literal-predicate</a>
+      <a href="#clojure.contrib.datalog.literals/literal-predicate">literal-predicate</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/literal-vars">literal-vars</a>
+      <a href="#clojure.contrib.datalog.literals/literal-vars">literal-vars</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/magic-literal">magic-literal</a>
+      <a href="#clojure.contrib.datalog.literals/magic-literal">magic-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/negated-literal">negated-literal</a>
+      <a href="#clojure.contrib.datalog.literals/negated-literal">negated-literal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/negated?">negated?</a>
+      <a href="#clojure.contrib.datalog.literals/negated?">negated?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/negative-vars">negative-vars</a>
+      <a href="#clojure.contrib.datalog.literals/negative-vars">negative-vars</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/positive-vars">positive-vars</a>
+      <a href="#clojure.contrib.datalog.literals/positive-vars">positive-vars</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/positive?">positive?</a>
+      <a href="#clojure.contrib.datalog.literals/positive?">positive?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.literals/project-literal">project-literal</a>
+      <a href="#clojure.contrib.datalog.literals/project-literal">project-literal</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#datalog.magic">datalog.magic</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/adorn-query">adorn-query</a>
+      <a href="#clojure.contrib.datalog.magic/adorn-query">adorn-query</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/adorn-rules-set">adorn-rules-set</a>
+      <a href="#clojure.contrib.datalog.magic/adorn-rules-set">adorn-rules-set</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/build-partial-tuple">build-partial-tuple</a>
+      <a href="#clojure.contrib.datalog.magic/build-partial-tuple">build-partial-tuple</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/magic-transform">magic-transform</a>
+      <a href="#clojure.contrib.datalog.magic/magic-transform">magic-transform</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/seed-predicate-for-insertion">seed-predicate-for-insertion</a>
+      <a href="#clojure.contrib.datalog.magic/seed-predicate-for-insertion">seed-predicate-for-insertion</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/seed-relation">seed-relation</a>
+      <a href="#clojure.contrib.datalog.magic/seed-relation">seed-relation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.magic/seed-rule">seed-rule</a>
+      <a href="#clojure.contrib.datalog.magic/seed-rule">seed-rule</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#datalog.rules">datalog.rules</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/&lt;-">&lt;-</a>
+      <a href="#clojure.contrib.datalog.rules/&lt;-">&lt;-</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/?-">?-</a>
+      <a href="#clojure.contrib.datalog.rules/?-">?-</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/all-predicates">all-predicates</a>
+      <a href="#clojure.contrib.datalog.rules/all-predicates">all-predicates</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/apply-rule">apply-rule</a>
+      <a href="#clojure.contrib.datalog.rules/apply-rule">apply-rule</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/compute-sip">compute-sip</a>
+      <a href="#clojure.contrib.datalog.rules/compute-sip">compute-sip</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/display-query">display-query</a>
+      <a href="#clojure.contrib.datalog.rules/display-query">display-query</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/display-rule">display-rule</a>
+      <a href="#clojure.contrib.datalog.rules/display-rule">display-rule</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/is-safe?">is-safe?</a>
+      <a href="#clojure.contrib.datalog.rules/is-safe?">is-safe?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/make-rules-set">make-rules-set</a>
+      <a href="#clojure.contrib.datalog.rules/make-rules-set">make-rules-set</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/non-base-rules">non-base-rules</a>
+      <a href="#clojure.contrib.datalog.rules/non-base-rules">non-base-rules</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/predicate-map">predicate-map</a>
+      <a href="#clojure.contrib.datalog.rules/predicate-map">predicate-map</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/return-rule-data">return-rule-data</a>
+      <a href="#clojure.contrib.datalog.rules/return-rule-data">return-rule-data</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.rules/rules-set">rules-set</a>
+      <a href="#clojure.contrib.datalog.rules/rules-set">rules-set</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#datalog.softstrat">datalog.softstrat</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.softstrat/build-soft-strat-work-plan">build-soft-strat-work-plan</a>
+      <a href="#clojure.contrib.datalog.softstrat/build-soft-strat-work-plan">build-soft-strat-work-plan</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.softstrat/get-all-relations">get-all-relations</a>
+      <a href="#clojure.contrib.datalog.softstrat/get-all-relations">get-all-relations</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#datalog.util">datalog.util</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/is-query-var?">is-query-var?</a>
+      <a href="#clojure.contrib.datalog.util/is-query-var?">is-query-var?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/is-var?">is-var?</a>
+      <a href="#clojure.contrib.datalog.util/is-var?">is-var?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/keys-to-vals">keys-to-vals</a>
+      <a href="#clojure.contrib.datalog.util/keys-to-vals">keys-to-vals</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/map-values">map-values</a>
+      <a href="#clojure.contrib.datalog.util/map-values">map-values</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/preduce">preduce</a>
+      <a href="#clojure.contrib.datalog.util/preduce">preduce</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/reverse-map">reverse-map</a>
+      <a href="#clojure.contrib.datalog.util/reverse-map">reverse-map</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#datalog.util/trace-datalog">trace-datalog</a>
+      <a href="#clojure.contrib.datalog.util/trace-datalog">trace-datalog</a>
     </div>
     <br />
   </div>
@@ -236,7 +236,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="datalog/build-work-plan">build-work-plan</h2>
+  <h2 id="clojure.contrib.datalog/build-work-plan">build-work-plan</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-work-plan rules query)
 </pre>
@@ -246,7 +246,7 @@ used to execute the query.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="datalog/run-work-plan">run-work-plan</h2>
+  <h2 id="clojure.contrib.datalog/run-work-plan">run-work-plan</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (run-work-plan work-plan database query-bindings)
 </pre>
@@ -259,7 +259,7 @@ work plan and return the results.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="datalog.database/add-index">add-index</h2>
+  <h2 id="clojure.contrib.datalog.database/add-index">add-index</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-index db name key)
 </pre>
@@ -267,7 +267,7 @@ work plan and return the results.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L85" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/add-relation">add-relation</h2>
+  <h2 id="clojure.contrib.datalog.database/add-relation">add-relation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-relation db name keys)
 </pre>
@@ -275,7 +275,7 @@ work plan and return the results.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L80" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/add-tuple">add-tuple</h2>
+  <h2 id="clojure.contrib.datalog.database/add-tuple">add-tuple</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-tuple db rel-name tuple)
        (add-tuple rel tuple)
@@ -289,7 +289,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L171" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/add-tuples">add-tuples</h2>
+  <h2 id="clojure.contrib.datalog.database/add-tuples">add-tuples</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-tuples db &amp; tupls)
 </pre>
@@ -300,7 +300,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L206" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/any-match?">any-match?</h2>
+  <h2 id="clojure.contrib.datalog.database/any-match?">any-match?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (any-match? db rn pt)
 </pre>
@@ -308,7 +308,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L252" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/database-counts">database-counts</h2>
+  <h2 id="clojure.contrib.datalog.database/database-counts">database-counts</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (database-counts db)
 </pre>
@@ -316,7 +316,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L143" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/database-merge">database-merge</h2>
+  <h2 id="clojure.contrib.datalog.database/database-merge">database-merge</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (database-merge dbs)
 </pre>
@@ -324,7 +324,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L276" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/database-merge-parallel">database-merge-parallel</h2>
+  <h2 id="clojure.contrib.datalog.database/database-merge-parallel">database-merge-parallel</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (database-merge-parallel dbs)
 </pre>
@@ -332,7 +332,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L281" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/datalog-relation">datalog-relation</h2>
+  <h2 id="clojure.contrib.datalog.database/datalog-relation">datalog-relation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (datalog-relation schema data indexes)
 </pre>
@@ -340,7 +340,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L75" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/ensure-relation">ensure-relation</h2>
+  <h2 id="clojure.contrib.datalog.database/ensure-relation">ensure-relation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (ensure-relation db name keys indexes)
 </pre>
@@ -348,7 +348,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L95" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/get-relation">get-relation</h2>
+  <h2 id="clojure.contrib.datalog.database/get-relation">get-relation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-relation db rel-name)
 </pre>
@@ -356,7 +356,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L129" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/make-database">make-database</h2>
+  <h2 id="clojure.contrib.datalog.database/make-database">make-database</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (make-database &amp; commands)
 </pre>
@@ -370,7 +370,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L108" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/merge-relations">merge-relations</h2>
+  <h2 id="clojure.contrib.datalog.database/merge-relations">merge-relations</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (merge-relations r1 r2)
 </pre>
@@ -378,7 +378,7 @@ the new database.
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L266" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/remove-tuple">remove-tuple</h2>
+  <h2 id="clojure.contrib.datalog.database/remove-tuple">remove-tuple</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (remove-tuple db rel-name tuple)
        (remove-tuple rel tuple)
@@ -393,7 +393,7 @@ relation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L189" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/replace-relation">replace-relation</h2>
+  <h2 id="clojure.contrib.datalog.database/replace-relation">replace-relation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (replace-relation db rel-name rel)
 </pre>
@@ -401,7 +401,7 @@ relation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj#L134" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.database/select">select</h2>
+  <h2 id="clojure.contrib.datalog.database/select">select</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (select db rn pt)
 </pre>
@@ -413,14 +413,14 @@ relation.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/adorned-literal">adorned-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/adorned-literal">adorned-literal</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">When passed a set of bound columns, returns the adorned literal</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L254" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/build-atom">build-atom</h2>
+  <h2 id="clojure.contrib.datalog.literals/build-atom">build-atom</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-atom f type)
 </pre>
@@ -429,7 +429,7 @@ atom.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L133" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/build-literal">build-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/build-literal">build-literal</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">(Returns an unevaluated expression (to be used in macros) of a
@@ -437,7 +437,7 @@ literal.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L128" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/build-seed-bindings">build-seed-bindings</h2>
+  <h2 id="clojure.contrib.datalog.literals/build-seed-bindings">build-seed-bindings</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-seed-bindings s)
 </pre>
@@ -446,7 +446,7 @@ its bound constants to new variables.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L303" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/delta-literal">delta-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/delta-literal">delta-literal</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (delta-literal l)
 </pre>
@@ -454,14 +454,14 @@ its bound constants to new variables.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L320" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/display-literal">display-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/display-literal">display-literal</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Converts a struct representing a literal to a normal list</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L164" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/get-adorned-bindings">get-adorned-bindings</h2>
+  <h2 id="clojure.contrib.datalog.literals/get-adorned-bindings">get-adorned-bindings</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-adorned-bindings pred)
 </pre>
@@ -469,7 +469,7 @@ its bound constants to new variables.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L271" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/get-base-predicate">get-base-predicate</h2>
+  <h2 id="clojure.contrib.datalog.literals/get-base-predicate">get-base-predicate</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-base-predicate pred)
 </pre>
@@ -477,28 +477,28 @@ its bound constants to new variables.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L276" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/get-cs-from-vs">get-cs-from-vs</h2>
+  <h2 id="clojure.contrib.datalog.literals/get-cs-from-vs">get-cs-from-vs</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">From a set of vars, get the columns</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L202" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/get-self-bound-cs">get-self-bound-cs</h2>
+  <h2 id="clojure.contrib.datalog.literals/get-self-bound-cs">get-self-bound-cs</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Get the columns that are bound withing the literal.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L219" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/get-vs-from-cs">get-vs-from-cs</h2>
+  <h2 id="clojure.contrib.datalog.literals/get-vs-from-cs">get-vs-from-cs</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">From a set of columns, return the vars</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L187" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/join-literal">join-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/join-literal">join-literal</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Given a database (db), a literal (lit) and a seq of bindings (bs),
@@ -506,7 +506,7 @@ return a new seq of bindings by joining this literal.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L361" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/literal-appropriate?">literal-appropriate?</h2>
+  <h2 id="clojure.contrib.datalog.literals/literal-appropriate?">literal-appropriate?</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">When passed a set of bound vars, determines if this literal can be
@@ -514,14 +514,14 @@ used during this point of a SIP computation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L236" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/literal-columns">literal-columns</h2>
+  <h2 id="clojure.contrib.datalog.literals/literal-columns">literal-columns</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Return the column names this applies to</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L48" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/literal-magic?">literal-magic?</h2>
+  <h2 id="clojure.contrib.datalog.literals/literal-magic?">literal-magic?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (literal-magic? lit)
 </pre>
@@ -529,21 +529,21 @@ used during this point of a SIP computation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L296" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/literal-predicate">literal-predicate</h2>
+  <h2 id="clojure.contrib.datalog.literals/literal-predicate">literal-predicate</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Return the predicate/relation this conditional operates over</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L44" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/literal-vars">literal-vars</h2>
+  <h2 id="clojure.contrib.datalog.literals/literal-vars">literal-vars</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Returns the logic vars used by this literal</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L52" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/magic-literal">magic-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/magic-literal">magic-literal</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (magic-literal l)
 </pre>
@@ -551,7 +551,7 @@ used during this point of a SIP computation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L286" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/negated-literal">negated-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/negated-literal">negated-literal</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (negated-literal l)
 </pre>
@@ -559,7 +559,7 @@ used during this point of a SIP computation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L314" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/negated?">negated?</h2>
+  <h2 id="clojure.contrib.datalog.literals/negated?">negated?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (negated? l)
 </pre>
@@ -567,21 +567,21 @@ used during this point of a SIP computation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L112" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/negative-vars">negative-vars</h2>
+  <h2 id="clojure.contrib.datalog.literals/negative-vars">negative-vars</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Returns the logic vars used in a negative position</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L60" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/positive-vars">positive-vars</h2>
+  <h2 id="clojure.contrib.datalog.literals/positive-vars">positive-vars</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Returns the logic vars used in a positive position</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L56" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/positive?">positive?</h2>
+  <h2 id="clojure.contrib.datalog.literals/positive?">positive?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (positive? l)
 </pre>
@@ -589,7 +589,7 @@ used during this point of a SIP computation.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj#L117" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.literals/project-literal">project-literal</h2>
+  <h2 id="clojure.contrib.datalog.literals/project-literal">project-literal</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (project-literal db lit bs)
        (project-literal db lit bs var?)
@@ -603,7 +603,7 @@ db.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/adorn-query">adorn-query</h2>
+  <h2 id="clojure.contrib.datalog.magic/adorn-query">adorn-query</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (adorn-query q)
 </pre>
@@ -611,7 +611,7 @@ db.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj#L26" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/adorn-rules-set">adorn-rules-set</h2>
+  <h2 id="clojure.contrib.datalog.magic/adorn-rules-set">adorn-rules-set</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (adorn-rules-set rs q)
 </pre>
@@ -620,7 +620,7 @@ rules-set, (q) is an adorned query.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj#L31" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/build-partial-tuple">build-partial-tuple</h2>
+  <h2 id="clojure.contrib.datalog.magic/build-partial-tuple">build-partial-tuple</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-partial-tuple q bindings)
 </pre>
@@ -629,7 +629,7 @@ to extract the relation from the database.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj#L78" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/magic-transform">magic-transform</h2>
+  <h2 id="clojure.contrib.datalog.magic/magic-transform">magic-transform</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (magic-transform rs)
        (magic-transform rs i-preds)
@@ -640,7 +640,7 @@ default to the predicates within the rules-set.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj#L98" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/seed-predicate-for-insertion">seed-predicate-for-insertion</h2>
+  <h2 id="clojure.contrib.datalog.magic/seed-predicate-for-insertion">seed-predicate-for-insertion</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (seed-predicate-for-insertion q)
 </pre>
@@ -648,7 +648,7 @@ default to the predicates within the rules-set.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj#L90" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/seed-relation">seed-relation</h2>
+  <h2 id="clojure.contrib.datalog.magic/seed-relation">seed-relation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (seed-relation q)
 </pre>
@@ -657,7 +657,7 @@ relation</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj#L63" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.magic/seed-rule">seed-rule</h2>
+  <h2 id="clojure.contrib.datalog.magic/seed-rule">seed-rule</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (seed-rule q)
 </pre>
@@ -669,7 +669,7 @@ relation</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/&lt;-">&lt;-</h2>
+  <h2 id="clojure.contrib.datalog.rules/&lt;-">&lt;-</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (&lt;- hd &amp; body)
 </pre>
@@ -679,7 +679,7 @@ relation</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L66" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/?-">?-</h2>
+  <h2 id="clojure.contrib.datalog.rules/?-">?-</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (?- &amp; q)
 </pre>
@@ -687,7 +687,7 @@ relation</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L84" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/all-predicates">all-predicates</h2>
+  <h2 id="clojure.contrib.datalog.rules/all-predicates">all-predicates</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (all-predicates rs)
 </pre>
@@ -695,7 +695,7 @@ relation</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L161" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/apply-rule">apply-rule</h2>
+  <h2 id="clojure.contrib.datalog.rules/apply-rule">apply-rule</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (apply-rule db rule)
        (apply-rule db-1 db-2 rule)
@@ -705,7 +705,7 @@ relation in db-2.  The relation will be created if needed.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L182" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/compute-sip">compute-sip</h2>
+  <h2 id="clojure.contrib.datalog.rules/compute-sip">compute-sip</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (compute-sip bindings i-preds rule)
 </pre>
@@ -715,7 +715,7 @@ determine what should be adorned.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L98" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/display-query">display-query</h2>
+  <h2 id="clojure.contrib.datalog.rules/display-query">display-query</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (display-query query)
 </pre>
@@ -723,7 +723,7 @@ determine what should be adorned.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L37" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/display-rule">display-rule</h2>
+  <h2 id="clojure.contrib.datalog.rules/display-rule">display-rule</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (display-rule rule)
 </pre>
@@ -731,7 +731,7 @@ determine what should be adorned.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L30" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/is-safe?">is-safe?</h2>
+  <h2 id="clojure.contrib.datalog.rules/is-safe?">is-safe?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (is-safe? rule)
 </pre>
@@ -739,7 +739,7 @@ determine what should be adorned.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L45" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/make-rules-set">make-rules-set</h2>
+  <h2 id="clojure.contrib.datalog.rules/make-rules-set">make-rules-set</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-rules-set rs)
 </pre>
@@ -748,7 +748,7 @@ printing.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L127" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/non-base-rules">non-base-rules</h2>
+  <h2 id="clojure.contrib.datalog.rules/non-base-rules">non-base-rules</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (non-base-rules rs)
 </pre>
@@ -756,7 +756,7 @@ printing.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L166" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/predicate-map">predicate-map</h2>
+  <h2 id="clojure.contrib.datalog.rules/predicate-map">predicate-map</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (predicate-map rs)
 </pre>
@@ -765,7 +765,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L151" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/return-rule-data">return-rule-data</h2>
+  <h2 id="clojure.contrib.datalog.rules/return-rule-data">return-rule-data</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (return-rule-data rule)
 </pre>
@@ -773,7 +773,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj#L79" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.rules/rules-set">rules-set</h2>
+  <h2 id="clojure.contrib.datalog.rules/rules-set">rules-set</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (rules-set &amp; rules)
 </pre>
@@ -785,7 +785,7 @@ Each value will be a set of rules.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="datalog.softstrat/build-soft-strat-work-plan">build-soft-strat-work-plan</h2>
+  <h2 id="clojure.contrib.datalog.softstrat/build-soft-strat-work-plan">build-soft-strat-work-plan</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-soft-strat-work-plan rs q)
 </pre>
@@ -793,7 +793,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/softstrat.clj#L115" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.softstrat/get-all-relations">get-all-relations</h2>
+  <h2 id="clojure.contrib.datalog.softstrat/get-all-relations">get-all-relations</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-all-relations ws)
 </pre>
@@ -805,7 +805,7 @@ Each value will be a set of rules.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="datalog.util/is-query-var?">is-query-var?</h2>
+  <h2 id="clojure.contrib.datalog.util/is-query-var?">is-query-var?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (is-query-var? sym)
 </pre>
@@ -813,7 +813,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj#L33" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.util/is-var?">is-var?</h2>
+  <h2 id="clojure.contrib.datalog.util/is-var?">is-var?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (is-var? sym)
 </pre>
@@ -821,7 +821,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj#L25" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.util/keys-to-vals">keys-to-vals</h2>
+  <h2 id="clojure.contrib.datalog.util/keys-to-vals">keys-to-vals</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (keys-to-vals m ks)
 </pre>
@@ -829,7 +829,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj#L49" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.util/map-values">map-values</h2>
+  <h2 id="clojure.contrib.datalog.util/map-values">map-values</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (map-values f hash)
 </pre>
@@ -837,7 +837,7 @@ Each value will be a set of rules.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj#L41" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.util/preduce">preduce</h2>
+  <h2 id="clojure.contrib.datalog.util/preduce">preduce</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (preduce f data)
 </pre>
@@ -849,7 +849,7 @@ data - a collection of hashes.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj#L62" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.util/reverse-map">reverse-map</h2>
+  <h2 id="clojure.contrib.datalog.util/reverse-map">reverse-map</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (reverse-map m)
 </pre>
@@ -857,7 +857,7 @@ data - a collection of hashes.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj#L54" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="datalog.util/trace-datalog">trace-datalog</h2>
+  <h2 id="clojure.contrib.datalog.util/trace-datalog">trace-datalog</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (trace-datalog &amp; body)
 </pre>
@@ -872,9 +872,7 @@ data - a collection of hashes.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

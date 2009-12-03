@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>http.agent API reference (clojure.contrib)</title>
+    <title>http.agent API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,45 +48,45 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/buffer-bytes">buffer-bytes</a>
+      <a href="#clojure.contrib.http.agent/buffer-bytes">buffer-bytes</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/bytes">bytes</a>
+      <a href="#clojure.contrib.http.agent/bytes">bytes</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/client-error?">client-error?</a>
+      <a href="#clojure.contrib.http.agent/client-error?">client-error?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/done?">done?</a>
+      <a href="#clojure.contrib.http.agent/done?">done?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/error?">error?</a>
+      <a href="#clojure.contrib.http.agent/error?">error?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/headers">headers</a>
+      <a href="#clojure.contrib.http.agent/headers">headers</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/headers-seq">headers-seq</a>
+      <a href="#clojure.contrib.http.agent/headers-seq">headers-seq</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/http-agent">http-agent</a>
+      <a href="#clojure.contrib.http.agent/http-agent">http-agent</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/message">message</a>
+      <a href="#clojure.contrib.http.agent/message">message</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/method">method</a>
+      <a href="#clojure.contrib.http.agent/method">method</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/redirect?">redirect?</a>
+      <a href="#clojure.contrib.http.agent/redirect?">redirect?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/request-body">request-body</a>
+      <a href="#clojure.contrib.http.agent/request-body">request-body</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/request-headers">request-headers</a>
+      <a href="#clojure.contrib.http.agent/request-headers">request-headers</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/request-uri">request-uri</a>
+      <a href="#clojure.contrib.http.agent/request-uri">request-uri</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/result">result</a>
+      <a href="#clojure.contrib.http.agent/result">result</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/server-error?">server-error?</a>
+      <a href="#clojure.contrib.http.agent/server-error?">server-error?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/status">status</a>
+      <a href="#clojure.contrib.http.agent/status">status</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/stream">stream</a>
+      <a href="#clojure.contrib.http.agent/stream">stream</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/string">string</a>
+      <a href="#clojure.contrib.http.agent/string">string</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#http.agent/success?">success?</a>
+      <a href="#clojure.contrib.http.agent/success?">success?</a>
     </div>
     <br />
   </div>
@@ -151,7 +151,7 @@ And you could write the response directly to a file like this:
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/buffer-bytes">buffer-bytes</h2>
+  <h2 id="clojure.contrib.http.agent/buffer-bytes">buffer-bytes</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (buffer-bytes http-agnt)
 </pre>
@@ -162,7 +162,7 @@ retrieved with the 'stream', 'string', and 'bytes' functions.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/bytes">bytes</h2>
+  <h2 id="clojure.contrib.http.agent/bytes">bytes</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (bytes http-agnt)
 </pre>
@@ -172,7 +172,7 @@ nil if the content is not yet available.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/client-error?">client-error?</h2>
+  <h2 id="clojure.contrib.http.agent/client-error?">client-error?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (client-error? http-agnt)
 </pre>
@@ -181,7 +181,7 @@ nil if the content is not yet available.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/done?">done?</h2>
+  <h2 id="clojure.contrib.http.agent/done?">done?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (done? http-agnt)
 </pre>
@@ -190,7 +190,7 @@ nil if the content is not yet available.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/error?">error?</h2>
+  <h2 id="clojure.contrib.http.agent/error?">error?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (error? http-agnt)
 </pre>
@@ -200,7 +200,7 @@ the 500-599 range.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/headers">headers</h2>
+  <h2 id="clojure.contrib.http.agent/headers">headers</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (headers http-agnt)
 </pre>
@@ -211,7 +211,7 @@ header appears more than once, only the last value is returned.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/headers-seq">headers-seq</h2>
+  <h2 id="clojure.contrib.http.agent/headers-seq">headers-seq</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (headers-seq http-agnt)
 </pre>
@@ -222,7 +222,7 @@ HTTP status line.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/http-agent">http-agent</h2>
+  <h2 id="clojure.contrib.http.agent/http-agent">http-agent</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (http-agent uri &amp; options)
 </pre>
@@ -278,7 +278,7 @@ response stream in a memory buffer.
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/message">message</h2>
+  <h2 id="clojure.contrib.http.agent/message">message</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (message http-agnt)
 </pre>
@@ -288,7 +288,7 @@ request, or nil if the response has not yet been received.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/method">method</h2>
+  <h2 id="clojure.contrib.http.agent/method">method</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (method http-agnt)
 </pre>
@@ -297,7 +297,7 @@ request, or nil if the response has not yet been received.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/redirect?">redirect?</h2>
+  <h2 id="clojure.contrib.http.agent/redirect?">redirect?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (redirect? http-agnt)
 </pre>
@@ -310,7 +310,7 @@ return a 3xx response code.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/request-body">request-body</h2>
+  <h2 id="clojure.contrib.http.agent/request-body">request-body</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (request-body http-agnt)
 </pre>
@@ -322,7 +322,7 @@ longer be usable.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/request-headers">request-headers</h2>
+  <h2 id="clojure.contrib.http.agent/request-headers">request-headers</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (request-headers http-agnt)
 </pre>
@@ -331,7 +331,7 @@ longer be usable.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/request-uri">request-uri</h2>
+  <h2 id="clojure.contrib.http.agent/request-uri">request-uri</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (request-uri http-agnt)
 </pre>
@@ -340,7 +340,7 @@ longer be usable.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/result">result</h2>
+  <h2 id="clojure.contrib.http.agent/result">result</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (result http-agnt)
 </pre>
@@ -351,7 +351,7 @@ handler function returns a ByteArrayOutputStream.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/server-error?">server-error?</h2>
+  <h2 id="clojure.contrib.http.agent/server-error?">server-error?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (server-error? http-agnt)
 </pre>
@@ -360,7 +360,7 @@ handler function returns a ByteArrayOutputStream.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/status">status</h2>
+  <h2 id="clojure.contrib.http.agent/status">status</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (status http-agnt)
 </pre>
@@ -371,7 +371,7 @@ received.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/stream">stream</h2>
+  <h2 id="clojure.contrib.http.agent/stream">stream</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (stream http-agnt)
 </pre>
@@ -385,7 +385,7 @@ ByteArrayInputStream on the buffered response body.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/string">string</h2>
+  <h2 id="clojure.contrib.http.agent/string">string</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (string http-agnt)
        (string http-agnt encoding)
@@ -400,7 +400,7 @@ not specified.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="http.agent/success?">success?</h2>
+  <h2 id="clojure.contrib.http.agent/success?">success?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (success? http-agnt)
 </pre>
@@ -415,9 +415,7 @@ not specified.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

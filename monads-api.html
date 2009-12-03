@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>monads API reference (clojure.contrib)</title>
+    <title>monads API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,77 +48,77 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/call-cc">call-cc</a>
+      <a href="#clojure.contrib.monads/call-cc">call-cc</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/cont-m">cont-m</a>
+      <a href="#clojure.contrib.monads/cont-m">cont-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/defmonad">defmonad</a>
+      <a href="#clojure.contrib.monads/defmonad">defmonad</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/defmonadfn">defmonadfn</a>
+      <a href="#clojure.contrib.monads/defmonadfn">defmonadfn</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/domonad">domonad</a>
+      <a href="#clojure.contrib.monads/domonad">domonad</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/fetch-state">fetch-state</a>
+      <a href="#clojure.contrib.monads/fetch-state">fetch-state</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/fetch-val">fetch-val</a>
+      <a href="#clojure.contrib.monads/fetch-val">fetch-val</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/identity-m">identity-m</a>
+      <a href="#clojure.contrib.monads/identity-m">identity-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-chain">m-chain</a>
+      <a href="#clojure.contrib.monads/m-chain">m-chain</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-fmap">m-fmap</a>
+      <a href="#clojure.contrib.monads/m-fmap">m-fmap</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-join">m-join</a>
+      <a href="#clojure.contrib.monads/m-join">m-join</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-lift">m-lift</a>
+      <a href="#clojure.contrib.monads/m-lift">m-lift</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-map">m-map</a>
+      <a href="#clojure.contrib.monads/m-map">m-map</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-reduce">m-reduce</a>
+      <a href="#clojure.contrib.monads/m-reduce">m-reduce</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-seq">m-seq</a>
+      <a href="#clojure.contrib.monads/m-seq">m-seq</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-until">m-until</a>
+      <a href="#clojure.contrib.monads/m-until">m-until</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-when">m-when</a>
+      <a href="#clojure.contrib.monads/m-when">m-when</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/m-when-not">m-when-not</a>
+      <a href="#clojure.contrib.monads/m-when-not">m-when-not</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/maybe-m">maybe-m</a>
+      <a href="#clojure.contrib.monads/maybe-m">maybe-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/maybe-t">maybe-t</a>
+      <a href="#clojure.contrib.monads/maybe-t">maybe-t</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/monad">monad</a>
+      <a href="#clojure.contrib.monads/monad">monad</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/monad-transformer">monad-transformer</a>
+      <a href="#clojure.contrib.monads/monad-transformer">monad-transformer</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/run-cont">run-cont</a>
+      <a href="#clojure.contrib.monads/run-cont">run-cont</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/sequence-m">sequence-m</a>
+      <a href="#clojure.contrib.monads/sequence-m">sequence-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/sequence-t">sequence-t</a>
+      <a href="#clojure.contrib.monads/sequence-t">sequence-t</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/set-m">set-m</a>
+      <a href="#clojure.contrib.monads/set-m">set-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/set-state">set-state</a>
+      <a href="#clojure.contrib.monads/set-state">set-state</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/set-val">set-val</a>
+      <a href="#clojure.contrib.monads/set-val">set-val</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/state-m">state-m</a>
+      <a href="#clojure.contrib.monads/state-m">state-m</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/state-m-until">state-m-until</a>
+      <a href="#clojure.contrib.monads/state-m-until">state-m-until</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/state-t">state-t</a>
+      <a href="#clojure.contrib.monads/state-t">state-t</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/update-state">update-state</a>
+      <a href="#clojure.contrib.monads/update-state">update-state</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/update-val">update-val</a>
+      <a href="#clojure.contrib.monads/update-val">update-val</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/with-monad">with-monad</a>
+      <a href="#clojure.contrib.monads/with-monad">with-monad</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/with-state-field">with-state-field</a>
+      <a href="#clojure.contrib.monads/with-state-field">with-state-field</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#monads/writer-m">writer-m</a>
+      <a href="#clojure.contrib.monads/writer-m">writer-m</a>
     </div>
     <br />
   </div>
@@ -154,7 +154,7 @@ functions.</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/call-cc">call-cc</h2>
+  <h2 id="clojure.contrib.monads/call-cc">call-cc</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (call-cc f)
 </pre>
@@ -166,7 +166,7 @@ or call the passed-in current continuation to terminate.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/cont-m">cont-m</h2>
+  <h2 id="clojure.contrib.monads/cont-m">cont-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing computations in continuation-passing style. The monadic
@@ -176,7 +176,7 @@ the continuation of the computation, to which they pass their result.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/defmonad">defmonad</h2>
+  <h2 id="clojure.contrib.monads/defmonad">defmonad</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (defmonad name doc-string operations)
        (defmonad name operations)
@@ -188,7 +188,7 @@ m-result (required) and m-zero and m-plus (optional).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/defmonadfn">defmonadfn</h2>
+  <h2 id="clojure.contrib.monads/defmonadfn">defmonadfn</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (defmonadfn name docstring? attr-map? args expr)
        (defmonadfn name docstring? attr-map? (args expr) ...)
@@ -199,7 +199,7 @@ a with-monad block.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/domonad">domonad</h2>
+  <h2 id="clojure.contrib.monads/domonad">domonad</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (domonad steps expr)
        (domonad name steps expr)
@@ -218,7 +218,7 @@ bindings that can be used in the following steps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/fetch-state">fetch-state</h2>
+  <h2 id="clojure.contrib.monads/fetch-state">fetch-state</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (fetch-state)
 </pre>
@@ -228,7 +228,7 @@ modify it.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/fetch-val">fetch-val</h2>
+  <h2 id="clojure.contrib.monads/fetch-val">fetch-val</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (fetch-val key)
 </pre>
@@ -238,7 +238,7 @@ returns the value corresponding to the given key. The state is not modified.</pr
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/identity-m">identity-m</h2>
+  <h2 id="clojure.contrib.monads/identity-m">identity-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing plain computations. This monad does in fact nothing
@@ -248,7 +248,7 @@ transformers, and for code that is parameterized with a monad.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-chain">m-chain</h2>
+  <h2 id="clojure.contrib.monads/m-chain">m-chain</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Chains together monadic computation steps that are each functions
@@ -259,7 +259,7 @@ step as its argument. (m-chain (step1 step2)) is equivalent to
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-fmap">m-fmap</h2>
+  <h2 id="clojure.contrib.monads/m-fmap">m-fmap</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Bind the monadic value m to the function returning (f x) for argument x</pre>
@@ -267,7 +267,7 @@ step as its argument. (m-chain (step1 step2)) is equivalent to
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-join">m-join</h2>
+  <h2 id="clojure.contrib.monads/m-join">m-join</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Converts a monadic value containing a monadic value into a 'simple'
@@ -276,7 +276,7 @@ monadic value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-lift">m-lift</h2>
+  <h2 id="clojure.contrib.monads/m-lift">m-lift</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (m-lift n f)
 </pre>
@@ -286,7 +286,7 @@ monadic arguments returning a monadic value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-map">m-map</h2>
+  <h2 id="clojure.contrib.monads/m-map">m-map</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">'Executes' the sequence of monadic values resulting from mapping
@@ -295,7 +295,7 @@ f onto the values xs. f must return a monadic value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-reduce">m-reduce</h2>
+  <h2 id="clojure.contrib.monads/m-reduce">m-reduce</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Return the reduction of (m-lift 2 f) over the list of monadic values mvs
@@ -304,7 +304,7 @@ with initial value (m-result val).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-seq">m-seq</h2>
+  <h2 id="clojure.contrib.monads/m-seq">m-seq</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">'Executes' the monadic values in ms and returns a sequence of the
@@ -313,7 +313,7 @@ basic values contained in them.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-until">m-until</h2>
+  <h2 id="clojure.contrib.monads/m-until">m-until</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">While (p x) is false, replace x by the value returned by the
@@ -323,7 +323,7 @@ x for which (p x) is true.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-when">m-when</h2>
+  <h2 id="clojure.contrib.monads/m-when">m-when</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (m-when test m-expr)
 </pre>
@@ -333,7 +333,7 @@ x for which (p x) is true.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/m-when-not">m-when-not</h2>
+  <h2 id="clojure.contrib.monads/m-when-not">m-when-not</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (m-when-not test m-expr)
 </pre>
@@ -343,7 +343,7 @@ x for which (p x) is true.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/maybe-m">maybe-m</h2>
+  <h2 id="clojure.contrib.monads/maybe-m">maybe-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing computations with possible failures. Failure is
@@ -353,7 +353,7 @@ a step returns nil, the whole computation will yield nil as well.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/maybe-t">maybe-t</h2>
+  <h2 id="clojure.contrib.monads/maybe-t">maybe-t</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (maybe-t m)
        (maybe-t m nothing)
@@ -370,7 +370,7 @@ if the base monad m has a definition for m-plus, and
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/monad">monad</h2>
+  <h2 id="clojure.contrib.monads/monad">monad</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (monad operations)
 </pre>
@@ -381,7 +381,7 @@ m-result (required) and m-zero and m-plus (optional).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/monad-transformer">monad-transformer</h2>
+  <h2 id="clojure.contrib.monads/monad-transformer">monad-transformer</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (monad-transformer base which-m-plus operations)
 </pre>
@@ -392,7 +392,7 @@ from the base monad or from the transformer.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/run-cont">run-cont</h2>
+  <h2 id="clojure.contrib.monads/run-cont">run-cont</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (run-cont c)
 </pre>
@@ -401,7 +401,7 @@ from the base monad or from the transformer.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/sequence-m">sequence-m</h2>
+  <h2 id="clojure.contrib.monads/sequence-m">sequence-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing multi-valued computations, i.e. computations
@@ -411,7 +411,7 @@ protocol can be used as a monadic value.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/sequence-t">sequence-t</h2>
+  <h2 id="clojure.contrib.monads/sequence-t">sequence-t</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (sequence-t m)
        (sequence-t m which-m-plus)
@@ -427,7 +427,7 @@ if the base monad m has a definition for m-plus, and
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/set-m">set-m</h2>
+  <h2 id="clojure.contrib.monads/set-m">set-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing multi-valued computations, like sequence-m,
@@ -436,7 +436,7 @@ but returning sets of results instead of sequences of results.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/set-state">set-state</h2>
+  <h2 id="clojure.contrib.monads/set-state">set-state</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (set-state s)
 </pre>
@@ -446,7 +446,7 @@ returns the previous state.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/set-val">set-val</h2>
+  <h2 id="clojure.contrib.monads/set-val">set-val</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (set-val key val)
 </pre>
@@ -456,7 +456,7 @@ replaces the value associated with key by val. The old value is returned.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/state-m">state-m</h2>
+  <h2 id="clojure.contrib.monads/state-m">state-m</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Monad describing stateful computations. The monadic values have the
@@ -465,7 +465,7 @@ structure (fn [old-state] [result new-state]).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/state-m-until">state-m-until</h2>
+  <h2 id="clojure.contrib.monads/state-m-until">state-m-until</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (state-m-until p f x)
 </pre>
@@ -475,7 +475,7 @@ replaces recursion by a loop.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/state-t">state-t</h2>
+  <h2 id="clojure.contrib.monads/state-t">state-t</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (state-t m)
 </pre>
@@ -485,7 +485,7 @@ computations that have the base monad type as their result.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/update-state">update-state</h2>
+  <h2 id="clojure.contrib.monads/update-state">update-state</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (update-state f)
 </pre>
@@ -495,7 +495,7 @@ result of f applied to the current state and that returns the old state.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/update-val">update-val</h2>
+  <h2 id="clojure.contrib.monads/update-val">update-val</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (update-val key f)
 </pre>
@@ -506,7 +506,7 @@ of f applied to the old value. The old value is returned.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/with-monad">with-monad</h2>
+  <h2 id="clojure.contrib.monads/with-monad">with-monad</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-monad monad &amp; exprs)
 </pre>
@@ -517,7 +517,7 @@ in the monad definition given by name.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/with-state-field">with-state-field</h2>
+  <h2 id="clojure.contrib.monads/with-state-field">with-state-field</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (with-state-field key statement)
 </pre>
@@ -529,7 +529,7 @@ new state returned by statement.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="monads/writer-m">writer-m</h2>
+  <h2 id="clojure.contrib.monads/writer-m">writer-m</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (writer-m empty-accumulator)
 </pre>
@@ -547,9 +547,7 @@ log data. Its empty value is passed as a parameter.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

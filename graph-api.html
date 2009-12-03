@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>graph API reference (clojure.contrib)</title>
+    <title>graph API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,33 +48,33 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/add-loops">add-loops</a>
+      <a href="#clojure.contrib.graph/add-loops">add-loops</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/component-graph">component-graph</a>
+      <a href="#clojure.contrib.graph/component-graph">component-graph</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/dependency-list">dependency-list</a>
+      <a href="#clojure.contrib.graph/dependency-list">dependency-list</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/fixed-point">fixed-point</a>
+      <a href="#clojure.contrib.graph/fixed-point">fixed-point</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/get-neighbors">get-neighbors</a>
+      <a href="#clojure.contrib.graph/get-neighbors">get-neighbors</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/lazy-walk">lazy-walk</a>
+      <a href="#clojure.contrib.graph/lazy-walk">lazy-walk</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/post-ordered-nodes">post-ordered-nodes</a>
+      <a href="#clojure.contrib.graph/post-ordered-nodes">post-ordered-nodes</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/recursive-component?">recursive-component?</a>
+      <a href="#clojure.contrib.graph/recursive-component?">recursive-component?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/remove-loops">remove-loops</a>
+      <a href="#clojure.contrib.graph/remove-loops">remove-loops</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/reverse-graph">reverse-graph</a>
+      <a href="#clojure.contrib.graph/reverse-graph">reverse-graph</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/scc">scc</a>
+      <a href="#clojure.contrib.graph/scc">scc</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/self-recursive-sets">self-recursive-sets</a>
+      <a href="#clojure.contrib.graph/self-recursive-sets">self-recursive-sets</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/stratification-list">stratification-list</a>
+      <a href="#clojure.contrib.graph/stratification-list">stratification-list</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#graph/transitive-closure">transitive-closure</a>
+      <a href="#clojure.contrib.graph/transitive-closure">transitive-closure</a>
     </div>
     <br />
   </div>
@@ -94,7 +94,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/add-loops">add-loops</h2>
+  <h2 id="clojure.contrib.graph/add-loops">add-loops</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-loops g)
 </pre>
@@ -103,7 +103,7 @@ by <span id="author">Jeffrey Straszheim</span><br />
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/component-graph">component-graph</h2>
+  <h2 id="clojure.contrib.graph/component-graph">component-graph</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (component-graph g)
        (component-graph g sccs)
@@ -116,7 +116,7 @@ be the union of the corresponding edges of the prior graph.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/dependency-list">dependency-list</h2>
+  <h2 id="clojure.contrib.graph/dependency-list">dependency-list</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (dependency-list g)
 </pre>
@@ -129,7 +129,7 @@ much be acyclic) has an edge a-&gt;b when a depends on b.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/fixed-point">fixed-point</h2>
+  <h2 id="clojure.contrib.graph/fixed-point">fixed-point</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (fixed-point data fun max equal)
 </pre>
@@ -140,7 +140,7 @@ exception.  Set max to nil for unlimited iterations.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/get-neighbors">get-neighbors</h2>
+  <h2 id="clojure.contrib.graph/get-neighbors">get-neighbors</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-neighbors g n)
 </pre>
@@ -149,7 +149,7 @@ exception.  Set max to nil for unlimited iterations.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/lazy-walk">lazy-walk</h2>
+  <h2 id="clojure.contrib.graph/lazy-walk">lazy-walk</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (lazy-walk g n)
        (lazy-walk g ns v)
@@ -161,7 +161,7 @@ visit (ns).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/post-ordered-nodes">post-ordered-nodes</h2>
+  <h2 id="clojure.contrib.graph/post-ordered-nodes">post-ordered-nodes</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (post-ordered-nodes g)
 </pre>
@@ -170,7 +170,7 @@ visit (ns).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/recursive-component?">recursive-component?</h2>
+  <h2 id="clojure.contrib.graph/recursive-component?">recursive-component?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (recursive-component? g ns)
 </pre>
@@ -179,7 +179,7 @@ visit (ns).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/remove-loops">remove-loops</h2>
+  <h2 id="clojure.contrib.graph/remove-loops">remove-loops</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (remove-loops g)
 </pre>
@@ -188,7 +188,7 @@ visit (ns).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/reverse-graph">reverse-graph</h2>
+  <h2 id="clojure.contrib.graph/reverse-graph">reverse-graph</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (reverse-graph g)
 </pre>
@@ -198,7 +198,7 @@ order of the edges reversed.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/scc">scc</h2>
+  <h2 id="clojure.contrib.graph/scc">scc</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (scc g)
 </pre>
@@ -208,7 +208,7 @@ of g.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/self-recursive-sets">self-recursive-sets</h2>
+  <h2 id="clojure.contrib.graph/self-recursive-sets">self-recursive-sets</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (self-recursive-sets g)
 </pre>
@@ -218,7 +218,7 @@ self-recursive.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/stratification-list">stratification-list</h2>
+  <h2 id="clojure.contrib.graph/stratification-list">stratification-list</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (stratification-list g1 g2)
 </pre>
@@ -231,7 +231,7 @@ graph, node a must be equal or later in the sequence.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="graph/transitive-closure">transitive-closure</h2>
+  <h2 id="clojure.contrib.graph/transitive-closure">transitive-closure</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (transitive-closure g)
 </pre>
@@ -252,9 +252,7 @@ behavior, call (-&gt; g transitive-closure add-loops)</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>str-utils API reference (clojure.contrib)</title>
+    <title>str-utils API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,19 +48,19 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/chomp">chomp</a>
+      <a href="#clojure.contrib.str-utils/chomp">chomp</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/chop">chop</a>
+      <a href="#clojure.contrib.str-utils/chop">chop</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/re-gsub">re-gsub</a>
+      <a href="#clojure.contrib.str-utils/re-gsub">re-gsub</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/re-partition">re-partition</a>
+      <a href="#clojure.contrib.str-utils/re-partition">re-partition</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/re-split">re-split</a>
+      <a href="#clojure.contrib.str-utils/re-split">re-split</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/re-sub">re-sub</a>
+      <a href="#clojure.contrib.str-utils/re-sub">re-sub</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils/str-join">str-join</a>
+      <a href="#clojure.contrib.str-utils/str-join">str-join</a>
     </div>
     <br />
   </div>
@@ -80,7 +80,7 @@ by <span id="author">Stuart Sierra</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/chomp">chomp</h2>
+  <h2 id="clojure.contrib.str-utils/chomp">chomp</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (chomp s)
 </pre>
@@ -90,7 +90,7 @@ string.  Note: String.trim() is similar and faster.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/chop">chop</h2>
+  <h2 id="clojure.contrib.str-utils/chop">chop</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (chop s)
 </pre>
@@ -99,7 +99,7 @@ string.  Note: String.trim() is similar and faster.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/re-gsub">re-gsub</h2>
+  <h2 id="clojure.contrib.str-utils/re-gsub">re-gsub</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (re-gsub regex replacement string)
 </pre>
@@ -113,7 +113,7 @@ match.
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/re-partition">re-partition</h2>
+  <h2 id="clojure.contrib.str-utils/re-partition">re-partition</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (re-partition re string)
 </pre>
@@ -130,7 +130,7 @@ Returns: ("" "abc" "123" "def")</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/re-split">re-split</h2>
+  <h2 id="clojure.contrib.str-utils/re-split">re-split</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (re-split pattern string)
        (re-split pattern string limit)
@@ -142,7 +142,7 @@ splits.  Like Perl's 'split'.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/re-sub">re-sub</h2>
+  <h2 id="clojure.contrib.str-utils/re-sub">re-sub</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (re-sub regex replacement string)
 </pre>
@@ -156,7 +156,7 @@ the match.
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils/str-join">str-join</h2>
+  <h2 id="clojure.contrib.str-utils/str-join">str-join</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (str-join separator sequence)
 </pre>
@@ -172,9 +172,7 @@ the match.
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

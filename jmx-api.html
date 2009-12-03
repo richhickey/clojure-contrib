@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>jmx API reference (clojure.contrib)</title>
+    <title>jmx API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,51 +48,51 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/*connection*">*connection*</a>
+      <a href="#clojure.contrib.jmx/*connection*">*connection*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/as-object-name">as-object-name</a>
+      <a href="#clojure.contrib.jmx/as-object-name">as-object-name</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/attribute-info">attribute-info</a>
+      <a href="#clojure.contrib.jmx/attribute-info">attribute-info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/attribute-names">attribute-names</a>
+      <a href="#clojure.contrib.jmx/attribute-names">attribute-names</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/build-attribute-info">build-attribute-info</a>
+      <a href="#clojure.contrib.jmx/build-attribute-info">build-attribute-info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/guess-attribute-typename">guess-attribute-typename</a>
+      <a href="#clojure.contrib.jmx/guess-attribute-typename">guess-attribute-typename</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/jmx-&gt;clj">jmx-&gt;clj</a>
+      <a href="#clojure.contrib.jmx/jmx-&gt;clj">jmx-&gt;clj</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/jmx-url">jmx-url</a>
+      <a href="#clojure.contrib.jmx/jmx-url">jmx-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/map-&gt;attribute-infos">map-&gt;attribute-infos</a>
+      <a href="#clojure.contrib.jmx/map-&gt;attribute-infos">map-&gt;attribute-infos</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/maybe-atomize">maybe-atomize</a>
+      <a href="#clojure.contrib.jmx/maybe-atomize">maybe-atomize</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/maybe-keywordize">maybe-keywordize</a>
+      <a href="#clojure.contrib.jmx/maybe-keywordize">maybe-keywordize</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/mbean">mbean</a>
+      <a href="#clojure.contrib.jmx/mbean">mbean</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/mbean-names">mbean-names</a>
+      <a href="#clojure.contrib.jmx/mbean-names">mbean-names</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/op-param-types">op-param-types</a>
+      <a href="#clojure.contrib.jmx/op-param-types">op-param-types</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/operation">operation</a>
+      <a href="#clojure.contrib.jmx/operation">operation</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/operation-names">operation-names</a>
+      <a href="#clojure.contrib.jmx/operation-names">operation-names</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/operations">operations</a>
+      <a href="#clojure.contrib.jmx/operations">operations</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/raw-read">raw-read</a>
+      <a href="#clojure.contrib.jmx/raw-read">raw-read</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/read">read</a>
+      <a href="#clojure.contrib.jmx/read">read</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/read-exceptions">read-exceptions</a>
+      <a href="#clojure.contrib.jmx/read-exceptions">read-exceptions</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/read-supported">read-supported</a>
+      <a href="#clojure.contrib.jmx/read-supported">read-supported</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/readable?">readable?</a>
+      <a href="#clojure.contrib.jmx/readable?">readable?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#jmx/with-connection">with-connection</a>
+      <a href="#clojure.contrib.jmx/with-connection">with-connection</a>
     </div>
     <br />
   </div>
@@ -172,7 +172,7 @@ in the ref:
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/*connection*">*connection*</h2>
+  <h2 id="clojure.contrib.jmx/*connection*">*connection*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The connection to be used for JMX ops. Defaults to the local process.</pre>
@@ -180,7 +180,7 @@ in the ref:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/as-object-name">as-object-name</h2>
+  <h2 id="clojure.contrib.jmx/as-object-name">as-object-name</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (as-object-name string-or-name)
 </pre>
@@ -189,7 +189,7 @@ in the ref:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/attribute-info">attribute-info</h2>
+  <h2 id="clojure.contrib.jmx/attribute-info">attribute-info</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (attribute-info object-name attr-name)
 </pre>
@@ -198,7 +198,7 @@ in the ref:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/attribute-names">attribute-names</h2>
+  <h2 id="clojure.contrib.jmx/attribute-names">attribute-names</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (attribute-names n)
 </pre>
@@ -207,7 +207,7 @@ in the ref:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/build-attribute-info">build-attribute-info</h2>
+  <h2 id="clojure.contrib.jmx/build-attribute-info">build-attribute-info</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (build-attribute-info attr-name attr-value)
        (build-attribute-info name type desc readable? writable? is?)
@@ -217,7 +217,7 @@ in the ref:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/guess-attribute-typename">guess-attribute-typename</h2>
+  <h2 id="clojure.contrib.jmx/guess-attribute-typename">guess-attribute-typename</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (guess-attribute-typename value)
 </pre>
@@ -226,7 +226,7 @@ in the ref:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/jmx-&gt;clj">jmx-&gt;clj</h2>
+  <h2 id="clojure.contrib.jmx/jmx-&gt;clj">jmx-&gt;clj</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Coerce JMX data structures into Clojure data.
@@ -235,7 +235,7 @@ Handles CompositeData, TabularData, maps, and atoms.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/jmx-url">jmx-url</h2>
+  <h2 id="clojure.contrib.jmx/jmx-url">jmx-url</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (jmx-url)
        (jmx-url overrides)
@@ -245,7 +245,7 @@ Handles CompositeData, TabularData, maps, and atoms.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/map-&gt;attribute-infos">map-&gt;attribute-infos</h2>
+  <h2 id="clojure.contrib.jmx/map-&gt;attribute-infos">map-&gt;attribute-infos</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (map-&gt;attribute-infos attr-map)
 </pre>
@@ -254,7 +254,7 @@ Handles CompositeData, TabularData, maps, and atoms.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/maybe-atomize">maybe-atomize</h2>
+  <h2 id="clojure.contrib.jmx/maybe-atomize">maybe-atomize</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (maybe-atomize k)
 </pre>
@@ -264,7 +264,7 @@ Used to simplify keys in the tabular data API.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/maybe-keywordize">maybe-keywordize</h2>
+  <h2 id="clojure.contrib.jmx/maybe-keywordize">maybe-keywordize</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (maybe-keywordize s)
 </pre>
@@ -274,7 +274,7 @@ simplify keys in the tabular data API.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/mbean">mbean</h2>
+  <h2 id="clojure.contrib.jmx/mbean">mbean</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (mbean n)
 </pre>
@@ -285,7 +285,7 @@ set to the exception thrown.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/mbean-names">mbean-names</h2>
+  <h2 id="clojure.contrib.jmx/mbean-names">mbean-names</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (mbean-names n)
 </pre>
@@ -294,7 +294,7 @@ set to the exception thrown.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/op-param-types">op-param-types</h2>
+  <h2 id="clojure.contrib.jmx/op-param-types">op-param-types</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (op-param-types n op)
 </pre>
@@ -303,7 +303,7 @@ set to the exception thrown.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/operation">operation</h2>
+  <h2 id="clojure.contrib.jmx/operation">operation</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (operation n op)
 </pre>
@@ -312,7 +312,7 @@ set to the exception thrown.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/operation-names">operation-names</h2>
+  <h2 id="clojure.contrib.jmx/operation-names">operation-names</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (operation-names n)
 </pre>
@@ -321,7 +321,7 @@ set to the exception thrown.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/operations">operations</h2>
+  <h2 id="clojure.contrib.jmx/operations">operations</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (operations n)
 </pre>
@@ -330,7 +330,7 @@ set to the exception thrown.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/raw-read">raw-read</h2>
+  <h2 id="clojure.contrib.jmx/raw-read">raw-read</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (raw-read n attr)
 </pre>
@@ -340,7 +340,7 @@ Most callers should use read.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/read">read</h2>
+  <h2 id="clojure.contrib.jmx/read">read</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Read an mbean property.</pre>
@@ -348,7 +348,7 @@ Most callers should use read.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/read-exceptions">read-exceptions</h2>
+  <h2 id="clojure.contrib.jmx/read-exceptions">read-exceptions</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Exceptions that might be thrown if you try to read an unsupported attribute.
@@ -358,7 +358,7 @@ want to swallow all exceptions.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/read-supported">read-supported</h2>
+  <h2 id="clojure.contrib.jmx/read-supported">read-supported</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (read-supported n attr)
 </pre>
@@ -369,7 +369,7 @@ indicate an unsupported operation!</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/readable?">readable?</h2>
+  <h2 id="clojure.contrib.jmx/readable?">readable?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (readable? n attr)
 </pre>
@@ -378,7 +378,7 @@ indicate an unsupported operation!</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="jmx/with-connection">with-connection</h2>
+  <h2 id="clojure.contrib.jmx/with-connection">with-connection</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-connection opts &amp; body)
 </pre>
@@ -393,9 +393,7 @@ indicate an unsupported operation!</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

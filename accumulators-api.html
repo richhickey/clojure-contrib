@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>accumulators API reference (clojure.contrib)</title>
+    <title>accumulators API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,41 +48,41 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/add">add</a>
+      <a href="#clojure.contrib.accumulators/add">add</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/add-items">add-items</a>
+      <a href="#clojure.contrib.accumulators/add-items">add-items</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/combine">combine</a>
+      <a href="#clojure.contrib.accumulators/combine">combine</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-counter">empty-counter</a>
+      <a href="#clojure.contrib.accumulators/empty-counter">empty-counter</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-counter-with-total">empty-counter-with-total</a>
+      <a href="#clojure.contrib.accumulators/empty-counter-with-total">empty-counter-with-total</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-list">empty-list</a>
+      <a href="#clojure.contrib.accumulators/empty-list">empty-list</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-map">empty-map</a>
+      <a href="#clojure.contrib.accumulators/empty-map">empty-map</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-maximum">empty-maximum</a>
+      <a href="#clojure.contrib.accumulators/empty-maximum">empty-maximum</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-mean-variance">empty-mean-variance</a>
+      <a href="#clojure.contrib.accumulators/empty-mean-variance">empty-mean-variance</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-min-max">empty-min-max</a>
+      <a href="#clojure.contrib.accumulators/empty-min-max">empty-min-max</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-minimum">empty-minimum</a>
+      <a href="#clojure.contrib.accumulators/empty-minimum">empty-minimum</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-product">empty-product</a>
+      <a href="#clojure.contrib.accumulators/empty-product">empty-product</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-queue">empty-queue</a>
+      <a href="#clojure.contrib.accumulators/empty-queue">empty-queue</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-set">empty-set</a>
+      <a href="#clojure.contrib.accumulators/empty-set">empty-set</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-string">empty-string</a>
+      <a href="#clojure.contrib.accumulators/empty-string">empty-string</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-sum">empty-sum</a>
+      <a href="#clojure.contrib.accumulators/empty-sum">empty-sum</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-tuple">empty-tuple</a>
+      <a href="#clojure.contrib.accumulators/empty-tuple">empty-tuple</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#accumulators/empty-vector">empty-vector</a>
+      <a href="#clojure.contrib.accumulators/empty-vector">empty-vector</a>
     </div>
     <br />
   </div>
@@ -103,7 +103,7 @@ accumulators.</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/add">add</h2>
+  <h2 id="clojure.contrib.accumulators/add">add</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (add acc item)
 </pre>
@@ -113,7 +113,7 @@ an item depends on the type of the accumulator.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/add-items">add-items</h2>
+  <h2 id="clojure.contrib.accumulators/add-items">add-items</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-items acc items)
 </pre>
@@ -122,7 +122,7 @@ an item depends on the type of the accumulator.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/combine">combine</h2>
+  <h2 id="clojure.contrib.accumulators/combine">combine</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (combine &amp; accs)
 </pre>
@@ -132,7 +132,7 @@ single accumulator of the same type.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-counter">empty-counter</h2>
+  <h2 id="clojure.contrib.accumulators/empty-counter">empty-counter</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty counter accumulator. Its value is a map that stores for
@@ -141,7 +141,7 @@ every item the number of times it was added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-counter-with-total">empty-counter-with-total</h2>
+  <h2 id="clojure.contrib.accumulators/empty-counter-with-total">empty-counter-with-total</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty counter-with-total accumulator. It works like the counter
@@ -151,7 +151,7 @@ value of the key :total.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-list">empty-list</h2>
+  <h2 id="clojure.contrib.accumulators/empty-list">empty-list</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty list accumulator. Adding an item appends it at the beginning.</pre>
@@ -159,7 +159,7 @@ value of the key :total.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-map">empty-map</h2>
+  <h2 id="clojure.contrib.accumulators/empty-map">empty-map</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty map accumulator. Items to be added must be [key value] pairs.</pre>
@@ -167,7 +167,7 @@ value of the key :total.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-maximum">empty-maximum</h2>
+  <h2 id="clojure.contrib.accumulators/empty-maximum">empty-maximum</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty maximum accumulator. Only numbers can be added.</pre>
@@ -175,7 +175,7 @@ value of the key :total.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-mean-variance">empty-mean-variance</h2>
+  <h2 id="clojure.contrib.accumulators/empty-mean-variance">empty-mean-variance</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty mean-variance accumulator, combining sample mean and
@@ -184,7 +184,7 @@ sample variance. Only numbers can be added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-min-max">empty-min-max</h2>
+  <h2 id="clojure.contrib.accumulators/empty-min-max">empty-min-max</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty min-max accumulator, combining minimum and maximum.
@@ -193,7 +193,7 @@ Only numbers can be added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-minimum">empty-minimum</h2>
+  <h2 id="clojure.contrib.accumulators/empty-minimum">empty-minimum</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty minimum accumulator. Only numbers can be added.</pre>
@@ -201,7 +201,7 @@ Only numbers can be added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-product">empty-product</h2>
+  <h2 id="clojure.contrib.accumulators/empty-product">empty-product</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty sum accumulator. Only numbers can be added.</pre>
@@ -209,7 +209,7 @@ Only numbers can be added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-queue">empty-queue</h2>
+  <h2 id="clojure.contrib.accumulators/empty-queue">empty-queue</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty queue accumulator. Adding an item appends it at the end.</pre>
@@ -217,7 +217,7 @@ Only numbers can be added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-set">empty-set</h2>
+  <h2 id="clojure.contrib.accumulators/empty-set">empty-set</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty set accumulator.</pre>
@@ -225,7 +225,7 @@ Only numbers can be added.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-string">empty-string</h2>
+  <h2 id="clojure.contrib.accumulators/empty-string">empty-string</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty string accumulator. Adding an item (string or character)
@@ -234,7 +234,7 @@ appends it at the end.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-sum">empty-sum</h2>
+  <h2 id="clojure.contrib.accumulators/empty-sum">empty-sum</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty sum accumulator. Only numbers can be added.</pre>
@@ -242,7 +242,7 @@ appends it at the end.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-tuple">empty-tuple</h2>
+  <h2 id="clojure.contrib.accumulators/empty-tuple">empty-tuple</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (empty-tuple empty-accumulators)
 </pre>
@@ -254,7 +254,7 @@ matches the number of sub-accumulators.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="accumulators/empty-vector">empty-vector</h2>
+  <h2 id="clojure.contrib.accumulators/empty-vector">empty-vector</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">An empty vector accumulator. Adding an item appends it at the end.</pre>
@@ -268,9 +268,7 @@ matches the number of sub-accumulators.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

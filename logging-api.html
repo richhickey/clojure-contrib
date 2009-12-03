@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>logging API reference (clojure.contrib)</title>
+    <title>logging API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,45 +48,45 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/*allow-direct-logging*">*allow-direct-logging*</a>
+      <a href="#clojure.contrib.logging/*allow-direct-logging*">*allow-direct-logging*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/*impl-name*">*impl-name*</a>
+      <a href="#clojure.contrib.logging/*impl-name*">*impl-name*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/*logging-agent*">*logging-agent*</a>
+      <a href="#clojure.contrib.logging/*logging-agent*">*logging-agent*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/agent-write!">agent-write!</a>
+      <a href="#clojure.contrib.logging/agent-write!">agent-write!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/debug">debug</a>
+      <a href="#clojure.contrib.logging/debug">debug</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/enabled?">enabled?</a>
+      <a href="#clojure.contrib.logging/enabled?">enabled?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/error">error</a>
+      <a href="#clojure.contrib.logging/error">error</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/fatal">fatal</a>
+      <a href="#clojure.contrib.logging/fatal">fatal</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/impl-enabled?">impl-enabled?</a>
+      <a href="#clojure.contrib.logging/impl-enabled?">impl-enabled?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/impl-get-log">impl-get-log</a>
+      <a href="#clojure.contrib.logging/impl-get-log">impl-get-log</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/impl-write!">impl-write!</a>
+      <a href="#clojure.contrib.logging/impl-write!">impl-write!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/info">info</a>
+      <a href="#clojure.contrib.logging/info">info</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/log">log</a>
+      <a href="#clojure.contrib.logging/log">log</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/log-capture!">log-capture!</a>
+      <a href="#clojure.contrib.logging/log-capture!">log-capture!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/log-stream">log-stream</a>
+      <a href="#clojure.contrib.logging/log-stream">log-stream</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/log-uncapture!">log-uncapture!</a>
+      <a href="#clojure.contrib.logging/log-uncapture!">log-uncapture!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/spy">spy</a>
+      <a href="#clojure.contrib.logging/spy">spy</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/trace">trace</a>
+      <a href="#clojure.contrib.logging/trace">trace</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/warn">warn</a>
+      <a href="#clojure.contrib.logging/warn">warn</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#logging/with-logs">with-logs</a>
+      <a href="#clojure.contrib.logging/with-logs">with-logs</a>
     </div>
     <br />
   </div>
@@ -137,7 +137,7 @@ needs to be specified to namespace the output.</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/*allow-direct-logging*">*allow-direct-logging*</h2>
+  <h2 id="clojure.contrib.logging/*allow-direct-logging*">*allow-direct-logging*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">A boolean indicating whether direct logging (as opposed to via an agent) is
@@ -146,7 +146,7 @@ allowed when not operating from within a transaction. Defaults to true.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/*impl-name*">*impl-name*</h2>
+  <h2 id="clojure.contrib.logging/*impl-name*">*impl-name*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The name of the logging implementation used.</pre>
@@ -154,7 +154,7 @@ allowed when not operating from within a transaction. Defaults to true.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/*logging-agent*">*logging-agent*</h2>
+  <h2 id="clojure.contrib.logging/*logging-agent*">*logging-agent*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The default agent used for performing logging durng a transaction or when
@@ -163,7 +163,7 @@ direct logging is disabled.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/agent-write!">agent-write!</h2>
+  <h2 id="clojure.contrib.logging/agent-write!">agent-write!</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (agent-write! _ log level message throwable)
 </pre>
@@ -173,7 +173,7 @@ logging agent. End-users should never need to call this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/debug">debug</h2>
+  <h2 id="clojure.contrib.logging/debug">debug</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (debug message)
        (debug message throwable)
@@ -183,7 +183,7 @@ logging agent. End-users should never need to call this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/enabled?">enabled?</h2>
+  <h2 id="clojure.contrib.logging/enabled?">enabled?</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (enabled? level)
        (enabled? level log-ns)
@@ -195,7 +195,7 @@ whether the log should be written to.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/error">error</h2>
+  <h2 id="clojure.contrib.logging/error">error</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (error message)
        (error message throwable)
@@ -205,7 +205,7 @@ whether the log should be written to.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/fatal">fatal</h2>
+  <h2 id="clojure.contrib.logging/fatal">fatal</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (fatal message)
        (fatal message throwable)
@@ -215,7 +215,7 @@ whether the log should be written to.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/impl-enabled?">impl-enabled?</h2>
+  <h2 id="clojure.contrib.logging/impl-enabled?">impl-enabled?</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Implementation-specific check if a particular level is enabled. End-users
@@ -224,7 +224,7 @@ should not need to call this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/impl-get-log">impl-get-log</h2>
+  <h2 id="clojure.contrib.logging/impl-get-log">impl-get-log</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Returns an implementation-specific log by string namespace. End-users should
@@ -233,7 +233,7 @@ not need to call this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/impl-write!">impl-write!</h2>
+  <h2 id="clojure.contrib.logging/impl-write!">impl-write!</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Implementation-specific write of a log message. End-users should not need to
@@ -242,7 +242,7 @@ call this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/info">info</h2>
+  <h2 id="clojure.contrib.logging/info">info</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (info message)
        (info message throwable)
@@ -252,7 +252,7 @@ call this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/log">log</h2>
+  <h2 id="clojure.contrib.logging/log">log</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (log level message)
        (log level message throwable)
@@ -264,7 +264,7 @@ convenience macros.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/log-capture!">log-capture!</h2>
+  <h2 id="clojure.contrib.logging/log-capture!">log-capture!</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (log-capture! log-ns)
 </pre>
@@ -276,7 +276,7 @@ output of *out* or *err*; for that, use with-logs.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/log-stream">log-stream</h2>
+  <h2 id="clojure.contrib.logging/log-stream">log-stream</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (log-stream level log-ns)
 </pre>
@@ -286,7 +286,7 @@ to invoke this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/log-uncapture!">log-uncapture!</h2>
+  <h2 id="clojure.contrib.logging/log-uncapture!">log-uncapture!</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (log-uncapture!)
 </pre>
@@ -295,7 +295,7 @@ to invoke this function.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/spy">spy</h2>
+  <h2 id="clojure.contrib.logging/spy">spy</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (spy expr)
 </pre>
@@ -305,7 +305,7 @@ the result of expr.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/trace">trace</h2>
+  <h2 id="clojure.contrib.logging/trace">trace</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (trace message)
        (trace message throwable)
@@ -315,7 +315,7 @@ the result of expr.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/warn">warn</h2>
+  <h2 id="clojure.contrib.logging/warn">warn</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (warn message)
        (warn message throwable)
@@ -325,7 +325,7 @@ the result of expr.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="logging/with-logs">with-logs</h2>
+  <h2 id="clojure.contrib.logging/with-logs">with-logs</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-logs log-ns &amp; body)
 </pre>
@@ -342,9 +342,7 @@ namespace all redirected logging.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

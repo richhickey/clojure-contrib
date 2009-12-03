@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>pprint API reference (clojure.contrib)</title>
+    <title>pprint API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,81 +48,81 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*code-dispatch*">*code-dispatch*</a>
+      <a href="#clojure.contrib.pprint/*code-dispatch*">*code-dispatch*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-base*">*print-base*</a>
+      <a href="#clojure.contrib.pprint/*print-base*">*print-base*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-circle*">*print-circle*</a>
+      <a href="#clojure.contrib.pprint/*print-circle*">*print-circle*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-lines*">*print-lines*</a>
+      <a href="#clojure.contrib.pprint/*print-lines*">*print-lines*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-miser-width*">*print-miser-width*</a>
+      <a href="#clojure.contrib.pprint/*print-miser-width*">*print-miser-width*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-pprint-dispatch*">*print-pprint-dispatch*</a>
+      <a href="#clojure.contrib.pprint/*print-pprint-dispatch*">*print-pprint-dispatch*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-pretty*">*print-pretty*</a>
+      <a href="#clojure.contrib.pprint/*print-pretty*">*print-pretty*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-radix*">*print-radix*</a>
+      <a href="#clojure.contrib.pprint/*print-radix*">*print-radix*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-right-margin*">*print-right-margin*</a>
+      <a href="#clojure.contrib.pprint/*print-right-margin*">*print-right-margin*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-shared*">*print-shared*</a>
+      <a href="#clojure.contrib.pprint/*print-shared*">*print-shared*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*print-suppress-namespaces*">*print-suppress-namespaces*</a>
+      <a href="#clojure.contrib.pprint/*print-suppress-namespaces*">*print-suppress-namespaces*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/*simple-dispatch*">*simple-dispatch*</a>
+      <a href="#clojure.contrib.pprint/*simple-dispatch*">*simple-dispatch*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/cl-format">cl-format</a>
+      <a href="#clojure.contrib.pprint/cl-format">cl-format</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/compile-format">compile-format</a>
+      <a href="#clojure.contrib.pprint/compile-format">compile-format</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/formatter">formatter</a>
+      <a href="#clojure.contrib.pprint/formatter">formatter</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/formatter-out">formatter-out</a>
+      <a href="#clojure.contrib.pprint/formatter-out">formatter-out</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/fresh-line">fresh-line</a>
+      <a href="#clojure.contrib.pprint/fresh-line">fresh-line</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/pp">pp</a>
+      <a href="#clojure.contrib.pprint/pp">pp</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/pprint">pprint</a>
+      <a href="#clojure.contrib.pprint/pprint">pprint</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/pprint-indent">pprint-indent</a>
+      <a href="#clojure.contrib.pprint/pprint-indent">pprint-indent</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/pprint-logical-block">pprint-logical-block</a>
+      <a href="#clojure.contrib.pprint/pprint-logical-block">pprint-logical-block</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/pprint-newline">pprint-newline</a>
+      <a href="#clojure.contrib.pprint/pprint-newline">pprint-newline</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/pprint-tab">pprint-tab</a>
+      <a href="#clojure.contrib.pprint/pprint-tab">pprint-tab</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/set-pprint-dispatch">set-pprint-dispatch</a>
+      <a href="#clojure.contrib.pprint/set-pprint-dispatch">set-pprint-dispatch</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/use-method">use-method</a>
+      <a href="#clojure.contrib.pprint/use-method">use-method</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/with-pprint-dispatch">with-pprint-dispatch</a>
+      <a href="#clojure.contrib.pprint/with-pprint-dispatch">with-pprint-dispatch</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/write">write</a>
+      <a href="#clojure.contrib.pprint/write">write</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint/write-out">write-out</a>
+      <a href="#clojure.contrib.pprint/write-out">write-out</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#pprint.examples.json">pprint.examples.json</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint.examples.json/dispatch-json">dispatch-json</a>
+      <a href="#clojure.contrib.pprint.examples.json/dispatch-json">dispatch-json</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint.examples.json/json-str">json-str</a>
+      <a href="#clojure.contrib.pprint.examples.json/json-str">json-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint.examples.json/print-json">print-json</a>
+      <a href="#clojure.contrib.pprint.examples.json/print-json">print-json</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#pprint.examples.xml">pprint.examples.xml</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint.examples.xml/*html-compatible*">*html-compatible*</a>
+      <a href="#clojure.contrib.pprint.examples.xml/*html-compatible*">*html-compatible*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint.examples.xml/*prxml-indent*">*prxml-indent*</a>
+      <a href="#clojure.contrib.pprint.examples.xml/*prxml-indent*">*prxml-indent*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#pprint.examples.xml/prxml">prxml</a>
+      <a href="#clojure.contrib.pprint.examples.xml/prxml">prxml</a>
     </div>
     <br />
   </div>
@@ -156,7 +156,7 @@ documentation on the the clojure-contrib web site on github.</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*code-dispatch*">*code-dispatch*</h2>
+  <h2 id="clojure.contrib.pprint/*code-dispatch*">*code-dispatch*</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (*code-dispatch* object)
 </pre>
@@ -165,7 +165,7 @@ documentation on the the clojure-contrib web site on github.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-base*">*print-base*</h2>
+  <h2 id="clojure.contrib.pprint/*print-base*">*print-base*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The base to use for printing integers and rationals.</pre>
@@ -173,7 +173,7 @@ documentation on the the clojure-contrib web site on github.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-circle*">*print-circle*</h2>
+  <h2 id="clojure.contrib.pprint/*print-circle*">*print-circle*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Mark circular structures (N.B. This is not yet used)</pre>
@@ -181,7 +181,7 @@ documentation on the the clojure-contrib web site on github.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-lines*">*print-lines*</h2>
+  <h2 id="clojure.contrib.pprint/*print-lines*">*print-lines*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Maximum number of lines to print in a pretty print instance (N.B. This is not yet used)</pre>
@@ -189,7 +189,7 @@ documentation on the the clojure-contrib web site on github.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-miser-width*">*print-miser-width*</h2>
+  <h2 id="clojure.contrib.pprint/*print-miser-width*">*print-miser-width*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The column at which to enter miser style. Depending on the dispatch table, 
@@ -199,7 +199,7 @@ levels of nesting.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-pprint-dispatch*">*print-pprint-dispatch*</h2>
+  <h2 id="clojure.contrib.pprint/*print-pprint-dispatch*">*print-pprint-dispatch*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The pretty print dispatch function. Use with-pprint-dispatch or set-pprint-dispatch
@@ -208,7 +208,7 @@ to modify.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-pretty*">*print-pretty*</h2>
+  <h2 id="clojure.contrib.pprint/*print-pretty*">*print-pretty*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Bind to true if you want write to use pretty printing</pre>
@@ -216,7 +216,7 @@ to modify.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-radix*">*print-radix*</h2>
+  <h2 id="clojure.contrib.pprint/*print-radix*">*print-radix*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8, 
@@ -226,7 +226,7 @@ radix specifier is in the form #XXr where XX is the decimal value of *print-base
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-right-margin*">*print-right-margin*</h2>
+  <h2 id="clojure.contrib.pprint/*print-right-margin*">*print-right-margin*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Pretty printing will try to avoid anything going beyond this column.
@@ -236,7 +236,7 @@ non-mandatory newlines.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-shared*">*print-shared*</h2>
+  <h2 id="clojure.contrib.pprint/*print-shared*">*print-shared*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Mark repeated structures rather than repeat them (N.B. This is not yet used)</pre>
@@ -244,7 +244,7 @@ non-mandatory newlines.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*print-suppress-namespaces*">*print-suppress-namespaces*</h2>
+  <h2 id="clojure.contrib.pprint/*print-suppress-namespaces*">*print-suppress-namespaces*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Don't print namespaces with symbols. This is particularly useful when 
@@ -253,7 +253,7 @@ pretty printing the results of macro expansions</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/*simple-dispatch*">*simple-dispatch*</h2>
+  <h2 id="clojure.contrib.pprint/*simple-dispatch*">*simple-dispatch*</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (*simple-dispatch* object)
 </pre>
@@ -262,7 +262,7 @@ pretty printing the results of macro expansions</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/cl-format">cl-format</h2>
+  <h2 id="clojure.contrib.pprint/cl-format">cl-format</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (cl-format writer format-in &amp; args)
 </pre>
@@ -297,7 +297,7 @@ and in the Common Lisp HyperSpec at
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/compile-format">compile-format</h2>
+  <h2 id="clojure.contrib.pprint/compile-format">compile-format</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (compile-format format-str)
 </pre>
@@ -308,7 +308,7 @@ performance when you're using the same format string repeatedly</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/formatter">formatter</h2>
+  <h2 id="clojure.contrib.pprint/formatter">formatter</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (formatter format-in)
 </pre>
@@ -321,7 +321,7 @@ format-in can be either a control string or a previously compiled format.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/formatter-out">formatter-out</h2>
+  <h2 id="clojure.contrib.pprint/formatter-out">formatter-out</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (formatter-out format-in)
 </pre>
@@ -335,7 +335,7 @@ format-in can be either a control string or a previously compiled format.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/fresh-line">fresh-line</h2>
+  <h2 id="clojure.contrib.pprint/fresh-line">fresh-line</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (fresh-line)
 </pre>
@@ -345,7 +345,7 @@ N.B. Only works on ColumnWriters right now.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/pp">pp</h2>
+  <h2 id="clojure.contrib.pprint/pp">pp</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (pp)
 </pre>
@@ -355,7 +355,7 @@ exactly equivalent to (pprint *1).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/pprint">pprint</h2>
+  <h2 id="clojure.contrib.pprint/pprint">pprint</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (pprint object)
        (pprint object writer)
@@ -366,7 +366,7 @@ print the object to the currently bound value of *out*.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/pprint-indent">pprint-indent</h2>
+  <h2 id="clojure.contrib.pprint/pprint-indent">pprint-indent</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (pprint-indent relative-to n)
 </pre>
@@ -380,7 +380,7 @@ Output is sent to *out* which must be a pretty printing writer.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/pprint-logical-block">pprint-logical-block</h2>
+  <h2 id="clojure.contrib.pprint/pprint-logical-block">pprint-logical-block</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (pprint-logical-block options* body)
 </pre>
@@ -394,7 +394,7 @@ and :suffix.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/pprint-newline">pprint-newline</h2>
+  <h2 id="clojure.contrib.pprint/pprint-newline">pprint-newline</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (pprint-newline kind)
 </pre>
@@ -406,7 +406,7 @@ Output is sent to *out* which must be a pretty printing writer.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/pprint-tab">pprint-tab</h2>
+  <h2 id="clojure.contrib.pprint/pprint-tab">pprint-tab</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (pprint-tab kind colnum colinc)
 </pre>
@@ -423,7 +423,7 @@ THIS FUNCTION IS NOT YET IMPLEMENTED.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/set-pprint-dispatch">set-pprint-dispatch</h2>
+  <h2 id="clojure.contrib.pprint/set-pprint-dispatch">set-pprint-dispatch</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (set-pprint-dispatch function)
 </pre>
@@ -437,7 +437,7 @@ clojure.contrib.pprint.dispatch.clj.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/use-method">use-method</h2>
+  <h2 id="clojure.contrib.pprint/use-method">use-method</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (use-method multifn dispatch-val func)
 </pre>
@@ -446,7 +446,7 @@ clojure.contrib.pprint.dispatch.clj.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/with-pprint-dispatch">with-pprint-dispatch</h2>
+  <h2 id="clojure.contrib.pprint/with-pprint-dispatch">with-pprint-dispatch</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-pprint-dispatch function &amp; body)
 </pre>
@@ -455,7 +455,7 @@ clojure.contrib.pprint.dispatch.clj.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/write">write</h2>
+  <h2 id="clojure.contrib.pprint/write">write</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (write object &amp; kw-args)
 </pre>
@@ -484,7 +484,7 @@ The following keyword arguments can be passed with values:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="pprint/write-out">write-out</h2>
+  <h2 id="clojure.contrib.pprint/write-out">write-out</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (write-out object)
 </pre>
@@ -511,7 +511,7 @@ This is an example of using a pretty printer dispatch function to generate JSON 
 </span><br />
 <div id="var-entry">
   <hr />
-  <h2 id="pprint.examples.json/dispatch-json">dispatch-json</h2>
+  <h2 id="clojure.contrib.pprint.examples.json/dispatch-json">dispatch-json</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (dispatch-json x)
 </pre>
@@ -519,7 +519,7 @@ This is an example of using a pretty printer dispatch function to generate JSON 
   <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj#L28" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="pprint.examples.json/json-str">json-str</h2>
+  <h2 id="clojure.contrib.pprint.examples.json/json-str">json-str</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (json-str x)
 </pre>
@@ -527,7 +527,7 @@ This is an example of using a pretty printer dispatch function to generate JSON 
   <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj#L96" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="pprint.examples.json/print-json">print-json</h2>
+  <h2 id="clojure.contrib.pprint.examples.json/print-json">print-json</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (print-json x)
 </pre>
@@ -543,21 +543,21 @@ Numbers print as with pr.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="pprint.examples.xml/*html-compatible*">*html-compatible*</h2>
+  <h2 id="clojure.contrib.pprint.examples.xml/*html-compatible*">*html-compatible*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">If true, empty tags will have a space before the closing /&gt;</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/2f7ddf7205bbd47ace5d2240c66a4686de18d7e7/src/clojure/contrib/pprint/examples/xml.clj#L27" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="pprint.examples.xml/*prxml-indent*">*prxml-indent*</h2>
+  <h2 id="clojure.contrib.pprint.examples.xml/*prxml-indent*">*prxml-indent*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The number of spaces to indent sub-tags.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/2f7ddf7205bbd47ace5d2240c66a4686de18d7e7/src/clojure/contrib/pprint/examples/xml.clj#L31" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="pprint.examples.xml/prxml">prxml</h2>
+  <h2 id="clojure.contrib.pprint.examples.xml/prxml">prxml</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (prxml &amp; args)
 </pre>
@@ -593,9 +593,7 @@ PSEUDO-TAGS: some keywords have special meaning:
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

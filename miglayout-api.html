@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>miglayout API reference (clojure.contrib)</title>
+    <title>miglayout API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,51 +48,51 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout/components">components</a>
+      <a href="#clojure.contrib.miglayout/components">components</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout/miglayout">miglayout</a>
+      <a href="#clojure.contrib.miglayout/miglayout">miglayout</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#miglayout.example">miglayout.example</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.example/converter-ui">converter-ui</a>
+      <a href="#clojure.contrib.miglayout.example/converter-ui">converter-ui</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.example/fahrenheit">fahrenheit</a>
+      <a href="#clojure.contrib.miglayout.example/fahrenheit">fahrenheit</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.example/main">main</a>
+      <a href="#clojure.contrib.miglayout.example/main">main</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#miglayout.internal">miglayout.internal</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/add-components">add-components</a>
+      <a href="#clojure.contrib.miglayout.internal/add-components">add-components</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/component?">component?</a>
+      <a href="#clojure.contrib.miglayout.internal/component?">component?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/constraint?">constraint?</a>
+      <a href="#clojure.contrib.miglayout.internal/constraint?">constraint?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/do-layout">do-layout</a>
+      <a href="#clojure.contrib.miglayout.internal/do-layout">do-layout</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/format-constraint">format-constraint</a>
+      <a href="#clojure.contrib.miglayout.internal/format-constraint">format-constraint</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/format-constraints">format-constraints</a>
+      <a href="#clojure.contrib.miglayout.internal/format-constraints">format-constraints</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/get-components">get-components</a>
+      <a href="#clojure.contrib.miglayout.internal/get-components">get-components</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/parse-component-constraint">parse-component-constraint</a>
+      <a href="#clojure.contrib.miglayout.internal/parse-component-constraint">parse-component-constraint</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.internal/parse-item-constraints">parse-item-constraints</a>
+      <a href="#clojure.contrib.miglayout.internal/parse-item-constraints">parse-item-constraints</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#miglayout.test">miglayout.test</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.test/label">label</a>
+      <a href="#clojure.contrib.miglayout.test/label">label</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.test/sep">sep</a>
+      <a href="#clojure.contrib.miglayout.test/sep">sep</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#miglayout.test/text-field">text-field</a>
+      <a href="#clojure.contrib.miglayout.test/text-field">text-field</a>
     </div>
     <br />
   </div>
@@ -118,7 +118,7 @@ Example:
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="miglayout/components">components</h2>
+  <h2 id="clojure.contrib.miglayout/components">components</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (components container)
 </pre>
@@ -128,7 +128,7 @@ an id constraint set</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="miglayout/miglayout">miglayout</h2>
+  <h2 id="clojure.contrib.miglayout/miglayout">miglayout</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (miglayout container &amp; args)
 </pre>
@@ -170,7 +170,7 @@ clojure.contrib.miglayout/components.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="miglayout.example/converter-ui">converter-ui</h2>
+  <h2 id="clojure.contrib.miglayout.example/converter-ui">converter-ui</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (converter-ui)
 </pre>
@@ -178,7 +178,7 @@ clojure.contrib.miglayout/components.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/df27c0a710440e2fef44f799dc5933f29ced44e1/src/clojure/contrib/miglayout/example.clj#L40" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.example/fahrenheit">fahrenheit</h2>
+  <h2 id="clojure.contrib.miglayout.example/fahrenheit">fahrenheit</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (fahrenheit celsius)
 </pre>
@@ -187,7 +187,7 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/df27c0a710440e2fef44f799dc5933f29ced44e1/src/clojure/contrib/miglayout/example.clj#L24" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.example/main">main</h2>
+  <h2 id="clojure.contrib.miglayout.example/main">main</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (main)
 </pre>
@@ -199,7 +199,7 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/add-components">add-components</h2>
+  <h2 id="clojure.contrib.miglayout.internal/add-components">add-components</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (add-components container components)
 </pre>
@@ -207,7 +207,7 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L94" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/component?">component?</h2>
+  <h2 id="clojure.contrib.miglayout.internal/component?">component?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (component? x)
 </pre>
@@ -215,7 +215,7 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L59" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/constraint?">constraint?</h2>
+  <h2 id="clojure.contrib.miglayout.internal/constraint?">constraint?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (constraint? x)
 </pre>
@@ -223,7 +223,7 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L64" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/do-layout">do-layout</h2>
+  <h2 id="clojure.contrib.miglayout.internal/do-layout">do-layout</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (do-layout container layout column row components)
 </pre>
@@ -232,7 +232,7 @@ with constraints</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L114" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/format-constraint">format-constraint</h2>
+  <h2 id="clojure.contrib.miglayout.internal/format-constraint">format-constraint</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (format-constraint c)
 </pre>
@@ -242,7 +242,7 @@ strings, keywords, vectors, maps, and/or sets.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L32" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/format-constraints">format-constraints</h2>
+  <h2 id="clojure.contrib.miglayout.internal/format-constraints">format-constraints</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (format-constraints &amp; constraints)
 </pre>
@@ -251,7 +251,7 @@ or component formatted for miglayout.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L47" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/get-components">get-components</h2>
+  <h2 id="clojure.contrib.miglayout.internal/get-components">get-components</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-components container)
 </pre>
@@ -259,7 +259,7 @@ or component formatted for miglayout.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L109" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/parse-component-constraint">parse-component-constraint</h2>
+  <h2 id="clojure.contrib.miglayout.internal/parse-component-constraint">parse-component-constraint</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (parse-component-constraint constraint)
 </pre>
@@ -267,7 +267,7 @@ or component formatted for miglayout.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj#L88" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.internal/parse-item-constraints">parse-item-constraints</h2>
+  <h2 id="clojure.contrib.miglayout.internal/parse-item-constraints">parse-item-constraints</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (parse-item-constraints &amp; args)
 </pre>
@@ -282,7 +282,7 @@ vectors each associating a component with its constraints string.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="miglayout.test/label">label</h2>
+  <h2 id="clojure.contrib.miglayout.test/label">label</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (label text)
 </pre>
@@ -290,7 +290,7 @@ vectors each associating a component with its constraints string.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/test.clj#L32" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.test/sep">sep</h2>
+  <h2 id="clojure.contrib.miglayout.test/sep">sep</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (sep)
 </pre>
@@ -298,7 +298,7 @@ vectors each associating a component with its constraints string.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/test.clj#L43" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="miglayout.test/text-field">text-field</h2>
+  <h2 id="clojure.contrib.miglayout.test/text-field">text-field</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (text-field)
        (text-field width)
@@ -314,9 +314,7 @@ vectors each associating a component with its constraints string.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

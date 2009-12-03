@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>sql API reference (clojure.contrib)</title>
+    <title>sql API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,105 +48,105 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/connection">connection</a>
+      <a href="#clojure.contrib.sql/connection">connection</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/create-table">create-table</a>
+      <a href="#clojure.contrib.sql/create-table">create-table</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/delete-rows">delete-rows</a>
+      <a href="#clojure.contrib.sql/delete-rows">delete-rows</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/do-commands">do-commands</a>
+      <a href="#clojure.contrib.sql/do-commands">do-commands</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/do-prepared">do-prepared</a>
+      <a href="#clojure.contrib.sql/do-prepared">do-prepared</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/drop-table">drop-table</a>
+      <a href="#clojure.contrib.sql/drop-table">drop-table</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/find-connection">find-connection</a>
+      <a href="#clojure.contrib.sql/find-connection">find-connection</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/insert-records">insert-records</a>
+      <a href="#clojure.contrib.sql/insert-records">insert-records</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/insert-rows">insert-rows</a>
+      <a href="#clojure.contrib.sql/insert-rows">insert-rows</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/insert-values">insert-values</a>
+      <a href="#clojure.contrib.sql/insert-values">insert-values</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/is-rollback-only">is-rollback-only</a>
+      <a href="#clojure.contrib.sql/is-rollback-only">is-rollback-only</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/set-rollback-only">set-rollback-only</a>
+      <a href="#clojure.contrib.sql/set-rollback-only">set-rollback-only</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/transaction">transaction</a>
+      <a href="#clojure.contrib.sql/transaction">transaction</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/update-or-insert-values">update-or-insert-values</a>
+      <a href="#clojure.contrib.sql/update-or-insert-values">update-or-insert-values</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/update-values">update-values</a>
+      <a href="#clojure.contrib.sql/update-values">update-values</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/with-connection">with-connection</a>
+      <a href="#clojure.contrib.sql/with-connection">with-connection</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql/with-query-results">with-query-results</a>
+      <a href="#clojure.contrib.sql/with-query-results">with-query-results</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#sql.internal">sql.internal</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/connection*">connection*</a>
+      <a href="#clojure.contrib.sql.internal/connection*">connection*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/find-connection*">find-connection*</a>
+      <a href="#clojure.contrib.sql.internal/find-connection*">find-connection*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/get-connection">get-connection</a>
+      <a href="#clojure.contrib.sql.internal/get-connection">get-connection</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/print-sql-exception">print-sql-exception</a>
+      <a href="#clojure.contrib.sql.internal/print-sql-exception">print-sql-exception</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/print-sql-exception-chain">print-sql-exception-chain</a>
+      <a href="#clojure.contrib.sql.internal/print-sql-exception-chain">print-sql-exception-chain</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/print-update-counts">print-update-counts</a>
+      <a href="#clojure.contrib.sql.internal/print-update-counts">print-update-counts</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/rollback">rollback</a>
+      <a href="#clojure.contrib.sql.internal/rollback">rollback</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/throw-rollback">throw-rollback</a>
+      <a href="#clojure.contrib.sql.internal/throw-rollback">throw-rollback</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/transaction*">transaction*</a>
+      <a href="#clojure.contrib.sql.internal/transaction*">transaction*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/with-connection*">with-connection*</a>
+      <a href="#clojure.contrib.sql.internal/with-connection*">with-connection*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.internal/with-query-results*">with-query-results*</a>
+      <a href="#clojure.contrib.sql.internal/with-query-results*">with-query-results*</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#sql.test">sql.test</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/create-fruit">create-fruit</a>
+      <a href="#clojure.contrib.sql.test/create-fruit">create-fruit</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-batchupdate-exception">db-batchupdate-exception</a>
+      <a href="#clojure.contrib.sql.test/db-batchupdate-exception">db-batchupdate-exception</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-exception">db-exception</a>
+      <a href="#clojure.contrib.sql.test/db-exception">db-exception</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-get-tables">db-get-tables</a>
+      <a href="#clojure.contrib.sql.test/db-get-tables">db-get-tables</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-grade-a">db-grade-a</a>
+      <a href="#clojure.contrib.sql.test/db-grade-a">db-grade-a</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-grade-range">db-grade-range</a>
+      <a href="#clojure.contrib.sql.test/db-grade-range">db-grade-range</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-read">db-read</a>
+      <a href="#clojure.contrib.sql.test/db-read">db-read</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-read-all">db-read-all</a>
+      <a href="#clojure.contrib.sql.test/db-read-all">db-read-all</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-rollback">db-rollback</a>
+      <a href="#clojure.contrib.sql.test/db-rollback">db-rollback</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-sql-exception">db-sql-exception</a>
+      <a href="#clojure.contrib.sql.test/db-sql-exception">db-sql-exception</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-update">db-update</a>
+      <a href="#clojure.contrib.sql.test/db-update">db-update</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-update-appearance-cost">db-update-appearance-cost</a>
+      <a href="#clojure.contrib.sql.test/db-update-appearance-cost">db-update-appearance-cost</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-update-or-insert">db-update-or-insert</a>
+      <a href="#clojure.contrib.sql.test/db-update-or-insert">db-update-or-insert</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/db-write">db-write</a>
+      <a href="#clojure.contrib.sql.test/db-write">db-write</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/drop-fruit">drop-fruit</a>
+      <a href="#clojure.contrib.sql.test/drop-fruit">drop-fruit</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/insert-records-fruit">insert-records-fruit</a>
+      <a href="#clojure.contrib.sql.test/insert-records-fruit">insert-records-fruit</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/insert-rows-fruit">insert-rows-fruit</a>
+      <a href="#clojure.contrib.sql.test/insert-rows-fruit">insert-rows-fruit</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#sql.test/insert-values-fruit">insert-values-fruit</a>
+      <a href="#clojure.contrib.sql.test/insert-values-fruit">insert-values-fruit</a>
     </div>
     <br />
   </div>
@@ -172,7 +172,7 @@ See clojure.contrib.sql.test for an example</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/connection">connection</h2>
+  <h2 id="clojure.contrib.sql/connection">connection</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (connection)
 </pre>
@@ -181,7 +181,7 @@ See clojure.contrib.sql.test for an example</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/create-table">create-table</h2>
+  <h2 id="clojure.contrib.sql/create-table">create-table</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (create-table name &amp; specs)
 </pre>
@@ -194,7 +194,7 @@ words used to describe the table may be supplied as strings or keywords.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/delete-rows">delete-rows</h2>
+  <h2 id="clojure.contrib.sql/delete-rows">delete-rows</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (delete-rows table where-params)
 </pre>
@@ -205,7 +205,7 @@ values for any parameters.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/do-commands">do-commands</h2>
+  <h2 id="clojure.contrib.sql/do-commands">do-commands</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (do-commands &amp; commands)
 </pre>
@@ -214,7 +214,7 @@ values for any parameters.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/do-prepared">do-prepared</h2>
+  <h2 id="clojure.contrib.sql/do-prepared">do-prepared</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (do-prepared sql &amp; param-groups)
 </pre>
@@ -225,7 +225,7 @@ the parameters.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/drop-table">drop-table</h2>
+  <h2 id="clojure.contrib.sql/drop-table">drop-table</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (drop-table name)
 </pre>
@@ -235,7 +235,7 @@ or keyword</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/find-connection">find-connection</h2>
+  <h2 id="clojure.contrib.sql/find-connection">find-connection</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-connection)
 </pre>
@@ -244,7 +244,7 @@ or keyword</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/insert-records">insert-records</h2>
+  <h2 id="clojure.contrib.sql/insert-records">insert-records</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (insert-records table &amp; records)
 </pre>
@@ -254,7 +254,7 @@ keywords (identifying columns) to values.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/insert-rows">insert-rows</h2>
+  <h2 id="clojure.contrib.sql/insert-rows">insert-rows</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (insert-rows table &amp; rows)
 </pre>
@@ -264,7 +264,7 @@ each of the table's columns in order.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/insert-values">insert-values</h2>
+  <h2 id="clojure.contrib.sql/insert-values">insert-values</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (insert-values table column-names &amp; value-groups)
 </pre>
@@ -277,7 +277,7 @@ insert-rows instead.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/is-rollback-only">is-rollback-only</h2>
+  <h2 id="clojure.contrib.sql/is-rollback-only">is-rollback-only</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (is-rollback-only)
 </pre>
@@ -287,7 +287,7 @@ commit when complete</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/set-rollback-only">set-rollback-only</h2>
+  <h2 id="clojure.contrib.sql/set-rollback-only">set-rollback-only</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (set-rollback-only)
 </pre>
@@ -297,7 +297,7 @@ commit when complete</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/transaction">transaction</h2>
+  <h2 id="clojure.contrib.sql/transaction">transaction</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (transaction &amp; body)
 </pre>
@@ -312,7 +312,7 @@ committed when complete.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/update-or-insert-values">update-or-insert-values</h2>
+  <h2 id="clojure.contrib.sql/update-or-insert-values">update-or-insert-values</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (update-or-insert-values table where-params record)
 </pre>
@@ -325,7 +325,7 @@ strings or keywords (identifying columns) to updated values.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/update-values">update-values</h2>
+  <h2 id="clojure.contrib.sql/update-values">update-values</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (update-values table where-params record)
 </pre>
@@ -337,7 +337,7 @@ strings or keywords (identifying columns) to updated values.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/with-connection">with-connection</h2>
+  <h2 id="clojure.contrib.sql/with-connection">with-connection</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-connection db-spec &amp; body)
 </pre>
@@ -363,7 +363,7 @@ JNDI:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="sql/with-query-results">with-query-results</h2>
+  <h2 id="clojure.contrib.sql/with-query-results">with-query-results</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-query-results results sql-params &amp; body)
 </pre>
@@ -378,7 +378,7 @@ parameters.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="sql.internal/connection*">connection*</h2>
+  <h2 id="clojure.contrib.sql.internal/connection*">connection*</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (connection*)
 </pre>
@@ -386,7 +386,7 @@ parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L38" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/find-connection*">find-connection*</h2>
+  <h2 id="clojure.contrib.sql.internal/find-connection*">find-connection*</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-connection*)
 </pre>
@@ -394,7 +394,7 @@ parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L33" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/get-connection">get-connection</h2>
+  <h2 id="clojure.contrib.sql.internal/get-connection">get-connection</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-connection {:keys [classname subprotocol subname datasource username password name environment], :as db-spec})
 </pre>
@@ -418,7 +418,7 @@ JNDI:
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L51" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/print-sql-exception">print-sql-exception</h2>
+  <h2 id="clojure.contrib.sql.internal/print-sql-exception">print-sql-exception</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (print-sql-exception stream exception)
 </pre>
@@ -426,7 +426,7 @@ JNDI:
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L100" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/print-sql-exception-chain">print-sql-exception-chain</h2>
+  <h2 id="clojure.contrib.sql.internal/print-sql-exception-chain">print-sql-exception-chain</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (print-sql-exception-chain stream exception)
 </pre>
@@ -434,7 +434,7 @@ JNDI:
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L114" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/print-update-counts">print-update-counts</h2>
+  <h2 id="clojure.contrib.sql.internal/print-update-counts">print-update-counts</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (print-update-counts stream exception)
 </pre>
@@ -442,7 +442,7 @@ JNDI:
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L122" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/rollback">rollback</h2>
+  <h2 id="clojure.contrib.sql.internal/rollback">rollback</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (rollback)
        (rollback val)
@@ -451,7 +451,7 @@ JNDI:
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L44" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/throw-rollback">throw-rollback</h2>
+  <h2 id="clojure.contrib.sql.internal/throw-rollback">throw-rollback</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (throw-rollback e)
 </pre>
@@ -459,7 +459,7 @@ JNDI:
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L131" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/transaction*">transaction*</h2>
+  <h2 id="clojure.contrib.sql.internal/transaction*">transaction*</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (transaction* func)
 </pre>
@@ -473,7 +473,7 @@ complete.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L137" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/with-connection*">with-connection*</h2>
+  <h2 id="clojure.contrib.sql.internal/with-connection*">with-connection*</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (with-connection* db-spec func)
 </pre>
@@ -482,7 +482,7 @@ closes the connection.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L91" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.internal/with-query-results*">with-query-results*</h2>
+  <h2 id="clojure.contrib.sql.internal/with-query-results*">with-query-results*</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (with-query-results* [sql &amp; params :as sql-params] func)
 </pre>
@@ -496,7 +496,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="sql.test/create-fruit">create-fruit</h2>
+  <h2 id="clojure.contrib.sql.test/create-fruit">create-fruit</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (create-fruit)
 </pre>
@@ -504,7 +504,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L24" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-batchupdate-exception">db-batchupdate-exception</h2>
+  <h2 id="clojure.contrib.sql.test/db-batchupdate-exception">db-batchupdate-exception</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-batchupdate-exception)
 </pre>
@@ -512,7 +512,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L177" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-exception">db-exception</h2>
+  <h2 id="clojure.contrib.sql.test/db-exception">db-exception</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-exception)
 </pre>
@@ -520,7 +520,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L150" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-get-tables">db-get-tables</h2>
+  <h2 id="clojure.contrib.sql.test/db-get-tables">db-get-tables</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-get-tables)
 </pre>
@@ -528,7 +528,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L140" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-grade-a">db-grade-a</h2>
+  <h2 id="clojure.contrib.sql.test/db-grade-a">db-grade-a</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-grade-a)
 </pre>
@@ -536,7 +536,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L135" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-grade-range">db-grade-range</h2>
+  <h2 id="clojure.contrib.sql.test/db-grade-range">db-grade-range</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-grade-range min max)
 </pre>
@@ -544,7 +544,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L123" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-read">db-read</h2>
+  <h2 id="clojure.contrib.sql.test/db-read">db-read</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-read)
 </pre>
@@ -552,7 +552,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L80" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-read-all">db-read-all</h2>
+  <h2 id="clojure.contrib.sql.test/db-read-all">db-read-all</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-read-all)
 </pre>
@@ -560,7 +560,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L115" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-rollback">db-rollback</h2>
+  <h2 id="clojure.contrib.sql.test/db-rollback">db-rollback</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-rollback)
 </pre>
@@ -568,7 +568,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L186" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-sql-exception">db-sql-exception</h2>
+  <h2 id="clojure.contrib.sql.test/db-sql-exception">db-sql-exception</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-sql-exception)
 </pre>
@@ -576,7 +576,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L165" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-update">db-update</h2>
+  <h2 id="clojure.contrib.sql.test/db-update">db-update</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-update)
 </pre>
@@ -584,7 +584,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L97" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-update-appearance-cost">db-update-appearance-cost</h2>
+  <h2 id="clojure.contrib.sql.test/db-update-appearance-cost">db-update-appearance-cost</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-update-appearance-cost name appearance cost)
 </pre>
@@ -592,7 +592,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L89" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-update-or-insert">db-update-or-insert</h2>
+  <h2 id="clojure.contrib.sql.test/db-update-or-insert">db-update-or-insert</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-update-or-insert record)
 </pre>
@@ -600,7 +600,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L106" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/db-write">db-write</h2>
+  <h2 id="clojure.contrib.sql.test/db-write">db-write</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (db-write)
 </pre>
@@ -608,7 +608,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L68" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/drop-fruit">drop-fruit</h2>
+  <h2 id="clojure.contrib.sql.test/drop-fruit">drop-fruit</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (drop-fruit)
 </pre>
@@ -616,7 +616,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L34" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/insert-records-fruit">insert-records-fruit</h2>
+  <h2 id="clojure.contrib.sql.test/insert-records-fruit">insert-records-fruit</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (insert-records-fruit)
 </pre>
@@ -624,7 +624,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L60" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/insert-rows-fruit">insert-rows-fruit</h2>
+  <h2 id="clojure.contrib.sql.test/insert-rows-fruit">insert-rows-fruit</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (insert-rows-fruit)
 </pre>
@@ -632,7 +632,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj#L41" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="sql.test/insert-values-fruit">insert-values-fruit</h2>
+  <h2 id="clojure.contrib.sql.test/insert-values-fruit">insert-values-fruit</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (insert-values-fruit)
 </pre>
@@ -647,9 +647,7 @@ parameterized) sql query string followed by values for any parameters.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

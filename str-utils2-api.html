@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>str-utils2 API reference (clojure.contrib)</title>
+    <title>str-utils2 API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,67 +48,67 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/blank?">blank?</a>
+      <a href="#clojure.contrib.str-utils2/blank?">blank?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/butlast">butlast</a>
+      <a href="#clojure.contrib.str-utils2/butlast">butlast</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/capitalize">capitalize</a>
+      <a href="#clojure.contrib.str-utils2/capitalize">capitalize</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/chomp">chomp</a>
+      <a href="#clojure.contrib.str-utils2/chomp">chomp</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/chop">chop</a>
+      <a href="#clojure.contrib.str-utils2/chop">chop</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/codepoints">codepoints</a>
+      <a href="#clojure.contrib.str-utils2/codepoints">codepoints</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/contains?">contains?</a>
+      <a href="#clojure.contrib.str-utils2/contains?">contains?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/dochars">dochars</a>
+      <a href="#clojure.contrib.str-utils2/dochars">dochars</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/docodepoints">docodepoints</a>
+      <a href="#clojure.contrib.str-utils2/docodepoints">docodepoints</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/drop">drop</a>
+      <a href="#clojure.contrib.str-utils2/drop">drop</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/escape">escape</a>
+      <a href="#clojure.contrib.str-utils2/escape">escape</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/get">get</a>
+      <a href="#clojure.contrib.str-utils2/get">get</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/grep">grep</a>
+      <a href="#clojure.contrib.str-utils2/grep">grep</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/join">join</a>
+      <a href="#clojure.contrib.str-utils2/join">join</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/lower-case">lower-case</a>
+      <a href="#clojure.contrib.str-utils2/lower-case">lower-case</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/ltrim">ltrim</a>
+      <a href="#clojure.contrib.str-utils2/ltrim">ltrim</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/map-str">map-str</a>
+      <a href="#clojure.contrib.str-utils2/map-str">map-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/partial">partial</a>
+      <a href="#clojure.contrib.str-utils2/partial">partial</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/partition">partition</a>
+      <a href="#clojure.contrib.str-utils2/partition">partition</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/repeat">repeat</a>
+      <a href="#clojure.contrib.str-utils2/repeat">repeat</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/replace">replace</a>
+      <a href="#clojure.contrib.str-utils2/replace">replace</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/replace-first">replace-first</a>
+      <a href="#clojure.contrib.str-utils2/replace-first">replace-first</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/reverse">reverse</a>
+      <a href="#clojure.contrib.str-utils2/reverse">reverse</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/rtrim">rtrim</a>
+      <a href="#clojure.contrib.str-utils2/rtrim">rtrim</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/split">split</a>
+      <a href="#clojure.contrib.str-utils2/split">split</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/split-lines">split-lines</a>
+      <a href="#clojure.contrib.str-utils2/split-lines">split-lines</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/swap-case">swap-case</a>
+      <a href="#clojure.contrib.str-utils2/swap-case">swap-case</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/tail">tail</a>
+      <a href="#clojure.contrib.str-utils2/tail">tail</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/take">take</a>
+      <a href="#clojure.contrib.str-utils2/take">take</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/trim">trim</a>
+      <a href="#clojure.contrib.str-utils2/trim">trim</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#str-utils2/upper-case">upper-case</a>
+      <a href="#clojure.contrib.str-utils2/upper-case">upper-case</a>
     </div>
     <br />
   </div>
@@ -142,7 +142,7 @@ Some ideas are borrowed from
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/blank?">blank?</h2>
+  <h2 id="clojure.contrib.str-utils2/blank?">blank?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (blank? s)
 </pre>
@@ -151,7 +151,7 @@ Some ideas are borrowed from
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/butlast">butlast</h2>
+  <h2 id="clojure.contrib.str-utils2/butlast">butlast</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (butlast s n)
 </pre>
@@ -164,7 +164,7 @@ this is to keep the string as the first argument for use with -&gt;</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/capitalize">capitalize</h2>
+  <h2 id="clojure.contrib.str-utils2/capitalize">capitalize</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (capitalize s)
 </pre>
@@ -174,7 +174,7 @@ characters to lower-case.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/chomp">chomp</h2>
+  <h2 id="clojure.contrib.str-utils2/chomp">chomp</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (chomp s)
 </pre>
@@ -184,7 +184,7 @@ string.  Note: String.trim() is similar and faster.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/chop">chop</h2>
+  <h2 id="clojure.contrib.str-utils2/chop">chop</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (chop s)
 </pre>
@@ -194,7 +194,7 @@ string.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/codepoints">codepoints</h2>
+  <h2 id="clojure.contrib.str-utils2/codepoints">codepoints</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (codepoints s)
 </pre>
@@ -204,7 +204,7 @@ Unicode supplementary characters (above U+FFFF) correctly.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/contains?">contains?</h2>
+  <h2 id="clojure.contrib.str-utils2/contains?">contains?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (contains? s substring)
 </pre>
@@ -213,7 +213,7 @@ Unicode supplementary characters (above U+FFFF) correctly.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/dochars">dochars</h2>
+  <h2 id="clojure.contrib.str-utils2/dochars">dochars</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (dochars bindings &amp; body)
 </pre>
@@ -226,7 +226,7 @@ U+FFFF).</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/docodepoints">docodepoints</h2>
+  <h2 id="clojure.contrib.str-utils2/docodepoints">docodepoints</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (docodepoints bindings &amp; body)
 </pre>
@@ -239,7 +239,7 @@ supplementary characters (above U+FFFF) correctly.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/drop">drop</h2>
+  <h2 id="clojure.contrib.str-utils2/drop">drop</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (drop s n)
 </pre>
@@ -252,7 +252,7 @@ is to keep the string as the first argument for use with -&gt;</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/escape">escape</h2>
+  <h2 id="clojure.contrib.str-utils2/escape">escape</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (escape s cmap)
 </pre>
@@ -263,7 +263,7 @@ added to the output unchanged.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/get">get</h2>
+  <h2 id="clojure.contrib.str-utils2/get">get</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get s i)
 </pre>
@@ -272,7 +272,7 @@ added to the output unchanged.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/grep">grep</h2>
+  <h2 id="clojure.contrib.str-utils2/grep">grep</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (grep re coll)
 </pre>
@@ -282,7 +282,7 @@ representation (with str) of each element is tested with re-find.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/join">join</h2>
+  <h2 id="clojure.contrib.str-utils2/join">join</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (join separator coll)
 </pre>
@@ -292,7 +292,7 @@ separator.  Like Perl's join.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/lower-case">lower-case</h2>
+  <h2 id="clojure.contrib.str-utils2/lower-case">lower-case</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (lower-case s)
 </pre>
@@ -301,7 +301,7 @@ separator.  Like Perl's join.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/ltrim">ltrim</h2>
+  <h2 id="clojure.contrib.str-utils2/ltrim">ltrim</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (ltrim s)
 </pre>
@@ -310,7 +310,7 @@ separator.  Like Perl's join.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/map-str">map-str</h2>
+  <h2 id="clojure.contrib.str-utils2/map-str">map-str</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (map-str f coll)
 </pre>
@@ -320,7 +320,7 @@ String.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/partial">partial</h2>
+  <h2 id="clojure.contrib.str-utils2/partial">partial</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (partial f &amp; args)
 </pre>
@@ -337,7 +337,7 @@ Example: (str-utils2/partial str-utils2/take 2)
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/partition">partition</h2>
+  <h2 id="clojure.contrib.str-utils2/partition">partition</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (partition s re)
 </pre>
@@ -353,7 +353,7 @@ returns: ("" "abc" "123" "def")</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/repeat">repeat</h2>
+  <h2 id="clojure.contrib.str-utils2/repeat">repeat</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (repeat s n)
 </pre>
@@ -362,7 +362,7 @@ returns: ("" "abc" "123" "def")</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/replace">replace</h2>
+  <h2 id="clojure.contrib.str-utils2/replace">replace</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (replace string pattern replacement)
 </pre>
@@ -380,7 +380,7 @@ Allowed argument types for pattern and replacement are:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/replace-first">replace-first</h2>
+  <h2 id="clojure.contrib.str-utils2/replace-first">replace-first</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (replace-first s pattern replacement)
 </pre>
@@ -395,7 +395,7 @@ Allowed argument types for pattern and replacement are:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/reverse">reverse</h2>
+  <h2 id="clojure.contrib.str-utils2/reverse">reverse</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (reverse s)
 </pre>
@@ -404,7 +404,7 @@ Allowed argument types for pattern and replacement are:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/rtrim">rtrim</h2>
+  <h2 id="clojure.contrib.str-utils2/rtrim">rtrim</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (rtrim s)
 </pre>
@@ -413,7 +413,7 @@ Allowed argument types for pattern and replacement are:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/split">split</h2>
+  <h2 id="clojure.contrib.str-utils2/split">split</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (split s re)
        (split s re limit)
@@ -424,7 +424,7 @@ the maximum number of splits.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/split-lines">split-lines</h2>
+  <h2 id="clojure.contrib.str-utils2/split-lines">split-lines</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (split-lines s)
 </pre>
@@ -433,7 +433,7 @@ the maximum number of splits.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/swap-case">swap-case</h2>
+  <h2 id="clojure.contrib.str-utils2/swap-case">swap-case</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (swap-case s)
 </pre>
@@ -445,7 +445,7 @@ methods.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/tail">tail</h2>
+  <h2 id="clojure.contrib.str-utils2/tail">tail</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (tail s n)
 </pre>
@@ -454,7 +454,7 @@ methods.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/take">take</h2>
+  <h2 id="clojure.contrib.str-utils2/take">take</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (take s n)
 </pre>
@@ -466,7 +466,7 @@ is to keep the string as the first argument for use with -&gt;</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/trim">trim</h2>
+  <h2 id="clojure.contrib.str-utils2/trim">trim</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (trim s)
 </pre>
@@ -475,7 +475,7 @@ is to keep the string as the first argument for use with -&gt;</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="str-utils2/upper-case">upper-case</h2>
+  <h2 id="clojure.contrib.str-utils2/upper-case">upper-case</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (upper-case s)
 </pre>
@@ -490,9 +490,7 @@ is to keep the string as the first argument for use with -&gt;</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

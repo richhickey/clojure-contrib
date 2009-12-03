@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>test-is API reference (clojure.contrib)</title>
+    <title>test-is API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,75 +48,75 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/*load-tests*">*load-tests*</a>
+      <a href="#clojure.contrib.test-is/*load-tests*">*load-tests*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/*stack-trace-depth*">*stack-trace-depth*</a>
+      <a href="#clojure.contrib.test-is/*stack-trace-depth*">*stack-trace-depth*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/apply-template">apply-template</a>
+      <a href="#clojure.contrib.test-is/apply-template">apply-template</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/are">are</a>
+      <a href="#clojure.contrib.test-is/are">are</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/assert-any">assert-any</a>
+      <a href="#clojure.contrib.test-is/assert-any">assert-any</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/assert-predicate">assert-predicate</a>
+      <a href="#clojure.contrib.test-is/assert-predicate">assert-predicate</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/compose-fixtures">compose-fixtures</a>
+      <a href="#clojure.contrib.test-is/compose-fixtures">compose-fixtures</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/deftest">deftest</a>
+      <a href="#clojure.contrib.test-is/deftest">deftest</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/deftest-">deftest-</a>
+      <a href="#clojure.contrib.test-is/deftest-">deftest-</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/do-template">do-template</a>
+      <a href="#clojure.contrib.test-is/do-template">do-template</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/file-position">file-position</a>
+      <a href="#clojure.contrib.test-is/file-position">file-position</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/find-holes">find-holes</a>
+      <a href="#clojure.contrib.test-is/find-holes">find-holes</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/find-pure-exprs">find-pure-exprs</a>
+      <a href="#clojure.contrib.test-is/find-pure-exprs">find-pure-exprs</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/find-symbols">find-symbols</a>
+      <a href="#clojure.contrib.test-is/find-symbols">find-symbols</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/flatten-map">flatten-map</a>
+      <a href="#clojure.contrib.test-is/flatten-map">flatten-map</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/function?">function?</a>
+      <a href="#clojure.contrib.test-is/function?">function?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/get-possibly-unbound-var">get-possibly-unbound-var</a>
+      <a href="#clojure.contrib.test-is/get-possibly-unbound-var">get-possibly-unbound-var</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/inc-report-counter">inc-report-counter</a>
+      <a href="#clojure.contrib.test-is/inc-report-counter">inc-report-counter</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/is">is</a>
+      <a href="#clojure.contrib.test-is/is">is</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/join-fixtures">join-fixtures</a>
+      <a href="#clojure.contrib.test-is/join-fixtures">join-fixtures</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/report">report</a>
+      <a href="#clojure.contrib.test-is/report">report</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/run-all-tests">run-all-tests</a>
+      <a href="#clojure.contrib.test-is/run-all-tests">run-all-tests</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/run-tests">run-tests</a>
+      <a href="#clojure.contrib.test-is/run-tests">run-tests</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/set-test">set-test</a>
+      <a href="#clojure.contrib.test-is/set-test">set-test</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/template?">template?</a>
+      <a href="#clojure.contrib.test-is/template?">template?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/test-all-vars">test-all-vars</a>
+      <a href="#clojure.contrib.test-is/test-all-vars">test-all-vars</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/test-ns">test-ns</a>
+      <a href="#clojure.contrib.test-is/test-ns">test-ns</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/test-var">test-var</a>
+      <a href="#clojure.contrib.test-is/test-var">test-var</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/testing">testing</a>
+      <a href="#clojure.contrib.test-is/testing">testing</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/testing-contexts-str">testing-contexts-str</a>
+      <a href="#clojure.contrib.test-is/testing-contexts-str">testing-contexts-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/testing-vars-str">testing-vars-str</a>
+      <a href="#clojure.contrib.test-is/testing-vars-str">testing-vars-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/try-expr">try-expr</a>
+      <a href="#clojure.contrib.test-is/try-expr">try-expr</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/use-fixtures">use-fixtures</a>
+      <a href="#clojure.contrib.test-is/use-fixtures">use-fixtures</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/with-test">with-test</a>
+      <a href="#clojure.contrib.test-is/with-test">with-test</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#test-is/with-test-out">with-test-out</a>
+      <a href="#clojure.contrib.test-is/with-test-out">with-test-out</a>
     </div>
     <br />
   </div>
@@ -150,7 +150,7 @@ This was suggested by Howard Lewis Ship in ticket #26,
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/*load-tests*">*load-tests*</h2>
+  <h2 id="clojure.contrib.test-is/*load-tests*">*load-tests*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">True by default.  If set to false, no test functions will
@@ -161,7 +161,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L468" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/*stack-trace-depth*">*stack-trace-depth*</h2>
+  <h2 id="clojure.contrib.test-is/*stack-trace-depth*">*stack-trace-depth*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The maximum depth of stack traces to print when an Exception
@@ -172,7 +172,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L474" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/apply-template">apply-template</h2>
+  <h2 id="clojure.contrib.test-is/apply-template">apply-template</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (apply-template expr values)
 </pre>
@@ -182,7 +182,7 @@ values.  Returns the modified expression.  For use in macros.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/are">are</h2>
+  <h2 id="clojure.contrib.test-is/are">are</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (are expr &amp; args)
 </pre>
@@ -202,7 +202,7 @@ Note: This breaks some reporting features, such as line numbers.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/assert-any">assert-any</h2>
+  <h2 id="clojure.contrib.test-is/assert-any">assert-any</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (assert-any msg form)
 </pre>
@@ -213,7 +213,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L633" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/assert-predicate">assert-predicate</h2>
+  <h2 id="clojure.contrib.test-is/assert-predicate">assert-predicate</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (assert-predicate msg form)
 </pre>
@@ -227,7 +227,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L615" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/compose-fixtures">compose-fixtures</h2>
+  <h2 id="clojure.contrib.test-is/compose-fixtures">compose-fixtures</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (compose-fixtures f1 f2)
 </pre>
@@ -238,7 +238,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L847" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/deftest">deftest</h2>
+  <h2 id="clojure.contrib.test-is/deftest">deftest</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (deftest name &amp; body)
 </pre>
@@ -257,7 +257,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L786" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/deftest-">deftest-</h2>
+  <h2 id="clojure.contrib.test-is/deftest-">deftest-</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (deftest- name &amp; body)
 </pre>
@@ -267,7 +267,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L802" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/do-template">do-template</h2>
+  <h2 id="clojure.contrib.test-is/do-template">do-template</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (do-template expr &amp; args)
 </pre>
@@ -279,7 +279,7 @@ expands to (do (check :a :b) (check :c :d))</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/file-position">file-position</h2>
+  <h2 id="clojure.contrib.test-is/file-position">file-position</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (file-position n)
 </pre>
@@ -290,7 +290,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L504" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/find-holes">find-holes</h2>
+  <h2 id="clojure.contrib.test-is/find-holes">find-holes</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-holes form)
 </pre>
@@ -299,7 +299,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L504" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/find-pure-exprs">find-pure-exprs</h2>
+  <h2 id="clojure.contrib.test-is/find-pure-exprs">find-pure-exprs</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-pure-exprs form)
 </pre>
@@ -309,7 +309,7 @@ any symbols starting with _</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/find-symbols">find-symbols</h2>
+  <h2 id="clojure.contrib.test-is/find-symbols">find-symbols</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (find-symbols form)
 </pre>
@@ -318,7 +318,7 @@ any symbols starting with _</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/flatten-map">flatten-map</h2>
+  <h2 id="clojure.contrib.test-is/flatten-map">flatten-map</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (flatten-map m)
 </pre>
@@ -327,7 +327,7 @@ any symbols starting with _</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/function?">function?</h2>
+  <h2 id="clojure.contrib.test-is/function?">function?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (function? x)
 </pre>
@@ -338,7 +338,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L604" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/get-possibly-unbound-var">get-possibly-unbound-var</h2>
+  <h2 id="clojure.contrib.test-is/get-possibly-unbound-var">get-possibly-unbound-var</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (get-possibly-unbound-var v)
 </pre>
@@ -348,7 +348,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L597" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/inc-report-counter">inc-report-counter</h2>
+  <h2 id="clojure.contrib.test-is/inc-report-counter">inc-report-counter</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (inc-report-counter name)
 </pre>
@@ -359,7 +359,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L529" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/is">is</h2>
+  <h2 id="clojure.contrib.test-is/is">is</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (is form)
        (is form msg)
@@ -382,7 +382,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L730" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/join-fixtures">join-fixtures</h2>
+  <h2 id="clojure.contrib.test-is/join-fixtures">join-fixtures</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (join-fixtures fixtures)
 </pre>
@@ -393,7 +393,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L853" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/report">report</h2>
+  <h2 id="clojure.contrib.test-is/report">report</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Generic reporting function, may be overridden to plug in
@@ -407,7 +407,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L541" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/run-all-tests">run-all-tests</h2>
+  <h2 id="clojure.contrib.test-is/run-all-tests">run-all-tests</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (run-all-tests)
        (run-all-tests re)
@@ -421,7 +421,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L921" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/run-tests">run-tests</h2>
+  <h2 id="clojure.contrib.test-is/run-tests">run-tests</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (run-tests)
        (run-tests &amp; namespaces)
@@ -433,7 +433,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L913" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/set-test">set-test</h2>
+  <h2 id="clojure.contrib.test-is/set-test">set-test</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (set-test name &amp; body)
 </pre>
@@ -447,7 +447,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L810" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/template?">template?</h2>
+  <h2 id="clojure.contrib.test-is/template?">template?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (template? form)
 </pre>
@@ -456,7 +456,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L810" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/test-all-vars">test-all-vars</h2>
+  <h2 id="clojure.contrib.test-is/test-all-vars">test-all-vars</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (test-all-vars ns)
 </pre>
@@ -466,7 +466,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L878" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/test-ns">test-ns</h2>
+  <h2 id="clojure.contrib.test-is/test-ns">test-ns</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (test-ns ns)
 </pre>
@@ -482,7 +482,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L889" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/test-var">test-var</h2>
+  <h2 id="clojure.contrib.test-is/test-var">test-var</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (test-var v)
 </pre>
@@ -493,7 +493,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L864" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/testing">testing</h2>
+  <h2 id="clojure.contrib.test-is/testing">testing</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (testing string &amp; body)
 </pre>
@@ -504,7 +504,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L763" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/testing-contexts-str">testing-contexts-str</h2>
+  <h2 id="clojure.contrib.test-is/testing-contexts-str">testing-contexts-str</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (testing-contexts-str)
 </pre>
@@ -515,7 +515,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L523" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/testing-vars-str">testing-vars-str</h2>
+  <h2 id="clojure.contrib.test-is/testing-vars-str">testing-vars-str</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (testing-vars-str)
 </pre>
@@ -527,7 +527,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L511" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/try-expr">try-expr</h2>
+  <h2 id="clojure.contrib.test-is/try-expr">try-expr</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (try-expr msg form)
 </pre>
@@ -538,7 +538,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L715" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/use-fixtures">use-fixtures</h2>
+  <h2 id="clojure.contrib.test-is/use-fixtures">use-fixtures</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Wrap test runs in a fixture function to perform setup and
@@ -549,7 +549,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L830" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/with-test">with-test</h2>
+  <h2 id="clojure.contrib.test-is/with-test">with-test</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-test definition &amp; body)
 </pre>
@@ -563,7 +563,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L774" id="var-sou
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="test-is/with-test-out">with-test-out</h2>
+  <h2 id="clojure.contrib.test-is/with-test-out">with-test-out</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-test-out &amp; body)
 </pre>
@@ -579,9 +579,7 @@ Use '--' to separate paths from revisions/src/clojure/test.clj#L494" id="var-sou
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

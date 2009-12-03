@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>mock API reference (clojure.contrib)</title>
+    <title>mock API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,49 +48,49 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/calls">calls</a>
+      <a href="#clojure.contrib.mock/calls">calls</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/expect">expect</a>
+      <a href="#clojure.contrib.mock/expect">expect</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/has-args">has-args</a>
+      <a href="#clojure.contrib.mock/has-args">has-args</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/has-matching-signature?">has-matching-signature?</a>
+      <a href="#clojure.contrib.mock/has-matching-signature?">has-matching-signature?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/make-arg-checker">make-arg-checker</a>
+      <a href="#clojure.contrib.mock/make-arg-checker">make-arg-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/make-count-checker">make-count-checker</a>
+      <a href="#clojure.contrib.mock/make-count-checker">make-count-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/make-mock">make-mock</a>
+      <a href="#clojure.contrib.mock/make-mock">make-mock</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/returns">returns</a>
+      <a href="#clojure.contrib.mock/returns">returns</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/times">times</a>
+      <a href="#clojure.contrib.mock/times">times</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock/validate-counts">validate-counts</a>
+      <a href="#clojure.contrib.mock/validate-counts">validate-counts</a>
     </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#mock.test-adapter">mock.test-adapter</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/calls">calls</a>
+      <a href="#clojure.contrib.mock.test-adapter/calls">calls</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/has-args">has-args</a>
+      <a href="#clojure.contrib.mock.test-adapter/has-args">has-args</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/has-matching-signature?">has-matching-signature?</a>
+      <a href="#clojure.contrib.mock.test-adapter/has-matching-signature?">has-matching-signature?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/make-arg-checker">make-arg-checker</a>
+      <a href="#clojure.contrib.mock.test-adapter/make-arg-checker">make-arg-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/make-count-checker">make-count-checker</a>
+      <a href="#clojure.contrib.mock.test-adapter/make-count-checker">make-count-checker</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/make-mock">make-mock</a>
+      <a href="#clojure.contrib.mock.test-adapter/make-mock">make-mock</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/report-problem">report-problem</a>
+      <a href="#clojure.contrib.mock.test-adapter/report-problem">report-problem</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/returns">returns</a>
+      <a href="#clojure.contrib.mock.test-adapter/returns">returns</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/times">times</a>
+      <a href="#clojure.contrib.mock.test-adapter/times">times</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#mock.test-adapter/validate-counts">validate-counts</a>
+      <a href="#clojure.contrib.mock.test-adapter/validate-counts">validate-counts</a>
     </div>
     <br />
   </div>
@@ -110,7 +110,7 @@ by <span id="author">Unknown</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/calls">calls</h2>
+  <h2 id="clojure.contrib.mock/calls">calls</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (calls val)
        (calls val expectation-hash)
@@ -125,7 +125,7 @@ Usage:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/expect">expect</h2>
+  <h2 id="clojure.contrib.mock/expect">expect</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (expect expect-bindings &amp; body)
 </pre>
@@ -140,7 +140,7 @@ Usage:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/has-args">has-args</h2>
+  <h2 id="clojure.contrib.mock/has-args">has-args</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (has-args arg-pred-forms)
        (has-args arg-pred-forms expect-hash-form)
@@ -157,7 +157,7 @@ Usage:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/has-matching-signature?">has-matching-signature?</h2>
+  <h2 id="clojure.contrib.mock/has-matching-signature?">has-matching-signature?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (has-matching-signature? fn-name args)
 </pre>
@@ -168,7 +168,7 @@ not called.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/make-arg-checker">make-arg-checker</h2>
+  <h2 id="clojure.contrib.mock/make-arg-checker">make-arg-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-arg-checker arg-preds arg-pred-forms)
 </pre>
@@ -181,7 +181,7 @@ of the mock info object created by make-mock.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/make-count-checker">make-count-checker</h2>
+  <h2 id="clojure.contrib.mock/make-count-checker">make-count-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-count-checker pred pred-form)
 </pre>
@@ -192,7 +192,7 @@ name of the associated dependency and the invocation count as arguments.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/make-mock">make-mock</h2>
+  <h2 id="clojure.contrib.mock/make-mock">make-mock</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-mock fn-name expectation-hash)
 </pre>
@@ -206,7 +206,7 @@ increases count, returns return value.
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/returns">returns</h2>
+  <h2 id="clojure.contrib.mock/returns">returns</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (returns val)
        (returns val expectation-hash)
@@ -220,7 +220,7 @@ Usage:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/times">times</h2>
+  <h2 id="clojure.contrib.mock/times">times</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (times times-fn)
        (times times-fn expectation-hash)
@@ -240,7 +240,7 @@ Usage:
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="mock/validate-counts">validate-counts</h2>
+  <h2 id="clojure.contrib.mock/validate-counts">validate-counts</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (validate-counts mock-data)
 </pre>
@@ -253,7 +253,7 @@ count checker for each dependency.</pre>
 <br />
 <div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/calls">calls</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/calls">calls</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (calls val)
        (calls val expectation-hash)
@@ -267,7 +267,7 @@ Usage:
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L216" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/has-args">has-args</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/has-args">has-args</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (has-args arg-pred-forms)
        (has-args arg-pred-forms expect-hash-form)
@@ -283,7 +283,7 @@ Usage:
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L228" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/has-matching-signature?">has-matching-signature?</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/has-matching-signature?">has-matching-signature?</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (has-matching-signature? fn-name args)
 </pre>
@@ -293,7 +293,7 @@ not called.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L105" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/make-arg-checker">make-arg-checker</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/make-arg-checker">make-arg-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-arg-checker arg-preds arg-pred-forms)
 </pre>
@@ -305,7 +305,7 @@ of the mock info object created by make-mock.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L116" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/make-count-checker">make-count-checker</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/make-count-checker">make-count-checker</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-count-checker pred pred-form)
 </pre>
@@ -315,7 +315,7 @@ name of the associated dependency and the invocation count as arguments.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L131" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/make-mock">make-mock</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/make-mock">make-mock</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (make-mock fn-name expectation-hash)
 </pre>
@@ -328,7 +328,7 @@ increases count, returns return value.
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L150" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/report-problem">report-problem</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/report-problem">report-problem</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (report-problem fn-name expected actual msg)
 </pre>
@@ -338,7 +338,7 @@ the error to the console, the error is logged via clojure.test.</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock/test_adapter.clj#L19" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/returns">returns</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/returns">returns</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (returns val)
        (returns val expectation-hash)
@@ -351,7 +351,7 @@ Usage:
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L205" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/times">times</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/times">times</h2>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (times times-fn)
        (times times-fn expectation-hash)
@@ -370,7 +370,7 @@ Usage:
   <a href="http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj#L246" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
-  <h2 id="mock.test-adapter/validate-counts">validate-counts</h2>
+  <h2 id="clojure.contrib.mock.test-adapter/validate-counts">validate-counts</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (validate-counts mock-data)
 </pre>
@@ -386,9 +386,7 @@ count checker for each dependency.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

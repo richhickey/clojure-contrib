@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>generic.math-functions API reference (clojure.contrib)</title>
+    <title>generic.math-functions API reference (Clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
 <!--
-This document was auto-generated from the clojure.contrib source by contrib-autodoc.
+This document was auto-generated from the source by the clojure autodoc system.
 To report errors or ask questions about the overall documentation structure, formatting,
 etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
 For errors in the documentation of a particular namespace, contact the author of that
@@ -25,7 +25,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="Clojure-contrib" href="index.html">Clojure-contrib</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">Clojure-contrib</a></h1>
       </div>
       <div id="leftcolumn"><div><div style="text-align: center;"></div>
 <div class="menu">
@@ -48,45 +48,45 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/abs">abs</a>
+      <a href="#clojure.contrib.generic.math-functions/abs">abs</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/acos">acos</a>
+      <a href="#clojure.contrib.generic.math-functions/acos">acos</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/approx=">approx=</a>
+      <a href="#clojure.contrib.generic.math-functions/approx=">approx=</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/asin">asin</a>
+      <a href="#clojure.contrib.generic.math-functions/asin">asin</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/atan">atan</a>
+      <a href="#clojure.contrib.generic.math-functions/atan">atan</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/atan2">atan2</a>
+      <a href="#clojure.contrib.generic.math-functions/atan2">atan2</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/ceil">ceil</a>
+      <a href="#clojure.contrib.generic.math-functions/ceil">ceil</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/conjugate">conjugate</a>
+      <a href="#clojure.contrib.generic.math-functions/conjugate">conjugate</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/cos">cos</a>
+      <a href="#clojure.contrib.generic.math-functions/cos">cos</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/exp">exp</a>
+      <a href="#clojure.contrib.generic.math-functions/exp">exp</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/floor">floor</a>
+      <a href="#clojure.contrib.generic.math-functions/floor">floor</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/log">log</a>
+      <a href="#clojure.contrib.generic.math-functions/log">log</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/pow">pow</a>
+      <a href="#clojure.contrib.generic.math-functions/pow">pow</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/rint">rint</a>
+      <a href="#clojure.contrib.generic.math-functions/rint">rint</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/round">round</a>
+      <a href="#clojure.contrib.generic.math-functions/round">round</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/sgn">sgn</a>
+      <a href="#clojure.contrib.generic.math-functions/sgn">sgn</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/sin">sin</a>
+      <a href="#clojure.contrib.generic.math-functions/sin">sin</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/sqr">sqr</a>
+      <a href="#clojure.contrib.generic.math-functions/sqr">sqr</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/sqrt">sqrt</a>
+      <a href="#clojure.contrib.generic.math-functions/sqrt">sqrt</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#generic.math-functions/tan">tan</a>
+      <a href="#clojure.contrib.generic.math-functions/tan">tan</a>
     </div>
     <br />
   </div>
@@ -109,7 +109,7 @@ defined for any type.</pre>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/abs">abs</h2>
+  <h2 id="clojure.contrib.generic.math-functions/abs">abs</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (abs x)
 </pre>
@@ -118,7 +118,7 @@ defined for any type.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/acos">acos</h2>
+  <h2 id="clojure.contrib.generic.math-functions/acos">acos</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (acos x)
 </pre>
@@ -127,7 +127,7 @@ defined for any type.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/approx=">approx=</h2>
+  <h2 id="clojure.contrib.generic.math-functions/approx=">approx=</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (approx= x y eps)
 </pre>
@@ -137,7 +137,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/asin">asin</h2>
+  <h2 id="clojure.contrib.generic.math-functions/asin">asin</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (asin x)
 </pre>
@@ -146,7 +146,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/atan">atan</h2>
+  <h2 id="clojure.contrib.generic.math-functions/atan">atan</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (atan x)
 </pre>
@@ -155,7 +155,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/atan2">atan2</h2>
+  <h2 id="clojure.contrib.generic.math-functions/atan2">atan2</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (atan2 x y)
 </pre>
@@ -164,7 +164,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/ceil">ceil</h2>
+  <h2 id="clojure.contrib.generic.math-functions/ceil">ceil</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (ceil x)
 </pre>
@@ -173,7 +173,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/conjugate">conjugate</h2>
+  <h2 id="clojure.contrib.generic.math-functions/conjugate">conjugate</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (conjugate x)
 </pre>
@@ -182,7 +182,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/cos">cos</h2>
+  <h2 id="clojure.contrib.generic.math-functions/cos">cos</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (cos x)
 </pre>
@@ -191,7 +191,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/exp">exp</h2>
+  <h2 id="clojure.contrib.generic.math-functions/exp">exp</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (exp x)
 </pre>
@@ -200,7 +200,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/floor">floor</h2>
+  <h2 id="clojure.contrib.generic.math-functions/floor">floor</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (floor x)
 </pre>
@@ -209,7 +209,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/log">log</h2>
+  <h2 id="clojure.contrib.generic.math-functions/log">log</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (log x)
 </pre>
@@ -218,7 +218,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/pow">pow</h2>
+  <h2 id="clojure.contrib.generic.math-functions/pow">pow</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (pow x y)
 </pre>
@@ -227,7 +227,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/rint">rint</h2>
+  <h2 id="clojure.contrib.generic.math-functions/rint">rint</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (rint x)
 </pre>
@@ -236,7 +236,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/round">round</h2>
+  <h2 id="clojure.contrib.generic.math-functions/round">round</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (round x)
 </pre>
@@ -245,7 +245,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/sgn">sgn</h2>
+  <h2 id="clojure.contrib.generic.math-functions/sgn">sgn</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (sgn x)
 </pre>
@@ -254,7 +254,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/sin">sin</h2>
+  <h2 id="clojure.contrib.generic.math-functions/sin">sin</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (sin x)
 </pre>
@@ -263,7 +263,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/sqr">sqr</h2>
+  <h2 id="clojure.contrib.generic.math-functions/sqr">sqr</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (sqr x)
 </pre>
@@ -272,7 +272,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/sqrt">sqrt</h2>
+  <h2 id="clojure.contrib.generic.math-functions/sqrt">sqrt</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (sqrt x)
 </pre>
@@ -281,7 +281,7 @@ is less than eps.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="generic.math-functions/tan">tan</h2>
+  <h2 id="clojure.contrib.generic.math-functions/tan">tan</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (tan x)
 </pre>
@@ -296,9 +296,7 @@ is less than eps.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;">
-            Copyright 2008-2009 Rich Hickey and the various contributors
-          </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2009 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
