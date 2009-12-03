@@ -3,7 +3,7 @@ body {margin: 0;padding: 0;background-color: #e3e3e3;border-top: 4px solid #b3cc
 body, .wiki, #Content, .wikipage {font-family: "Lucida Grande","Trebuchet MS","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;font-size: 12px;line-height: 18px;}
 #leftcolumn .wiki_link, #toc, #toc a {font-size: 11px;line-height: 18px;text-decoration: none}
 img {border: 0;}
-#AllContentContainer {max-width: 92em;min-width: 663px;background: #fff url(space/content-background.gif) right repeat-y;padding: 0 40px 18px 0;}
+#AllContentContainer {max-width: 96em;min-width: 96em;background: #fff url(space/content-background.gif) right repeat-y;padding: 0 40px 18px 0;}
 
 #Header {position: relative;clear: both;overflow: auto;height: 110px}
 #Logo {position: absolute;top: 0;left: 0;padding: 10px 0 0 62px;width: 138px;height: 100px}
