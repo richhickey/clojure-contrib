@@ -50,13 +50,19 @@ namespace.
     <div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.pprint/*code-dispatch*">*code-dispatch*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.pprint/*print-base*">*print-base*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.pprint/*print-circle*">*print-circle*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.pprint/*print-lines*">*print-lines*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.pprint/*print-miser-width*">*print-miser-width*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.pprint/*print-pprint-dispatch*">*print-pprint-dispatch*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.pprint/*print-pretty*">*print-pretty*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.pprint/*print-radix*">*print-radix*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.pprint/*print-right-margin*">*print-right-margin*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -159,6 +165,14 @@ documentation on the the clojure-contrib web site on github.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
+  <h2 id="clojure.contrib.pprint/*print-base*">*print-base*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">The base to use for printing integers and rationals.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L78" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
   <h2 id="clojure.contrib.pprint/*print-circle*">*print-circle*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
@@ -185,11 +199,30 @@ levels of nesting.</pre>
 </div><div id="var-entry">
   <br />
   <hr />
+  <h2 id="clojure.contrib.pprint/*print-pprint-dispatch*">*print-pprint-dispatch*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">The pretty print dispatch function. Use with-pprint-dispatch or set-pprint-dispatch
+to modify.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L33" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
   <h2 id="clojure.contrib.pprint/*print-pretty*">*print-pretty*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Bind to true if you want write to use pretty printing</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L29" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.pprint/*print-radix*">*print-radix*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8, 
+or 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the 
+radix specifier is in the form #XXr where XX is the decimal value of *print-base* </pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L72" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -483,8 +516,7 @@ This is an example of using a pretty printer dispatch function to generate JSON 
   <pre id="var-usage">Usage: (dispatch-json x)
 </pre>
   <pre id="var-docstr">The dispatch function for printing objects as JSON</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'src/clojure/contrib/pprint/examples/json.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/examples/json.clj#L28" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj#L28" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.pprint.examples.json/json-str">json-str</h2>
@@ -492,8 +524,7 @@ Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/example
   <pre id="var-usage">Usage: (json-str x)
 </pre>
   <pre id="var-docstr">Converts x to a JSON-formatted string.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'src/clojure/contrib/pprint/examples/json.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/examples/json.clj#L96" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj#L96" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.pprint.examples.json/print-json">print-json</h2>
@@ -505,8 +536,7 @@ strings, without the leading colon.  Maps become JSON objects, all
 other collection types become JSON arrays.  Java arrays become JSON
 arrays.  Unicode characters in strings are escaped as \uXXXX.
 Numbers print as with pr.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'src/clojure/contrib/pprint/examples/json.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/examples/json.clj#L87" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj#L87" id="var-source">Source</a>
 </div>
 </div><div><h2 id="namespace-name">pprint.examples.xml</h2>
 <pre id="namespace-docstr">A version of prxml that uses a pretty print dispatch function.</pre>
@@ -517,16 +547,14 @@ Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/example
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">If true, empty tags will have a space before the closing /&gt;</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'src/clojure/contrib/pprint/examples/xml.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/examples/xml.clj#L27" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/2f7ddf7205bbd47ace5d2240c66a4686de18d7e7/src/clojure/contrib/pprint/examples/xml.clj#L27" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.pprint.examples.xml/*prxml-indent*">*prxml-indent*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The number of spaces to indent sub-tags.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'src/clojure/contrib/pprint/examples/xml.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/examples/xml.clj#L31" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/2f7ddf7205bbd47ace5d2240c66a4686de18d7e7/src/clojure/contrib/pprint/examples/xml.clj#L31" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.pprint.examples.xml/prxml">prxml</h2>
@@ -555,8 +583,7 @@ PSEUDO-TAGS: some keywords have special meaning:
 
   (prxml [:decl! {:version "1.1"}])
   ; =&gt; &lt;?xml version="1.1" encoding="UTF-8"?&gt;</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'src/clojure/contrib/pprint/examples/xml.clj': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions/src/src/clojure/contrib/pprint/examples/xml.clj#L92" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/2f7ddf7205bbd47ace5d2240c66a4686de18d7e7/src/clojure/contrib/pprint/examples/xml.clj#L92" id="var-source">Source</a>
 </div>
 </div>
 
