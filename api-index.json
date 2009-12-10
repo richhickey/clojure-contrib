@@ -5616,7 +5616,7 @@
    "An atom containing the dispatch set for the add-menu-item method.",
    "name":"menu-constructor-dispatch"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L468",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L239",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/*load-tests*",
    "namespace":"clojure.contrib.test-is",
@@ -5624,7 +5624,7 @@
    "True by default.  If set to false, no test functions will\nbe created by deftest, set-test, or with-test.  Use this to omit\ntests when compiling or loading production code.",
    "name":"*load-tests*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L474",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L245",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/*stack-trace-depth*",
    "namespace":"clojure.contrib.test-is",
@@ -5650,7 +5650,7 @@
    "Checks multiple assertions with a template expression.\nSee clojure.contrib.template/do-template for an explanation of\ntemplates.\n\nExample: (are (= _1 _2)  \n              2 (+ 1 1)\n              4 (* 2 2))\nExpands to: \n         (do (is (= 2 (+ 1 1)))\n             (is (= 4 (* 2 2))))\n\nNote: This breaks some reporting features, such as line numbers.",
    "name":"are"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L633",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L404",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/assert-any",
    "namespace":"clojure.contrib.test-is",
@@ -5659,7 +5659,7 @@
    "Returns generic assertion code for any test, including macros, Java\nmethod calls, or isolated symbols.",
    "name":"assert-any"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L615",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L386",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/assert-predicate",
    "namespace":"clojure.contrib.test-is",
@@ -5668,7 +5668,7 @@
    "Returns generic assertion code for any functional predicate.  The\n'expected' argument to 'report' will contains the original form, the\n'actual' argument will contain the form with all its sub-forms\nevaluated.  If the predicate returns false, the 'actual' form will\nbe wrapped in (not...).",
    "name":"assert-predicate"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L847",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L618",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/compose-fixtures",
    "namespace":"clojure.contrib.test-is",
@@ -5677,7 +5677,7 @@
    "Composes two fixture functions, creating a new fixture function\nthat combines their behavior.",
    "name":"compose-fixtures"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L786",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L557",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/deftest",
    "namespace":"clojure.contrib.test-is",
@@ -5686,7 +5686,7 @@
    "Defines a test function with no arguments.  Test functions may call\nother tests, so tests may be composed.  If you compose tests, you\nshould also define a function named test-ns-hook; run-tests will\ncall test-ns-hook instead of testing all vars.\n\nNote: Actually, the test body goes in the :test metadata on the var,\nand the real function (the value of the var) calls test-var on\nitself.\n\nWhen *load-tests* is false, deftest is ignored.",
    "name":"deftest"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L802",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L573",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/deftest-",
    "namespace":"clojure.contrib.test-is",
@@ -5703,7 +5703,7 @@
    "Repeatedly evaluates template expr (in a do block) using values in\nargs.  args are grouped by the number of holes in the template.\nExample: (do-template (check _1 _2) :a :b :c :d)\nexpands to (do (check :a :b) (check :c :d))",
    "name":"do-template"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L504",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L275",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/file-position",
    "namespace":"clojure.contrib.test-is",
@@ -5745,7 +5745,7 @@
    "doc":"Transforms a map into a vector like [key value key value].",
    "name":"flatten-map"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L604",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L375",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/function?",
    "namespace":"clojure.contrib.test-is",
@@ -5754,7 +5754,7 @@
    "Returns true if argument is a function or a symbol that resolves to\na function (not a macro).",
    "name":"function?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L597",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L368",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/get-possibly-unbound-var",
    "namespace":"clojure.contrib.test-is",
@@ -5762,7 +5762,7 @@
    "doc":"Like var-get but returns nil if the var is unbound.",
    "name":"get-possibly-unbound-var"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L529",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L300",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/inc-report-counter",
    "namespace":"clojure.contrib.test-is",
@@ -5771,7 +5771,7 @@
    "Increments the named counter in *report-counters*, a ref to a map.\nDoes nothing if *report-counters* is nil.",
    "name":"inc-report-counter"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L730",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L501",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/is",
    "namespace":"clojure.contrib.test-is",
@@ -5780,7 +5780,7 @@
    "Generic assertion macro.  'form' is any predicate test.\n'msg' is an optional message to attach to the assertion.\n\nExample: (is (= 4 (+ 2 2)) \"Two plus two should be 4\")\n\nSpecial forms:\n\n(is (thrown? c body)) checks that an instance of c is thrown from\nbody, fails if not; then returns the thing thrown.\n\n(is (thrown-with-msg? c re body)) checks that an instance of c is\nthrown AND that the message on the exception matches (with\nre-matches) the regular expression re.",
    "name":"is"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L853",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L624",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/join-fixtures",
    "namespace":"clojure.contrib.test-is",
@@ -5789,7 +5789,7 @@
    "Composes a collection of fixtures, in order.  Always returns a valid\nfixture function, even if the collection is empty.",
    "name":"join-fixtures"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L541",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L312",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/report",
    "namespace":"clojure.contrib.test-is",
@@ -5797,7 +5797,7 @@
    "Generic reporting function, may be overridden to plug in\ndifferent report formats (e.g., TAP, JUnit).  Assertions such as\n'is' call 'report' to indicate results.  The argument given to\n'report' will be a map with a :type key.  See the documentation at\nthe top of test_is.clj for more information on the types of\narguments for 'report'.",
    "name":"report"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L921",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L692",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/run-all-tests",
    "namespace":"clojure.contrib.test-is",
@@ -5806,7 +5806,7 @@
    "Runs all tests in all namespaces; prints results.\nOptional argument is a regular expression; only namespaces with\nnames matching the regular expression (with re-matches) will be\ntested.",
    "name":"run-all-tests"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L913",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L684",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/run-tests",
    "namespace":"clojure.contrib.test-is",
@@ -5815,7 +5815,7 @@
    "Runs all tests in the given namespaces; prints results.\nDefaults to current namespace if none given.",
    "name":"run-tests"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L810",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L581",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/set-test",
    "namespace":"clojure.contrib.test-is",
@@ -5832,7 +5832,7 @@
    "doc":"Returns true if form is a valid template expression.",
    "name":"template?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L878",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L649",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/test-all-vars",
    "namespace":"clojure.contrib.test-is",
@@ -5841,7 +5841,7 @@
    "Calls test-var on every var interned in the namespace, with fixtures.",
    "name":"test-all-vars"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L889",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L660",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/test-ns",
    "namespace":"clojure.contrib.test-is",
@@ -5850,7 +5850,7 @@
    "If the namespace defines a function named test-ns-hook, calls that.\nOtherwise, calls test-all-vars on the namespace.  'ns' is a\nnamespace object or a symbol.\n\nInternally binds *report-counters* to a ref initialized to\n*inital-report-counters*.  Returns the final, dereferenced state of\n*report-counters*.",
    "name":"test-ns"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L864",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L635",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/test-var",
    "namespace":"clojure.contrib.test-is",
@@ -5859,7 +5859,7 @@
    "If v has a function in its :test metadata, calls that function,\nwith *testing-vars* bound to (conj *testing-vars* v).",
    "name":"test-var"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L763",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L534",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/testing",
    "namespace":"clojure.contrib.test-is",
@@ -5868,7 +5868,7 @@
    "Adds a new string to the list of testing contexts.  May be nested,\nbut must occur inside a test function (deftest).",
    "name":"testing"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L523",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L294",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/testing-contexts-str",
    "namespace":"clojure.contrib.test-is",
@@ -5877,7 +5877,7 @@
    "Returns a string representation of the current test context. Joins\nstrings in *testing-contexts* with spaces.",
    "name":"testing-contexts-str"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L511",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L282",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/testing-vars-str",
    "namespace":"clojure.contrib.test-is",
@@ -5886,7 +5886,7 @@
    "Returns a string representation of the current test.  Renders names\nin *testing-vars* as a list, then the source file and line of\ncurrent assertion.",
    "name":"testing-vars-str"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L715",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L486",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/try-expr",
    "namespace":"clojure.contrib.test-is",
@@ -5895,7 +5895,7 @@
    "Used by the 'is' macro to catch unexpected exceptions.\nYou don't call this.",
    "name":"try-expr"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L830",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L601",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/use-fixtures",
    "namespace":"clojure.contrib.test-is",
@@ -5903,7 +5903,7 @@
    "Wrap test runs in a fixture function to perform setup and\nteardown. Using a fixture-type of :each wraps every test\nindividually, while:once wraps the whole run in a single function.",
    "name":"use-fixtures"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L774",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L545",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/with-test",
    "namespace":"clojure.contrib.test-is",
@@ -5912,7 +5912,7 @@
    "Takes any definition form (that returns a Var) as the first argument.\nRemaining body goes in the :test metadata function for that Var.\n\nWhen *load-tests* is false, only evaluates the definition, ignoring\nthe tests.",
    "name":"with-test"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L494",
+   "http://github.com/richhickey/clojure-contrib/blob/fatal: ambiguous argument 'clojure/test.clj': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions/src/clojure/test.clj#L265",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//test-is-api.html#clojure.contrib.test-is/with-test-out",
    "namespace":"clojure.contrib.test-is",
