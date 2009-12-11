@@ -69,7 +69,7 @@
    "author":"Stephen C. Gilardi",
    "doc":"Extensions to the basic cond function."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/condition-api.html",
    "name":"clojure.contrib.condition",
@@ -114,7 +114,7 @@
    "doc":
    "This file defines \"duck-typed\" I/O utility functions for Clojure.\nThe 'reader' and 'writer' functions will open and return an\ninstance of java.io.BufferedReader and java.io.PrintWriter,\nrespectively, for a variety of argument types -- filenames as\nstrings, URLs, java.io.File's, etc.  'reader' even works on http\nURLs.\n\nNote: this is not really \"duck typing\" as implemented in languages\nlike Ruby.  A better name would have been \"do-what-I-mean-streams\"\nor \"just-give-me-a-stream\", but ducks are funnier."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/error-kit-api.html",
    "name":"clojure.contrib.error-kit",
@@ -437,7 +437,7 @@
    "doc":
    "A repl with that provides support for lines and line numbers in the\ninput stream."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/repl-utils-api.html",
    "name":"clojure.contrib.repl-utils",
@@ -535,7 +535,7 @@
    "doc":
    "This file defines simple \"tracing\" macros to help you see what your\ncode is doing."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/types.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/types-api.html",
    "name":"clojure.contrib.types",
@@ -549,7 +549,7 @@
    "author":"Stuart Sierra",
    "doc":"Temporary namespace macro"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/zip-filter-api.html",
    "name":"clojure.contrib.zip-filter",
@@ -939,7 +939,7 @@
    "Takes a binding-form and a set of test/expr pairs. Evaluates each test\none at a time. If a test returns logical true, cond-let evaluates and\nreturns expr with binding-form bound to the value of test and doesn't\nevaluate any of the other tests or exprs. To provide a default value\neither provide a literal that evaluates to logical true and is\nbinding-compatible with binding-form, or use :else as the test and don't\nrefer to any parts of binding-form in the expr. (cond-let binding-form)\nreturns nil.",
    "name":"cond-let"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition.clj#L56",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj#L56",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//condition-api.html#clojure.contrib.condition/*full-stack-traces*",
    "namespace":"clojure.contrib.condition",
@@ -947,7 +947,7 @@
    "Bind to true to include clojure.{core,lang,main} frames in stack\ntraces",
    "name":"*full-stack-traces*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition.clj#L71",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj#L71",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//condition-api.html#clojure.contrib.condition/handler-case",
    "namespace":"clojure.contrib.condition",
@@ -956,7 +956,7 @@
    "Executes body in a context where raised conditions can be handled.\n\ndispatch-fn accepts a raised condition (a map) and returns a selector\nused to choose a handler. Commonly, dispatch-fn will be :type to dispatch\non the condition's :type value.\n\nHandlers are forms within body:\n\n  (handle key\n    ...)\n\nIf a condition is raised, executes the body of the first handler whose\nkey satisfies (isa? selector key). If no handlers match, re-raises the\ncondition.\n\nWhile a handler is running, *condition* is bound to the condition being\nhandled and *selector* is bound to to the value returned by dispatch-fn\nthat matched the handler's key.",
    "name":"handler-case"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition.clj#L128",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj#L128",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//condition-api.html#clojure.contrib.condition/print-stack-trace",
    "namespace":"clojure.contrib.condition",
@@ -965,7 +965,7 @@
    "Prints a stack trace for a condition or Throwable. Skips frames for\nclasses in clojure.{core,lang,main} unless the *full-stack-traces* is\nbound to logical true",
    "name":"print-stack-trace"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition.clj#L60",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj#L60",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//condition-api.html#clojure.contrib.condition/raise",
    "namespace":"clojure.contrib.condition",
@@ -974,7 +974,7 @@
    "Raises a condition. With no arguments, re-raises the current condition.\nWith one argument (a map), raises the argument. With two or more\narguments, raises a map with keys and values from the arguments.",
    "name":"raise"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition.clj#L106",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj#L106",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//condition-api.html#clojure.contrib.condition/stack-trace-info",
    "namespace":"clojure.contrib.condition",
@@ -1480,7 +1480,7 @@
    "Attempts to coerce its argument into an open java.io.PrintWriter\nwrapped around a java.io.BufferedWriter.  Argument may be an\ninstance of Writer, PrintWriter, BufferedWriter, OutputStream, File,\nURI, URL, Socket, or String.\n\nIf argument is a String, it tries to resolve it first as a URI, then\nas a local file name.  URIs with a 'file' protocol are converted to\nlocal file names.\n\nShould be used inside with-open to ensure the Writer is properly\nclosed.",
    "name":"writer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L150",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L150",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/bind-continue",
    "namespace":"clojure.contrib.error-kit",
@@ -1489,7 +1489,7 @@
    "Special form to be used inside a 'with-handler'.\nControl can be passed to this 'continue' form from a 'raise' enclosed\nin this with-handler's dynamic scope, when this 'continue-name' is\ngiven to a 'continue' form.",
    "name":"bind-continue"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L59",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L59",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/deferror",
    "namespace":"clojure.contrib.error-kit",
@@ -1500,7 +1500,7 @@
    "doc":"Define a new error type",
    "name":"deferror"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L117",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L117",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/do-not-handle",
    "namespace":"clojure.contrib.error-kit",
@@ -1509,7 +1509,7 @@
    "Use in a tail position of a 'handle' form to indicate 'raise' should\nnot consider the error handled, but should continue searching for an\nappropriate 'handle' form.  Allows finer-grain control over catching\nthan just the error type.",
    "name":"do-not-handle"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L46",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L46",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/error",
    "namespace":"clojure.contrib.error-kit",
@@ -1517,7 +1517,7 @@
    "doc":"Base type for all error-kit errors",
    "name":"error"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L138",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L138",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/handle",
    "namespace":"clojure.contrib.error-kit",
@@ -1528,7 +1528,7 @@
    "Special form to be used inside a 'with-handler'.  When\nany error is 'raised' from withing the dynamic scope of 'body' that\nis of error-name's type or a derived type, the args will be bound\nand the body executed.  If no 'error-name' is given, the body will\nbe executed for regardless of the type of error raised.  The body\nmay return a value, in which case that will be the return value of\nthe entire 'with-handler' form, or it may use any of the special\nreturn forms, 'do-not-handle', 'continue-with', or 'continue'.",
    "name":"handle"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L110",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L110",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/raise",
    "namespace":"clojure.contrib.error-kit",
@@ -1537,7 +1537,7 @@
    "Raise an error of the type err-name, constructed with the given args",
    "name":"raise"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L86",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L86",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/raise*",
    "namespace":"clojure.contrib.error-kit",
@@ -1546,7 +1546,7 @@
    "Raise the given error object, best if created by an error\nconstructor defined with deferror.  See also 'raise' macro.",
    "name":"raise*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L39",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L39",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/throw-msg",
    "namespace":"clojure.contrib.error-kit",
@@ -1555,7 +1555,7 @@
    "Returns a function that throws a Java Exception with the given\nname.  Useful to associate a new error-kit error type with a\nparticular Java Exception class, via the :unhandled error key.",
    "name":"throw-msg"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/error_kit.clj#L163",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj#L163",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//error-kit-api.html#clojure.contrib.error-kit/with-handler",
    "namespace":"clojure.contrib.error-kit",
@@ -3966,7 +3966,7 @@
    "Returns a sorted seq of symbols naming public vars in\na namespace",
    "name":"vars"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/b902ebe3c80ec86d4f80f8cce6d2faabc8da5278/src/clojure/contrib/pprint/dispatch.clj#L353",
+   "http://github.com/richhickey/clojure-contrib/blob/eb73c54687a9ed63dc939bbe886170f4a47455ed/src/clojure/contrib/pprint/dispatch.clj#L354",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*code-dispatch*",
    "namespace":"clojure.contrib.pprint",
@@ -4052,7 +4052,7 @@
    "Don't print namespaces with symbols. This is particularly useful when \npretty printing the results of macro expansions",
    "name":"*print-suppress-namespaces*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/b902ebe3c80ec86d4f80f8cce6d2faabc8da5278/src/clojure/contrib/pprint/dispatch.clj#L124",
+   "http://github.com/richhickey/clojure-contrib/blob/eb73c54687a9ed63dc939bbe886170f4a47455ed/src/clojure/contrib/pprint/dispatch.clj#L125",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*simple-dispatch*",
    "namespace":"clojure.contrib.pprint",
@@ -4169,7 +4169,7 @@
    "Set the pretty print dispatch function to a function matching (fn [obj] ...)\nwhere obj is the object to pretty print. That function will be called with *out* set\nto a pretty printing writer to which it should do its printing.\n\nFor example functions, see *simple-dispatch* and *code-dispatch* in \nclojure.contrib.pprint.dispatch.clj.",
    "name":"set-pprint-dispatch"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/b902ebe3c80ec86d4f80f8cce6d2faabc8da5278/src/clojure/contrib/pprint/dispatch.clj#L19",
+   "http://github.com/richhickey/clojure-contrib/blob/eb73c54687a9ed63dc939bbe886170f4a47455ed/src/clojure/contrib/pprint/dispatch.clj#L19",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/use-method",
    "namespace":"clojure.contrib.pprint",
@@ -4589,7 +4589,7 @@
    "Ref to a map from package name prefixes to URLs for remote\nJavadocs.",
    "name":"*remote-javadocs*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L150",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L150",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/add-break-thread!",
    "namespace":"clojure.contrib.repl-utils",
@@ -4615,7 +4615,7 @@
    "Adds to the list of remote Javadoc URLs.  package-prefix is the\nbeginning of the package name that has docs at this URL.",
    "name":"add-remote-javadoc"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L131",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L131",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/break-threads",
    "namespace":"clojure.contrib.repl-utils",
@@ -4623,7 +4623,7 @@
    "Threads to stop when Ctrl-C is pressed.  See 'add-break-thread!'",
    "name":"break-threads"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L163",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L163",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/expression-info",
    "namespace":"clojure.contrib.repl-utils",
@@ -4641,7 +4641,7 @@
    "Searches for a URL for the given class name.  Tries\n*local-javadocs* first, then *remote-javadocs*.  Returns a string.",
    "name":"find-javadoc-url"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L97",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L97",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/get-source",
    "namespace":"clojure.contrib.repl-utils",
@@ -4659,7 +4659,7 @@
    "Opens a browser window displaying the javadoc for the argument.\nTries *local-javadocs* first, then *remote-javadocs*.",
    "name":"javadoc"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L188",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L188",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/run",
    "namespace":"clojure.contrib.repl-utils",
@@ -4668,7 +4668,7 @@
    "Loads the specified namespace and invokes its \"main\" function with\noptional args. ns-name is not evaluated.",
    "name":"run"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L181",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L181",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/run*",
    "namespace":"clojure.contrib.repl-utils",
@@ -4677,7 +4677,7 @@
    "Loads the specified namespace and invokes its \"main\" function with\noptional args.",
    "name":"run*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L59",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L59",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/show",
    "namespace":"clojure.contrib.repl-utils",
@@ -4686,7 +4686,7 @@
    "With one arg prints all static and instance members of x or (class x).\nEach member is listed with a number which can be given as 'selector'\nto return the member object -- the REPL will print more details for\nthat member.\n\nThe selector also may be a string or regex, in which case only\nmembers whose names match 'selector' as a case-insensitive regex\nwill be printed.\n\nFinally, the selector also may be a predicate, in which case only\nmembers for which the predicate returns true will be printed.  The\npredicate will be passed a single argument, a map that includes the\n:text that will be printed and the :member object itself, as well as\nall the properies of the member object as translated by 'bean'.\n\nExamples: (show Integer)  (show [])  (show String 23)  (show String \"case\")",
    "name":"show"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L119",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L119",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/source",
    "namespace":"clojure.contrib.repl-utils",
@@ -4695,7 +4695,7 @@
    "Prints the source code for the given symbol, if it can find it.\nThis requires that the symbol resolve to a Var defined in a\nnamespace for which the .clj is in the classpath.\n\nExample: (source filter)",
    "name":"source"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/f165e286ac9856781419d4659a0cde088eb79ee1/src/clojure/contrib/repl_utils.clj#L135",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj#L135",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//repl-utils-api.html#clojure.contrib.repl-utils/start-handling-break",
    "namespace":"clojure.contrib.repl-utils",
@@ -5980,7 +5980,7 @@
    "This function is called by trace.  Prints to standard output, but\nmay be rebound to do anything you like.  'name' is optional.",
    "name":"tracer"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L128",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/types.clj#L128",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#clojure.contrib.types/defadt",
    "namespace":"clojure.contrib.types",
@@ -5989,7 +5989,7 @@
    "Define an algebraic data type name by an exhaustive list of constructors.\nEach constructor can be a symbol (argument-free constructor) or a\nlist consisting of a tag symbol followed by the argument symbols.\nThe data type tag must be a keyword.",
    "name":"defadt"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L54",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/types.clj#L54",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#clojure.contrib.types/deftype",
    "namespace":"clojure.contrib.types",
@@ -6003,7 +6003,7 @@
    "Define a data type by a type tag (a namespace-qualified keyword)\nand a symbol naming the constructor function. Optionally, a\nconstructor and a deconstructor function can be given as well,\nthe defaults being clojure.core/identity and clojure.core/list.\nThe full constructor associated with constructor-name calls the\nconstructor function and attaches the type tag to its result\nas metadata. The deconstructor function must return the arguments\nto be passed to the constructor in order to create an equivalent\nobject. It is used for printing and matching.",
    "name":"deftype"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L88",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/types.clj#L88",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#clojure.contrib.types/deftype-",
    "namespace":"clojure.contrib.types",
@@ -6011,7 +6011,7 @@
    "doc":"Same as deftype but the constructor is private.",
    "name":"deftype-"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/types.clj#L241",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/types.clj#L241",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//types-api.html#clojure.contrib.types/match",
    "namespace":"clojure.contrib.types",
@@ -6038,7 +6038,7 @@
    "Evaluates body in an anonymous namespace, which is then immediately\nremoved.  The temporary namespace will 'refer' clojure.core.",
    "name":"with-temp-ns"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L65",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L65",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/ancestors",
    "namespace":"clojure.contrib.zip-filter",
@@ -6047,7 +6047,7 @@
    "Returns a lazy sequence of all ancestors of location loc, starting\nwith loc and proceeding to loc's parent node and on through to the\nroot of the tree.",
    "name":"ancestors"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L45",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L45",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/children",
    "namespace":"clojure.contrib.zip-filter",
@@ -6056,7 +6056,7 @@
    "Returns a lazy sequence of all immediate children of location loc,\nleft-to-right.",
    "name":"children"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L52",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L52",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/children-auto",
    "namespace":"clojure.contrib.zip-filter",
@@ -6065,7 +6065,7 @@
    "Returns a lazy sequence of all immediate children of location loc,\nleft-to-right, marked so that a following tag= predicate will auto-descend.",
    "name":"children-auto"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L60",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L60",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/descendants",
    "namespace":"clojure.contrib.zip-filter",
@@ -6074,7 +6074,7 @@
    "Returns a lazy sequence of all descendants of location loc, in\ndepth-first order, left-to-right, starting with loc.",
    "name":"descendants"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L33",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L33",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/left-locs",
    "namespace":"clojure.contrib.zip-filter",
@@ -6083,7 +6083,7 @@
    "Returns a lazy sequence of locations to the left of loc, starting with loc.",
    "name":"left-locs"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L37",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L37",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/leftmost?",
    "namespace":"clojure.contrib.zip-filter",
@@ -6092,7 +6092,7 @@
    "Returns true if there are no more nodes to the left of location loc.",
    "name":"leftmost?"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L29",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L29",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/right-locs",
    "namespace":"clojure.contrib.zip-filter",
@@ -6101,7 +6101,7 @@
    "Returns a lazy sequence of locations to the right of loc, starting with loc.",
    "name":"right-locs"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/zip_filter.clj#L41",
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj#L41",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//zip-filter-api.html#clojure.contrib.zip-filter/rightmost?",
    "namespace":"clojure.contrib.zip-filter",
