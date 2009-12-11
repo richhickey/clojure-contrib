@@ -3975,21 +3975,21 @@
    "The pretty print dispatch function for pretty printing Clojure code.",
    "name":"*code-dispatch*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L78",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L78",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-base*",
    "namespace":"clojure.contrib.pprint",
    "doc":"The base to use for printing integers and rationals.",
    "name":"*print-base*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L56",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L56",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-circle*",
    "namespace":"clojure.contrib.pprint",
    "doc":"Mark circular structures (N.B. This is not yet used)",
    "name":"*print-circle*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L51",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L51",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-lines*",
    "namespace":"clojure.contrib.pprint",
@@ -3997,7 +3997,7 @@
    "Maximum number of lines to print in a pretty print instance (N.B. This is not yet used)",
    "name":"*print-lines*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L44",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L44",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-miser-width*",
    "namespace":"clojure.contrib.pprint",
@@ -4005,7 +4005,7 @@
    "The column at which to enter miser style. Depending on the dispatch table, \nmiser style add newlines in more places to try to keep lines short allowing for further \nlevels of nesting.",
    "name":"*print-miser-width*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L33",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L33",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-pprint-dispatch*",
    "namespace":"clojure.contrib.pprint",
@@ -4013,14 +4013,14 @@
    "The pretty print dispatch function. Use with-pprint-dispatch or set-pprint-dispatch\nto modify.",
    "name":"*print-pprint-dispatch*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L29",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L29",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-pretty*",
    "namespace":"clojure.contrib.pprint",
    "doc":"Bind to true if you want write to use pretty printing",
    "name":"*print-pretty*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L72",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L72",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-radix*",
    "namespace":"clojure.contrib.pprint",
@@ -4028,7 +4028,7 @@
    "Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8, \nor 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the \nradix specifier is in the form #XXr where XX is the decimal value of *print-base* ",
    "name":"*print-radix*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L38",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L38",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-right-margin*",
    "namespace":"clojure.contrib.pprint",
@@ -4036,7 +4036,7 @@
    "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all \nnon-mandatory newlines.",
    "name":"*print-right-margin*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L61",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L61",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-shared*",
    "namespace":"clojure.contrib.pprint",
@@ -4044,7 +4044,7 @@
    "Mark repeated structures rather than repeat them (N.B. This is not yet used)",
    "name":"*print-shared*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L65",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L65",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/*print-suppress-namespaces*",
    "namespace":"clojure.contrib.pprint",
@@ -4061,7 +4061,7 @@
    "The pretty print dispatch function for simple data structure format.",
    "name":"*simple-dispatch*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ec3a9d1fc37db63245ec6a3c672725add7633bd2/src/clojure/contrib/pprint/cl_format.clj#L26",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/cl_format.clj#L26",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/cl-format",
    "namespace":"clojure.contrib.pprint",
@@ -4070,7 +4070,7 @@
    "An implementation of a Common Lisp compatible format function. cl-format formats its\narguments to an output stream or string based on the format control string given. It \nsupports sophisticated formatting of structured data.\n\nWriter is an instance of java.io.Writer, true to output to *out* or nil to output \nto a string, format-in is the format control string and the remaining arguments \nare the data to be formatted.\n\nThe format control string is a string to be output with embedded 'format directives' \ndescribing how to format the various arguments passed in.\n\nIf writer is nil, cl-format returns the formatted result string. Otherwise, cl-format \nreturns nil.\n\nFor example:\n (let [results [46 38 22]]\n        (cl-format true \"There ~[are~;is~:;are~]~:* ~d result~:p: ~{~d~^, ~}~%\" \n                   (count results) results))\n\nPrints to *out*:\n There are 3 results: 46, 38, 22\n\nDetailed documentation on format control strings is available in the \"Common Lisp the \nLanguage, 2nd edition\", Chapter 22 (available online at:\nhttp://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node200.html#SECTION002633000000000000000) \nand in the Common Lisp HyperSpec at \nhttp://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm",
    "name":"cl-format"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ec3a9d1fc37db63245ec6a3c672725add7633bd2/src/clojure/contrib/pprint/cl_format.clj#L1749",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/cl_format.clj#L1748",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/compile-format",
    "namespace":"clojure.contrib.pprint",
@@ -4079,7 +4079,7 @@
    "Compiles format-str into a compiled format which can be used as an argument\nto cl-format just like a plain format string. Use this function for improved \nperformance when you're using the same format string repeatedly",
    "name":"compile-format"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ec3a9d1fc37db63245ec6a3c672725add7633bd2/src/clojure/contrib/pprint/cl_format.clj#L1817",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/cl_format.clj#L1816",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/formatter",
    "namespace":"clojure.contrib.pprint",
@@ -4088,7 +4088,7 @@
    "Makes a function which can directly run format-in. The function is\nfn [stream & args] ... and returns nil unless the stream is nil (meaning \noutput to a string) in which case it returns the resulting string.\n\nformat-in can be either a control string or a previously compiled format.",
    "name":"formatter"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ec3a9d1fc37db63245ec6a3c672725add7633bd2/src/clojure/contrib/pprint/cl_format.clj#L1831",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/cl_format.clj#L1830",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/formatter-out",
    "namespace":"clojure.contrib.pprint",
@@ -4097,7 +4097,7 @@
    "Makes a function which can directly run format-in. The function is\nfn [& args] ... and returns nil. This version of the formatter macro is\ndesigned to be used with *out* set to an appropriate Writer. In particular,\nthis is meant to be used as part of a pretty printer dispatch method.\n\nformat-in can be either a control string or a previously compiled format.",
    "name":"formatter-out"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/ec3a9d1fc37db63245ec6a3c672725add7633bd2/src/clojure/contrib/pprint/cl_format.clj#L1153",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/cl_format.clj#L1152",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/fresh-line",
    "namespace":"clojure.contrib.pprint",
@@ -4106,7 +4106,7 @@
    "Make a newline if the Writer is not already at the beginning of the line.\nN.B. Only works on ColumnWriters right now.",
    "name":"fresh-line"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L241",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L241",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/pp",
    "namespace":"clojure.contrib.pprint",
@@ -4115,7 +4115,7 @@
    "A convenience macro that pretty prints the last thing output. This is\nexactly equivalent to (pprint *1).",
    "name":"pp"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L229",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L229",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/pprint",
    "namespace":"clojure.contrib.pprint",
@@ -4124,7 +4124,7 @@
    "Pretty print object to the optional output writer. If the writer is not provided, \nprint the object to the currently bound value of *out*.",
    "name":"pprint"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L313",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L315",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/pprint-indent",
    "namespace":"clojure.contrib.pprint",
@@ -4133,7 +4133,7 @@
    "Create an indent at this point in the pretty printing stream. This defines how \nfollowing lines are indented. relative-to can be either :block or :current depending \nwhether the indent should be computed relative to the start of the logical block or\nthe current column position. n is an offset. \n\nOutput is sent to *out* which must be a pretty printing writer.",
    "name":"pprint-indent"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L284",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L286",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/pprint-logical-block",
    "namespace":"clojure.contrib.pprint",
@@ -4142,7 +4142,7 @@
    "Execute the body as a pretty printing logical block with output to *out* which \nmust be a pretty printing writer. When used from pprint or cl-format, this can be \nassumed. \n\nBefore the body, the caller can optionally specify options: :prefix, :per-line-prefix, \nand :suffix.",
    "name":"pprint-logical-block"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L304",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L306",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/pprint-newline",
    "namespace":"clojure.contrib.pprint",
@@ -4151,7 +4151,7 @@
    "Print a conditional newline to a pretty printing stream. kind specifies if the \nnewline is :linear, :miser, :fill, or :mandatory. \n\nOutput is sent to *out* which must be a pretty printing writer.",
    "name":"pprint-newline"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L325",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L327",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/pprint-tab",
    "namespace":"clojure.contrib.pprint",
@@ -4160,7 +4160,7 @@
    "Tab at this point in the pretty printing stream. kind specifies whether the tab\nis :line, :section, :line-relative, or :section-relative. \n\nColnum and colinc specify the target column and the increment to move the target\nforward if the output is already past the original target.\n\nOutput is sent to *out* which must be a pretty printing writer.\n\nTHIS FUNCTION IS NOT YET IMPLEMENTED.",
    "name":"pprint-tab"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L246",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L246",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/set-pprint-dispatch",
    "namespace":"clojure.contrib.pprint",
@@ -4178,7 +4178,7 @@
    "Installs a function as a new method of multimethod associated with dispatch-value. ",
    "name":"use-method"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L257",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L259",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/with-pprint-dispatch",
    "namespace":"clojure.contrib.pprint",
@@ -4187,7 +4187,7 @@
    "Execute body with the pretty print dispatch function bound to function.",
    "name":"with-pprint-dispatch"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L186",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L186",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/write",
    "namespace":"clojure.contrib.pprint",
@@ -4196,7 +4196,7 @@
    "Write an object subject to the current bindings of the printer control variables.\nUse the kw-args argument to override individual variables for this call (and any \nrecursive calls). Returns the string result if :stream is nil or nil otherwise.\n\nThe following keyword arguments can be passed with values:\n  Keyword              Meaning                              Default value\n  :stream              Writer for output or nil             true (indicates *out*)\n  :base                Base to use for writing rationals    Current value of *print-base*\n  :circle*             If true, mark circular structures    Current value of *print-circle*\n  :length              Maximum elements to show in sublists Current value of *print-length*\n  :level               Maximum depth                        Current value of *print-level*\n  :lines*              Maximum lines of output              Current value of *print-lines*\n  :miser-width         Width to enter miser mode            Current value of *print-miser-width*\n  :dispatch            The pretty print dispatch function   Current value of *print-pprint-dispatch*\n  :pretty              If true, do pretty printing          Current value of *print-pretty*\n  :radix               If true, prepend a radix specifier   Current value of *print-radix*\n  :readably*           If true, print readably              Current value of *print-readably*\n  :right-margin        The column for the right margin      Current value of *print-right-margin*\n  :suppress-namespaces If true, no namespaces in symbols    Current value of *print-suppress-namespaces*\n\n  * = not yet supported",
    "name":"write"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/0d2919855b1cc18f21e08fb4ee4a8c32445582e0/src/clojure/contrib/pprint/pprint_base.clj#L161",
+   "http://github.com/richhickey/clojure-contrib/blob/74c5bf10a5e92c2f2ee83d09eb15938914f95fbe/src/clojure/contrib/pprint/pprint_base.clj#L161",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//pprint-api.html#clojure.contrib.pprint/write-out",
    "namespace":"clojure.contrib.pprint",
