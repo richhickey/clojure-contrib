@@ -481,7 +481,7 @@
    "author":"Stuart Sierra",
    "doc":"Singleton functions"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/sql-api.html",
    "name":"clojure.contrib.sql",
@@ -643,7 +643,7 @@
    "doc":
    "A version of prxml that uses a pretty print dispatch function."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/sql.internal-api.html",
    "name":"clojure.contrib.sql.internal",
@@ -4942,7 +4942,7 @@
    "Returns a per-thread singleton function.  f is a function of no\narguments that creates and returns some object.  The singleton\nfunction will call f only once for each thread, and cache its value\nfor subsequent calls from the same thread.  This allows you to\nsafely and lazily initialize shared objects on a per-thread basis.\n\nWarning: due to a bug in JDK 5, it may not be safe to use a\nper-thread-singleton in the initialization function for another\nper-thread-singleton.  See\nhttp://bugs.sun.com/bugdatabase/view_bug.do?bug_id=5025230",
    "name":"per-thread-singleton"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L32",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L32",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/connection",
    "namespace":"clojure.contrib.sql",
@@ -4951,7 +4951,7 @@
    "Returns the current database connection (or throws if there is none)",
    "name":"connection"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L101",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L105",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/create-table",
    "namespace":"clojure.contrib.sql",
@@ -4960,7 +4960,7 @@
    "Creates a table on the open database connection given a table name and\nspecs. Each spec is either a column spec: a vector containing a column\nname and optionally a type and other constraints, or a table-level\nconstraint: a vector containing words that express the constraint. All\nwords used to describe the table may be supplied as strings or keywords.",
    "name":"create-table"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L155",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L159",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/delete-rows",
    "namespace":"clojure.contrib.sql",
@@ -4969,7 +4969,7 @@
    "Deletes rows from a table. where-params is a vector containing a string\nproviding the (optionally parameterized) selection criteria followed by\nvalues for any parameters.",
    "name":"delete-rows"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L79",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L83",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/do-commands",
    "namespace":"clojure.contrib.sql",
@@ -4977,7 +4977,7 @@
    "doc":"Executes SQL commands on the open database connection.",
    "name":"do-commands"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L88",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L92",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/do-prepared",
    "namespace":"clojure.contrib.sql",
@@ -4986,7 +4986,7 @@
    "Executes an (optionally parameterized) SQL prepared statement on the\nopen database connection. Each param-group is a seq of values for all of\nthe parameters.",
    "name":"do-prepared"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L117",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L121",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/drop-table",
    "namespace":"clojure.contrib.sql",
@@ -4995,7 +4995,7 @@
    "Drops a table on the open database connection given its name, a string\nor keyword",
    "name":"drop-table"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L31",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L31",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/find-connection",
    "namespace":"clojure.contrib.sql",
@@ -5004,7 +5004,7 @@
    "Returns the current database connection (or nil if there is none)",
    "name":"find-connection"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L148",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L152",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/insert-records",
    "namespace":"clojure.contrib.sql",
@@ -5013,7 +5013,7 @@
    "Inserts records into a table. records are maps from strings or\nkeywords (identifying columns) to values.",
    "name":"insert-records"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L142",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L146",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/insert-rows",
    "namespace":"clojure.contrib.sql",
@@ -5022,7 +5022,7 @@
    "Inserts complete rows into a table. Each row is a vector of values for\neach of the table's columns in order.",
    "name":"insert-rows"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L124",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L128",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/insert-values",
    "namespace":"clojure.contrib.sql",
@@ -5031,7 +5031,7 @@
    "Inserts rows into a table with values for specified columns only.\ncolumn-names is a vector of strings or keywords identifying columns. Each\nvalue-group is a vector containing a values for each column in\norder. When inserting complete rows (all columns), consider using\ninsert-rows instead.",
    "name":"insert-values"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L73",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L77",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/is-rollback-only",
    "namespace":"clojure.contrib.sql",
@@ -5040,7 +5040,7 @@
    "Returns true if the outermost transaction will rollback rather than\ncommit when complete",
    "name":"is-rollback-only"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L67",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L71",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/set-rollback-only",
    "namespace":"clojure.contrib.sql",
@@ -5049,7 +5049,7 @@
    "Marks the outermost transaction such that it will rollback rather than\ncommit when complete",
    "name":"set-rollback-only"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L56",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L60",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/transaction",
    "namespace":"clojure.contrib.sql",
@@ -5058,7 +5058,7 @@
    "Evaluates body as a transaction on the open database connection. Any\nnested transactions are absorbed into the outermost transaction. By\ndefault, all database updates are committed together as a group after\nevaluating the outermost body, or rolled back on any uncaught\nexception. If set-rollback-only is called within scope of the outermost\ntransaction, the entire transaction will be rolled back rather than\ncommitted when complete.",
    "name":"transaction"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L180",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L184",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/update-or-insert-values",
    "namespace":"clojure.contrib.sql",
@@ -5067,7 +5067,7 @@
    "Updates values on selected rows in a table, or inserts a new row when no\nexisting row matches the selection criteria. where-params is a vector\ncontaining a string providing the (optionally parameterized) selection\ncriteria followed by values for any parameters. record is a map from\nstrings or keywords (identifying columns) to updated values.",
    "name":"update-or-insert-values"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L166",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L170",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/update-values",
    "namespace":"clojure.contrib.sql",
@@ -5076,16 +5076,16 @@
    "Updates values on selected rows in a table. where-params is a vector\ncontaining a string providing the (optionally parameterized) selection\ncriteria followed by values for any parameters. record is a map from\nstrings or keywords (identifying columns) to updated values.",
    "name":"update-values"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L34",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L34",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/with-connection",
    "namespace":"clojure.contrib.sql",
    "arglists":[["db-spec", "&", "body"]],
    "doc":
-   "Evaluates body in the context of a new connection to a database then\ncloses the connection. db-spec is a map containing values for one of the\nfollowing parameter sets:\n\nDriverManager:\n  :classname   (required) a String, the jdbc driver class name\n  :subprotocol (required) a String, the jdbc subprotocol\n  :subname     (required) a String, the jdbc subname\n  (others)     (optional) passed to the driver as properties.\n\nDataSource:\n  :datasource  (required) a javax.sql.DataSource\n  :username    (optional) a String\n  :password    (optional) a String, required if :username is supplied\n\nJNDI:\n  :name        (required) a String or javax.naming.Name\n  :environment (optional) a java.util.Map",
+   "Evaluates body in the context of a new connection to a database then\ncloses the connection. db-spec is a map containing values for one of the\nfollowing parameter sets:\n\nFactory:\n  :factory     (required) a function of one argument, a map of params\n  (others)     (optional) passed to the factory function in a map\n\nDriverManager:\n  :classname   (required) a String, the jdbc driver class name\n  :subprotocol (required) a String, the jdbc subprotocol\n  :subname     (required) a String, the jdbc subname\n  (others)     (optional) passed to the driver as properties.\n\nDataSource:\n  :datasource  (required) a javax.sql.DataSource\n  :username    (optional) a String\n  :password    (optional) a String, required if :username is supplied\n\nJNDI:\n  :name        (required) a String or javax.naming.Name\n  :environment (optional) a java.util.Map",
    "name":"with-connection"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/5b826a3e8315cbb7fbcb5c6b1d83c74cf6dc66d1/src/clojure/contrib/sql.clj#L193",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj#L197",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql/with-query-results",
    "namespace":"clojure.contrib.sql",
@@ -6946,7 +6946,7 @@
    "Print XML to *out*.  Vectors become XML tags: the first item is the\ntag name; optional second item is a map of attributes.\n\nSequences are processed recursively, so you can use map and other\nsequence functions inside prxml.\n\n  (prxml [:p {:class \"greet\"} [:i \"Ladies & gentlemen\"]])\n  ; => <p class=\"greet\"><i>Ladies &amp; gentlemen</i></p>\n\nPSEUDO-TAGS: some keywords have special meaning:\n\n  :raw!      do not XML-escape contents\n  :comment!  create an XML comment\n  :decl!     create an XML declaration, with attributes\n  :cdata!    create a CDATA section\n  :doctype!  create a DOCTYPE!\n\n  (prxml [:p [:raw! \"<i>here & gone</i>\"]])\n  ; => <p><i>here & gone</i></p>\n\n  (prxml [:decl! {:version \"1.1\"}])\n  ; => <?xml version=\"1.1\" encoding=\"UTF-8\"?>",
    "name":"prxml"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L38",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L38",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/connection*",
    "namespace":"clojure.contrib.sql.internal",
@@ -6955,7 +6955,7 @@
    "Returns the current database connection (or throws if there is none)",
    "name":"connection*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L33",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L33",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/find-connection*",
    "namespace":"clojure.contrib.sql.internal",
@@ -6964,20 +6964,20 @@
    "Returns the current database connection (or nil if there is none)",
    "name":"find-connection*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L51",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L51",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/get-connection",
    "namespace":"clojure.contrib.sql.internal",
    "arglists":
    [[{"keys":
-      ["classname", "subprotocol", "subname", "datasource", "username",
-       "password", "name", "environment"],
+      ["factory", "classname", "subprotocol", "subname", "datasource",
+       "username", "password", "name", "environment"],
       "as":"db-spec"}]],
    "doc":
-   "Creates a connection to a database. db-spec is a map containing values\nfor one of the following parameter sets:\n\nDriverManager:\n  :classname   (required) a String, the jdbc driver class name\n  :subprotocol (required) a String, the jdbc subprotocol\n  :subname     (required) a String, the jdbc subname\n  (others)     (optional) passed to the driver as properties.\n\nDataSource:\n  :datasource  (required) a javax.sql.DataSource\n  :username    (optional) a String\n  :password    (optional) a String, required if :username is supplied\n\nJNDI:\n  :name        (required) a String or javax.naming.Name\n  :environment (optional) a java.util.Map",
+   "Creates a connection to a database. db-spec is a map containing values\nfor one of the following parameter sets:\n\nFactory:\n  :factory     (required) a function of one argument, a map of params\n  (others)     (optional) passed to the factory function in a map\n\nDriverManager:\n  :classname   (required) a String, the jdbc driver class name\n  :subprotocol (required) a String, the jdbc subprotocol\n  :subname     (required) a String, the jdbc subname\n  (others)     (optional) passed to the driver as properties.\n\nDataSource:\n  :datasource  (required) a javax.sql.DataSource\n  :username    (optional) a String\n  :password    (optional) a String, required if :username is supplied\n\nJNDI:\n  :name        (required) a String or javax.naming.Name\n  :environment (optional) a java.util.Map",
    "name":"get-connection"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L100",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L107",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/print-sql-exception",
    "namespace":"clojure.contrib.sql.internal",
@@ -6985,7 +6985,7 @@
    "doc":"Prints the contents of an SQLException to stream",
    "name":"print-sql-exception"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L114",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L121",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/print-sql-exception-chain",
    "namespace":"clojure.contrib.sql.internal",
@@ -6993,7 +6993,7 @@
    "doc":"Prints a chain of SQLExceptions to stream",
    "name":"print-sql-exception-chain"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L122",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L129",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/print-update-counts",
    "namespace":"clojure.contrib.sql.internal",
@@ -7002,7 +7002,7 @@
    "Prints the update counts from a BatchUpdateException to stream",
    "name":"print-update-counts"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L44",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L44",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/rollback",
    "namespace":"clojure.contrib.sql.internal",
@@ -7010,7 +7010,7 @@
    "doc":"Accessor for the rollback flag on the current connection",
    "name":"rollback"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L131",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L138",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/throw-rollback",
    "namespace":"clojure.contrib.sql.internal",
@@ -7018,7 +7018,7 @@
    "doc":"Sets rollback and throws a wrapped exception",
    "name":"throw-rollback"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L137",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L144",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/transaction*",
    "namespace":"clojure.contrib.sql.internal",
@@ -7027,7 +7027,7 @@
    "Evaluates func as a transaction on the open database connection. Any\nnested transactions are absorbed into the outermost transaction. By\ndefault, all database updates are committed together as a group after\nevaluating the outermost body, or rolled back on any uncaught\nexception. If rollback is set within scope of the outermost transaction,\nthe entire transaction will be rolled back rather than committed when\ncomplete.",
    "name":"transaction*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L91",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L98",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/with-connection*",
    "namespace":"clojure.contrib.sql.internal",
@@ -7036,7 +7036,7 @@
    "Evaluates func in the context of a new connection to a database then\ncloses the connection.",
    "name":"with-connection*"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/47fefa28e235e5fcd0377e1bd930eb05a6a9d23b/src/clojure/contrib/sql/internal.clj#L171",
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj#L178",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//sql-api.html#clojure.contrib.sql.internal/with-query-results*",
    "namespace":"clojure.contrib.sql.internal",
