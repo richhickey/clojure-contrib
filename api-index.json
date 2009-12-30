@@ -542,7 +542,7 @@
    "author":"Konrad Hinsen",
    "doc":"General and algebraic data types"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/with_ns.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/f24f6412a1cee7015285856e5e4fc6ddc3974439/src/clojure/contrib/with_ns.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/with-ns-api.html",
    "name":"clojure.contrib.with-ns",
@@ -6020,7 +6020,7 @@
    "Given a value and a list of template-expr clauses, evaluate the first\nexpr whose template matches the value. There are four kinds of templates:\n1) Lists of the form (tag x1 x2 ...) match instances of types\n   whose constructor has the same form as the list.\n2) Quoted lists of the form '(x1 x2 ...) match lists of the same\n   length.\n3) Vectors of the form [x1 x2 ...] match vectors of the same length.\n4) Maps of the form {:key1 x1 :key2 x2 ...} match maps that have\n   the same keys as the template, but which can have additional keys\n   that are not part of the template.\nThe values x1, x2, ... can be symbols or non-symbol values. Non-symbols\nmust be equal to the corresponding values in the object to be matched.\nSymbols will be bound to the corresponding value in the object in the\nevaluation of expr. If the same symbol occurs more than once in a,\ntemplate the corresponding elements of the object must be equal\nfor the template to match.",
    "name":"match"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/with_ns.clj#L20",
+   "http://github.com/richhickey/clojure-contrib/blob/f24f6412a1cee7015285856e5e4fc6ddc3974439/src/clojure/contrib/with_ns.clj#L20",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//with-ns-api.html#clojure.contrib.with-ns/with-ns",
    "namespace":"clojure.contrib.with-ns",
@@ -6029,7 +6029,7 @@
    "Evaluates body in another namespace.  ns is either a namespace\nobject or a symbol.  This makes it possible to define functions in\nnamespaces other than the current one.",
    "name":"with-ns"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/with_ns.clj#L28",
+   "http://github.com/richhickey/clojure-contrib/blob/f24f6412a1cee7015285856e5e4fc6ddc3974439/src/clojure/contrib/with_ns.clj#L28",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//with-ns-api.html#clojure.contrib.with-ns/with-temp-ns",
    "namespace":"clojure.contrib.with-ns",
