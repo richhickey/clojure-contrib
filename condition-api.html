@@ -59,6 +59,16 @@ namespace.
       <a href="#clojure.contrib.condition/stack-trace-info">stack-trace-info</a>
     </div>
     <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#condition.Condition">condition.Condition</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition.Condition/-init">-init</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition.Condition/-meta">-meta</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition.Condition/-post-init">-post-init</a>
+    </div>
+    <br />
   </div>
 </div>
 </div>
@@ -162,6 +172,38 @@ arguments, raises a map with keys and values from the arguments.</pre>
   <pre id="var-docstr">Returns header, stack-trace, and cause info from conditions and
 Throwables</pre>
   <a href="http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj#L106" id="var-source">Source</a>
+</div>
+<h2 id="namespace-name">condition.Condition</h2>
+<pre id="namespace-docstr"></pre>
+<br />
+<div id="var-entry">
+  <hr />
+  <h2 id="clojure.contrib.condition.Condition/-init">-init</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (-init condition)
+</pre>
+  <pre id="var-docstr">Constructs a Condition object with condition (a map) as its
+metadata. Also initializes the superclass with the values at :message
+and :cause, if any, so they are also available via .getMessage and
+.getCause.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition/Condition.clj#L25" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="clojure.contrib.condition.Condition/-meta">-meta</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (-meta this)
+</pre>
+  <pre id="var-docstr">Returns this object's metadata, the condition</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition/Condition.clj#L40" id="var-source">Source</a>
+</div><div id="var-entry">
+  <hr />
+  <h2 id="clojure.contrib.condition.Condition/-post-init">-post-init</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (-post-init this condition)
+</pre>
+  <pre id="var-docstr">Adds :stack-trace to the condition. Drops the bottom 3 frames because
+they are always the same: implementation details of Condition and raise.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition/Condition.clj#L33" id="var-source">Source</a>
 </div>
 
 
