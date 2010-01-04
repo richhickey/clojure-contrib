@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.clojure</groupId>
   <artifactId>clojure-contrib</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-RC1</version>
   <url>http://clojure.org/</url>
 
   <description>Clojure user contributions library.</description>
@@ -21,18 +21,8 @@
   <dependencies>
     <dependency>
       <groupId>org.clojure</groupId>
-      <artifactId>clojure-lang</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <artifactId>clojure</artifactId>
+      <version>1.0.0</version>
     </dependency>
   </dependencies>
-
-  <!-- Source of Clojure snapshot dependencies. -->
-
-  <repositories>
-    <repository>
-      <id>tapestry-snapshots</id>
-      <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
-    </repository>
-  </repositories>
-
 </project>
