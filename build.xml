@@ -8,6 +8,9 @@
 
   <property name="src" location="src"/>
   <property name="build" location="classes"/>
+  <property name="dist" location="dist"/>
+  <property name="contrib.version.label" value="1.1.0-RC1"/>
+  <property name="zip" location="clojure-contrib-${contrib.version.label}.zip"/>
   <property file="local.properties"/>
 
   <available property="hasclojure" file="${clojure.jar}"/>
@@ -29,7 +32,9 @@
   <target name="clean" description="Remove generated files and directories.">
     <delete file="${jarfile}"/>
     <delete file="${slimjarfile}"/>
+    <delete file="${zip}"/>
     <delete dir="${build}"/>
+    <delete dir="${dist}"/>
   </target>
 
   <target name="test_contrib"
@@ -201,5 +206,16 @@
     <deploy target-dir="${stable.repo.dir}"/>
   </target>
 
-
+  <target name="dist" depends="jar"
+          description="Builds distribution ZIP file.">
+    <property name="distdir" value="${dist}/clojure-contrib-${contrib.version.label}"/>
+    <mkdir dir="${distdir}"/>
+    <copy todir="${distdir}" includeEmptyDirs="false">
+      <fileset dir="${basedir}">
+        <exclude name="**/.git/**"/>
+        <exclude name="**/*.class"/>
+      </fileset>
+    </copy>
+    <zip basedir="${dist}" destfile="${zip}"/>
+  </target>
 </project>
