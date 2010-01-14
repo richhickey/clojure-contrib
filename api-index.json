@@ -305,7 +305,7 @@
    "doc":
    "Logging macros which delegate to a specific logging implementation. At\nmacro-expansion-time a specific implementation is selected from, in order,\nApache commons-logging, log4j, and finally java.util.logging.\n\nLogging levels are specified by clojure keywords corresponding to the\nvalues used in log4j and commons-logging:\n  :trace, :debug, :info, :warn, :error, :fatal\n\nLogging occurs with the log macro, or the level-specific convenience macros,\nwhich write either directly or via an agent.  For performance reasons, direct\nlogging is enabled by default, but setting the *allow-direct-logging* boolean\natom to false will disable it. If logging is invoked within a transaction it\nwill always use an agent.\n\nThe log macros will not evaluate their 'message' unless the specific logging\nlevel is in effect. Alternately, you can use the spy macro when you have code\nthat needs to be evaluated, and also want to output the code and its result to\nthe debug log.\n\nUnless otherwise specified, the current namespace (as identified by *ns*) will\nbe used as the log-ns (similar to how the java class name is usually used).\nNote: your log configuration should display the name that was passed to the\nlogging implementation, and not perform stack-inspection, otherwise you'll see\nsomething like \"fn__72$impl_write_BANG__39__auto____81\" in your logs.\n\nUse the enabled? macro to write conditional code against the logging level\n(beyond simply whether or not to call log, which is handled automatically).\n\nYou can redirect all java writes of System.out and System.err to the log\nsystem by calling log-capture!.  To rebind *out* and *err* to the log system\ninvoke with-logs.  In both cases a log-ns (e.g., \"com.example.captured\")\nneeds to be specified to namespace the output."},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/macro-utils-api.html",
    "name":"clojure.contrib.macro-utils",
@@ -3157,7 +3157,7 @@
    "Evaluates exprs in a context in which *out* and *err* are bound to :info and\n:error logging, respectively. The specified log-ns value will be used to\nnamespace all redirected logging.",
    "name":"with-logs"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L199",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L222",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/defsymbolmacro",
    "namespace":"clojure.contrib.macro-utils",
@@ -3166,7 +3166,7 @@
    "Define a symbol macro. Because symbol macros are not part of\nClojure's built-in macro expansion system, they can be used only\ninside a with-symbol-macros form.",
    "name":"defsymbolmacro"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L213",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L236",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/deftemplate",
    "namespace":"clojure.contrib.macro-utils",
@@ -3175,7 +3175,7 @@
    "Define a macro that expands into forms after replacing the\nsymbols in params (a vector) by the corresponding parameters\ngiven in the macro call.",
    "name":"deftemplate"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L178",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L201",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/macrolet",
    "namespace":"clojure.contrib.macro-utils",
@@ -3184,7 +3184,7 @@
    "Define local macros that are used in the expansion of exprs. The\nsyntax is the same as for letfn forms.",
    "name":"macrolet"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L233",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L256",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/mexpand",
    "namespace":"clojure.contrib.macro-utils",
@@ -3193,7 +3193,7 @@
    "Like clojure.core/macroexpand, but takes into account symbol macros.",
    "name":"mexpand"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L225",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L248",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/mexpand-1",
    "namespace":"clojure.contrib.macro-utils",
@@ -3202,7 +3202,7 @@
    "Like clojure.core/macroexpand-1, but takes into account symbol macros.",
    "name":"mexpand-1"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L241",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L264",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/mexpand-all",
    "namespace":"clojure.contrib.macro-utils",
@@ -3210,7 +3210,7 @@
    "doc":"Perform a full recursive macro expansion of a form.",
    "name":"mexpand-all"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L189",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L212",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/symbol-macrolet",
    "namespace":"clojure.contrib.macro-utils",
@@ -3219,7 +3219,7 @@
    "Define local symbol macros that are used in the expansion of exprs.\nThe syntax is the same as for let forms.",
    "name":"symbol-macrolet"},
   {"source-url":
-   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj#L208",
+   "http://github.com/richhickey/clojure-contrib/blob/1bc820d96048a6536706ff999e9892649b53c700/src/clojure/contrib/macro_utils.clj#L231",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib//macro-utils-api.html#clojure.contrib.macro-utils/with-symbol-macros",
    "namespace":"clojure.contrib.macro-utils",
