@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.clojure</groupId>
   <artifactId>clojure-contrib</artifactId>
-  <version>1.1.0-RC1</version>
+  <version>1.1.0-RC3</version>
   <url>http://clojure.org/</url>
 
   <description>Clojure user contributions library.</description>
