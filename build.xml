@@ -18,10 +18,9 @@
   <property name="jarfile" location="clojure-contrib.jar"/>
   <property name="slimjarfile" location="clojure-contrib-slim.jar"/>
 
-  <!-- These make sense for building on tapestry.formos.com -->
-
-  <property name="snapshot.repo.dir" location="/var/www/maven-snapshot-repository"/>
-  <property name="stable.repo.dir" location="/var/www/maven-repository"/>
+  <!-- These make sense for build.clojure.org -->
+  <property name="snapshot.repo.dir" location="/srv/www/snapshots"/>
+  <property name="stable.repo.dir" location="/srv/www/releases"/>
 
   <target name="init">
     <tstamp/>
