@@ -236,7 +236,7 @@
   <target name="ci-build" depends="-setup-maven"
           description="Build clojure-contrib using Clojure obtained via Maven.">
     <antcall target="clean-build">
-      <param name="clojure.jar" value="${org.clojure:clojure-lang:jar}"/>
+      <param name="clojure.jar" value="${org.clojure:clojure:jar}"/>
     </antcall>
     <mvn:install file="${jarfile}" pomrefid="contrib.pom">
       <attach file="${slimjarfile}" classifier="slim"/>
