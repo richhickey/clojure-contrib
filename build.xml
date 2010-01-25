@@ -9,7 +9,7 @@
   <property name="src" location="src"/>
   <property name="build" location="classes"/>
   <property name="dist" location="dist"/>
-  <property name="contrib.version.label" value="1.0.0-RC2"/>
+  <property name="contrib.version.label" value="1.0.0"/>
   <property name="zip" location="clojure-contrib-${contrib.version.label}.zip"/>
 
   <available property="hasclojure" file="${clojure.jar}"/>
