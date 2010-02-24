@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>io API reference (clojure-contrib)</title>
+    <title>java-utils API reference (clojure-contrib)</title>
     <link href="../static/favicon.png" rel="icon" />
     <link href="../static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="../static/clojure.css" rel="stylesheet" />
@@ -54,356 +54,233 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/*append-to-writer*">*append-to-writer*</a>
+      <a href="#clojure.contrib.java-utils/as-file">as-file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/*buffer-size*">*buffer-size*</a>
+      <a href="#clojure.contrib.java-utils/as-properties">as-properties</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/*byte-array-type*">*byte-array-type*</a>
+      <a href="#clojure.contrib.java-utils/as-str">as-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/*default-encoding*">*default-encoding*</a>
+      <a href="#clojure.contrib.java-utils/as-url">as-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/append-spit">append-spit</a>
+      <a href="#clojure.contrib.java-utils/delete-file">delete-file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/append-writer">append-writer</a>
+      <a href="#clojure.contrib.java-utils/delete-file-recursively">delete-file-recursively</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/as-file">as-file</a>
+      <a href="#clojure.contrib.java-utils/file">file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/as-url">as-url</a>
+      <a href="#clojure.contrib.java-utils/get-system-property">get-system-property</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/copy">copy</a>
+      <a href="#clojure.contrib.java-utils/read-properties">read-properties</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/delete-file">delete-file</a>
+      <a href="#clojure.contrib.java-utils/relative-path-string">relative-path-string</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/delete-file-recursively">delete-file-recursively</a>
+      <a href="#clojure.contrib.java-utils/set-system-properties">set-system-properties</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/file">file</a>
+      <a href="#clojure.contrib.java-utils/wall-hack-field">wall-hack-field</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/file-str">file-str</a>
+      <a href="#clojure.contrib.java-utils/wall-hack-method">wall-hack-method</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/make-parents">make-parents</a>
+      <a href="#clojure.contrib.java-utils/with-system-properties">with-system-properties</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/pwd">pwd</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/read-lines">read-lines</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/reader">reader</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/relative-path-string">relative-path-string</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/slurp*">slurp*</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/spit">spit</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/to-byte-array">to-byte-array</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/with-in-reader">with-in-reader</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/with-out-append-writer">with-out-append-writer</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/with-out-writer">with-out-writer</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/write-lines">write-lines</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/writer">writer</a>
+      <a href="#clojure.contrib.java-utils/write-properties">write-properties</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">io</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">java-utils</span>
   <span id="branch-name">(1.1.x branch)</span></h1>
-by <span id="author">Stuart Sierra</span><br />
+by <span id="author">Stuart Halloway, Stephen C. Gilardi, Shawn Hoover, Perry Trolard, Stuart Sierra</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.io</span>))
+  (:require <span id="long-name">clojure.contrib.java-utils</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">This file defines "duck-typed" I/O utility functions for Clojure.
-The 'reader' and 'writer' functions will open and return an
-instance of java.io.BufferedReader and java.io.PrintWriter,
-respectively, for a variety of argument types -- filenames as
-strings, URLs, java.io.File's, etc.  'reader' even works on http
-URLs.
+<pre id="namespace-docstr">A set of utilties for dealing with Java stuff like files and properties.
 
-Note: this is not really "duck typing" as implemented in languages
-like Ruby.  A better name would have been "do-what-I-mean-streams"
-or "just-give-me-a-stream", but ducks are funnier.</pre>
+Design goals:
+
+(1) Ease-of-use. These APIs should be convenient. Performance is secondary.
+
+(2) Duck typing. I hate having to think about the difference between
+    a string that names a file, and a File. Ditto for a ton of other 
+    wrapper classes in the Java world (URL, InternetAddress). With these
+    APIs you should be able to think about domain equivalence, not type
+    equivalence.
+
+(3) No bossiness. I am not marking any of these functions as private
+    the docstrings will tell you the intended usage but do what works for you. 					
+
+Feedback welcome!
+
+If something in this module violates the principle of least surprise, please 
+let me (Stu) and the Clojure community know via the mailing list.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/*append-to-writer*">*append-to-writer*</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">If true, writer and spit will open files in append mode.
-Defaults to false.  Use append-writer or append-spit.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/*buffer-size*">*buffer-size*</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">Size, in bytes or characters, of the buffer used when
-copying streams.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/*byte-array-type*">*byte-array-type*</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">Type object for a Java primitive byte array.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/*default-encoding*">*default-encoding*</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">Name of the default encoding to use when reading &amp; writing.
-Default is UTF-8.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/append-spit">append-spit</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (append-spit f content)
-</pre>
-  <pre id="var-docstr">Like spit but appends to file.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/append-writer">append-writer</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (append-writer x)
-</pre>
-  <pre id="var-docstr">Like writer but opens file for appending.  Does not work on streams
-that are already open.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/as-file">as-file</h2>
+  <h2 id="clojure.contrib.java-utils/as-file">as-file</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Interpret a String or a java.io.File as a File. Building block
-for clojure.contrib.java/file, which you should prefer
+for clojure.contrib.java-utils/file, which you should prefer
 in most cases.</pre>
-  
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L75" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/as-url">as-url</h2>
+  <h2 id="clojure.contrib.java-utils/as-properties">as-properties</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (as-properties m)
+</pre>
+  <pre id="var-docstr">Convert any seq of pairs to a java.utils.Properties instance.
+Uses as-str to convert both keys and values into strings.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L152" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/as-str">as-str</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (as-str)
+       (as-str x)
+       (as-str x &amp; ys)
+</pre>
+  <pre id="var-docstr">Like clojure.core/str, but if an argument is a keyword or symbol,
+its name will be used instead of its literal representation.
+
+Example:
+   (str :foo :bar)     ;;=&gt; ":foo:bar"
+   (as-str :foo :bar)  ;;=&gt; "foobar" 
+
+Note that this does not apply to keywords or symbols nested within
+data structures; they will be rendered as with str.
+
+Example:
+   (str {:foo :bar})     ;;=&gt; "{:foo :bar}"
+   (as-str {:foo :bar})  ;;=&gt; "{:foo :bar}" </pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L92" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/as-url">as-url</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">Usage: (as-url arg)
 </pre>
   <pre id="var-docstr">Coerces argument (URL, URI, or String) to a java.net.URL.</pre>
-  
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L195" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/copy">copy</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">Usage: (copy input output)
-</pre>
-  <pre id="var-docstr">Copies input to output.  Returns nil.
-Input may be an InputStream, Reader, File, byte[], or String.
-Output may be an OutputStream, Writer, or File.
-
-Does not close any streams except those it opens itself 
-(on a File).
-
-Writing a File fails if the parent directory does not exist.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/delete-file">delete-file</h2>
+  <h2 id="clojure.contrib.java-utils/delete-file">delete-file</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (delete-file f &amp; [silently])
 </pre>
   <pre id="var-docstr">Delete file f. Raise an exception if it fails unless silently is true.</pre>
-  
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L178" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/delete-file-recursively">delete-file-recursively</h2>
+  <h2 id="clojure.contrib.java-utils/delete-file-recursively">delete-file-recursively</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (delete-file-recursively f &amp; [silently])
 </pre>
   <pre id="var-docstr">Delete file f. If it's a directory, recursively delete all its contents.
 Raise an exception if any deletion fails unless silently is true.</pre>
-  
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L185" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/file">file</h2>
+  <h2 id="clojure.contrib.java-utils/file">file</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (file arg)
        (file parent child)
        (file parent child &amp; more)
 </pre>
   <pre id="var-docstr">Returns a java.io.File from string or file args.</pre>
-  
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L83" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/file-str">file-str</h2>
+  <h2 id="clojure.contrib.java-utils/get-system-property">get-system-property</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (file-str &amp; args)
+  <pre id="var-usage">Usage: (get-system-property stringable)
+       (get-system-property stringable default)
 </pre>
-  <pre id="var-docstr">Concatenates args as strings and returns a java.io.File.  Replaces
-all / and \ with File/separatorChar.  Replaces ~ at the start of
-the path with the user.home system property.</pre>
-  
+  <pre id="var-docstr">Get a system property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L117" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/make-parents">make-parents</h2>
+  <h2 id="clojure.contrib.java-utils/read-properties">read-properties</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (make-parents file)
+  <pre id="var-usage">Usage: (read-properties file-able)
 </pre>
-  <pre id="var-docstr">Creates all parent directories of file.</pre>
-  
+  <pre id="var-docstr">Read properties from file-able.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L162" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/pwd">pwd</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (pwd)
-</pre>
-  <pre id="var-docstr">Returns current working directory as a String.  (Like UNIX 'pwd'.)
-Note: In Java, you cannot change the current working directory.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/read-lines">read-lines</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (read-lines f)
-</pre>
-  <pre id="var-docstr">Like clojure.core/line-seq but opens f with reader.  Automatically
-closes the reader AFTER YOU CONSUME THE ENTIRE SEQUENCE.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/reader">reader</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">Usage: (reader x)
-</pre>
-  <pre id="var-docstr">Attempts to coerce its argument into an open
-java.io.BufferedReader.  Argument may be an instance of Reader,
-BufferedReader, InputStream, File, URI, URL, Socket, or String.
-
-If argument is a String, it tries to resolve it first as a URI, then
-as a local file name.  URIs with a 'file' protocol are converted to
-local file names.  Uses *default-encoding* as the text encoding.
-
-Should be used inside with-open to ensure the Reader is properly
-closed.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/relative-path-string">relative-path-string</h2>
+  <h2 id="clojure.contrib.java-utils/relative-path-string">relative-path-string</h2>
   <span id="var-type">multimethod</span><br />
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Interpret a String or java.io.File as a relative path string. 
-Building block for clojure.contrib.java/file.</pre>
-  
+Building block for clojure.contrib.java-utils/file.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L62" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/slurp*">slurp*</h2>
+  <h2 id="clojure.contrib.java-utils/set-system-properties">set-system-properties</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (slurp* f)
+  <pre id="var-usage">Usage: (set-system-properties settings)
 </pre>
-  <pre id="var-docstr">Like clojure.core/slurp but opens f with reader.</pre>
-  
+  <pre id="var-docstr">Set some system properties. Nil clears a property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L124" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/spit">spit</h2>
+  <h2 id="clojure.contrib.java-utils/wall-hack-field">wall-hack-field</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (spit f content)
+  <pre id="var-usage">Usage: (wall-hack-field class-name field-name obj)
 </pre>
-  <pre id="var-docstr">Opposite of slurp.  Opens f with writer, writes content, then
-closes f.</pre>
-  
+  <pre id="var-docstr">Access to private or protected field.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L218" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/to-byte-array">to-byte-array</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">Usage: (to-byte-array arg)
-</pre>
-  <pre id="var-docstr">Converts argument into a Java byte array.  Argument may be
-a String, File, InputStream, or Reader.  If the argument is already
-a byte array, returns it.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/with-in-reader">with-in-reader</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-in-reader f &amp; body)
-</pre>
-  <pre id="var-docstr">Opens a PushbackReader on f, binds it to *in*, and evaluates body.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/with-out-append-writer">with-out-append-writer</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-out-append-writer f &amp; body)
-</pre>
-  <pre id="var-docstr">Like with-out-writer but appends to file.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/with-out-writer">with-out-writer</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-out-writer f &amp; body)
-</pre>
-  <pre id="var-docstr">Opens a writer on f, binds it to *out*, and evalutes body.
-Anything printed within body will be written to f.</pre>
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/write-lines">write-lines</h2>
+  <h2 id="clojure.contrib.java-utils/wall-hack-method">wall-hack-method</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (write-lines f lines)
+  <pre id="var-usage">Usage: (wall-hack-method class-name method-name params obj &amp; args)
 </pre>
-  <pre id="var-docstr">Writes lines (a seq) to f, separated by newlines.  f is opened with
-writer, and automatically closed at the end of the sequence.</pre>
-  
+  <pre id="var-docstr">Calls a private or protected method.
+params is a vector of class which correspond to the arguments to the method
+obj is nil for static methods, the instance object otherwise
+the method name is given as a symbol or a keyword (something Named)</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L208" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.io/writer">writer</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">Usage: (writer x)
+  <h2 id="clojure.contrib.java-utils/with-system-properties">with-system-properties</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-system-properties settings &amp; body)
 </pre>
-  <pre id="var-docstr">Attempts to coerce its argument into an open java.io.PrintWriter
-wrapped around a java.io.BufferedWriter.  Argument may be an
-instance of Writer, PrintWriter, BufferedWriter, OutputStream, File,
-URI, URL, Socket, or String.
+  <pre id="var-docstr">setting =&gt; property-name value
 
-If argument is a String, it tries to resolve it first as a URI, then
-as a local file name.  URIs with a 'file' protocol are converted to
-local file names.
-
-Should be used inside with-open to ensure the Writer is properly
-closed.</pre>
-  
+Sets the system properties to the supplied values, executes the body, and
+sets the properties back to their original values. Values of nil are
+translated to a clearing of the property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L132" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/write-properties">write-properties</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (write-properties m file-able)
+       (write-properties m file-able comments)
+</pre>
+  <pre id="var-docstr">Write properties to file-able.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj#L169" id="var-source">Source</a>
 </div>
 
 

@@ -1,197 +1,235 @@
 {"namespaces":
- [{"source-url":null,
+ [{"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/accumulators.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/accumulators-api.html",
    "name":"clojure.contrib.accumulators",
    "author":"Konrad Hinsen",
    "doc":
    "A generic accumulator interface and implementations of various\naccumulators."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/47a2f69414f0c3ff90fb2fad4930d9af3d491d23/src/clojure/contrib/agent_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/agent-utils-api.html",
    "name":"clojure.contrib.agent-utils",
    "author":"Christophe Grande",
    "doc":
    "Miscellaneous agent utilities\n(note to other contrib members: feel free to add to this lib)"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/apply_macro.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/apply-macro-api.html",
    "name":"clojure.contrib.apply-macro",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/7b661cfc55e2293d14bed4fd801c017b3f68d291/src/clojure/contrib/base64.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/base64-api.html",
    "name":"clojure.contrib.base64",
    "author":"Stuart Sierra",
    "doc":
    "Base-64 encoding and (maybe later) decoding.  \n\nThis is mainly here as an example.  It is much slower than the\nApache Commons Codec implementation or sun.misc.BASE64Encoder."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/a4b8d24cb2f4e79fa3856db37d5fcf1d94003b30/src/clojure/contrib/classpath.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/classpath-api.html",
    "name":"clojure.contrib.classpath",
    "author":"Stuart Sierra",
    "doc":"Utilities for dealing with the JVM's classpath"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/47a2f69414f0c3ff90fb2fad4930d9af3d491d23/src/clojure/contrib/combinatorics.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/combinatorics-api.html",
    "name":"clojure.contrib.combinatorics",
    "author":"Mark Engelberg",
    "doc":
    "Efficient, functional algorithms for generating lazy\nsequences for common combinatorial functions. (See the source code \nfor a longer description.)"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/ddd7bc2226927634dc0216554194877fa6f170e1/src/clojure/contrib/command_line.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/command-line-api.html",
    "name":"clojure.contrib.command-line",
    "author":"Chris Houser",
    "doc":
    "Process command-line arguments according to a given cmdspec"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/complex_numbers.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/complex-numbers-api.html",
    "name":"clojure.contrib.complex-numbers",
    "author":"Konrad Hinsen",
    "doc":
    "Complex numbers\nNOTE: This library is in evolution. Most math functions are\n      not implemented yet."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/a4b8d24cb2f4e79fa3856db37d5fcf1d94003b30/src/clojure/contrib/cond.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/cond-api.html",
    "name":"clojure.contrib.cond",
    "author":"Stephen C. Gilardi",
    "doc":"Extensions to the basic cond function."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/condition.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/condition-api.html",
    "name":"clojure.contrib.condition",
    "author":"Stephen C. Gilardi",
    "doc":
    "Flexible raising and handling of conditions:\n\nFunctions:\n\n              raise: raises a condition\n       handler-case: dispatches raised conditions to appropriate handlers\n  print-stack-trace: prints abbreviated or full condition stack traces\n\nData:\n\n  A condition is a map containing values for these keys:\n\n    - :type, a condition type specifier, typically a keyword\n    - :stack-trace, a stack trace to the site of the raise\n    - :message, a human-readable message (optional)\n    - :cause, a wrapped exception or condition (optional)\n    - other keys given as arguments to raise (optional)\n\nNote: requires AOT compilation.\n\nBased on an idea from Chouser:\nhttp://groups.google.com/group/clojure/browse_frm/thread/da1285c538f22bb5"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/bc07de7c3b1058f4263bd7b1c424f771fb010005/src/clojure/contrib/core.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/core-api.html",
    "name":"clojure.contrib.core",
    "author":"Laurent Petit (and others)",
    "doc":
    "Functions/macros variants of the ones that can be found in clojure.core \n(note to other contrib members: feel free to add to this lib)"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/dataflow.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/dataflow-api.html",
    "name":"clojure.contrib.dataflow",
    "author":"Jeffrey Straszheim",
    "doc":"A library to support a dataflow model of state"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/ab7e1757c4de4c5d05b8c286646c152d19e29825/src/clojure/contrib/datalog.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/datalog-api.html",
    "name":"clojure.contrib.datalog",
    "author":"Jeffrey Straszheim",
    "doc":"A Clojure implementation of Datalog"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/4df3fae61cbd538786a73908eb0b8fc176b3fefd/src/clojure/contrib/def.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/def-api.html",
    "name":"clojure.contrib.def",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/2ae8ff46d348522efe9f96cfd31f6e9b6018cfdc/src/clojure/contrib/duck_streams.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/duck-streams-api.html",
+   "name":"clojure.contrib.duck-streams",
+   "author":"Stuart Sierra",
+   "doc":
+   "This file defines \"duck-typed\" I/O utility functions for Clojure.\nThe 'reader' and 'writer' functions will open and return an\ninstance of java.io.BufferedReader and java.io.PrintWriter,\nrespectively, for a variety of argument types -- filenames as\nstrings, URLs, java.io.File's, etc.  'reader' even works on http\nURLs.\n\nNote: this is not really \"duck typing\" as implemented in languages\nlike Ruby.  A better name would have been \"do-what-I-mean-streams\"\nor \"just-give-me-a-stream\", but ducks are funnier."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/error_kit.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/error-kit-api.html",
    "name":"clojure.contrib.error-kit",
    "author":"Chris Houser",
    "doc":
    "EXPERIMENTAL\nSystem for defining and using custom errors\nPlease contact Chouser if you have any suggestions for better names\nor API adjustments."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/83fa7099432d5af2febbad9c33e076b9a03c3d1e/src/clojure/contrib/except.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/except-api.html",
    "name":"clojure.contrib.except",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/fcase-api.html",
    "name":"clojure.contrib.fcase",
    "author":"Stuart Sierra",
    "doc":
    "This file defines a generic \"case\" macro called \"fcase\" which takes\nthe equality-testing function as an argument.  It also defines a\ntraditional \"case\" macro that tests using \"=\" and variants that\ntest for regular expressions and class membership.\n\n\nNote (December 23, 2008): This library has been supplanted by the\ninclusion of \"condp\" in clojure.core as of Clojure SVN rev. 1180."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/de4df718178084ffe32d6a40b449892cd3d57d50/src/clojure/contrib/find_namespaces.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/find-namespaces-api.html",
    "name":"clojure.contrib.find-namespaces",
    "author":"Stuart Sierra",
    "doc":"Search for ns declarations in dirs, JARs, or CLASSPATH"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/016af1ddecea945f0ae9e6354e2bd006efcd7a04/src/clojure/contrib/fnmap.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/fnmap-api.html",
    "name":"clojure.contrib.fnmap",
    "author":"Stuart Sierra",
    "doc":
    "Maps that dispatch get/assoc to user-defined functions.\n\nNote: requires AOT-compilation"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/04a22729691863a5b7e7b1b3c6c1157a02aff3b2/src/clojure/contrib/gen_html_docs.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/gen-html-docs-api.html",
    "name":"clojure.contrib.gen-html-docs",
    "author":"Craig Andera",
    "doc":
    "Generates a single HTML page that contains the documentation for\none or more Clojure libraries."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/637ce542010b34381948f914e0b6829b41602e34/src/clojure/contrib/generic/arithmetic.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/generic.arithmetic-api.html",
    "name":"clojure.contrib.generic.arithmetic",
    "author":"Konrad Hinsen",
    "doc":
    "Generic arithmetic interface\nThis library defines generic versions of + - * / as multimethods\nthat can be defined for any type. The minimal required \nimplementations for a type are binary + and * plus unary - and /.\nEverything else is derived from these automatically. Explicit\nbinary definitions for - and / can be provided for\nefficiency reasons."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/637ce542010b34381948f914e0b6829b41602e34/src/clojure/contrib/generic/collection.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/generic.collection-api.html",
    "name":"clojure.contrib.generic.collection",
    "author":"Konrad Hinsen",
    "doc":
    "Generic arithmetic interface\nThis library defines generic versions of common\ncollection-related functions as multimethods that can be\ndefined for any type."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/637ce542010b34381948f914e0b6829b41602e34/src/clojure/contrib/generic/comparison.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/generic.comparison-api.html",
    "name":"clojure.contrib.generic.comparison",
    "author":"Konrad Hinsen",
    "doc":
    "Generic comparison interface\nThis library defines generic versions of = < > <= >= zero?\nas multimethods that can be defined for any type. Of the\ngreater/less-than relations, types must minimally implement >."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/bdc813a0d39cb3c6184c4e123d847458e9c77711/src/clojure/contrib/generic/functor.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/generic.functor-api.html",
    "name":"clojure.contrib.generic.functor",
    "author":"Konrad Hinsen",
    "doc":"Generic functor interface (fmap)"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/1dd60bdd968cd19dc04b4cb4fdcc0b6032833543/src/clojure/contrib/generic/math_functions.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/generic.math-functions-api.html",
    "name":"clojure.contrib.generic.math-functions",
    "author":"Konrad Hinsen",
    "doc":
    "Generic math function interface\nThis library defines generic versions of common mathematical\nfunctions such as sqrt or sin as multimethods that can be\ndefined for any type."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/graph.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/graph-api.html",
    "name":"clojure.contrib.graph",
    "author":"Jeffrey Straszheim",
    "doc":"Basic graph theory algorithms"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/greatest_least.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/greatest-least-api.html",
    "name":"clojure.contrib.greatest-least",
    "author":"Vincent Foley",
    "doc":
    "Various functions for finding greatest and least values in a collection"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/5055f41c8bc99747392396d622f17f723470858e/src/clojure/contrib/http/agent.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/http.agent-api.html",
    "name":"clojure.contrib.http.agent",
    "author":"Stuart Sierra",
    "doc":
-   "Agent-based asynchronous HTTP client.\n\nThis is a HTTP client library based on Java's HttpURLConnection\nclass and Clojure's Agent system.  It allows you to make multiple\nHTTP requests in parallel.\n\nStart an HTTP request with the 'http-agent' function, which\nimmediately returns a Clojure Agent.  You will never deref this\nagent; that is handled by the accessor functions.  The agent will\nexecute the HTTP request on a separate thread.\n\nIf you pass a :handler function to http-agent, that function will be\ncalled as soon as the HTTP response body is ready.  The handler\nfunction is called with one argument, the HTTP agent itself.  The\nhandler can read the response body by calling the 'stream' function\non the agent.\n\nThe value returned by the handler function becomes part of the state\nof the agent, and you can retrieve it with the 'result' function.\nIf you call 'result' before the HTTP request has finished, it will\nblock until the handler function returns.\n\nIf you don't provide a handler function, the default handler will\nbuffer the entire response body in memory, which you can retrieve\nwith the 'bytes', 'string', or 'stream' functions.  Like 'result',\nthese functions will block until the HTTP request is completed.\n\nIf you want to check if an HTTP request is finished without\nblocking, use the 'done?' function.\n\nA single GET request could be as simple as:\n\n  (string (http-agent \"http://www.stuartsierra.com/\"))\n\nA simple POST might look like:\n\n  (http-agent \"http...\" :method \"POST\" :body \"foo=1\")\n\nAnd you could write the response directly to a file like this:\n\n  (require '[clojure.contrib.io :as d])\n\n  (http-agent \"http...\"\n              :handler (fn [agnt] \n                         (with-open [w (d/writer \"/tmp/out\")] \n                           (d/copy (stream agnt) w))))"},
-  {"source-url":null,
+   "Agent-based asynchronous HTTP client.\n\nThis is a HTTP client library based on Java's HttpURLConnection\nclass and Clojure's Agent system.  It allows you to make multiple\nHTTP requests in parallel.\n\nStart an HTTP request with the 'http-agent' function, which\nimmediately returns a Clojure Agent.  You will never deref this\nagent; that is handled by the accessor functions.  The agent will\nexecute the HTTP request on a separate thread.\n\nIf you pass a :handler function to http-agent, that function will be\ncalled as soon as the HTTP response body is ready.  The handler\nfunction is called with one argument, the HTTP agent itself.  The\nhandler can read the response body by calling the 'stream' function\non the agent.\n\nThe value returned by the handler function becomes part of the state\nof the agent, and you can retrieve it with the 'result' function.\nIf you call 'result' before the HTTP request has finished, it will\nblock until the handler function returns.\n\nIf you don't provide a handler function, the default handler will\nbuffer the entire response body in memory, which you can retrieve\nwith the 'bytes', 'string', or 'stream' functions.  Like 'result',\nthese functions will block until the HTTP request is completed.\n\nIf you want to check if an HTTP request is finished without\nblocking, use the 'done?' function.\n\nA single GET request could be as simple as:\n\n  (string (http-agent \"http://www.stuartsierra.com/\"))\n\nA simple POST might look like:\n\n  (http-agent \"http...\" :method \"POST\" :body \"foo=1\")\n\nAnd you could write the response directly to a file like this:\n\n  (require '[clojure.contrib.duck-streams :as d])\n\n  (http-agent \"http...\"\n              :handler (fn [agnt] \n                         (with-open [w (d/writer \"/tmp/out\")] \n                           (d/copy (stream agnt) w))))"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/ee6e4bf2d912419dd180b712d32e817a479f14e8/src/clojure/contrib/http/connection.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/http.connection-api.html",
    "name":"clojure.contrib.http.connection",
    "author":null,
    "doc":"Low-level HTTP client API around HttpURLConnection"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/import_static.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/import-static-api.html",
    "name":"clojure.contrib.import-static",
@@ -204,174 +242,203 @@
    "author":"Stuart Sierra",
    "doc":
    "This file defines \"duck-typed\" I/O utility functions for Clojure.\nThe 'reader' and 'writer' functions will open and return an\ninstance of java.io.BufferedReader and java.io.PrintWriter,\nrespectively, for a variety of argument types -- filenames as\nstrings, URLs, java.io.File's, etc.  'reader' even works on http\nURLs.\n\nNote: this is not really \"duck typing\" as implemented in languages\nlike Ruby.  A better name would have been \"do-what-I-mean-streams\"\nor \"just-give-me-a-stream\", but ducks are funnier."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/jar.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/jar-api.html",
    "name":"clojure.contrib.jar",
    "author":"Stuart Sierra",
    "doc":"Utilities for working with Java JAR files"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/java_utils.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/java-utils-api.html",
+   "name":"clojure.contrib.java-utils",
+   "author":
+   "Stuart Halloway, Stephen C. Gilardi, Shawn Hoover, Perry Trolard, Stuart Sierra",
+   "doc":
+   "A set of utilties for dealing with Java stuff like files and properties.\n\nDesign goals:\n\n(1) Ease-of-use. These APIs should be convenient. Performance is secondary.\n\n(2) Duck typing. I hate having to think about the difference between\n    a string that names a file, and a File. Ditto for a ton of other \n    wrapper classes in the Java world (URL, InternetAddress). With these\n    APIs you should be able to think about domain equivalence, not type\n    equivalence.\n\n(3) No bossiness. I am not marking any of these functions as private\n    the docstrings will tell you the intended usage but do what works for you. \t\t\t\t\t\n\nFeedback welcome!\n\nIf something in this module violates the principle of least surprise, please \nlet me (Stu) and the Clojure community know via the mailing list."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/jmx-api.html",
    "name":"clojure.contrib.jmx",
    "author":"Stuart Halloway",
    "doc":
    "JMX support for Clojure\n\nRequires post-Clojure 1.0 git edge for clojure.test, clojure.backtrace.\nThis is prerelease.\nThis API will change.\nSend reports to stu@thinkrelevance.com.\n\nUsage\n  (require '[clojure.contrib.jmx :as jmx])\n\nWhat beans do I have?\n\n  (jmx/mbean-names \"*:*\")\n  -> #<HashSet [java.lang:type=MemoryPool,name=CMS Old Gen, \n                java.lang:type=Memory, ...]\n\nWhat attributes does a bean have?\n\n  (jmx/attribute-names \"java.lang:type=Memory\")\n  -> (:Verbose :ObjectPendingFinalizationCount \n      :HeapMemoryUsage :NonHeapMemoryUsage)\n\nWhat is the value of an attribute? \n\n  (jmx/read \"java.lang:type=Memory\" :ObjectPendingFinalizationCount)\n  -> 0\n\nCan't I just have *all* the attributes in a Clojure map?\n\n  (jmx/mbean \"java.lang:type=Memory\")\n  -> {:NonHeapMemoryUsage\n       {:used 16674024, :max 138412032, :init 24317952, :committed 24317952},\n      :HeapMemoryUsage\n       {:used 18619064, :max 85393408, :init 0, :committed 83230720},\n      :ObjectPendingFinalizationCount 0,\n      :Verbose false}\n\nCan I find and invoke an operation?\n\n  (jmx/operation-names \"java.lang:type=Memory\")\n  -> (:gc)  \n  (jmx/invoke \"java.lang:type=Memory\" :gc)\n  -> nil\n\nWhat about some other process? Just run *any* of the above code\ninside a with-connection:\n\n  (jmx/with-connection {:host \"localhost\", :port 3000} \n    (jmx/mbean \"java.lang:type=Memory\"))\n  -> {:ObjectPendingFinalizationCount 0, \n      :HeapMemoryUsage ... etc.}\n\nCan I serve my own beans?  Sure, just drop a Clojure ref\ninto an instance of clojure.contrib.jmx.Bean, and the bean\nwill expose read-only attributes for every key/value pair\nin the ref:\n\n  (jmx/register-mbean\n     (Bean.\n     (ref {:string-attribute \"a-string\"}))\n     \"my.namespace:name=Value\")"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/json/read.clj",
    "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/json-api.html",
-   "name":"clojure.contrib.json",
+   "http://richhickey.github.com/clojure-contrib/json.read-api.html",
+   "name":"clojure.contrib.json.read",
    "author":"Stuart Sierra",
    "doc":
-   "JavaScript Object Notation (JSON) parser/writer.\nSee http://www.json.org/\nTo write JSON, use json-str, write-json, or write-json.\nTo read JSON, use read-json."},
-  {"source-url":null,
+   "JavaScript Object Notation (JSON) parser\n\nFor more information on JSON, see http://www.json.org/\n\nThis library parses data in JSON format.  This is a fairly strict\nimplementation of JSON as described at json.org, not a full-fledged\nJavaScript parser.  JavaScript functions and object constructors\nare not supported.  Object field names must be quoted strings; they\nmay not be bare symbols.\n\nIf you want to convert map keys from strings to keywords, use\nclojure.contrib.walk/keywordize-keys"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/json/write.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/json.write-api.html",
+   "name":"clojure.contrib.json.write",
+   "author":"Stuart Sierra",
+   "doc":
+   "JavaScript Object Notation (JSON) generator.\n\nThis library will generate JSON from the following types:\n * nil\n * all primitives (Boolean, Byte, Short, Integer, Long, Float, Double)\n * String (actually any CharSequence)\n * java.util.Map (including Clojure maps)\n * java.util.Collection (including Clojure vectors, lists, and sets)\n * Java arrays\n\nYou can extend this library to handle new types by adding methods to\nprint-json.\n\nThis library does NOT attempt to preserve round-trip equality between\nJSON and Clojure data types. That is, if you write a JSON string with\nthis library, then read it back with clojure.contrib.json.read, you\nwon't necessarily get the exact same data structure.  For example,\nClojure sets are written as JSON arrays, which will be read back as\nClojure vectors.\n\nIf you want indented output, try the clojure-json library at\nhttp://github.com/danlarkin/clojure-json\n\nThis implementation attempts to follow the description of JSON at\n<http://json.org/>.  Maps become JSON objects, all other collections\nbecome JSON arrays.  JSON object keys are always converted to strings.\nWithin strings, all non-ASCII characters are hexadecimal escaped."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/lazy_seqs.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/lazy-seqs-api.html",
    "name":"clojure.contrib.lazy-seqs",
    "author":"Stephen C. Gilardi",
    "doc":
    "\n==== Lazy sequences ====\n\n primes - based on the \"naive\" implemention described in [1] plus a\n          small \"wheel\" which eliminates multiples of 2, 3, 5, and\n          7 from consideration by incrementing past them. Also inspired\n          by code from Christophe Grand in [2].\n\n fibs   - all the Fibonacci numbers\n\n powers-of-2 - all the powers of 2\n\n ==== Lazy sequence functions ====\n\n (rotations, partition-all, shuffle, rand-elt  moved to seq_utils.clj)\n (permutations and combinations moved to combinatorics.clj)\n\n [1] http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf\n [2] http://clj-me.blogspot.com/2008/06/primes.html"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/acbd2097ddfbe5db48b486b6b706bdb59d412a69/src/clojure/contrib/lazy_xml.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/lazy-xml-api.html",
    "name":"clojure.contrib.lazy-xml",
    "author":"Chris Houser",
    "doc":"Functions to parse xml lazily and emit back to text."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cd69d778f5a08810d4b934dbfc08f400ed34146a/src/clojure/contrib/logging.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/logging-api.html",
    "name":"clojure.contrib.logging",
    "author":"Alex Taggart, Timothy Pratley",
    "doc":
-   "Logging macros which delegate to a specific logging implementation. At\nruntime a specific implementation is selected from, in order, Apache\ncommons-logging, log4j, and finally java.util.logging.\n\nLogging levels are specified by clojure keywords corresponding to the\nvalues used in log4j and commons-logging:\n  :trace, :debug, :info, :warn, :error, :fatal\n\nLogging occurs with the log macro, or the level-specific convenience macros,\nwhich write either directly or via an agent.  For performance reasons, direct\nlogging is enabled by default, but setting the *allow-direct-logging* boolean\natom to false will disable it. If logging is invoked within a transaction it\nwill always use an agent.\n\nThe log macros will not evaluate their 'message' unless the specific logging\nlevel is in effect. Alternately, you can use the spy macro when you have code\nthat needs to be evaluated, and also want to output the code and its result to\nthe debug log.\n\nUnless otherwise specified, the current namespace (as identified by *ns*) will\nbe used as the log-ns (similar to how the java class name is usually used).\nNote: your log configuration should display the name that was passed to the\nlogging implementation, and not perform stack-inspection, otherwise you'll see\nsomething like \"fn__72$impl_write_BANG__39__auto____81\" in your logs.\n\nUse the enabled? macro to write conditional code against the logging level\n(beyond simply whether or not to call log, which is handled automatically).\n\nYou can redirect all java writes of System.out and System.err to the log\nsystem by calling log-capture!.  To rebind *out* and *err* to the log system\ninvoke with-logs.  In both cases a log-ns (e.g., \"com.example.captured\")\nneeds to be specified to namespace the output."},
-  {"source-url":null,
+   "Logging macros which delegate to a specific logging implementation. At\nmacro-expansion-time a specific implementation is selected from, in order,\nApache commons-logging, log4j, and finally java.util.logging.\n\nLogging levels are specified by clojure keywords corresponding to the\nvalues used in log4j and commons-logging:\n  :trace, :debug, :info, :warn, :error, :fatal\n\nLogging occurs with the log macro, or the level-specific convenience macros,\nwhich write either directly or via an agent.  For performance reasons, direct\nlogging is enabled by default, but setting the *allow-direct-logging* boolean\natom to false will disable it. If logging is invoked within a transaction it\nwill always use an agent.\n\nThe log macros will not evaluate their 'message' unless the specific logging\nlevel is in effect. Alternately, you can use the spy macro when you have code\nthat needs to be evaluated, and also want to output the code and its result to\nthe debug log.\n\nUnless otherwise specified, the current namespace (as identified by *ns*) will\nbe used as the log-ns (similar to how the java class name is usually used).\nNote: your log configuration should display the name that was passed to the\nlogging implementation, and not perform stack-inspection, otherwise you'll see\nsomething like \"fn__72$impl_write_BANG__39__auto____81\" in your logs.\n\nUse the enabled? macro to write conditional code against the logging level\n(beyond simply whether or not to call log, which is handled automatically).\n\nYou can redirect all java writes of System.out and System.err to the log\nsystem by calling log-capture!.  To rebind *out* and *err* to the log system\ninvoke with-logs.  In both cases a log-ns (e.g., \"com.example.captured\")\nneeds to be specified to namespace the output."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/39618b6d881fb0c3b52de4929aa34134bb32ffdb/src/clojure/contrib/macro_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/macro-utils-api.html",
    "name":"clojure.contrib.macro-utils",
    "author":"Konrad Hinsen",
    "doc":
    "Local macros and symbol macros\n\nLocal macros are defined by a macrolet form. They are usable only\ninside its body. Symbol macros can be defined globally\n(defsymbolmacro) or locally (symbol-macrolet). A symbol\nmacro defines a form that replaces a symbol during macro\nexpansion. Function arguments and symbols bound in let\nforms are not subject to symbol macro expansion.\n\nLocal macros are most useful in the definition of the expansion\nof another macro, they may be used anywhere. Global symbol\nmacros can be used only inside a with-symbol-macros form."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/59b6a660707837af10b69cc67fe9033ba528d22f/src/clojure/contrib/macros.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/macros-api.html",
    "name":"clojure.contrib.macros",
    "author":"Konrad Hinsen",
    "doc":"Various small macros"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/map_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/map-utils-api.html",
    "name":"clojure.contrib.map-utils",
    "author":"Jason Wolfe, Chris Houser",
    "doc":"Utilities for operating on Clojure maps."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/math.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/math-api.html",
    "name":"clojure.contrib.math",
    "author":"Mark Engelberg",
    "doc":
    "Math functions that deal intelligently with the various\ntypes in Clojure's numeric tower, as well as math functions\ncommonly found in Scheme implementations.\n\nexpt - (expt x y) is x to the yth power, returns an exact number\n  if the base is an exact number, and the power is an integer,\n  otherwise returns a double.\nabs - (abs n) is the absolute value of n\ngcd - (gcd m n) returns the greatest common divisor of m and n\nlcm - (lcm m n) returns the least common multiple of m and n\n\nThe behavior of the next three functions on doubles is consistent\nwith the behavior of the corresponding functions\nin Java's Math library, but on exact numbers, returns an integer.\n\nfloor - (floor n) returns the greatest integer less than or equal to n.\n  If n is an exact number, floor returns an integer,\n  otherwise a double.\nceil - (ceil n) returns the least integer greater than or equal to n.\n  If n is an exact number, ceil returns an integer,\n  otherwise a double.\nround - (round n) rounds to the nearest integer.\n  round always returns an integer.  round rounds up for values\n  exactly in between two integers.\n\n\nsqrt - Implements the sqrt behavior I'm accustomed to from PLT Scheme,\n  specifically, if the input is an exact number, and is a square\n  of an exact number, the output will be exact.  The downside\n  is that for the common case (inexact square root), some extra\n  computation is done to look for an exact square root first.\n  So if you need blazingly fast square root performance, and you\n  know you're just going to need a double result, you're better\n  off calling java's Math/sqrt, or alternatively, you could just\n  convert your input to a double before calling this sqrt function.\n  If Clojure ever gets complex numbers, then this function will\n  need to be updated (so negative inputs yield complex outputs).\nexact-integer-sqrt - Implements a math function from the R6RS Scheme\n  standard.  (exact-integer-sqrt k) where k is a non-negative integer,\n  returns [s r] where k = s^2+r and k < (s+1)^2.  In other words, it\n  returns the floor of the square root and the "},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/62976a684da2984bec184324dfb3269b7de916e5/src/clojure/contrib/miglayout.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/miglayout-api.html",
    "name":"clojure.contrib.miglayout",
    "author":"Stephen C. Gilardi",
    "doc":
    "Clojure support for the MiGLayout layout manager\nhttp://www.miglayout.com/\n\nExample:\n\n  (use '[clojure.contrib.miglayout.test :as mlt :only ()])\n  (dotimes [i 5] (mlt/run-test i))"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/mmap.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/mmap-api.html",
    "name":"clojure.contrib.mmap",
    "author":"Chris Houser",
    "doc":
    "Functions for memory-mapping files, plus some functions that use a\nmmaped file for \"normal\" activies -- slurp, load-file, etc."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/mock-api.html",
    "name":"clojure.contrib.mock",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/f9b111c67752220c9d45a7d6ef22c6eecf400c87/src/clojure/contrib/monadic_io_streams.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/monadic-io-streams-api.html",
    "name":"clojure.contrib.monadic-io-streams",
    "author":"Konrad Hinsen",
    "doc":
    "Monadic I/O with Java input/output streams\nDefines monadic I/O statements to be used in a state monad\nwith an input or output stream as the state. The macro\nmonadic-io creates a stream, runs a monadic I/O statement\non it, and closes the stream. This structure permits the\ndefinition of purely functional compound I/O statements\nwhich are applied to streams that can never escape from the\nmonadic statement sequence."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/34fc5f2bc4dbae6b1b05b77cda98f56cc62e73b7/src/clojure/contrib/monads.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/monads-api.html",
    "name":"clojure.contrib.monads",
    "author":"Konrad Hinsen",
    "doc":
    "This library contains the most commonly used monads as well\nas macros for defining and using monads and useful monadic\nfunctions."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/3a220e3af24bd5bd30869a112c7210a888ea6dc4/src/clojure/contrib/ns_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/ns-utils-api.html",
    "name":"clojure.contrib.ns-utils",
    "author":"Stephen C. Gilardi",
    "doc":"Namespace utilities"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/ec3a9d1fc37db63245ec6a3c672725add7633bd2/src/clojure/contrib/pprint.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/pprint-api.html",
    "name":"clojure.contrib.pprint",
    "author":"Tom Faulhaber",
    "doc":
    "This module comprises two elements:\n1) A pretty printer for Clojure data structures, implemented in the \n   function \"pprint\"\n2) A Common Lisp compatible format function, implemented as \n   \"cl-format\" because Clojure is using the name \"format\" \n   for its Java-based format function.\n\nSee documentation for those functions for more information or complete \ndocumentation on the the clojure-contrib web site on github."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/3f893e28ecc0fc2335355aea2cc9324ed5781c81/src/clojure/contrib/probabilities/finite_distributions.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/probabilities.finite-distributions-api.html",
    "name":"clojure.contrib.probabilities.finite-distributions",
    "author":"Konrad Hinsen",
    "doc":
    "Finite probability distributions\nThis library defines a monad for combining finite probability\ndistributions."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/monte_carlo.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/probabilities.monte-carlo-api.html",
    "name":"clojure.contrib.probabilities.monte-carlo",
    "author":"Konrad Hinsen",
    "doc":
    "Monte-Carlo method support\n\nMonte-Carlo methods transform an input random number stream\n(usually having a continuous uniform distribution in the\ninterval [0, 1)) into a random number stream whose distribution\nsatisfies certain conditions (usually the expectation value\nis equal to some desired quantity). They are thus\ntransformations from one probability distribution to another one.\n\nThis library represents a Monte-Carlo method by a function that\ntakes as input the state of a random number stream with\nuniform distribution (see\nclojure.contrib.probabilities.random-numbers) and returns a\nvector containing one sample value of the desired output\ndistribution and the final state of the input random number\nstream. Such functions are state monad values and can be\ncomposed using operations defined in clojure.contrib.monads."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/probabilities/random_numbers.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/probabilities.random-numbers-api.html",
    "name":"clojure.contrib.probabilities.random-numbers",
    "author":"Konrad Hinsen",
    "doc":
    "Random number streams\n\nThis library provides random number generators with a common\nstream interface. They all produce pseudo-random numbers that are\nuniformly distributed in the interval [0, 1), i.e. 0 is a\npossible value but 1 isn't. For transformations to other\ndistributions, see clojure.contrib.probabilities.monte-carlo.\n\nAt the moment, the only generator provided is a rather simple\nlinear congruential generator."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/4c1bd15f0bc1764b68ca9ceb16201b7fcadca56b/src/clojure/contrib/profile.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/profile-api.html",
    "name":"clojure.contrib.profile",
    "author":"Stuart Sierra",
    "doc":
    "Simple code profiling & timing measurement.\n\nWrap any section of code in the prof macro, giving it a name, like this:\n\n       (defn my-function [x y]\n         (let [sum (prof :addition (+ x y))\n               product (prof :multiplication (* x y))]\n           [sum product]))\n\nThe run your code in the profile macro, like this:\n\n       (profile (dotimes [i 10000] (my-function 3 4)))\n\nWhich prints a report for each named section of code:\n\n          Name      mean       min       max     count       sum\n      addition       265         0     37000     10000   2655000\nmultiplication       274         0     53000     10000   2747000\n\nTimes are measured in nanoseconds, to the maximum precision available\nunder the JVM.  See the function documentation for more details."},
-  {"source-url":null,
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/properties-api.html",
-   "name":"clojure.contrib.properties",
-   "author":null,
-   "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/prxml.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/prxml-api.html",
    "name":"clojure.contrib.prxml",
    "author":"Stuart Sierra",
    "doc":
    "Compact syntax for generating XML. See the documentation of \"prxml\" \nfor details."},
-  {"source-url":null,
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/reflect-api.html",
-   "name":"clojure.contrib.reflect",
-   "author":null,
-   "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/3ec66e7b4e47c95d4cc27b0c405447117b2d5503/src/clojure/contrib/repl_ln.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/repl-ln-api.html",
    "name":"clojure.contrib.repl-ln",
    "author":"Stephen C. Gilardi",
    "doc":
    "A repl with that provides support for lines and line numbers in the\ninput stream."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/repl_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/repl-utils-api.html",
    "name":"clojure.contrib.repl-utils",
@@ -383,112 +450,144 @@
    "name":"clojure.contrib.seq",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/seq-utils-api.html",
+   "name":"clojure.contrib.seq-utils",
+   "author":"Stuart Sierra (and others)",
+   "doc":"Sequence utilities for Clojure"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/37dad8c37622669271357cfceec03e391cc10e17/src/clojure/contrib/server_socket.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/server-socket-api.html",
    "name":"clojure.contrib.server-socket",
    "author":"Craig McDaniel",
    "doc":"Server socket library - includes REPL on socket"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/set.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/set-api.html",
    "name":"clojure.contrib.set",
    "author":"Jason Wolfe",
    "doc":
    "Clojure functions for operating on sets (supplemental to clojure.set)"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cc4e2ec2bf558f059330ebc97a031d7806a1e364/src/clojure/contrib/shell_out.clj",
    "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/shell-api.html",
-   "name":"clojure.contrib.shell",
+   "http://richhickey.github.com/clojure-contrib/shell-out-api.html",
+   "name":"clojure.contrib.shell-out",
    "author":"Chris Houser",
    "doc":
    "Conveniently launch a sub-process providing to its stdin and\ncollecting its stdout"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/singleton.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/singleton-api.html",
    "name":"clojure.contrib.singleton",
    "author":"Stuart Sierra",
    "doc":"Singleton functions"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/sql-api.html",
    "name":"clojure.contrib.sql",
    "author":"Stephen C. Gilardi",
    "doc":
    "A Clojure interface to sql databases via jdbc\n\nSee clojure.contrib.sql.test for an example"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/str_utils.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/str-utils-api.html",
+   "name":"clojure.contrib.str-utils",
+   "author":"Stuart Sierra",
+   "doc":"String utilities for Clojure"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/4b4f6ab5bcab58c4219eb50395bd366daea3ecc3/src/clojure/contrib/str_utils2.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/str-utils2-api.html",
+   "name":"clojure.contrib.str-utils2",
+   "author":"Stuart Sierra",
+   "doc":
+   "This is a library of string manipulation functions.  It\nis intented as a replacement for clojure.contrib.str-utils.\n\nYou cannot (use 'clojure.contrib.str-utils2) because it defines\nfunctions with the same names as functions in clojure.core.\nInstead, do (require '[clojure.contrib.str-utils2 :as s]) \nor something similar.\n\nGoals:\n  1. Be functional\n  2. String argument first, to work with ->\n  3. Performance linear in string length\n\nSome ideas are borrowed from\nhttp://github.com/francoisdevlin/devlinsf-clojure-utils/"},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/09d39aca5a69a83f4326ffb0d4ba8f9fc15c9861/src/clojure/contrib/stream_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/stream-utils-api.html",
    "name":"clojure.contrib.stream-utils",
    "author":"Konrad Hinsen",
    "doc":
    "Functions for setting up computational pipelines via data streams.\n\nNOTE: This library is experimental. It may change significantly\n      with future release.\n\nThis library defines:\n- an abstract stream type, whose interface consists of the\n  multimethod stream-next\n- a macro for implementing streams\n- implementations of stream for\n  1) Clojure sequences, and vectors\n  2) nil, representing an empty stream\n- tools for writing stream transformers, including the\n  monad stream-m\n- various utility functions for working with streams\n\nStreams are building blocks in the construction of computational\npipelines. A stream is represented by its current state plus\na function that takes a stream state and obtains the next item\nin the stream as well as the new stream state. The state is\nimplemented as a Java class or a Clojure type (as defined by the\nfunction clojure.core/type), and the function is provided as an\nimplementation of the multimethod stream-next for this class or type.\n\nWhile setting up pipelines using this mechanism is somewhat more\ncumbersome than using Clojure's lazy seq mechanisms, there are a\nfew advantages:\n- The state of a stream can be stored in any Clojure data structure,\n  and the stream can be re-generated from it any number of times.\n  Any number of states can be stored this way.\n- The elements of the stream are never cached, so keeping a reference\n  to a stream state does not incur an uncontrollable memory penalty.\n\nNote that the stream mechanism is thread-safe as long as the\nconcrete stream implementations do not use any mutable state.\n\nStream transformers take any number of input streams and produce one\noutput stream. They are typically written using the stream-m\nmonad. In the definition of a stream transformer, (pick s) returns\nthe next value of stream argument s, whereas pick-all returns the\nnext value of all stream arguments in the form of a vector."},
-  {"source-url":null,
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/string-api.html",
-   "name":"clojure.contrib.string",
-   "author":null,
-   "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/2c75edd4a1764b9453107e50feceb0fc185faae2/src/clojure/contrib/swing_utils.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/swing-utils-api.html",
    "name":"clojure.contrib.swing-utils",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/cdbfc8de5723bc352ee4fb54bd3eeb4502835362/src/clojure/contrib/test_is.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/test-is-api.html",
    "name":"clojure.contrib.test-is",
    "author":"Stuart Sierra",
    "doc":
    "Backwards-compatibility for clojure.contrib.test-is\n\nThe clojure.contrib.test-is library moved from Contrib into the\nClojure distribution as clojure.test.\n\nThis happened on or around clojure-contrib Git commit\n82cf0409d0fcb71be477ebfc4da18ee2128a2ad1 on June 25, 2009.\n\nThis file makes the clojure.test interface available under the old\nnamespace clojure.contrib.test-is.\n\nThis includes support for the old syntax of the 'are' macro.\n\nThis was suggested by Howard Lewis Ship in ticket #26, \nhttp://www.assembla.com/spaces/clojure-contrib/tickets/26"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/6dff158bdec5f06c33877c6c6550699d5e08ca71/src/clojure/contrib/trace.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/trace-api.html",
    "name":"clojure.contrib.trace",
    "author":"Stuart Sierra, Michel Salim",
    "doc":
    "This file defines simple \"tracing\" macros to help you see what your\ncode is doing."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/types.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/types-api.html",
    "name":"clojure.contrib.types",
    "author":"Konrad Hinsen",
    "doc":"General and algebraic data types"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/f24f6412a1cee7015285856e5e4fc6ddc3974439/src/clojure/contrib/with_ns.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/with-ns-api.html",
    "name":"clojure.contrib.with-ns",
    "author":"Stuart Sierra",
    "doc":"Temporary namespace macro"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/e5b7819ef66410a87b8072417dc2f09ac4ddb03f/src/clojure/contrib/zip_filter.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/zip-filter-api.html",
    "name":"clojure.contrib.zip-filter",
    "author":"Chris Houser",
    "doc":
    "System for filtering trees and nodes generated by zip.clj in\ngeneral, and xml trees in particular."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/443409f56420f3dc7972131c34c189e63d28fdcb/src/clojure/contrib/condition/Condition.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/condition.Condition-api.html",
    "name":"clojure.contrib.condition.Condition",
    "author":null,
    "doc":null},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/pprint.examples.json-api.html",
    "name":"clojure.contrib.pprint.examples.json",
    "author":"Tom Faulhaber (based on the version by Stuart Sierra)",
    "doc":
    "Pretty printing JavaScript Object Notation (JSON) generator.\n\nThis is an example of using a pretty printer dispatch function to generate JSON output"},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/2f7ddf7205bbd47ace5d2240c66a4686de18d7e7/src/clojure/contrib/pprint/examples/xml.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/pprint.examples.xml-api.html",
    "name":"clojure.contrib.pprint.examples.xml",
    "author":"Tom Faulhaber, based on the original by Stuart Sierra",
    "doc":
    "A version of prxml that uses a pretty print dispatch function."},
-  {"source-url":null,
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/81b9e71effbaf6aa2945cd684802d87c762cdcdd/src/clojure/contrib/zip_filter/xml.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/zip-filter.xml-api.html",
    "name":"clojure.contrib.zip-filter.xml",
@@ -513,4 +612,5 @@
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [], [], [], []]}
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], []]}

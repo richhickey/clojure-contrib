@@ -192,7 +192,7 @@ in the ref:
   <pre id="var-usage">Usage: (as-object-name string-or-name)
 </pre>
   <pre id="var-docstr">Interpret an object as a JMX ObjectName.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L26" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L26" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -200,8 +200,8 @@ in the ref:
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (attribute-info object-name attr-name)
 </pre>
-  <pre id="var-docstr">Get the MBeanAttributeInfo for an attribute</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L69" id="var-source">Source</a>
+  <pre id="var-docstr">Get the MBeanAttributeInfo for an attribute.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L74" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -220,7 +220,7 @@ in the ref:
        (build-attribute-info name type desc readable? writable? is?)
 </pre>
   <pre id="var-docstr">Construct an MBeanAttributeInfo. Normally called with a key/value pair from a Clojure map.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L91" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L91" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -229,7 +229,7 @@ in the ref:
   <pre id="var-usage">Usage: (guess-attribute-typename value)
 </pre>
   <pre id="var-docstr">Guess the attribute typename for MBeanAttributeInfo based on the attribute value.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L85" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L85" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -238,7 +238,7 @@ in the ref:
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Coerce JMX data structures into Clojure data.
 Handles CompositeData, TabularData, maps, and atoms.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L64" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L64" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -248,7 +248,7 @@ Handles CompositeData, TabularData, maps, and atoms.</pre>
        (jmx-url overrides)
 </pre>
   <pre id="var-docstr">Build a JMX URL from options.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L19" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L19" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -257,7 +257,7 @@ Handles CompositeData, TabularData, maps, and atoms.</pre>
   <pre id="var-usage">Usage: (map-&gt;attribute-infos attr-map)
 </pre>
   <pre id="var-docstr">Construct an MBeanAttributeInfo[] from a Clojure associative.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L100" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L100" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -267,7 +267,7 @@ Handles CompositeData, TabularData, maps, and atoms.</pre>
 </pre>
   <pre id="var-docstr">Convert a list of length 1 into its contents, leaving other things alone.
 Used to simplify keys in the tabular data API.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L44" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L44" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -277,7 +277,7 @@ Used to simplify keys in the tabular data API.</pre>
 </pre>
   <pre id="var-docstr">Convert a string key to a keyword, leaving other types alone. Used to
 simplify keys in the tabular data API.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/data.clj#L38" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6cfd3b286680fd59021382fdc516be6be82a8834/src/main/clojure/clojure/contrib/jmx/data.clj#L38" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -305,8 +305,9 @@ set to the exception thrown.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (op-param-types n op)
 </pre>
-  <pre id="var-docstr">The parameter types (as class name strings) for operation op on n. Used for invoke.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L90" id="var-source">Source</a>
+  <pre id="var-docstr">The parameter types (as class name strings) for operation op on n.
+Used for invoke.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L95" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -314,8 +315,8 @@ set to the exception thrown.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (operation n op)
 </pre>
-  <pre id="var-docstr">The MBeanOperationInfo for operation op on mbean n. Used for invoke.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L85" id="var-source">Source</a>
+  <pre id="var-docstr">The MBeanOperationInfo for operation op on mbean n. Used by invoke.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L90" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -333,7 +334,7 @@ set to the exception thrown.</pre>
   <pre id="var-usage">Usage: (operations n)
 </pre>
   <pre id="var-docstr">All oeprations available on an MBean.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L80" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L85" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -341,9 +342,9 @@ set to the exception thrown.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (raw-read n attr)
 </pre>
-  <pre id="var-docstr">Read an mbean property. Returns low-level Java object model for composites, tabulars, etc.
-Most callers should use read.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L30" id="var-source">Source</a>
+  <pre id="var-docstr">Read an mbean property. Returns low-level Java object model for
+composites, tabulars, etc. Most callers should use read.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L33" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -351,17 +352,18 @@ Most callers should use read.</pre>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Read an mbean property.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L36" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L39" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="clojure.contrib.jmx/read-exceptions">read-exceptions</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
-  <pre id="var-docstr">Exceptions that might be thrown if you try to read an unsupported attribute.
-by testing agains jconsole and Tomcat. This is dreadful and ad-hoc but I did not
-want to swallow all exceptions.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L40" id="var-source">Source</a>
+  <pre id="var-docstr">Exceptions that might be thrown if you try to read an unsupported
+attribute. Found these by testing agains jconsole and Tomcat. This
+is dreadful and ad-hoc but I did not want to swallow all
+exceptions.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L43" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -369,10 +371,11 @@ want to swallow all exceptions.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (read-supported n attr)
 </pre>
-  <pre id="var-docstr">Calls read to read an mbean property, *returning* unsupported operation exceptions instead of throwing them.
-Used to keep mbean from blowing up. Note that some terribly-behaved mbeans use java.lang.InternalError to
-indicate an unsupported operation!</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L50" id="var-source">Source</a>
+  <pre id="var-docstr">Calls read to read an mbean property, *returning* unsupported
+operation exceptions instead of throwing them. Used to keep mbean
+from blowing up. Note that some terribly-behaved mbeans use
+java.lang.InternalError to indicate an unsupported operation!</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L54" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -381,7 +384,7 @@ indicate an unsupported operation!</pre>
   <pre id="var-usage">Usage: (readable? n attr)
 </pre>
   <pre id="var-docstr">Is attribute readable?</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L75" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L80" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -389,8 +392,10 @@ indicate an unsupported operation!</pre>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (with-connection opts &amp; body)
 </pre>
-  <pre id="var-docstr">Execute body with JMX connection specified by opts (:port).</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/jmx/client.clj#L19" id="var-source">Source</a>
+  <pre id="var-docstr">Execute body with JMX connection specified by opts. opts can also
+include an optional :environment key which is passed as the
+environment arg to JMXConnectorFactory/connect.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/6f2b1d73b50b7b9f0d753aa0f5fd343b67f75bf6/src/main/clojure/clojure/contrib/jmx/client.clj#L17" id="var-source">Source</a>
 </div>
 
 

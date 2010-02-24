@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>generic.arithmetic API reference (clojure-contrib)</title>
+    <title>json.read API reference (clojure-contrib)</title>
     <link href="../static/favicon.png" rel="icon" />
     <link href="../static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="../static/clojure.css" rel="stylesheet" />
@@ -53,30 +53,65 @@ namespace.
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
-    
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.json.read/*json-keyword-keys*">*json-keyword-keys*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.json.read/read-json">read-json</a>
+    </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">generic.arithmetic</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">json.read</span>
   <span id="branch-name">(1.1.x branch)</span></h1>
-by <span id="author">Konrad Hinsen</span><br />
+by <span id="author">Stuart Sierra</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.generic.arithmetic</span>))
+  (:require <span id="long-name">clojure.contrib.json.read</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">Generic arithmetic interface
-This library defines generic versions of + - * / as multimethods
-that can be defined for any type. The minimal required 
-implementations for a type are binary + and * plus unary - and /.
-Everything else is derived from these automatically. Explicit
-binary definitions for - and / can be provided for
-efficiency reasons.</pre>
-<br />
-<h2>Public Variables and Functions</h2>
+<pre id="namespace-docstr">JavaScript Object Notation (JSON) parser
 
+For more information on JSON, see http://www.json.org/
+
+This library parses data in JSON format.  This is a fairly strict
+implementation of JSON as described at json.org, not a full-fledged
+JavaScript parser.  JavaScript functions and object constructors
+are not supported.  Object field names must be quoted strings; they
+may not be bare symbols.
+
+If you want to convert map keys from strings to keywords, use
+clojure.contrib.walk/keywordize-keys</pre>
+<span id="see-also">See also: 
+  <span id="see-also-link">
+    <a href="http://www.json.org">JSON Home Page</a>
+  </span><br />
+</span><br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.json.read/*json-keyword-keys*">*json-keyword-keys*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">If true, JSON object keys will be converted to keywords
+instead of strings.  Defaults to false.  There are no checks that
+the strings form valid keywords.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/json/read.clj#L55" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.json.read/read-json">read-json</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (read-json)
+       (read-json s)
+       (read-json stream eof-error? eof-value)
+</pre>
+  <pre id="var-docstr">Read one JSON record from s, which may be a String or a
+java.io.PushbackReader.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/4f2c7bb5cf6828eb710fd18b603828ab295d0fa5/src/clojure/contrib/json/read.clj#L143" id="var-source">Source</a>
+</div>
 
 
 </div>

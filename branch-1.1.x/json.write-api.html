@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>generic.arithmetic API reference (clojure-contrib)</title>
+    <title>json.write API reference (clojure-contrib)</title>
     <link href="../static/favicon.png" rel="icon" />
     <link href="../static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="../static/clojure.css" rel="stylesheet" />
@@ -58,23 +58,47 @@ namespace.
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">generic.arithmetic</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">json.write</span>
   <span id="branch-name">(1.1.x branch)</span></h1>
-by <span id="author">Konrad Hinsen</span><br />
+by <span id="author">Stuart Sierra</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.generic.arithmetic</span>))
+  (:require <span id="long-name">clojure.contrib.json.write</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">Generic arithmetic interface
-This library defines generic versions of + - * / as multimethods
-that can be defined for any type. The minimal required 
-implementations for a type are binary + and * plus unary - and /.
-Everything else is derived from these automatically. Explicit
-binary definitions for - and / can be provided for
-efficiency reasons.</pre>
-<br />
+<pre id="namespace-docstr">JavaScript Object Notation (JSON) generator.
+
+This library will generate JSON from the following types:
+ * nil
+ * all primitives (Boolean, Byte, Short, Integer, Long, Float, Double)
+ * String (actually any CharSequence)
+ * java.util.Map (including Clojure maps)
+ * java.util.Collection (including Clojure vectors, lists, and sets)
+ * Java arrays
+
+You can extend this library to handle new types by adding methods to
+print-json.
+
+This library does NOT attempt to preserve round-trip equality between
+JSON and Clojure data types. That is, if you write a JSON string with
+this library, then read it back with clojure.contrib.json.read, you
+won't necessarily get the exact same data structure.  For example,
+Clojure sets are written as JSON arrays, which will be read back as
+Clojure vectors.
+
+If you want indented output, try the clojure-json library at
+http://github.com/danlarkin/clojure-json
+
+This implementation attempts to follow the description of JSON at
+&lt;<a href="http://json.org/">http://json.org/</a>&gt;.  Maps become JSON objects, all other collections
+become JSON arrays.  JSON object keys are always converted to strings.
+Within strings, all non-ASCII characters are hexadecimal escaped.</pre>
+<span id="see-also">See also: 
+  <span id="see-also-link">
+    <a href="http://json.org/">JSON Home Page</a>
+  </span><br />
+</span><br />
 <h2>Public Variables and Functions</h2>
 
 
