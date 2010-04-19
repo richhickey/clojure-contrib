@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>lazy-seqs API reference (clojure-contrib)</title>
+    <title>javadoc.browse API reference (clojure-contrib)</title>
     <link href="../static/favicon.png" rel="icon" />
     <link href="../static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="../static/clojure.css" rel="stylesheet" />
@@ -54,72 +54,46 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.lazy-seqs/fibs">fibs</a>
+      <a href="#clojure.contrib.javadoc.browse/open-url-in-browser">open-url-in-browser</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.lazy-seqs/powers-of-2">powers-of-2</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.lazy-seqs/primes">primes</a>
+      <a href="#clojure.contrib.javadoc.browse/open-url-in-swing">open-url-in-swing</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">lazy-seqs</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">javadoc.browse</span>
   <span id="branch-name">(1.1.x branch)</span></h1>
-by <span id="author">Stephen C. Gilardi</span><br />
+by <span id="author">Christophe Grand</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.lazy-seqs</span>))
+  (:require <span id="long-name">clojure.contrib.javadoc.browse</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">
-==== Lazy sequences ====
-
- primes - based on the "naive" implemention described in [1] plus a
-          small "wheel" which eliminates multiples of 2, 3, 5, and
-          7 from consideration by incrementing past them. Also inspired
-          by code from Christophe Grand in [2].
-
- fibs   - all the Fibonacci numbers
-
- powers-of-2 - all the powers of 2
-
- ==== Lazy sequence functions ====
-
- (rotations, partition-all, shuffle, rand-elt  moved to seq_utils.clj)
- (permutations and combinations moved to combinatorics.clj)
-
- [1] http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf
- [2] <a href="http://clj-me.blogspot.com/2008/06/primes.html">http://clj-me.blogspot.com/2008/06/primes.html</a></pre>
+<pre id="namespace-docstr">Start a web browser from Clojure</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.lazy-seqs/fibs">fibs</h2>
+  <h2 id="clojure.contrib.javadoc.browse/open-url-in-browser">open-url-in-browser</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (fibs)
+  <pre id="var-usage">Usage: (open-url-in-browser url)
 </pre>
-  <pre id="var-docstr">Returns a lazy sequence of all the Fibonacci numbers.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/lazy_seqs.clj#L78" id="var-source">Source</a>
+  <pre id="var-docstr">Opens url (a string) in the default system web browser.  May not
+work on all platforms.  Returns url on success, nil if not
+supported.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/javadoc/browse.clj#L25" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.lazy-seqs/powers-of-2">powers-of-2</h2>
+  <h2 id="clojure.contrib.javadoc.browse/open-url-in-swing">open-url-in-swing</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (powers-of-2)
+  <pre id="var-usage">Usage: (open-url-in-swing url)
 </pre>
-  <pre id="var-docstr">Returns a lazy sequence of all the powers of 2</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/lazy_seqs.clj#L83" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.lazy-seqs/primes">primes</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">Lazy sequence of all the prime numbers.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/lazy_seqs.clj#L62" id="var-source">Source</a>
+  <pre id="var-docstr">Opens url (a string) in a Swing window.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/javadoc/browse.clj#L40" id="var-source">Source</a>
 </div>
 
 

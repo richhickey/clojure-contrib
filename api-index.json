@@ -103,8 +103,9 @@
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/def-api.html",
    "name":"clojure.contrib.def",
-   "author":null,
-   "doc":null},
+   "author":"Stephen C. Gilardi",
+   "doc":
+   "def.clj provides variants of def that make including doc strings and\nmaking private definitions more succinct."},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/2ae8ff46d348522efe9f96cfd31f6e9b6018cfdc/src/clojure/contrib/duck_streams.clj",
    "wiki-url":
@@ -126,8 +127,9 @@
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/except-api.html",
    "name":"clojure.contrib.except",
-   "author":null,
-   "doc":null},
+   "author":"Stephen C. Gilardi",
+   "doc":
+   "Provides functions that make it easy to specify the class, cause, and\nmessage when throwing an Exception or Error. The optional message is\nformatted using clojure.core/format."},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/d9c42218f493e7eb261677047008cedb67364ee8/src/clojure/contrib/fcase.clj",
    "wiki-url":
@@ -235,13 +237,6 @@
    "name":"clojure.contrib.import-static",
    "author":"Stuart Sierra",
    "doc":"Import static Java methods/fields into Clojure"},
-  {"source-url":null,
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/io-api.html",
-   "name":"clojure.contrib.io",
-   "author":"Stuart Sierra",
-   "doc":
-   "This file defines \"duck-typed\" I/O utility functions for Clojure.\nThe 'reader' and 'writer' functions will open and return an\ninstance of java.io.BufferedReader and java.io.PrintWriter,\nrespectively, for a variety of argument types -- filenames as\nstrings, URLs, java.io.File's, etc.  'reader' even works on http\nURLs.\n\nNote: this is not really \"duck typing\" as implemented in languages\nlike Ruby.  A better name would have been \"do-what-I-mean-streams\"\nor \"just-give-me-a-stream\", but ducks are funnier."},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/jar.clj",
    "wiki-url":
@@ -258,6 +253,13 @@
    "Stuart Halloway, Stephen C. Gilardi, Shawn Hoover, Perry Trolard, Stuart Sierra",
    "doc":
    "A set of utilties for dealing with Java stuff like files and properties.\n\nDesign goals:\n\n(1) Ease-of-use. These APIs should be convenient. Performance is secondary.\n\n(2) Duck typing. I hate having to think about the difference between\n    a string that names a file, and a File. Ditto for a ton of other \n    wrapper classes in the Java world (URL, InternetAddress). With these\n    APIs you should be able to think about domain equivalence, not type\n    equivalence.\n\n(3) No bossiness. I am not marking any of these functions as private\n    the docstrings will tell you the intended usage but do what works for you. \t\t\t\t\t\n\nFeedback welcome!\n\nIf something in this module violates the principle of least surprise, please \nlet me (Stu) and the Clojure community know via the mailing list."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/javadoc/browse.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/javadoc.browse-api.html",
+   "name":"clojure.contrib.javadoc.browse",
+   "author":"Christophe Grand",
+   "doc":"Start a web browser from Clojure"},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/d596fee7fbe2f428a34ebecbaaf9451e215d5bdf/src/clojure/contrib/jmx.clj",
    "wiki-url":
@@ -444,12 +446,6 @@
    "name":"clojure.contrib.repl-utils",
    "author":"Chris Houser, Christophe Grand, Stephen Gilardi",
    "doc":"Utilities meant to be used interactively at the REPL"},
-  {"source-url":null,
-   "wiki-url":
-   "http://richhickey.github.com/clojure-contrib/seq-api.html",
-   "name":"clojure.contrib.seq",
-   "author":null,
-   "doc":null},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/1640c0433e35cf9a60e1483424c0a2a8ca56b730/src/clojure/contrib/seq_utils.clj",
    "wiki-url":
@@ -571,6 +567,76 @@
    "author":null,
    "doc":null},
   {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/f087e3a7f8b2f2ca48c07db2a47724ce7b98dce7/src/clojure/contrib/datalog/database.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/datalog.database-api.html",
+   "name":"clojure.contrib.datalog.database",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/245fc9ec4499219bfb66f3fe4789b884b418c7b2/src/clojure/contrib/datalog/literals.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/datalog.literals-api.html",
+   "name":"clojure.contrib.datalog.literals",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/magic.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/datalog.magic-api.html",
+   "name":"clojure.contrib.datalog.magic",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/rules.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/datalog.rules-api.html",
+   "name":"clojure.contrib.datalog.rules",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/7dfd0d90b11f00de5ad1ad30c690a4f12d426c3b/src/clojure/contrib/datalog/softstrat.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/datalog.softstrat-api.html",
+   "name":"clojure.contrib.datalog.softstrat",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/82f5ad11ff5d75f19de6bf5cfcf33b571592c89e/src/clojure/contrib/datalog/util.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/datalog.util-api.html",
+   "name":"clojure.contrib.datalog.util",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/df27c0a710440e2fef44f799dc5933f29ced44e1/src/clojure/contrib/miglayout/example.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/miglayout.example-api.html",
+   "name":"clojure.contrib.miglayout.example",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/internal.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/miglayout.internal-api.html",
+   "name":"clojure.contrib.miglayout.internal",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/8bce6fb2d0a9b66aa1fd145f3dfd62833d8ad330/src/clojure/contrib/miglayout/test.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/miglayout.test-api.html",
+   "name":"clojure.contrib.miglayout.test",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/a4a4a534d7dddc1d58fc93a216192bf4bb7b20ff/src/clojure/contrib/mock/test_adapter.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/mock.test-adapter-api.html",
+   "name":"clojure.contrib.mock.test-adapter",
+   "author":null,
+   "doc":null},
+  {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/e20e8effe977640592b1f285d6c666492d74df00/src/clojure/contrib/pprint/examples/json.clj",
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/pprint.examples.json-api.html",
@@ -586,6 +652,20 @@
    "author":"Tom Faulhaber, based on the original by Stuart Sierra",
    "doc":
    "A version of prxml that uses a pretty print dispatch function."},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/be33acd87f190d9ec2ad756d8cb31c88abca7e5f/src/clojure/contrib/sql/internal.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/sql.internal-api.html",
+   "name":"clojure.contrib.sql.internal",
+   "author":null,
+   "doc":null},
+  {"source-url":
+   "http://github.com/richhickey/clojure-contrib/blob/3ce0c3bd3178fc8de29d4e22646764aa07583673/src/clojure/contrib/sql/test.clj",
+   "wiki-url":
+   "http://richhickey.github.com/clojure-contrib/sql.test-api.html",
+   "name":"clojure.contrib.sql.test",
+   "author":null,
+   "doc":null},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/81b9e71effbaf6aa2945cd684802d87c762cdcdd/src/clojure/contrib/zip_filter/xml.clj",
    "wiki-url":
@@ -613,4 +693,28 @@
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [], [], [], [], []]}
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], []]}

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>swing-utils API reference (clojure-contrib)</title>
+    <title>strint API reference (clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -54,153 +54,52 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/action-translation-table">action-translation-table</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/add-action-listener">add-action-listener</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/add-key-typed-listener">add-key-typed-listener</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/add-menu-item">add-menu-item</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/do-swing">do-swing</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/do-swing*">do-swing*</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/do-swing-and-wait">do-swing-and-wait</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/make-action">make-action</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/make-menubar">make-menubar</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.swing-utils/menu-constructor-dispatch">menu-constructor-dispatch</a>
+      <a href="#clojure.contrib.strint/&lt;&lt;">&lt;&lt;</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">swing-utils</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">strint</span>
   <span id="branch-name">(master branch)</span></h1>
-by <span id="author">Unknown</span><br />
+by <span id="author">Chas Emerick</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.swing-utils</span>))
+  (:require <span id="long-name">clojure.contrib.strint</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr"></pre>
+<pre id="namespace-docstr">String interpolation for Clojure.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.swing-utils/action-translation-table">action-translation-table</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">Translation table for the make-action constructor.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L70" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/add-action-listener">add-action-listener</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (add-action-listener component f &amp; args)
+  <h2 id="clojure.contrib.strint/&lt;&lt;">&lt;&lt;</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (&lt;&lt; string)
 </pre>
-  <pre id="var-docstr">Adds an ActionLister to component. When the action fires, f will be
-invoked with the event as its first argument followed by args.
-Returns the listener.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L23" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/add-key-typed-listener">add-key-typed-listener</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (add-key-typed-listener component f &amp; args)
-</pre>
-  <pre id="var-docstr">Adds a KeyListener to component that only responds to KeyTyped events.
-When a key is typed, f is invoked with the KeyEvent as its first argument
-followed by args. Returns the listener.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L33" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/add-menu-item">add-menu-item</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">Usage: (add-menu-item parent item)
-</pre>
-  <pre id="var-docstr">Adds a menu item to the parent according to the item description.
-  The item description is a map of the following structure.
+  <pre id="var-docstr">Takes a single string argument and emits a str invocation that concatenates
+the string data and evaluated expressions contained within that argument.
+Evaluation is controlled using ~{} and ~() forms.  The former is used for
+simple value replacement using clojure.core/str; the latter can be used to
+embed the results of arbitrary function invocation into the produced string.
 
-Either:
-  - one single :action specifying a javax.swing.Action to be associated
-    with the item.
-  - a specification suitable for make-action
-  - a set of :name, :mnemonic and :items keys, specifying a submenu with
-    the given sequence of item entries.
-  - an empty map specifying a separator.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L101" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/do-swing">do-swing</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (do-swing &amp; body)
-</pre>
-  <pre id="var-docstr">Executes body in the Swing event thread asynchronously. Returns
-immediately after scheduling the execution.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L58" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/do-swing*">do-swing*</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (do-swing* schedule thunk)
-</pre>
-  <pre id="var-docstr">Runs thunk in the Swing event thread according to schedule:
-- :later =&gt; schedule the execution and return immediately
-- :now   =&gt; wait until the execution completes.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L46" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/do-swing-and-wait">do-swing-and-wait</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (do-swing-and-wait &amp; body)
-</pre>
-  <pre id="var-docstr">Executes body in the Swing event thread synchronously. Returns
-after the execution is complete.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L64" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/make-action">make-action</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (make-action spec)
-</pre>
-  <pre id="var-docstr">Create an Action proxy from the given action spec. The standard keys
-recognised are: :name, :accelerator, :command-key, :long-desc,
-:short-desc, :mnemonic and :icon - corresponding to the similar named
-Action properties.  The :handler value is used in the actionPerformed
-method of the proxy to pass on the event.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L80" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/make-menubar">make-menubar</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (make-menubar menubar-items)
-</pre>
-  <pre id="var-docstr">Create a menubar containing the given sequence of menu items. The menu
-items are described by a map as is detailed in the docstring of the
-add-menu-item function.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L142" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.swing-utils/menu-constructor-dispatch">menu-constructor-dispatch</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">An atom containing the dispatch set for the add-menu-item method.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/swing_utils.clj#L97" id="var-source">Source</a>
+Examples:
+user=&gt; (def v 30.5)
+#'user/v
+user=&gt; (&lt;&lt; "This trial required ~{v}ml of solution.")
+"This trial required 30.5ml of solution."
+user=&gt; (&lt;&lt; "There are ~(int v) days in November.")
+"There are 30 days in November."
+user=&gt; (def m {:a [1 2 3]})
+#'user/m
+user=&gt; (&lt;&lt; "The total for your order is $~(-&gt;&gt; m :a (apply +)).")
+"The total for your order is $6."
+
+Note that quotes surrounding string literals within ~() forms must be
+escaped.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/b9db2805f9571d52d5f0bb0b726fee1ca70c821d/src/main/clojure/clojure/contrib/strint.clj#L50" id="var-source">Source</a>
 </div>
 
 

@@ -53,24 +53,248 @@ namespace.
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
-    
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/fill-queue">fill-queue</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/find-first">find-first</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/flatten">flatten</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/frequencies">frequencies</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/group-by">group-by</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/includes?">includes?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/indexed">indexed</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/partition-all">partition-all</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/partition-by">partition-by</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/positions">positions</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/rand-elt">rand-elt</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/rec-cat">rec-cat</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/rec-seq">rec-seq</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/reductions">reductions</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/rotations">rotations</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/separate">separate</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/seq-on">seq-on</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.seq/shuffle">shuffle</a>
+    </div>
     <br />
   </div>
 </div>
 </div>
                 <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">seq</span>
   <span id="branch-name">(1.1.x branch)</span></h1>
-by <span id="author">Unknown</span><br />
+by <span id="author">Stuart Sierra (and others)</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
   (:require <span id="long-name">clojure.contrib.seq</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr"></pre>
+<pre id="namespace-docstr">Sequence utilities for Clojure</pre>
 <br />
 <h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/fill-queue">fill-queue</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (fill-queue filler-func &amp; optseq)
+</pre>
+  <pre id="var-docstr">filler-func will be called in another thread with a single arg
+'fill'.  filler-func may call fill repeatedly with one arg each
+time which will be pushed onto a queue, blocking if needed until
+this is possible.  fill-queue will return a lazy seq of the values
+filler-func has pushed onto the queue, blocking if needed until each
+next element becomes available.  filler-func's return value is ignored.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/find-first">find-first</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (find-first pred coll)
+</pre>
+  <pre id="var-docstr">Returns the first item of coll for which (pred item) returns logical true.
+Consumes sequences up to the first match, will consume the entire sequence
+and return nil if no match is found.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/flatten">flatten</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (flatten x)
+</pre>
+  <pre id="var-docstr">Takes any nested combination of sequential things (lists, vectors,
+etc.) and returns their contents as a single, flat sequence.
+(flatten nil) returns nil.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/frequencies">frequencies</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (frequencies coll)
+</pre>
+  <pre id="var-docstr">Returns a map from distinct items in coll to the number of times
+they appear.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/group-by">group-by</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (group-by f coll)
+</pre>
+  <pre id="var-docstr">Returns a sorted map of the elements of coll keyed by the result of
+f on each element. The value at each key will be a vector of the
+corresponding elements, in the order they appeared in coll.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/includes?">includes?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (includes? coll x)
+</pre>
+  <pre id="var-docstr">Returns true if coll contains something equal (with =) to x,
+in linear time.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/indexed">indexed</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (indexed s)
+</pre>
+  <pre id="var-docstr">Returns a lazy sequence of [index, item] pairs, where items come
+from 's' and indexes count up from zero.
 
+(indexed '(a b c d))  =&gt;  ([0 a] [1 b] [2 c] [3 d])</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/partition-all">partition-all</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (partition-all n coll)
+       (partition-all n step coll)
+</pre>
+  <pre id="var-docstr">Returns a lazy sequence of lists like clojure.core/partition, but may
+include lists with fewer than n items at the end.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/partition-by">partition-by</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (partition-by f coll)
+</pre>
+  <pre id="var-docstr">Applies f to each value in coll, splitting it each time f returns
+a new value.  Returns a lazy seq of lazy seqs.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/positions">positions</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (positions pred coll)
+</pre>
+  <pre id="var-docstr">Returns a lazy sequence containing the positions at which pred
+is true for items in coll.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/rand-elt">rand-elt</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (rand-elt s)
+</pre>
+  <pre id="var-docstr">Return a random element of this seq</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/rec-cat">rec-cat</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (rec-cat binding-name &amp; exprs)
+</pre>
+  <pre id="var-docstr">Similar to lazy-cat but binds the resulting sequence to the supplied 
+binding-name, allowing for recursive expressions.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/rec-seq">rec-seq</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (rec-seq binding-name &amp; body)
+</pre>
+  <pre id="var-docstr">Similar to lazy-seq but binds the resulting seq to the supplied 
+binding-name, allowing for recursive expressions.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/reductions">reductions</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (reductions f coll)
+       (reductions f init coll)
+</pre>
+  <pre id="var-docstr">Returns a lazy seq of the intermediate values of the reduction (as
+per reduce) of coll by f, starting with init.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/rotations">rotations</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (rotations x)
+</pre>
+  <pre id="var-docstr">Returns a lazy seq of all rotations of a seq</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/separate">separate</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (separate f s)
+</pre>
+  <pre id="var-docstr">Returns a vector:
+[ (filter f s), (filter (complement f) s) ]</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/seq-on">seq-on</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">Usage: (seq-on s)
+</pre>
+  <pre id="var-docstr">Returns a seq on the object s. Works like the built-in seq but as
+a multimethod that can have implementations for new classes and types.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.seq/shuffle">shuffle</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (shuffle coll)
+</pre>
+  <pre id="var-docstr">Return a random permutation of coll</pre>
+  
+</div>
 
 
 </div>
