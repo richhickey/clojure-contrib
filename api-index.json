@@ -103,9 +103,8 @@
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/def-api.html",
    "name":"clojure.contrib.def",
-   "author":"Stephen C. Gilardi",
-   "doc":
-   "def.clj provides variants of def that make including doc strings and\nmaking private definitions more succinct."},
+   "author":null,
+   "doc":null},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/2ae8ff46d348522efe9f96cfd31f6e9b6018cfdc/src/clojure/contrib/duck_streams.clj",
    "wiki-url":
@@ -249,10 +248,8 @@
    "wiki-url":
    "http://richhickey.github.com/clojure-contrib/java-utils-api.html",
    "name":"clojure.contrib.java-utils",
-   "author":
-   "Stuart Halloway, Stephen C. Gilardi, Shawn Hoover, Perry Trolard, Stuart Sierra",
-   "doc":
-   "A set of utilties for dealing with Java stuff like files and properties.\n\nDesign goals:\n\n(1) Ease-of-use. These APIs should be convenient. Performance is secondary.\n\n(2) Duck typing. I hate having to think about the difference between\n    a string that names a file, and a File. Ditto for a ton of other \n    wrapper classes in the Java world (URL, InternetAddress). With these\n    APIs you should be able to think about domain equivalence, not type\n    equivalence.\n\n(3) No bossiness. I am not marking any of these functions as private\n    the docstrings will tell you the intended usage but do what works for you. \t\t\t\t\t\n\nFeedback welcome!\n\nIf something in this module violates the principle of least surprise, please \nlet me (Stu) and the Clojure community know via the mailing list."},
+   "author":null,
+   "doc":null},
   {"source-url":
    "http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/javadoc/browse.clj",
    "wiki-url":
@@ -717,4 +714,6 @@
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [], [], []]}
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  [], [], [], [], []]}

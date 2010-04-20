@@ -53,7 +53,17 @@ namespace.
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
-    
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition/*full-stack-traces*">*full-stack-traces*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition/handler-case">handler-case</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition/print-stack-trace">print-stack-trace</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition/raise">raise</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.condition/stack-trace-info">stack-trace-info</a>
+    </div>
     <br />
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#condition.Condition">condition.Condition</a>
@@ -101,7 +111,75 @@ Based on an idea from Chouser:
 <a href="http://groups.google.com/group/clojure/browse_frm/thread/da1285c538f22bb5">http://groups.google.com/group/clojure/browse_frm/thread/da1285c538f22bb5</a></pre>
 <br />
 <h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.condition/*full-stack-traces*">*full-stack-traces*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Bind to true to include clojure.{core,lang,main} frames in stack
+traces</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L56" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.condition/handler-case">handler-case</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (handler-case dispatch-fn &amp; body)
+</pre>
+  <pre id="var-docstr">Executes body in a context where raised conditions can be handled.
 
+dispatch-fn accepts a raised condition (a map) and returns a selector
+used to choose a handler. Commonly, dispatch-fn will be :type to dispatch
+on the condition's :type value.
+
+Handlers are forms within body:
+
+  (handle key
+    ...)
+
+If a condition is raised, executes the body of the first handler whose
+key satisfies (isa? selector key). If no handlers match, re-raises the
+condition.
+
+While a handler is running, *condition* is bound to the condition being
+handled and *selector* is bound to to the value returned by dispatch-fn
+that matched the handler's key.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L71" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.condition/print-stack-trace">print-stack-trace</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (print-stack-trace x)
+</pre>
+  <pre id="var-docstr">Prints a stack trace for a condition or Throwable. Skips frames for
+classes in clojure.{core,lang,main} unless the *full-stack-traces* is
+bound to logical true</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L128" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.condition/raise">raise</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (raise)
+       (raise m)
+       (raise key val &amp; keyvals)
+</pre>
+  <pre id="var-docstr">Raises a condition. With no arguments, re-raises the current condition.
+With one argument (a map), raises the argument. With two or more
+arguments, raises a map with keys and values from the arguments.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L60" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.condition/stack-trace-info">stack-trace-info</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">No usage documentation available</pre>
+  <pre id="var-docstr">Returns header, stack-trace, and cause info from conditions and
+Throwables</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L106" id="var-source">Source</a>
+</div>
 <h2 id="namespace-name">condition.Condition</h2>
 <pre id="namespace-docstr"></pre>
 <br />

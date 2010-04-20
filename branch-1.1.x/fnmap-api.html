@@ -53,7 +53,9 @@ namespace.
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
-    
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.fnmap/fnmap">fnmap</a>
+    </div>
     <br />
   </div>
 </div>
@@ -72,7 +74,27 @@ by <span id="author">Stuart Sierra</span><br />
 Note: requires AOT-compilation</pre>
 <br />
 <h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.fnmap/fnmap">fnmap</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (fnmap getter setter)
+       (fnmap getter setter &amp; keyvals)
+</pre>
+  <pre id="var-docstr">Creates a fnmap, or functional map.  A fnmap behaves like an
+ordinary Clojure map, except that calls to get and assoc are
+filtered through user-defined getter and setter functions, which
+operate on an internal map.
 
+(getter m key) should return a value for key.
+
+(setter m key value) should assoc key with value and return a new
+map for m.
+
+All other map operations are passed through to the internal map.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/016af1ddecea945f0ae9e6354e2bd006efcd7a04/src/clojure/contrib/fnmap.clj#L19" id="var-source">Source</a>
+</div>
 
 
 </div>
