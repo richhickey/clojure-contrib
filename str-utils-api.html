@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>except API reference (clojure-contrib)</title>
+    <title>str-utils API reference (clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -54,87 +54,122 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.except/throw-arg">throw-arg</a>
+      <a href="#clojure.contrib.str-utils/chomp">chomp</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.except/throw-if">throw-if</a>
+      <a href="#clojure.contrib.str-utils/chop">chop</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.except/throw-if-not">throw-if-not</a>
+      <a href="#clojure.contrib.str-utils/re-gsub">re-gsub</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.except/throwf">throwf</a>
+      <a href="#clojure.contrib.str-utils/re-partition">re-partition</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.str-utils/re-split">re-split</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.str-utils/re-sub">re-sub</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.str-utils/str-join">str-join</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">except</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">str-utils</span>
   <span id="branch-name">(master branch)</span></h1>
-by <span id="author">Stephen C. Gilardi</span><br />
+by <span id="author">Stuart Sierra</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.except</span>))
+  (:require <span id="long-name">clojure.contrib.str-utils</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">Provides functions that make it easy to specify the class, cause, and
-message when throwing an Exception or Error. The optional message is
-formatted using clojure.core/format.</pre>
+<pre id="namespace-docstr">String utilities for Clojure</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.except/throw-arg">throw-arg</h2>
+  <h2 id="clojure.contrib.str-utils/chomp">chomp</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (throw-arg &amp; args)
+  <pre id="var-usage">Usage: (chomp s)
 </pre>
-  <pre id="var-docstr">Throws an IllegalArgumentException. All arguments are optional:
-
-      cause? format? format-args*
-
-- cause defaults to nil, if present it must be a Throwable
-- format is a format string for clojure.core/format
-- format-args are objects that correspond to format specifiers in
-  format.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/except.clj#L57" id="var-source">Source</a>
+  <pre id="var-docstr">Removes all trailing newline \n or return \r characters from
+string.  Note: String.trim() is similar and faster.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L96" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.except/throw-if">throw-if</h2>
+  <h2 id="clojure.contrib.str-utils/chop">chop</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (throw-if test &amp; args)
+  <pre id="var-usage">Usage: (chop s)
 </pre>
-  <pre id="var-docstr">Throws an Exception or Error if test is true. args are those documented
-for throwf.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/except.clj#L43" id="var-source">Source</a>
+  <pre id="var-docstr">Removes the last character of string.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L91" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.except/throw-if-not">throw-if-not</h2>
+  <h2 id="clojure.contrib.str-utils/re-gsub">re-gsub</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (throw-if-not test &amp; args)
+  <pre id="var-usage">Usage: (re-gsub regex replacement string)
 </pre>
-  <pre id="var-docstr">Throws an Exception or Error if test is false. args are those documented
-for throwf.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/except.clj#L50" id="var-source">Source</a>
+  <pre id="var-docstr">Replaces all instances of 'pattern' in 'string' with
+'replacement'.  Like Ruby's 'String#gsub'.
+
+If (ifn? replacment) is true, the replacement is called with the
+match.
+</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L50" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.except/throwf">throwf</h2>
+  <h2 id="clojure.contrib.str-utils/re-partition">re-partition</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (throwf &amp; args)
+  <pre id="var-usage">Usage: (re-partition re string)
 </pre>
-  <pre id="var-docstr">Throws an Exception or Error with an optional message formatted using
-clojure.core/format. All arguments are optional:
+  <pre id="var-docstr">Splits the string into a lazy sequence of substrings, alternating
+between substrings that match the patthern and the substrings
+between the matches.  The sequence always starts with the substring
+before the first match, or an empty string if the beginning of the
+string matches.
 
-    class? cause? format? format-args*
+For example: (re-partition #"[a-z]+" "abc123def")
 
-- class defaults to Exception, if present it must name a kind of
-  Throwable
-- cause defaults to nil, if present it must be a Throwable
-- format is a format string for clojure.core/format
-- format-args are objects that correspond to format specifiers in
-  format.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/except.clj#L28" id="var-source">Source</a>
+Returns: ("" "abc" "123" "def")</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L28" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.str-utils/re-split">re-split</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (re-split pattern string)
+       (re-split pattern string limit)
+</pre>
+  <pre id="var-docstr">Splits the string on instances of 'pattern'.  Returns a sequence of
+strings.  Optional 'limit' argument is the maximum number of
+splits.  Like Perl's 'split'.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L21" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.str-utils/re-sub">re-sub</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (re-sub regex replacement string)
+</pre>
+  <pre id="var-docstr">Replaces the first instance of 'pattern' in 'string' with
+'replacement'.  Like Ruby's 'String#sub'.
+
+If (ifn? replacement) is true, the replacement is called with
+the match.
+</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L66" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.str-utils/str-join">str-join</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (str-join separator sequence)
+</pre>
+  <pre id="var-docstr">Returns a string of all elements in 'sequence', separated by
+'separator'.  Like Perl's 'join'.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/str_utils.clj#L84" id="var-source">Source</a>
 </div>
 
 

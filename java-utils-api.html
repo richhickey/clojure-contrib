@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>monadic-io-streams API reference (clojure-contrib)</title>
+    <title>java-utils API reference (clojure-contrib)</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -54,164 +54,233 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/flush">flush</a>
+      <a href="#clojure.contrib.java-utils/as-file">as-file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/print">print</a>
+      <a href="#clojure.contrib.java-utils/as-properties">as-properties</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/println">println</a>
+      <a href="#clojure.contrib.java-utils/as-str">as-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/read-char">read-char</a>
+      <a href="#clojure.contrib.java-utils/as-url">as-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/read-line">read-line</a>
+      <a href="#clojure.contrib.java-utils/delete-file">delete-file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/read-lines">read-lines</a>
+      <a href="#clojure.contrib.java-utils/delete-file-recursively">delete-file-recursively</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/skip-chars">skip-chars</a>
+      <a href="#clojure.contrib.java-utils/file">file</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/with-io-streams">with-io-streams</a>
+      <a href="#clojure.contrib.java-utils/get-system-property">get-system-property</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/with-reader">with-reader</a>
+      <a href="#clojure.contrib.java-utils/read-properties">read-properties</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/with-writer">with-writer</a>
+      <a href="#clojure.contrib.java-utils/relative-path-string">relative-path-string</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.monadic-io-streams/write">write</a>
+      <a href="#clojure.contrib.java-utils/set-system-properties">set-system-properties</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.java-utils/wall-hack-field">wall-hack-field</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.java-utils/wall-hack-method">wall-hack-method</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.java-utils/with-system-properties">with-system-properties</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.java-utils/write-properties">write-properties</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">monadic-io-streams</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">java-utils</span>
   <span id="branch-name">(master branch)</span></h1>
-by <span id="author">Konrad Hinsen</span><br />
+by <span id="author">Stuart Halloway, Stephen C. Gilardi, Shawn Hoover, Perry Trolard, Stuart Sierra</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.monadic-io-streams</span>))
+  (:require <span id="long-name">clojure.contrib.java-utils</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">Monadic I/O with Java input/output streams
-Defines monadic I/O statements to be used in a state monad
-with an input or output stream as the state. The macro
-monadic-io creates a stream, runs a monadic I/O statement
-on it, and closes the stream. This structure permits the
-definition of purely functional compound I/O statements
-which are applied to streams that can never escape from the
-monadic statement sequence.</pre>
+<pre id="namespace-docstr">A set of utilties for dealing with Java stuff like files and properties.
+
+Design goals:
+
+(1) Ease-of-use. These APIs should be convenient. Performance is secondary.
+
+(2) Duck typing. I hate having to think about the difference between
+    a string that names a file, and a File. Ditto for a ton of other 
+    wrapper classes in the Java world (URL, InternetAddress). With these
+    APIs you should be able to think about domain equivalence, not type
+    equivalence.
+
+(3) No bossiness. I am not marking any of these functions as private
+    the docstrings will tell you the intended usage but do what works for you. 					
+
+Feedback welcome!
+
+If something in this module violates the principle of least surprise, please 
+let me (Stu) and the Clojure community know via the mailing list.</pre>
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/flush">flush</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (flush)
-</pre>
-  <pre id="var-docstr">Flush</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L62" id="var-source">Source</a>
+  <h2 id="clojure.contrib.java-utils/as-file">as-file</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">No usage documentation available</pre>
+  <pre id="var-docstr">Interpret a String or a java.io.File as a File. Building block
+for clojure.contrib.java-utils/file, which you should prefer
+in most cases.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L75" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/print">print</h2>
+  <h2 id="clojure.contrib.java-utils/as-properties">as-properties</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (print obj)
+  <pre id="var-usage">Usage: (as-properties m)
 </pre>
-  <pre id="var-docstr">Print obj</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L67" id="var-source">Source</a>
+  <pre id="var-docstr">Convert any seq of pairs to a java.utils.Properties instance.
+Uses as-str to convert both keys and values into strings.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L152" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/println">println</h2>
+  <h2 id="clojure.contrib.java-utils/as-str">as-str</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (println)
-       (println obj)
+  <pre id="var-usage">Usage: (as-str)
+       (as-str x)
+       (as-str x &amp; ys)
 </pre>
-  <pre id="var-docstr">Print obj followed by a newline</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L72" id="var-source">Source</a>
+  <pre id="var-docstr">Like clojure.core/str, but if an argument is a keyword or symbol,
+its name will be used instead of its literal representation.
+
+Example:
+   (str :foo :bar)     ;;=&gt; ":foo:bar"
+   (as-str :foo :bar)  ;;=&gt; "foobar" 
+
+Note that this does not apply to keywords or symbols nested within
+data structures; they will be rendered as with str.
+
+Example:
+   (str {:foo :bar})     ;;=&gt; "{:foo :bar}"
+   (as-str {:foo :bar})  ;;=&gt; "{:foo :bar}" </pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L92" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/read-char">read-char</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (read-char)
+  <h2 id="clojure.contrib.java-utils/as-url">as-url</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">Usage: (as-url arg)
 </pre>
-  <pre id="var-docstr">Read a single character</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L42" id="var-source">Source</a>
+  <pre id="var-docstr">Coerces argument (URL, URI, or String) to a java.net.URL.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L195" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/read-line">read-line</h2>
+  <h2 id="clojure.contrib.java-utils/delete-file">delete-file</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (read-line)
+  <pre id="var-usage">Usage: (delete-file f &amp; [silently])
 </pre>
-  <pre id="var-docstr">Read a single line</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L47" id="var-source">Source</a>
+  <pre id="var-docstr">Delete file f. Raise an exception if it fails unless silently is true.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L178" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/read-lines">read-lines</h2>
+  <h2 id="clojure.contrib.java-utils/delete-file-recursively">delete-file-recursively</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (read-lines)
+  <pre id="var-usage">Usage: (delete-file-recursively f &amp; [silently])
 </pre>
-  <pre id="var-docstr">Read all lines and return them in a vector</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L126" id="var-source">Source</a>
+  <pre id="var-docstr">Delete file f. If it's a directory, recursively delete all its contents.
+Raise an exception if any deletion fails unless silently is true.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L185" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/skip-chars">skip-chars</h2>
+  <h2 id="clojure.contrib.java-utils/file">file</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (skip-chars n)
+  <pre id="var-usage">Usage: (file arg)
+       (file parent child)
+       (file parent child &amp; more)
 </pre>
-  <pre id="var-docstr">Skip n characters</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L52" id="var-source">Source</a>
+  <pre id="var-docstr">Returns a java.io.File from string or file args.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L83" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/with-io-streams">with-io-streams</h2>
+  <h2 id="clojure.contrib.java-utils/get-system-property">get-system-property</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (with-io-streams io-specs statement)
+  <pre id="var-usage">Usage: (get-system-property stringable)
+       (get-system-property stringable default)
 </pre>
-  <pre id="var-docstr">Open one or more streams as specified by io-spec, run a monadic
-I/O statement on them, and close the streams. io-spec is
-a binding-like vector in which each stream is specified by
-three element: a keyword by which the stream can be referred to,
-the stream mode (:read or :write), and a stream specification as
-accepted by clojure.contrib.io/reader (mode :read) or
-clojure.contrib.io/writer (mode :write). The statement
-is run on a state which is a map from keywords to corresponding
-streams. Single-stream monadic I/O statements must be wrapped
-with clojure.contrib.monads/with-state-field.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L98" id="var-source">Source</a>
+  <pre id="var-docstr">Get a system property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L117" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/with-reader">with-reader</h2>
+  <h2 id="clojure.contrib.java-utils/read-properties">read-properties</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (with-reader reader-spec statement)
+  <pre id="var-usage">Usage: (read-properties file-able)
 </pre>
-  <pre id="var-docstr">Create a reader from reader-spec, run the monadic I/O statement
-on it, and close the reader. reader-spec can be any object accepted
-by clojure.contrib.io/reader.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L82" id="var-source">Source</a>
+  <pre id="var-docstr">Read properties from file-able.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L162" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/with-writer">with-writer</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (with-writer writer-spec statement)
-</pre>
-  <pre id="var-docstr">Create a writer from writer-spec, run the monadic I/O statement
-on it, and close the writer. writer-spec can be any object accepted
-by clojure.contrib.io/writer.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L90" id="var-source">Source</a>
+  <h2 id="clojure.contrib.java-utils/relative-path-string">relative-path-string</h2>
+  <span id="var-type">multimethod</span><br />
+  <pre id="var-usage">No usage documentation available</pre>
+  <pre id="var-docstr">Interpret a String or java.io.File as a relative path string. 
+Building block for clojure.contrib.java-utils/file.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L62" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.monadic-io-streams/write">write</h2>
+  <h2 id="clojure.contrib.java-utils/set-system-properties">set-system-properties</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (write text)
+  <pre id="var-usage">Usage: (set-system-properties settings)
 </pre>
-  <pre id="var-docstr">Write text (a string)</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/monadic_io_streams.clj#L57" id="var-source">Source</a>
+  <pre id="var-docstr">Set some system properties. Nil clears a property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L124" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/wall-hack-field">wall-hack-field</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (wall-hack-field class-name field-name obj)
+</pre>
+  <pre id="var-docstr">Access to private or protected field.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L218" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/wall-hack-method">wall-hack-method</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (wall-hack-method class-name method-name params obj &amp; args)
+</pre>
+  <pre id="var-docstr">Calls a private or protected method.
+params is a vector of class which correspond to the arguments to the method
+obj is nil for static methods, the instance object otherwise
+the method name is given as a symbol or a keyword (something Named)</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L208" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/with-system-properties">with-system-properties</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-system-properties settings &amp; body)
+</pre>
+  <pre id="var-docstr">setting =&gt; property-name value
+
+Sets the system properties to the supplied values, executes the body, and
+sets the properties back to their original values. Values of nil are
+translated to a clearing of the property.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L132" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.java-utils/write-properties">write-properties</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (write-properties m file-able)
+       (write-properties m file-able comments)
+</pre>
+  <pre id="var-docstr">Write properties to file-able.</pre>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/a1c66df5287776b4397cf3929a5f498fbb34ea32/src/main/clojure/clojure/contrib/java_utils.clj#L169" id="var-source">Source</a>
 </div>
 
 
