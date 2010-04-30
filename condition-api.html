@@ -109,6 +109,8 @@ Note: requires AOT compilation.
 
 Based on an idea from Chouser:
 <a href="http://groups.google.com/group/clojure/browse_frm/thread/da1285c538f22bb5">http://groups.google.com/group/clojure/browse_frm/thread/da1285c538f22bb5</a></pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -119,7 +121,9 @@ Based on an idea from Chouser:
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Bind to true to include clojure.{core,lang,main} frames in stack
 traces</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L56" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -145,7 +149,9 @@ condition.
 While a handler is running, *condition* is bound to the condition being
 handled and *selector* is bound to to the value returned by dispatch-fn
 that matched the handler's key.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L71" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -156,7 +162,9 @@ that matched the handler's key.</pre>
   <pre id="var-docstr">Prints a stack trace for a condition or Throwable. Skips frames for
 classes in clojure.{core,lang,main} unless the *full-stack-traces* is
 bound to logical true</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L128" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -169,7 +177,9 @@ bound to logical true</pre>
   <pre id="var-docstr">Raises a condition. With no arguments, re-raises the current condition.
 With one argument (a map), raises the argument. With two or more
 arguments, raises a map with keys and values from the arguments.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L60" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -178,10 +188,14 @@ arguments, raises a map with keys and values from the arguments.</pre>
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Returns header, stack-trace, and cause info from conditions and
 Throwables</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/condition.clj#L106" id="var-source">Source</a>
+  
+  
+  
 </div>
 <h2 id="namespace-name">condition.Condition</h2>
 <pre id="namespace-docstr"></pre>
+
+
 <br />
 <div id="var-entry">
   <hr />
@@ -193,7 +207,9 @@ Throwables</pre>
 metadata. Also initializes the superclass with the values at :message
 and :cause, if any, so they are also available via .getMessage and
 .getCause.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/condition/Condition.clj#L25" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.condition.Condition/-meta">-meta</h2>
@@ -201,7 +217,9 @@ and :cause, if any, so they are also available via .getMessage and
   <pre id="var-usage">Usage: (-meta this)
 </pre>
   <pre id="var-docstr">Returns this object's metadata, the condition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/condition/Condition.clj#L40" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.condition.Condition/-post-init">-post-init</h2>
@@ -210,7 +228,9 @@ and :cause, if any, so they are also available via .getMessage and
 </pre>
   <pre id="var-docstr">Adds :stack-trace to the condition. Drops the bottom 3 frames because
 they are always the same: implementation details of Condition and raise.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/condition/Condition.clj#L33" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 

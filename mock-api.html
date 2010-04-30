@@ -112,6 +112,8 @@ by <span id="author">Unknown</span><br />
 </pre><pre>
 </pre><h2>Overview</h2>
 <pre id="namespace-docstr"></pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -128,6 +130,8 @@ this function will be returned returned by the expected function. If both this
 and returns are specified, the return value of "calls" will have precedence.
 Usage:
 (calls some-fn expectation-hash?)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L216" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -143,6 +147,8 @@ Return values can also be specified as needed.
 Usage:
 (expect [dep-fn (has-args [arg-pred1] (times n (returns x)))]
   (function-under-test a b c))</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L265" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -160,6 +166,8 @@ Only specify as many predicates as you are interested in verifying. The rest
 of the values are safely ignored.
 Usage:
 (has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L228" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -171,6 +179,8 @@ Usage:
   <pre id="var-docstr">Calls no-matching-function-signature if no match is found for the given
 function. If no argslist meta data is available for the function, it is
 not called.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L105" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -184,6 +194,8 @@ the expectation bound scope. These functions take the additional argument
 of the name of the replaced function, then the rest of their args. It is
 designed to be called from the mock function generated in the first argument
 of the mock info object created by make-mock.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L116" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -195,6 +207,8 @@ of the mock info object created by make-mock.</pre>
   <pre id="var-docstr">creates the count checker that is invoked at the end of an expectation, after
 the code under test has all been executed. The function returned takes the
 name of the associated dependency and the invocation count as arguments.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L131" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -209,6 +223,8 @@ increases count, returns return value.
 2. an atom containing the invocation count
 3. the invocation count checker function
 4. a symbol of the name of the function being replaced.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L150" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -223,6 +239,8 @@ a value to be returned by the expectation after a successful invocation
 matching its expected arguments (if applicable).
 Usage:
 (returns ret-value expectation-hash?)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L205" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -243,6 +261,8 @@ Usage:
 (times n)
 (times #(&gt; n %))
 (times n expectation-hash)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L246" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
@@ -253,10 +273,14 @@ Usage:
 </pre>
   <pre id="var-docstr">given the sequence of all mock data for the expectation, simply calls the
 count checker for each dependency.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L175" id="var-source">Source</a>
 </div>
 <h2 id="namespace-name">mock.test-adapter</h2>
 <pre id="namespace-docstr"></pre>
+
+
 <br />
 <div id="var-entry">
   <hr />
@@ -271,6 +295,8 @@ this function will be returned returned by the expected function. If both this
 and returns are specified, the return value of "calls" will have precedence.
 Usage:
 (calls some-fn expectation-hash?)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L216" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -287,6 +313,8 @@ Only specify as many predicates as you are interested in verifying. The rest
 of the values are safely ignored.
 Usage:
 (has-args [arg-pred-1 arg-pred-2 ... arg-pred-n] expectation-hash?)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L228" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -297,6 +325,8 @@ Usage:
   <pre id="var-docstr">Calls no-matching-function-signature if no match is found for the given
 function. If no argslist meta data is available for the function, it is
 not called.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L105" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -309,6 +339,8 @@ the expectation bound scope. These functions take the additional argument
 of the name of the replaced function, then the rest of their args. It is
 designed to be called from the mock function generated in the first argument
 of the mock info object created by make-mock.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L116" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -319,6 +351,8 @@ of the mock info object created by make-mock.</pre>
   <pre id="var-docstr">creates the count checker that is invoked at the end of an expectation, after
 the code under test has all been executed. The function returned takes the
 name of the associated dependency and the invocation count as arguments.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L131" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -332,6 +366,8 @@ increases count, returns return value.
 2. an atom containing the invocation count
 3. the invocation count checker function
 4. a symbol of the name of the function being replaced.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L150" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -342,7 +378,9 @@ increases count, returns return value.
   <pre id="var-docstr">This function is designed to be used in a binding macro to override
 the report-problem function in clojure.contrib.mock. Instead of printing
 the error to the console, the error is logged via clojure.test.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/mock/test_adapter.clj#L19" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.mock.test-adapter/returns">returns</h2>
@@ -355,6 +393,8 @@ a value to be returned by the expectation after a successful invocation
 matching its expected arguments (if applicable).
 Usage:
 (returns ret-value expectation-hash?)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L205" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -374,6 +414,8 @@ Usage:
 (times n)
 (times #(&gt; n %))
 (times n expectation-hash)</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L246" id="var-source">Source</a>
 </div><div id="var-entry">
   <hr />
@@ -383,6 +425,8 @@ Usage:
 </pre>
   <pre id="var-docstr">given the sequence of all mock data for the expectation, simply calls the
 count checker for each dependency.</pre>
+  
+  
   <a href="http://github.com/richhickey/clojure-contrib/blob/ec6a7579d6b1c0bfa42e3666cfad196cffc966fe/src/main/clojure/clojure/contrib/mock.clj#L175" id="var-source">Source</a>
 </div>
 

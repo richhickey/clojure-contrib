@@ -154,6 +154,8 @@ This includes support for the old syntax of the 'are' macro.
 
 This was suggested by Howard Lewis Ship in ticket #26, 
 <a href="http://www.assembla.com/spaces/clojure-contrib/tickets/26">http://www.assembla.com/spaces/clojure-contrib/tickets/26</a></pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -166,6 +168,8 @@ This was suggested by Howard Lewis Ship in ticket #26,
 be created by deftest, set-test, or with-test.  Use this to omit
 tests when compiling or loading production code.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -176,6 +180,8 @@ tests when compiling or loading production code.</pre>
 is thrown during a test.  Defaults to nil, which means print the 
 complete stack trace.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -185,7 +191,9 @@ complete stack trace.</pre>
 </pre>
   <pre id="var-docstr">Replaces _1, _2, _3, etc. in expr with corresponding elements of
 values.  Returns the modified expression.  For use in macros.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L76" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -205,7 +213,9 @@ Expands to:
              (is (= 4 (* 2 2))))
 
 Note: This breaks some reporting features, such as line numbers.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L104" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -215,6 +225,8 @@ Note: This breaks some reporting features, such as line numbers.</pre>
 </pre>
   <pre id="var-docstr">Returns generic assertion code for any test, including macros, Java
 method calls, or isolated symbols.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -229,6 +241,8 @@ method calls, or isolated symbols.</pre>
 evaluated.  If the predicate returns false, the 'actual' form will
 be wrapped in (not...).</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -238,6 +252,8 @@ be wrapped in (not...).</pre>
 </pre>
   <pre id="var-docstr">Composes two fixture functions, creating a new fixture function
 that combines their behavior.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -257,6 +273,8 @@ itself.
 
 When *load-tests* is false, deftest is ignored.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -265,6 +283,8 @@ When *load-tests* is false, deftest is ignored.</pre>
   <pre id="var-usage">Usage: (deftest- name &amp; body)
 </pre>
   <pre id="var-docstr">Like deftest but creates a private var.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -277,7 +297,9 @@ When *load-tests* is false, deftest is ignored.</pre>
 args.  args are grouped by the number of holes in the template.
 Example: (do-template (check _1 _2) :a :b :c :d)
 expands to (do (check :a :b) (check :c :d))</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L87" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -288,6 +310,8 @@ expands to (do (check :a :b) (check :c :d))</pre>
   <pre id="var-docstr">Returns a vector [filename line-number] for the nth call up the
 stack.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -296,7 +320,9 @@ stack.</pre>
   <pre id="var-usage">Usage: (find-holes form)
 </pre>
   <pre id="var-docstr">Recursively finds all symbols starting with _ in form.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L51" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -306,7 +332,9 @@ stack.</pre>
 </pre>
   <pre id="var-docstr">Recursively finds all sub-expressions in form that do not contain
 any symbols starting with _</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L57" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -315,7 +343,9 @@ any symbols starting with _</pre>
   <pre id="var-usage">Usage: (find-symbols form)
 </pre>
   <pre id="var-docstr">Recursively finds all symbols in form.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L46" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -324,7 +354,9 @@ any symbols starting with _</pre>
   <pre id="var-usage">Usage: (flatten-map m)
 </pre>
   <pre id="var-docstr">Transforms a map into a vector like [key value key value].</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L65" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -335,6 +367,8 @@ any symbols starting with _</pre>
   <pre id="var-docstr">Returns true if argument is a function or a symbol that resolves to
 a function (not a macro).</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -343,6 +377,8 @@ a function (not a macro).</pre>
   <pre id="var-usage">Usage: (get-possibly-unbound-var v)
 </pre>
   <pre id="var-docstr">Like var-get but returns nil if the var is unbound.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -353,6 +389,8 @@ a function (not a macro).</pre>
 </pre>
   <pre id="var-docstr">Increments the named counter in *report-counters*, a ref to a map.
 Does nothing if *report-counters* is nil.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -376,6 +414,8 @@ body, fails if not; then returns the thing thrown.
 thrown AND that the message on the exception matches (with
 re-find) the regular expression re.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -385,6 +425,8 @@ re-find) the regular expression re.</pre>
 </pre>
   <pre id="var-docstr">Composes a collection of fixtures, in order.  Always returns a valid
 fixture function, even if the collection is empty.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -399,6 +441,8 @@ different report formats (e.g., TAP, JUnit).  Assertions such as
 the top of test_is.clj for more information on the types of
 arguments for 'report'.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -412,6 +456,8 @@ Optional argument is a regular expression; only namespaces with
 names matching the regular expression (with re-matches) will be
 tested.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -423,6 +469,8 @@ tested.</pre>
   <pre id="var-docstr">Runs all tests in the given namespaces; prints results.
 Defaults to current namespace if none given.  Returns a map
 summarizing test results.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -437,6 +485,8 @@ The var must already exist.  Does not modify the value of the var.
 
 When *load-tests* is false, set-test is ignored.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -447,6 +497,8 @@ When *load-tests* is false, set-test is ignored.</pre>
   <pre id="var-docstr">Returns true if the given test summary indicates all tests
 were successful, false otherwise.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -455,7 +507,9 @@ were successful, false otherwise.</pre>
   <pre id="var-usage">Usage: (template? form)
 </pre>
   <pre id="var-docstr">Returns true if form is a valid template expression.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L71" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -464,6 +518,8 @@ were successful, false otherwise.</pre>
   <pre id="var-usage">Usage: (test-all-vars ns)
 </pre>
   <pre id="var-docstr">Calls test-var on every var interned in the namespace, with fixtures.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -480,6 +536,8 @@ Internally binds *report-counters* to a ref initialized to
 *inital-report-counters*.  Returns the final, dereferenced state of
 *report-counters*.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -489,6 +547,8 @@ Internally binds *report-counters* to a ref initialized to
 </pre>
   <pre id="var-docstr">If v has a function in its :test metadata, calls that function,
 with *testing-vars* bound to (conj *testing-vars* v).</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -500,6 +560,8 @@ with *testing-vars* bound to (conj *testing-vars* v).</pre>
   <pre id="var-docstr">Adds a new string to the list of testing contexts.  May be nested,
 but must occur inside a test function (deftest).</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -509,6 +571,8 @@ but must occur inside a test function (deftest).</pre>
 </pre>
   <pre id="var-docstr">Returns a string representation of the current test context. Joins
 strings in *testing-contexts* with spaces.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -521,6 +585,8 @@ strings in *testing-contexts* with spaces.</pre>
 in *testing-vars* as a list, then the source file and line of
 current assertion.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -531,6 +597,8 @@ current assertion.</pre>
   <pre id="var-docstr">Used by the 'is' macro to catch unexpected exceptions.
 You don't call this.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -540,6 +608,8 @@ You don't call this.</pre>
   <pre id="var-docstr">Wrap test runs in a fixture function to perform setup and
 teardown. Using a fixture-type of :each wraps every test
 individually, while:once wraps the whole run in a single function.</pre>
+  
+  
   
 </div><div id="var-entry">
   <br />
@@ -554,6 +624,8 @@ Remaining body goes in the :test metadata function for that Var.
 When *load-tests* is false, only evaluates the definition, ignoring
 the tests.</pre>
   
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -562,6 +634,8 @@ the tests.</pre>
   <pre id="var-usage">Usage: (with-test-out &amp; body)
 </pre>
   <pre id="var-docstr">Runs body with *out* bound to the value of *test-out*.</pre>
+  
+  
   
 </div>
 

@@ -137,6 +137,8 @@ You can redirect all java writes of System.out and System.err to the log
 system by calling log-capture!.  To rebind *out* and *err* to the log system
 invoke with-logs.  In both cases a log-ns (e.g., "com.example.captured")
 needs to be specified to namespace the output.</pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -147,7 +149,9 @@ needs to be specified to namespace the output.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">A boolean indicating whether direct logging (as opposed to via an agent) is
 allowed when not operating from within a transaction. Defaults to true.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L202" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -155,7 +159,9 @@ allowed when not operating from within a transaction. Defaults to true.</pre>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The name of the logging implementation used.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L188" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -164,7 +170,9 @@ allowed when not operating from within a transaction. Defaults to true.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">The default agent used for performing logging durng a transaction or when
 direct logging is disabled.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L196" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -174,7 +182,9 @@ direct logging is disabled.</pre>
        (debug message throwable)
 </pre>
   <pre id="var-docstr">Logs a message at the debug level.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L310" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -186,7 +196,9 @@ direct logging is disabled.</pre>
   <pre id="var-docstr">Returns true if the specific logging level is enabled.  Use of this function
 should only be necessary if one needs to execute alternate code paths beyond
 whether the log should be written to.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L226" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -196,7 +208,9 @@ whether the log should be written to.</pre>
        (error message throwable)
 </pre>
   <pre id="var-docstr">Logs a message at the error level.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L331" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -206,7 +220,9 @@ whether the log should be written to.</pre>
        (fatal message throwable)
 </pre>
   <pre id="var-docstr">Logs a message at the fatal level.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L338" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -215,7 +231,9 @@ whether the log should be written to.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Implementation-specific check if a particular level is enabled. End-users
 should not need to call this.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L188" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -224,7 +242,9 @@ should not need to call this.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Returns an implementation-specific log by string namespace. End-users should
 not need to call this.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L188" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -233,7 +253,9 @@ not need to call this.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Implementation-specific write of a log message. End-users should not need to
 call this.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L188" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -243,7 +265,9 @@ call this.</pre>
        (info message throwable)
 </pre>
   <pre id="var-docstr">Logs a message at the info level.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L317" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -255,7 +279,9 @@ call this.</pre>
 </pre>
   <pre id="var-docstr">Logs a message, either directly or via an agent. Also see the level-specific
 convenience macros.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L208" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -267,7 +293,9 @@ convenience macros.</pre>
 to :info and :error logging, respectively. The specified log-ns value will
 be used to namespace all redirected logging. NOTE: this will not redirect
 output of *out* or *err*; for that, use with-logs.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L265" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -277,7 +305,9 @@ output of *out* or *err*; for that, use with-logs.</pre>
 </pre>
   <pre id="var-docstr">Creates a PrintStream that will output to the log. End-users should not need
 to invoke this.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L243" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -286,7 +316,9 @@ to invoke this.</pre>
   <pre id="var-usage">Usage: (log-uncapture!)
 </pre>
   <pre id="var-docstr">Restores System.out and System.err to their original values.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L281" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -296,7 +328,9 @@ to invoke this.</pre>
 </pre>
   <pre id="var-docstr">Evaluates expr and outputs the form and its result to the debug log; returns 
 the result of expr.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L236" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -306,7 +340,9 @@ the result of expr.</pre>
        (trace message throwable)
 </pre>
   <pre id="var-docstr">Logs a message at the trace level.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L303" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -316,7 +352,9 @@ the result of expr.</pre>
        (warn message throwable)
 </pre>
   <pre id="var-docstr">Logs a message at the warn level.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L324" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -327,7 +365,9 @@ the result of expr.</pre>
   <pre id="var-docstr">Evaluates exprs in a context in which *out* and *err* are bound to :info and
 :error logging, respectively. The specified log-ns value will be used to
 namespace all redirected logging.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/655060b3f265026ef3b45b44f5ab22d8897b3034/src/main/clojure/clojure/contrib/logging.clj#L291" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 

@@ -135,6 +135,8 @@ URLs.
 Note: this is not really "duck typing" as implemented in languages
 like Ruby.  A better name would have been "do-what-I-mean-streams"
 or "just-give-me-a-stream", but ducks are funnier.</pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -146,7 +148,9 @@ or "just-give-me-a-stream", but ducks are funnier.</pre>
   <pre id="var-docstr">If true, writer, output-stream and spit will open files in append mode.
 Defaults to false.  Instead of binding this var directly, use append-writer,
 append-output-stream or append-spit.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L177" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -155,7 +159,9 @@ append-output-stream or append-spit.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Size, in bytes or characters, of the buffer used when
 copying streams.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L77" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -163,7 +169,9 @@ copying streams.</pre>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Type object for a Java primitive byte array.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L82" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -172,7 +180,9 @@ copying streams.</pre>
   <pre id="var-usage"></pre>
   <pre id="var-docstr">Name of the default encoding to use when reading &amp; writing.
 Default is UTF-8.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L71" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -182,7 +192,9 @@ Default is UTF-8.</pre>
 </pre>
   <pre id="var-docstr">Like output-stream but opens file for appending.  Does not work on streams
 that are already open.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L235" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -191,7 +203,9 @@ that are already open.</pre>
   <pre id="var-usage">Usage: (append-spit f content)
 </pre>
   <pre id="var-docstr">Like spit but appends to file.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L337" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -201,7 +215,9 @@ that are already open.</pre>
 </pre>
   <pre id="var-docstr">Like writer but opens file for appending.  Does not work on streams
 that are already open.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L289" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -211,7 +227,9 @@ that are already open.</pre>
   <pre id="var-docstr">Interpret a String or a java.io.File as a File. Building block
 for clojure.contrib.java/file, which you should prefer
 in most cases.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L504" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -220,7 +238,9 @@ in most cases.</pre>
   <pre id="var-usage">Usage: (as-url arg)
 </pre>
   <pre id="var-docstr">Coerces argument (URL, URI, or String) to a java.net.URL.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L538" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -236,7 +256,9 @@ Does not close any streams except those it opens itself
 (on a File).
 
 Writing a File fails if the parent directory does not exist.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L373" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -245,7 +267,9 @@ Writing a File fails if the parent directory does not exist.</pre>
   <pre id="var-usage">Usage: (delete-file f &amp; [silently])
 </pre>
   <pre id="var-docstr">Delete file f. Raise an exception if it fails unless silently is true.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L521" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -255,7 +279,9 @@ Writing a File fails if the parent directory does not exist.</pre>
 </pre>
   <pre id="var-docstr">Delete file f. If it's a directory, recursively delete all its contents.
 Raise an exception if any deletion fails unless silently is true.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L528" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -266,7 +292,9 @@ Raise an exception if any deletion fails unless silently is true.</pre>
        (file parent child &amp; more)
 </pre>
   <pre id="var-docstr">Returns a java.io.File from string or file args.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L512" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -277,7 +305,9 @@ Raise an exception if any deletion fails unless silently is true.</pre>
   <pre id="var-docstr">Concatenates args as strings and returns a java.io.File.  Replaces
 all / and \ with File/separatorChar.  Replaces ~ at the start of
 the path with the user.home system property.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L87" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -296,7 +326,9 @@ the string as a resource on the CLASSPATH.
 
 Should be used inside with-open to ensure the InputStream is properly
 closed.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L102" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -305,7 +337,9 @@ closed.</pre>
   <pre id="var-usage">Usage: (make-parents file)
 </pre>
   <pre id="var-docstr">Creates all parent directories of file.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L460" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -323,7 +357,9 @@ local file names.
 
 Should be used inside with-open to ensure the OutputStream is
 properly closed.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L188" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -333,7 +369,9 @@ properly closed.</pre>
 </pre>
   <pre id="var-docstr">Returns current working directory as a String.  (Like UNIX 'pwd'.)
 Note: In Java, you cannot change the current working directory.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L343" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -343,7 +381,9 @@ Note: In Java, you cannot change the current working directory.</pre>
 </pre>
   <pre id="var-docstr">Like clojure.core/line-seq but opens f with reader.  Automatically
 closes the reader AFTER YOU CONSUME THE ENTIRE SEQUENCE.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L308" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -364,7 +404,9 @@ Uses *default-encoding* as the text encoding.
 
 Should be used inside with-open to ensure the Reader is properly
 closed.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L147" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -373,7 +415,9 @@ closed.</pre>
   <pre id="var-usage">No usage documentation available</pre>
   <pre id="var-docstr">Interpret a String or java.io.File as a relative path string. 
 Building block for clojure.contrib.java/file.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L491" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -382,7 +426,9 @@ Building block for clojure.contrib.java/file.</pre>
   <pre id="var-usage">Usage: (slurp* f)
 </pre>
   <pre id="var-docstr">Like clojure.core/slurp but opens f with reader.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L319" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -392,7 +438,9 @@ Building block for clojure.contrib.java/file.</pre>
 </pre>
   <pre id="var-docstr">Opposite of slurp.  Opens f with writer, writes content, then
 closes f.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L330" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -403,7 +451,9 @@ closes f.</pre>
   <pre id="var-docstr">Converts argument into a Java byte array.  Argument may be
 a String, File, InputStream, or Reader.  If the argument is already
 a byte array, returns it.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L465" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -412,7 +462,9 @@ a byte array, returns it.</pre>
   <pre id="var-usage">Usage: (with-in-reader f &amp; body)
 </pre>
   <pre id="var-docstr">Opens a PushbackReader on f, binds it to *in*, and evaluates body.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L366" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -421,7 +473,9 @@ a byte array, returns it.</pre>
   <pre id="var-usage">Usage: (with-out-append-writer f &amp; body)
 </pre>
   <pre id="var-docstr">Like with-out-writer but appends to file.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L359" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -431,7 +485,9 @@ a byte array, returns it.</pre>
 </pre>
   <pre id="var-docstr">Opens a writer on f, binds it to *out*, and evalutes body.
 Anything printed within body will be written to f.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L351" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -441,7 +497,9 @@ Anything printed within body will be written to f.</pre>
 </pre>
   <pre id="var-docstr">Writes lines (a seq) to f, separated by newlines.  f is opened with
 writer, and automatically closed at the end of the sequence.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L297" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -460,7 +518,9 @@ local file names.
 
 Should be used inside with-open to ensure the Writer is properly
 closed.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/9cd7b155149c6e20b799528c6d5bf2f0e553e9f3/src/main/clojure/clojure/contrib/io.clj#L243" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 

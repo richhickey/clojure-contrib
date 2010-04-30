@@ -91,6 +91,8 @@ by <span id="author">Konrad Hinsen</span><br />
 This library defines generic versions of = &lt; &gt; &lt;= &gt;= zero?
 as multimethods that can be defined for any type. Of the
 greater/less-than relations, types must minimally implement &gt;.</pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -106,7 +108,9 @@ greater/less-than relations, types must minimally implement &gt;.</pre>
 The minimal implementation for type ::my-type is the binary form
 with dispatch value [::my-type ::my-type]. A default implementation
 is provided in terms of &gt;.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L87" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -120,7 +124,9 @@ is provided in terms of &gt;.</pre>
 ones. The minimal implementation for type ::my-type is the binary form
 with dispatch value [::my-type ::my-type]. A default implementation
 is provided in terms of &gt;.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L139" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -132,7 +138,9 @@ is provided in terms of &gt;.</pre>
 </pre>
   <pre id="var-docstr">Return true if all arguments are equal. The minimal implementation for type
 ::my-type is the binary form with dispatch value [::my-type ::my-type].</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L46" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -145,7 +153,9 @@ is provided in terms of &gt;.</pre>
   <pre id="var-docstr">Return true if each argument is larger than the following ones.
 The minimal implementation for type ::my-type is the binary form
 with dispatch value [::my-type ::my-type].</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L66" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -159,7 +169,9 @@ with dispatch value [::my-type ::my-type].</pre>
 ones. The minimal implementation for type ::my-type is the binary form
 with dispatch value [::my-type ::my-type]. A default implementation
 is provided in terms of &lt;.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L113" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -171,7 +183,9 @@ is provided in terms of &lt;.</pre>
 </pre>
   <pre id="var-docstr">Returns the greatest of its arguments. Like clojure.core/max except that
 is uses generic comparison functions implementable for any data type.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L200" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -183,7 +197,9 @@ is uses generic comparison functions implementable for any data type.</pre>
 </pre>
   <pre id="var-docstr">Returns the least of its arguments. Like clojure.core/min except that
 is uses generic comparison functions implementable for any data type.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L208" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -192,7 +208,9 @@ is uses generic comparison functions implementable for any data type.</pre>
   <pre id="var-usage">Usage: (neg? x)
 </pre>
   <pre id="var-docstr">Return true of x is negative.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L38" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -201,7 +219,9 @@ is uses generic comparison functions implementable for any data type.</pre>
   <pre id="var-usage">Usage: (pos? x)
 </pre>
   <pre id="var-docstr">Return true of x is positive.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L33" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -210,7 +230,9 @@ is uses generic comparison functions implementable for any data type.</pre>
   <pre id="var-usage">Usage: (zero? x)
 </pre>
   <pre id="var-docstr">Return true of x is zero.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/f7a454fba2e2f8fea30dedd9f58a13d73b54f2ec/src/main/clojure/clojure/contrib/generic/comparison.clj#L28" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 

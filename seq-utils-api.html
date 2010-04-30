@@ -86,6 +86,8 @@ by <span id="author">Stuart Sierra (and others)</span><br />
 </pre><pre>
 </pre><h2>Overview</h2>
 <pre id="namespace-docstr">Sequence utilities for Clojure</pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -101,7 +103,9 @@ time which will be pushed onto a queue, blocking if needed until
 this is possible.  fill-queue will return a lazy seq of the values
 filler-func has pushed onto the queue, blocking if needed until each
 next element becomes available.  filler-func's return value is ignored.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L103" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -112,7 +116,9 @@ next element becomes available.  filler-func's return value is ignored.</pre>
   <pre id="var-docstr">Returns the first item of coll for which (pred item) returns logical true.
 Consumes sequences up to the first match, will consume the entire sequence
 and return nil if no match is found.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L94" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -124,7 +130,9 @@ and return nil if no match is found.</pre>
 from 's' and indexes count up from zero.
 
 (indexed '(a b c d))  =&gt;  ([0 a] [1 b] [2 c] [3 d])</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L49" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -134,7 +142,9 @@ from 's' and indexes count up from zero.
 </pre>
   <pre id="var-docstr">Returns a lazy sequence containing the positions at which pred
 is true for items in coll.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L138" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -144,7 +154,9 @@ is true for items in coll.</pre>
 </pre>
   <pre id="var-docstr">Similar to lazy-cat but binds the resulting sequence to the supplied 
 binding-name, allowing for recursive expressions.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L66" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -154,7 +166,9 @@ binding-name, allowing for recursive expressions.</pre>
 </pre>
   <pre id="var-docstr">Similar to lazy-seq but binds the resulting seq to the supplied 
 binding-name, allowing for recursive expressions.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L59" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -163,7 +177,9 @@ binding-name, allowing for recursive expressions.</pre>
   <pre id="var-usage">Usage: (rotations x)
 </pre>
   <pre id="var-docstr">Returns a lazy seq of all rotations of a seq</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L72" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -173,7 +189,9 @@ binding-name, allowing for recursive expressions.</pre>
 </pre>
   <pre id="var-docstr">Returns a vector:
 [ (filter f s), (filter (complement f) s) ]</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L43" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -183,7 +201,9 @@ binding-name, allowing for recursive expressions.</pre>
 </pre>
   <pre id="var-docstr">Returns a seq on the object s. Works like the built-in seq but as
 a multimethod that can have implementations for new classes and types.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/78ee9b3e64c5ac6082fb223fc79292175e8e4f0c/src/main/clojure/clojure/contrib/seq_utils.clj#L83" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 

@@ -92,6 +92,8 @@ by <span id="author">Unknown</span><br />
 </pre><pre>
 </pre><h2>Overview</h2>
 <pre id="namespace-docstr"></pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -105,7 +107,9 @@ by <span id="author">Unknown</span><br />
   <pre id="var-docstr">Defines an alias for a var: a new var with the same root binding (if
 any) and similar metadata. The metadata of the alias is its initial
 metadata (as provided by def) merged into the metadata of the original.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L66" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -116,7 +120,9 @@ metadata (as provided by def) merged into the metadata of the original.</pre>
   <pre id="var-docstr">Defines a var with a type hint matching the class of the given
 init.  Be careful about using any form of 'def' or 'binding' to a
 value of a different type.  See <a href="http://paste.lisp.org/display/73344">http://paste.lisp.org/display/73344</a></pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L83" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -125,7 +131,9 @@ value of a different type.  See <a href="http://paste.lisp.org/display/73344">ht
   <pre id="var-usage">Usage: (defmacro- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defmacro but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L39" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -134,7 +142,9 @@ value of a different type.  See <a href="http://paste.lisp.org/display/73344">ht
   <pre id="var-usage">Usage: (defn-memo fn-name &amp; defn-stuff)
 </pre>
   <pre id="var-docstr">Just like defn, but memoizes the function using clojure.core/memoize</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L141" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -148,7 +158,9 @@ an alternating sequence of keywords and defaults values is expected. The
 values of the keyword arguments are available in the function body by
 virtue of the symbol corresponding to the keyword (cf. :keys destructuring).
 defnk accepts an optional docstring as well as an optional metadata map.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L120" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -158,7 +170,9 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
        (defonce- name expr doc)
 </pre>
   <pre id="var-docstr">Same as defonce but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L59" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -167,7 +181,9 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
   <pre id="var-usage">Usage: (defstruct- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defstruct but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L54" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -177,7 +193,9 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
        (defunbound name doc)
 </pre>
   <pre id="var-docstr">Defines an unbound var with optional doc string</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L32" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -186,7 +204,9 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
   <pre id="var-usage">Usage: (defunbound- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defunbound but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L49" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -197,7 +217,9 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
        (defvar name init doc)
 </pre>
   <pre id="var-docstr">Defines a var with an optional intializer and doc string</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L23" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -206,7 +228,9 @@ defnk accepts an optional docstring as well as an optional metadata map.</pre>
   <pre id="var-usage">Usage: (defvar- name &amp; decls)
 </pre>
   <pre id="var-docstr">Same as defvar but yields a private definition</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L44" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -223,7 +247,9 @@ added to the name's metadata map and the map is removed from the
 macro argument list. The return value is a vector containing the name
 with its extended metadata map and the list of unprocessed macro
 arguments.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/def.clj#L94" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 

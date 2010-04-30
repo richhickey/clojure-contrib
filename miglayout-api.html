@@ -110,6 +110,8 @@ Example:
 
   (use '[clojure.contrib.miglayout.test :as mlt :only ()])
   (dotimes [i 5] (mlt/run-test i))</pre>
+
+
 <br />
 <h2>Public Variables and Functions</h2>
 <div id="var-entry">
@@ -121,7 +123,9 @@ Example:
 </pre>
   <pre id="var-docstr">Returns a map from id (a keyword) to component for all components with
 an id constraint set</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/miglayout.clj#L75" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -160,10 +164,14 @@ Constraint: string, keyword, vector, map, or set
 Any items marked with an "id" constraint will be included in a map from
 id to component attached to the container. The map can be retrieved using
 clojure.contrib.miglayout/components.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/miglayout.clj#L37" id="var-source">Source</a>
+  
+  
+  
 </div>
 <h2 id="namespace-name">miglayout.example</h2>
 <pre id="namespace-docstr"></pre>
+
+
 <br />
 <div id="var-entry">
   <hr />
@@ -172,7 +180,9 @@ clojure.contrib.miglayout/components.</pre>
   <pre id="var-usage">Usage: (converter-ui)
 </pre>
   <pre id="var-docstr">Lays out and shows a Temperature Converter UI</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/5a9c017b14507dbdf4bb9c83faa7bf61a3a455d5/src/examples/clojure/clojure/contrib/miglayout/example.clj#L40" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.example/fahrenheit">fahrenheit</h2>
@@ -181,7 +191,9 @@ clojure.contrib.miglayout/components.</pre>
 </pre>
   <pre id="var-docstr">Converts a Celsius temperature to Fahrenheit. Input and output are
 strings. Returns "input?" if the input can't be parsed as a Double.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/5a9c017b14507dbdf4bb9c83faa7bf61a3a455d5/src/examples/clojure/clojure/contrib/miglayout/example.clj#L24" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.example/main">main</h2>
@@ -189,10 +201,14 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <pre id="var-usage">Usage: (main)
 </pre>
   <pre id="var-docstr">Invokes converter-ui in the AWT Event thread</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/5a9c017b14507dbdf4bb9c83faa7bf61a3a455d5/src/examples/clojure/clojure/contrib/miglayout/example.clj#L57" id="var-source">Source</a>
+  
+  
+  
 </div>
 <h2 id="namespace-name">miglayout.internal</h2>
 <pre id="namespace-docstr"></pre>
+
+
 <br />
 <div id="var-entry">
   <hr />
@@ -201,7 +217,9 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <pre id="var-usage">Usage: (add-components container components)
 </pre>
   <pre id="var-docstr">Adds components with constraints to a container</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L94" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/component?">component?</h2>
@@ -209,7 +227,9 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <pre id="var-usage">Usage: (component? x)
 </pre>
   <pre id="var-docstr">Returns true if x is a java.awt.Component</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L59" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/constraint?">constraint?</h2>
@@ -217,7 +237,9 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
   <pre id="var-usage">Usage: (constraint? x)
 </pre>
   <pre id="var-docstr">Returns true if x is not a keyword-item or component</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L64" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/do-layout">do-layout</h2>
@@ -226,7 +248,9 @@ strings. Returns "input?" if the input can't be parsed as a Double.</pre>
 </pre>
   <pre id="var-docstr">Attaches a MigLayout layout manager to container and adds components
 with constraints</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L114" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/format-constraint">format-constraint</h2>
@@ -236,7 +260,9 @@ with constraints</pre>
   <pre id="var-docstr">Returns a vector of vectors representing one or more constraints
 separated by commas. Constraints may be specified in Clojure using
 strings, keywords, vectors, maps, and/or sets.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L32" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/format-constraints">format-constraints</h2>
@@ -245,7 +271,9 @@ strings, keywords, vectors, maps, and/or sets.</pre>
 </pre>
   <pre id="var-docstr">Returns a string representing all the constraints for one keyword-item
 or component formatted for miglayout.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L47" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/get-components">get-components</h2>
@@ -253,7 +281,9 @@ or component formatted for miglayout.</pre>
   <pre id="var-usage">Usage: (get-components container)
 </pre>
   <pre id="var-docstr">Returns a map from id to component for all components with an id</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L109" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/parse-component-constraint">parse-component-constraint</h2>
@@ -261,7 +291,9 @@ or component formatted for miglayout.</pre>
   <pre id="var-usage">Usage: (parse-component-constraint constraint)
 </pre>
   <pre id="var-docstr">Parses a component constraint string returning a CC object</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L88" id="var-source">Source</a>
+  
+  
+  
 </div><div id="var-entry">
   <hr />
   <h2 id="clojure.contrib.miglayout.internal/parse-item-constraints">parse-item-constraints</h2>
@@ -272,7 +304,9 @@ or component formatted for miglayout.</pre>
 :keywords and :components. The value for :keywords is a map from keyword
 items to constraints strings. The value for :components is a vector of
 vectors each associating a component with its constraints string.</pre>
-  <a href="http://github.com/richhickey/clojure-contrib/blob/b79b246dbb7dfcd55bf0f2e6efed221ee21a55e9/src/main/clojure/clojure/contrib/miglayout/internal.clj#L71" id="var-source">Source</a>
+  
+  
+  
 </div>
 
 
