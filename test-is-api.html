@@ -167,7 +167,7 @@ This was suggested by Howard Lewis Ship in ticket #26,
   <pre id="var-docstr">True by default.  If set to false, no test functions will
 be created by deftest, set-test, or with-test.  Use this to omit
 tests when compiling or loading production code.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -179,7 +179,7 @@ tests when compiling or loading production code.</pre>
   <pre id="var-docstr">The maximum depth of stack traces to print when an Exception
 is thrown during a test.  Defaults to nil, which means print the 
 complete stack trace.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -193,7 +193,7 @@ complete stack trace.</pre>
 values.  Returns the modified expression.  For use in macros.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L76" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -215,7 +215,7 @@ Expands to:
 Note: This breaks some reporting features, such as line numbers.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L104" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -225,7 +225,7 @@ Note: This breaks some reporting features, such as line numbers.</pre>
 </pre>
   <pre id="var-docstr">Returns generic assertion code for any test, including macros, Java
 method calls, or isolated symbols.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -240,7 +240,7 @@ method calls, or isolated symbols.</pre>
 'actual' argument will contain the form with all its sub-forms
 evaluated.  If the predicate returns false, the 'actual' form will
 be wrapped in (not...).</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -252,7 +252,7 @@ be wrapped in (not...).</pre>
 </pre>
   <pre id="var-docstr">Composes two fixture functions, creating a new fixture function
 that combines their behavior.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -272,7 +272,7 @@ and the real function (the value of the var) calls test-var on
 itself.
 
 When *load-tests* is false, deftest is ignored.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -283,7 +283,7 @@ When *load-tests* is false, deftest is ignored.</pre>
   <pre id="var-usage">Usage: (deftest- name &amp; body)
 </pre>
   <pre id="var-docstr">Like deftest but creates a private var.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -299,7 +299,7 @@ Example: (do-template (check _1 _2) :a :b :c :d)
 expands to (do (check :a :b) (check :c :d))</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L87" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -309,7 +309,7 @@ expands to (do (check :a :b) (check :c :d))</pre>
 </pre>
   <pre id="var-docstr">Returns a vector [filename line-number] for the nth call up the
 stack.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -322,7 +322,7 @@ stack.</pre>
   <pre id="var-docstr">Recursively finds all symbols starting with _ in form.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L51" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -334,7 +334,7 @@ stack.</pre>
 any symbols starting with _</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L57" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -345,7 +345,7 @@ any symbols starting with _</pre>
   <pre id="var-docstr">Recursively finds all symbols in form.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L46" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -356,7 +356,7 @@ any symbols starting with _</pre>
   <pre id="var-docstr">Transforms a map into a vector like [key value key value].</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L65" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -366,7 +366,7 @@ any symbols starting with _</pre>
 </pre>
   <pre id="var-docstr">Returns true if argument is a function or a symbol that resolves to
 a function (not a macro).</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -377,7 +377,7 @@ a function (not a macro).</pre>
   <pre id="var-usage">Usage: (get-possibly-unbound-var v)
 </pre>
   <pre id="var-docstr">Like var-get but returns nil if the var is unbound.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -389,7 +389,7 @@ a function (not a macro).</pre>
 </pre>
   <pre id="var-docstr">Increments the named counter in *report-counters*, a ref to a map.
 Does nothing if *report-counters* is nil.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -413,7 +413,7 @@ body, fails if not; then returns the thing thrown.
 (is (thrown-with-msg? c re body)) checks that an instance of c is
 thrown AND that the message on the exception matches (with
 re-find) the regular expression re.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -425,7 +425,7 @@ re-find) the regular expression re.</pre>
 </pre>
   <pre id="var-docstr">Composes a collection of fixtures, in order.  Always returns a valid
 fixture function, even if the collection is empty.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -440,7 +440,7 @@ different report formats (e.g., TAP, JUnit).  Assertions such as
 'report' will be a map with a :type key.  See the documentation at
 the top of test_is.clj for more information on the types of
 arguments for 'report'.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -455,7 +455,7 @@ arguments for 'report'.</pre>
 Optional argument is a regular expression; only namespaces with
 names matching the regular expression (with re-matches) will be
 tested.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -469,7 +469,7 @@ tested.</pre>
   <pre id="var-docstr">Runs all tests in the given namespaces; prints results.
 Defaults to current namespace if none given.  Returns a map
 summarizing test results.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -484,7 +484,7 @@ Sets :test metadata of the named var to a fn with the given body.
 The var must already exist.  Does not modify the value of the var.
 
 When *load-tests* is false, set-test is ignored.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -496,7 +496,7 @@ When *load-tests* is false, set-test is ignored.</pre>
 </pre>
   <pre id="var-docstr">Returns true if the given test summary indicates all tests
 were successful, false otherwise.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -509,7 +509,7 @@ were successful, false otherwise.</pre>
   <pre id="var-docstr">Returns true if form is a valid template expression.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/2ede388a9267d175bfaa7781ee9d57532eb4f20f/src/main/clojure/clojure/contrib/test_is.clj#L71" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -518,7 +518,7 @@ were successful, false otherwise.</pre>
   <pre id="var-usage">Usage: (test-all-vars ns)
 </pre>
   <pre id="var-docstr">Calls test-var on every var interned in the namespace, with fixtures.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -535,7 +535,7 @@ namespace object or a symbol.
 Internally binds *report-counters* to a ref initialized to
 *inital-report-counters*.  Returns the final, dereferenced state of
 *report-counters*.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -547,7 +547,7 @@ Internally binds *report-counters* to a ref initialized to
 </pre>
   <pre id="var-docstr">If v has a function in its :test metadata, calls that function,
 with *testing-vars* bound to (conj *testing-vars* v).</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -559,7 +559,7 @@ with *testing-vars* bound to (conj *testing-vars* v).</pre>
 </pre>
   <pre id="var-docstr">Adds a new string to the list of testing contexts.  May be nested,
 but must occur inside a test function (deftest).</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -571,7 +571,7 @@ but must occur inside a test function (deftest).</pre>
 </pre>
   <pre id="var-docstr">Returns a string representation of the current test context. Joins
 strings in *testing-contexts* with spaces.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -584,7 +584,7 @@ strings in *testing-contexts* with spaces.</pre>
   <pre id="var-docstr">Returns a string representation of the current test.  Renders names
 in *testing-vars* as a list, then the source file and line of
 current assertion.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -596,7 +596,7 @@ current assertion.</pre>
 </pre>
   <pre id="var-docstr">Used by the 'is' macro to catch unexpected exceptions.
 You don't call this.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -608,7 +608,7 @@ You don't call this.</pre>
   <pre id="var-docstr">Wrap test runs in a fixture function to perform setup and
 teardown. Using a fixture-type of :each wraps every test
 individually, while:once wraps the whole run in a single function.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -623,7 +623,7 @@ Remaining body goes in the :test metadata function for that Var.
 
 When *load-tests* is false, only evaluates the definition, ignoring
 the tests.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div><div id="var-entry">
@@ -634,7 +634,7 @@ the tests.</pre>
   <pre id="var-usage">Usage: (with-test-out &amp; body)
 </pre>
   <pre id="var-docstr">Runs body with *out* bound to the value of *test-out*.</pre>
-  
+  <span class="var-added"><span id="content">Added in clojure-contrib version 1.1</span><br /></span>
   
   
 </div>

@@ -373,70 +373,39 @@ namespace.
                 <div id="content-tag"><h1 id="toc0">An Overview of the <span id="header-project">clojure-contrib</span> API
   <span id="branch-name">(master branch)</span></h1>
 <br />
-<div id="project-description">The user contributions library, clojure.contrib, is a collection
-of namespaces each of which implements features that we believe may be useful to 
-a large part of the clojure community. 
-<br /><br />
-This library was created by Rich Hickey but has been populated and is maintained by a 
-group of volunteers who are excited about the success of the Clojure language and 
-want to do our part to help it along. The current list of contributors is available 
-on the <a href="http://github.com/richhickey/clojure-contrib/">
-clojure-contrib GitHub source page</a>.
-<br /><br />
-More contributions (and contributors) are welcome. If you wish to contribute, you will need
-to sign a contributor agreement (which allows Clojure and clojure.contrib to proceed
-without entanglements, see <a href="http://clojure.org/contributing">contributing</a>
-for more info). 
-<br /><br />
-The best way to start is to share a project you've written with the google group and gauge
-the interest in adding it to contrib. (Publishing it in an open source form on google code,
-github or some other easy-to-access place in the net will also help.) After general 
-discussion, Rich Hickey makes the final determination about what gets added to 
-clojure.contrib.
-<br /><br />
-Some parts of clojure.contrib may migrate into clojure.core if they prove to be so 
-generally useful that they justify being everywhere. (For example, condp started out
-as an extension in contrib, but was moved to core by popular acclamation.)
-<br /><br />
-The exact role of clojure.contrib and the future of the Clojure environment (standard 
-libraries, dependency models, packaging systems, etc.)
-is the subject of pretty much continuous discussion
-in the clojure google group and in #clojure on freenode. Feel free to join that 
-discussion and help shape the ways Clojure is extended.
-<br /><br />
-Like Clojure itself, clojure.contrib is made available under the 
-<a href="http://opensource.org/licenses/eclipse-1.0.php">Eclipse Public License (EPL)</a>. 
-clojure.contrib is copyright 2008-2009 Rich Hickey and the various contributors.
-<br /><br />
-<h3>Important clojure-contrib resources</h3>
+<div id="project-description"><h1 id="toc0">An Overview of the Clojure Core API</h1>
+<br />
+This is API documentation for the latest committed checkin of the Clojure core.
+<h3>Important Clojure resources</h3>
 <ul>
-  <li>The official source code for clojure-contrib is on the
-    <a href="http://github.com/richhickey/clojure-contrib/">
-      clojure-contrib GitHub source page
+  <li>The official source code for clojure is on the
+    <a href="http://github.com/richhickey/clojure/">
+      Clojure GitHub source page
     </a>.
   </li>
-  <li>Issues and other information for clojure-contrib are maintained in the
-    <a href="http://www.assembla.com/spaces/dashboard/index/clojure-contrib">
-      clojure-contrib Assembla space
+  <li>Issues and other information for clojure are maintained in the
+    <a href="http://www.assembla.com/spaces/dashboard/index/clojure">
+      Clojure Assembla space
     </a>.
   </li>
-  <li>This documentation is maintained in the gh-pages branch of clojure-contrib
+  <li>This documentation is maintained in the gh-pages branch of clojure
     on GitHub and is always available online 
-    <a href="http://richhickey.github.com/clojure-contrib">
-      GitHub pages for clojure-contrib
-    </a>. If you wish to have a version for off-line use you can use the download 
+    <a href="http://richhickey.github.com/clojure">
+      GitHub pages for Clojure
+    </a>. 
+    If you wish to have a version for off-line use you can use the download 
     button on the 
-    <a href="http://github.com/richhickey/clojure-contrib/tree/gh-pages">
+    <a href="http://github.com/richhickey/clojure/tree/gh-pages">
       gh-pages branch page at GitHub
     </a>.
   </li>
-  <li>Issues related to clojure-contrib and the various pieces of functionality
+  <li>Issues related to clojure and the various pieces of functionality
     within it are discussed in the
     <a href="http://groups.google.com/group/clojure">
       Clojure Google group
     </a>.
   </li>
-  <li>Discussions among clojure-contrib developers take place in the
+  <li>Discussions among clojure developers take place in the
     <a href="http://groups.google.com/group/clojure-dev">
       Clojure Dev Google group
     </a>.
@@ -540,7 +509,7 @@ for a longer description.)</pre>
   
   
   Public variables and functions:
-  <br />
+  <span id="var-link"><a href="command-line-api.html#clojure.contrib.command-line/with-command-line" id="var-tag">with-command-line</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
@@ -652,7 +621,7 @@ Based on an idea from Chouser:
   
   
   Public variables and functions:
-  <br />
+  <span id="var-link"><a href="datalog-api.html#clojure.contrib.datalog/build-work-plan" id="var-tag">build-work-plan</a> </span><span id="var-link"><a href="datalog-api.html#clojure.contrib.datalog/run-work-plan" id="var-tag">run-work-plan</a> </span><br />
   <span id="subspace"><br />Variables and functions in
     <span id="name">datalog.database</span>:
     <span id="sub-var-link">
@@ -692,17 +661,43 @@ Based on an idea from Chouser:
   </span><span id="subspace"><br />Variables and functions in
     <span id="name">datalog.literals</span>:
     <span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/adorned-literal">adorned-literal</a>
+    </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/build-atom">build-atom</a>
     </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/build-literal">build-literal</a>
     </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/build-seed-bindings">build-seed-bindings</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/delta-literal">delta-literal</a>
+    </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/display-literal">display-literal</a>
     </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/get-adorned-bindings">get-adorned-bindings</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/get-base-predicate">get-base-predicate</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/get-cs-from-vs">get-cs-from-vs</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/get-self-bound-cs">get-self-bound-cs</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/get-vs-from-cs">get-vs-from-cs</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/join-literal">join-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/literal-appropriate?">literal-appropriate?</a>
+    </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/literal-columns">literal-columns</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/literal-magic?">literal-magic?</a>
     </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/literal-predicate">literal-predicate</a>
     </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/literal-vars">literal-vars</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/magic-literal">magic-literal</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/negated-literal">negated-literal</a>
     </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/negated?">negated?</a>
     </span><span id="sub-var-link">
@@ -711,6 +706,64 @@ Based on an idea from Chouser:
       <a href="datalog-api.html#clojure.contrib.datalog.literals/positive-vars">positive-vars</a>
     </span><span id="sub-var-link">
       <a href="datalog-api.html#clojure.contrib.datalog.literals/positive?">positive?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.literals/project-literal">project-literal</a>
+    </span>
+    <br />
+  </span><span id="subspace"><br />Variables and functions in
+    <span id="name">datalog.magic</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/adorn-query">adorn-query</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/adorn-rules-set">adorn-rules-set</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/build-partial-tuple">build-partial-tuple</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/magic-transform">magic-transform</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/seed-predicate-for-insertion">seed-predicate-for-insertion</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/seed-relation">seed-relation</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.magic/seed-rule">seed-rule</a>
+    </span>
+    <br />
+  </span><span id="subspace"><br />Variables and functions in
+    <span id="name">datalog.rules</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/&lt;-">&lt;-</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/?-">?-</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/all-predicates">all-predicates</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/apply-rule">apply-rule</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/compute-sip">compute-sip</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/display-query">display-query</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/display-rule">display-rule</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/is-safe?">is-safe?</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/make-rules-set">make-rules-set</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/non-base-rules">non-base-rules</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/predicate-map">predicate-map</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/return-rule-data">return-rule-data</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.rules/rules-set">rules-set</a>
+    </span>
+    <br />
+  </span><span id="subspace"><br />Variables and functions in
+    <span id="name">datalog.softstrat</span>:
+    <span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.softstrat/build-soft-strat-work-plan">build-soft-strat-work-plan</a>
+    </span><span id="sub-var-link">
+      <a href="datalog-api.html#clojure.contrib.datalog.softstrat/get-all-relations">get-all-relations</a>
     </span>
     <br />
   </span><span id="subspace"><br />Variables and functions in
@@ -1067,7 +1120,7 @@ types: URLs or filenames as strings, java.io.File's, Sockets, etc.</pre>
   
   
   Public variables and functions:
-  <span id="var-link"><a href="io-api.html#clojure.contrib.io/*append*" id="var-tag">*append*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*buffer-size*" id="var-tag">*buffer-size*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*byte-array-type*" id="var-tag">*byte-array-type*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*char-array-type*" id="var-tag">*char-array-type*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*default-encoding*" id="var-tag">*default-encoding*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/append-output-stream" id="var-tag">append-output-stream</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/append-spit" id="var-tag">append-spit</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/append-writer" id="var-tag">append-writer</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/as-file" id="var-tag">as-file</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/as-url" id="var-tag">as-url</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/copy" id="var-tag">copy</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/delete-file" id="var-tag">delete-file</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/delete-file-recursively" id="var-tag">delete-file-recursively</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/file" id="var-tag">file</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/file-str" id="var-tag">file-str</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/make-parents" id="var-tag">make-parents</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/pwd" id="var-tag">pwd</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/read-lines" id="var-tag">read-lines</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/relative-path-string" id="var-tag">relative-path-string</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/slurp*" id="var-tag">slurp*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/spit" id="var-tag">spit</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/to-byte-array" id="var-tag">to-byte-array</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/with-in-reader" id="var-tag">with-in-reader</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/with-out-append-writer" id="var-tag">with-out-append-writer</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/with-out-writer" id="var-tag">with-out-writer</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/write-lines" id="var-tag">write-lines</a> </span><br />
+  <span id="var-link"><a href="io-api.html#clojure.contrib.io/*append*" id="var-tag">*append*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*buffer-size*" id="var-tag">*buffer-size*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*byte-array-type*" id="var-tag">*byte-array-type*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*char-array-type*" id="var-tag">*char-array-type*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/*default-encoding*" id="var-tag">*default-encoding*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/append-output-stream" id="var-tag">append-output-stream</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/append-spit" id="var-tag">append-spit</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/append-writer" id="var-tag">append-writer</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/as-url" id="var-tag">as-url</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/copy" id="var-tag">copy</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/delete-file" id="var-tag">delete-file</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/delete-file-recursively" id="var-tag">delete-file-recursively</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/file" id="var-tag">file</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/file-str" id="var-tag">file-str</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/input-stream" id="var-tag">input-stream</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/make-parents" id="var-tag">make-parents</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/output-stream" id="var-tag">output-stream</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/pwd" id="var-tag">pwd</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/read-lines" id="var-tag">read-lines</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/reader" id="var-tag">reader</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/relative-path-string" id="var-tag">relative-path-string</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/slurp*" id="var-tag">slurp*</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/spit" id="var-tag">spit</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/to-byte-array" id="var-tag">to-byte-array</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/with-in-reader" id="var-tag">with-in-reader</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/with-out-append-writer" id="var-tag">with-out-append-writer</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/with-out-writer" id="var-tag">with-out-writer</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/write-lines" id="var-tag">write-lines</a> </span><span id="var-link"><a href="io-api.html#clojure.contrib.io/writer" id="var-tag">writer</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
@@ -1213,7 +1266,7 @@ To read JSON, use read-json.</pre>
   
   
   Public variables and functions:
-  <span id="var-link"><a href="json-api.html#clojure.contrib.json/json-str" id="var-tag">json-str</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/pprint-json" id="var-tag">pprint-json</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/print-json" id="var-tag">print-json</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/read-json" id="var-tag">read-json</a> </span><br />
+  <span id="var-link"><a href="json-api.html#clojure.contrib.json/json-str" id="var-tag">json-str</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/pprint-json" id="var-tag">pprint-json</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/print-json" id="var-tag">print-json</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/read-json" id="var-tag">read-json</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/read-json-from" id="var-tag">read-json-from</a> </span><span id="var-link"><a href="json-api.html#clojure.contrib.json/write-json" id="var-tag">write-json</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />

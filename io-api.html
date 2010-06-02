@@ -70,8 +70,6 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/append-writer">append-writer</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.io/as-file">as-file</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/as-url">as-url</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/copy">copy</a>
@@ -84,11 +82,17 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/file-str">file-str</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.io/input-stream">input-stream</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/make-parents">make-parents</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.io/output-stream">output-stream</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/pwd">pwd</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/read-lines">read-lines</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.io/reader">reader</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/relative-path-string">relative-path-string</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -105,6 +109,8 @@ namespace.
       <a href="#clojure.contrib.io/with-out-writer">with-out-writer</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clojure.contrib.io/write-lines">write-lines</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.contrib.io/writer">writer</a>
     </div>
     <br />
   </div>
@@ -141,7 +147,7 @@ Defaults to false.  Instead of binding this var directly, use append-writer,
 append-output-stream or append-spit.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L104" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -152,7 +158,7 @@ append-output-stream or append-spit.</pre>
 copying streams.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L76" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -162,7 +168,7 @@ copying streams.</pre>
   <pre id="var-docstr">Type object for a Java primitive byte array.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L81" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -172,7 +178,7 @@ copying streams.</pre>
   <pre id="var-docstr">Type object for a Java primitive char array.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L85" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -183,7 +189,7 @@ copying streams.</pre>
 Default is UTF-8.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L70" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -195,7 +201,7 @@ Default is UTF-8.</pre>
 that are already open.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L277" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -206,7 +212,7 @@ that are already open.</pre>
   <pre id="var-docstr">Like spit but appends to file.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L331" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -218,35 +224,23 @@ that are already open.</pre>
 that are already open.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L284" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.contrib.io/as-file">as-file</h2>
-  <span id="var-type">multimethod</span><br />
-  <pre id="var-usage">No usage documentation available</pre>
-  <pre id="var-docstr">Interpret a String or a java.io.File as a File. Building block
-for clojure.contrib.java/file, which you should prefer
-in most cases.</pre>
   
-  
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L507" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="clojure.contrib.io/as-url">as-url</h2>
-  <span id="var-type">multimethod</span><br />
+  <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (as-url arg)
 </pre>
   <pre id="var-docstr">Coerces argument (URL, URI, or String) to a java.net.URL.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L541" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="clojure.contrib.io/copy">copy</h2>
-  <span id="var-type">multimethod</span><br />
+  <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (copy input output)
 </pre>
   <pre id="var-docstr">Copies input to output.  Returns nil.
@@ -259,7 +253,7 @@ Does not close any streams except those it opens itself
 Writing a File fails if the parent directory does not exist.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L367" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -270,7 +264,7 @@ Writing a File fails if the parent directory does not exist.</pre>
   <pre id="var-docstr">Delete file f. Raise an exception if it fails unless silently is true.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L524" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -282,7 +276,7 @@ Writing a File fails if the parent directory does not exist.</pre>
 Raise an exception if any deletion fails unless silently is true.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L531" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -295,7 +289,7 @@ Raise an exception if any deletion fails unless silently is true.</pre>
   <pre id="var-docstr">Returns a java.io.File from string or file args.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L515" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -308,7 +302,30 @@ all / and \ with File/separatorChar.  Replaces ~ at the start of
 the path with the user.home system property.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L90" id="var-source">Source</a>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.io/input-stream">input-stream</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (input-stream x)
+</pre>
+  <pre id="var-docstr">Attempts to coerce its argument into an open java.io.InputStream.
+The default implementations of this protocol always return a
+java.io.BufferedInputStream.
+
+Default implementations are defined for OutputStream, File, URI, URL,
+Socket, byte array, and String arguments.
+
+If the argument is a String, it tries to resolve it first as a URI, then
+as a local file name.  URIs with a 'file' protocol are converted to
+local file names.
+
+Should be used inside with-open to ensure the InputStream is properly
+closed.</pre>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -319,7 +336,30 @@ the path with the user.home system property.</pre>
   <pre id="var-docstr">Creates all parent directories of file.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L463" id="var-source">Source</a>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.io/output-stream">output-stream</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (output-stream x)
+</pre>
+  <pre id="var-docstr">Attempts to coerce its argument into an open java.io.OutputStream.
+The default implementations of this protocol always return a
+java.io.BufferedOutputStream.
+
+Default implementations are defined for OutputStream, File, URI, URL,
+Socket, and String arguments.
+
+If the argument is a String, it tries to resolve it first as a URI, then
+as a local file name.  URIs with a 'file' protocol are converted to
+local file names.
+
+Should be used inside with-open to ensure the OutputStream is
+properly closed.</pre>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -331,7 +371,7 @@ the path with the user.home system property.</pre>
 Note: In Java, you cannot change the current working directory.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L337" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -343,7 +383,34 @@ Note: In Java, you cannot change the current working directory.</pre>
 closes the reader AFTER YOU CONSUME THE ENTIRE SEQUENCE.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L302" id="var-source">Source</a>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.io/reader">reader</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (reader x)
+</pre>
+  <pre id="var-docstr">Attempts to coerce its argument into an open java.io.Reader.
+The default implementations of this protocol always return a
+java.io.BufferedReader.
+
+Default implementations are provided for Reader, BufferedReader,
+InputStream, File, URI, URL, Socket, byte arrays, character arrays,
+and String.
+
+If argument is a String, it tries to resolve it first as a URI, then
+as a local file name.  URIs with a 'file' protocol are converted to
+local file names.  If this fails, a final attempt is made to resolve
+the string as a resource on the CLASSPATH.
+
+Uses *default-encoding* as the text encoding.
+
+Should be used inside with-open to ensure the Reader is properly
+closed.</pre>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -365,7 +432,7 @@ Building block for clojure.contrib.java/file.</pre>
   <pre id="var-docstr">Like clojure.core/slurp but opens f with reader.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L313" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -377,12 +444,12 @@ Building block for clojure.contrib.java/file.</pre>
 closes f.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L324" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="clojure.contrib.io/to-byte-array">to-byte-array</h2>
-  <span id="var-type">multimethod</span><br />
+  <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (to-byte-array arg)
 </pre>
   <pre id="var-docstr">Converts argument into a Java byte array.  Argument may be
@@ -390,7 +457,7 @@ a String, File, InputStream, or Reader.  If the argument is already
 a byte array, returns it.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L468" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -401,7 +468,7 @@ a byte array, returns it.</pre>
   <pre id="var-docstr">Opens a PushbackReader on f, binds it to *in*, and evaluates body.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L360" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -412,7 +479,7 @@ a byte array, returns it.</pre>
   <pre id="var-docstr">Like with-out-writer but appends to file.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L353" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -424,7 +491,7 @@ a byte array, returns it.</pre>
 Anything printed within body will be written to f.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L345" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -436,7 +503,30 @@ Anything printed within body will be written to f.</pre>
 writer, and automatically closed at the end of the sequence.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/061f3d5b45657a89faa335ffa2bb80819f2e6918/src/main/clojure/clojure/contrib/io.clj#L291" id="var-source">Source</a>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.contrib.io/writer">writer</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (writer x)
+</pre>
+  <pre id="var-docstr">Attempts to coerce its argument into an open java.io.Writer.
+The default implementations of this protocol always return a
+java.io.BufferedWriter.
+
+Default implementations are provided for Writer, BufferedWriter,
+OutputStream, File, URI, URL, Socket, and String.
+
+If the argument is a String, it tries to resolve it first as a URI, then
+as a local file name.  URIs with a 'file' protocol are converted to
+local file names.
+
+Should be used inside with-open to ensure the Writer is properly
+closed.</pre>
+  
+  
+  
 </div>
 
 
