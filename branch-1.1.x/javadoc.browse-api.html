@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>singleton API reference (clojure-contrib)</title>
+    <title>javadoc.browse API reference (clojure-contrib)</title>
     <link href="../static/favicon.png" rel="icon" />
     <link href="../static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="../static/clojure.css" rel="stylesheet" />
@@ -54,24 +54,24 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.singleton/global-singleton">global-singleton</a>
+      <a href="#clojure.contrib.javadoc.browse/open-url-in-browser">open-url-in-browser</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.contrib.singleton/per-thread-singleton">per-thread-singleton</a>
+      <a href="#clojure.contrib.javadoc.browse/open-url-in-swing">open-url-in-swing</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">singleton</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">javadoc.browse</span>
   <span id="branch-name">(1.1.x branch)</span></h1>
-by <span id="author">Stuart Sierra</span><br />
+by <span id="author">Christophe Grand</span><br />
 <br />Usage:
 <pre>
 (ns your-namespace
-  (:require <span id="long-name">clojure.contrib.singleton</span>))
+  (:require <span id="long-name">clojure.contrib.javadoc.browse</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr">Singleton functions</pre>
+<pre id="namespace-docstr">Start a web browser from Clojure</pre>
 
 
 <br />
@@ -79,40 +79,27 @@ by <span id="author">Stuart Sierra</span><br />
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.singleton/global-singleton">global-singleton</h2>
+  <h2 id="clojure.contrib.javadoc.browse/open-url-in-browser">open-url-in-browser</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (global-singleton f)
+  <pre id="var-usage">Usage: (open-url-in-browser url)
 </pre>
-  <pre id="var-docstr">Returns a global singleton function.  f is a function of no
-arguments that creates and returns some object.  The singleton
-function will call f just once, the first time it is needed, and
-cache the value for all subsequent calls.
-
-Warning: global singletons are often unsafe in multi-threaded code.
-Consider per-thread-singleton instead.</pre>
+  <pre id="var-docstr">Opens url (a string) in the default system web browser.  May not
+work on all platforms.  Returns url on success, nil if not
+supported.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/singleton.clj#L28" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/javadoc/browse.clj#L25" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clojure.contrib.singleton/per-thread-singleton">per-thread-singleton</h2>
+  <h2 id="clojure.contrib.javadoc.browse/open-url-in-swing">open-url-in-swing</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (per-thread-singleton f)
+  <pre id="var-usage">Usage: (open-url-in-swing url)
 </pre>
-  <pre id="var-docstr">Returns a per-thread singleton function.  f is a function of no
-arguments that creates and returns some object.  The singleton
-function will call f only once for each thread, and cache its value
-for subsequent calls from the same thread.  This allows you to
-safely and lazily initialize shared objects on a per-thread basis.
-
-Warning: due to a bug in JDK 5, it may not be safe to use a
-per-thread-singleton in the initialization function for another
-per-thread-singleton.  See
-<a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=5025230">http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=5025230</a></pre>
+  <pre id="var-docstr">Opens url (a string) in a Swing window.</pre>
   
   
-  <a href="http://github.com/richhickey/clojure-contrib/blob/86e90011e274910c618a5592d21ba3ce290a6855/src/clojure/contrib/singleton.clj#L41" id="var-source">Source</a>
+  <a href="http://github.com/richhickey/clojure-contrib/blob/dd497fb5154f8a26f9a09af7361981cb196bdf67/src/clojure/contrib/javadoc/browse.clj#L40" id="var-source">Source</a>
 </div>
 
 
