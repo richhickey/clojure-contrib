@@ -41,7 +41,7 @@
     </repository>
     <repository>
       <id>clojure-releases</id>
-      <url>http://build.clojure.org/snapshots</url>
+      <url>http://build.clojure.org/releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
