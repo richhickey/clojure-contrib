@@ -5,7 +5,7 @@
 (deftest test-expt
   (are [x y] (= x y)
       (expt 2 3) 8
-      (expt (expt 2 32) 2) (expt 2 64)
+      (expt (expt 2 16) 2) (expt 2 32)
       (expt 4/3 2) 16/9
       (expt 2 -10) 1/1024
       (expt 0.5M 2) 0.25M
@@ -54,7 +54,7 @@
   (is (thrown? IllegalArgumentException (lcm 7.0 0))))
 
 (deftest test-floor
-  (are [x y] (= x y)
+  (are [x y] (== x y)
       (floor 6) 6
       (floor -6) -6
       (floor 123456789123456789) 123456789123456789
@@ -67,7 +67,7 @@
       (floor -4.3) -5.0))
 
 (deftest test-ceil
-  (are [x y] (= x y)
+  (are [x y] (== x y)
       (ceil 6) 6
       (ceil -6) -6
       (ceil 123456789123456789) 123456789123456789
@@ -80,7 +80,7 @@
       (ceil -4.3) -4.0))
 
 (deftest test-round
-  (are [x y] (= x y)
+  (are [x y] (== x y)
       (round 6) 6
       (round -6) -6
       (round 123456789123456789) 123456789123456789
@@ -114,5 +114,5 @@
 (deftest test-exact-integer-sqrt
   (are [x y] (= x y)
    (exact-integer-sqrt 15) [3 6]
-   (exact-integer-sqrt (inc (expt 2 64))) [(expt 2 32) 1]
+   (exact-integer-sqrt (inc (expt 2 32))) [(expt 2 16) 1]
    (exact-integer-sqrt 1000000000000) [1000000 0]))
