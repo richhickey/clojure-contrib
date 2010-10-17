@@ -14,7 +14,7 @@
 ;;  Created 31 May 2009
 
 (ns clojure.contrib.swing-utils
-  (:import (java.awt.event ActionListener KeyAdapter)
+  (:import (java.awt.event ActionListener KeyAdapter MouseListener)
            (javax.swing AbstractAction Action 
                         JMenu JMenuBar JMenuItem
                         SwingUtilities))
@@ -38,6 +38,19 @@
   (let [listener (proxy [KeyAdapter] []
                    (keyTyped [event] (apply f event args)))]
     (.addKeyListener component listener)
+    listener))
+
+;; ----------------------------------------------------------------------
+;; Franz Haas
+
+(defn add-mouse-clicked-listener
+  "Adds a MouseListener, only setting the clicked interface When a key
+  is typed, f is invoked with the MouseEvent as its first argument
+  followed by args. Returns the listener."
+  [component f & args]
+  (let [listener (proxy [MouseListener] []
+                   (mouseClicked [event] (apply f event args)))]
+    (.addMouseListener component listener)
     listener))
 
 ;; ----------------------------------------------------------------------
