@@ -49,6 +49,10 @@
   followed by args. Returns the listener."
   [component f & args]
   (let [listener (proxy [MouseListener] []
+                   (mouseEntered [e])
+                   (mouseExited [e])
+                   (mousePressed [e])
+                   (mouseReleased [e])
                    (mouseClicked [event] (apply f event args)))]
     (.addMouseListener component listener)
     listener))
