@@ -167,3 +167,9 @@
     menubar))
 
 ;; ----------------------------------------------------------------------
+;; Franz Haas
+
+(defn message-box
+  "shows a message box and return imediately"
+  [text]
+  (do-swing  (javax.swing.JOptionPane/showMessageDialog nil text)))
