@@ -1,3 +1,5 @@
+Note - the contrib libs have moved to individual repos under Clojure org - [https://github.com/clojure]
+
 = Clojure-contrib =
 
 The user contributions library, clojure.contrib, is a collection of
