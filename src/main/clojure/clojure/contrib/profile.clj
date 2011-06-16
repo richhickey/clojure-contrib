@@ -85,7 +85,7 @@ profiling code."}  *enable-profiling* true)
   (reduce (fn [m [k v]]
             (let [cnt (count v)
                   sum (reduce + v)]
-              (assoc m k {:mean (int (/ sum cnt))
+              (assoc m k {:mean (long (/ sum cnt))
                           :min (apply min v)
                           :max (apply max v)
                           :count cnt
