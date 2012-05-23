@@ -291,3 +291,9 @@
   [x]
   (let [i (imag x)]
     (complex (gm/cos i) (gm/sin i))))
+
+;Franz Haas
+(defmethod gm/round ::complex
+  [x]
+  (let [[r i] (vals x)]
+    (complex (gm/round r) (gm/round i))))
