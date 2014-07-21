@@ -46,7 +46,7 @@ set -o errexit
 if [ -n "${CLOJURE_EXT:-}" ]; then
     OLD="$IFS"
     IFS=":"
-    EXT="$(find -H $CLOJURE_EXT -mindepth 1 -maxdepth 1 -print0 | tr \\0 \:)"
+    EXT="$(find -H $CLOJURE_EXT -maxdepth 1 -print0 | tr \\0 \:)"
     IFS="$OLD"
     if [ -n "${CLASSPATH:-}" ]; then
         export CLASSPATH="$EXT$CLASSPATH"
